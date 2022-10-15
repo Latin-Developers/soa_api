@@ -2,6 +2,7 @@
 
 require 'http'
 require_relative 'youtube_category'
+require_relative 'youtube_video'
 
 module YoutubeAnalytics
   # Library for Youtube Web API
@@ -32,9 +33,14 @@ module YoutubeAnalytics
       youtube_response['items'].map { |category_data| Category.new(category_data) }
     end
 
-    def videos; end
+    def videos
+      videos_url = produce_youtube_api_path(YOUTUBE_API_PATH[:VIDEOS],
+                                           { regionCode: REGIONS[:GUATEMALA], part: 'snippet', chart: 'mostPopular' })
+      youtube_response = call_youtube_api(videos_url).parse
+      youtube_response['items'].map { |video_data| Video.new(video_data) }
+    end
 
-    def video(video_id); end
+    def comments(video_id); end
 
     private
 
