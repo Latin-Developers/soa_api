@@ -3,7 +3,8 @@
 require 'http'
 require 'yaml'
 
-YOUTUBE_API_PATH = { VIDEO_CATEGORIES: 'videoCategories' }.freeze
+YOUTUBE_API_PATH = { VIDEO_CATEGORIES: 'videoCategories', VIDEOS: "videos" }.freeze
+
 REGIONS = { TAIWAN: 'TW' }.freeze
 
 YOUTUBE_API_KEY = 'YOUTUBE_API_KEY'
@@ -26,3 +27,8 @@ categories_url = produce_youtube_api_path(config, YOUTUBE_API_PATH[:VIDEO_CATEGO
 youtube_response = call_youtube_api(categories_url).parse
 
 File.write('spec/fixtures/youtube_categories_results.yml', youtube_response.to_yaml)
+
+categories_url = produce_youtube_api_path(config, YOUTUBE_API_PATH[:VIDEOS], { regionCode: REGIONS[:TAIWAN], part: 'snippet', chart: 'mostPopular'})
+youtube_response = call_youtube_api(categories_url).parse
+
+File.write('spec/fixtures/youtube_videos_results.yml', youtube_response.to_yaml)
