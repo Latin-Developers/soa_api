@@ -1,4 +1,4 @@
-# Github API Client
+# Youtube API Client
 
 ## Resources
 
