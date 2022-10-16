@@ -6,6 +6,7 @@
 
 ## Entities
 
+
 # Mexican Central Bank API Client
 
 ## Resources
