@@ -49,6 +49,13 @@ module YoutubeAnalytics
       youtube_response['items'].map { |comment_data| Comment.new(comment_data) }
     end
 
+    def details 
+      details_url = produce_youtube_api_path(YOUTUBE_API_PATH[:VIDEOS],
+                                             { id: VIDEOS_ID[:VIDEO_ID], part: 'snippet,contentDetails,statistics' }) 
+      youtube_response = call_youtube_api(details_url).parse
+      youtube_response['items'].map { |detail_data| Detail.new(detail_data) }
+    end
+
     private
 
     def produce_youtube_api_path(path, args = {})
