@@ -4,6 +4,7 @@ require 'http'
 require_relative 'youtube_category'
 require_relative 'youtube_video'
 require_relative 'youtube_comment'
+require_relative 'youtube_detail'
 
 module YoutubeAnalytics
   # Library for Youtube Web API
@@ -11,7 +12,7 @@ module YoutubeAnalytics
     YOUTUBE_API_ROOT = 'https://www.googleapis.com/youtube/v3'
     YOUTUBE_API_PATH = { VIDEO_CATEGORIES: 'videoCategories', VIDEOS: 'videos', COMMENTS: 'commentThreads' }.freeze
     REGIONS = { TAIWAN: 'TW', MEXICO: 'MX', GUATEMALA: 'GT', NICARAGUA: 'NI' }.freeze
-    VIDEOS_ID = {VIDEO_ID: 'xDZOlnJ8Ovw'}.freeze
+    VIDEOS_ID = {VIDEO_ID: 'ggGINmj5EQE'}.freeze
 
     module Errors
       class NotFound < StandardError; end
