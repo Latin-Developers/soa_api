@@ -11,7 +11,7 @@ module YoutubeAnalytics
     YOUTUBE_API_ROOT = 'https://www.googleapis.com/youtube/v3'
     YOUTUBE_API_PATH = { VIDEO_CATEGORIES: 'videoCategories', VIDEOS: 'videos', COMMENTS: 'commentThreads' }.freeze
     REGIONS = { TAIWAN: 'TW', MEXICO: 'MX', GUATEMALA: 'GT', NICARAGUA: 'NI' }.freeze
-    VIDEOS_ID = {VIDEO_ID: 'UYm0kfnRTJk'}.freeze
+    VIDEOS_ID = {VIDEO_ID: 'qsN39AoaTRI'}.freeze
 
     module Errors
       class NotFound < StandardError; end
