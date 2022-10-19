@@ -32,7 +32,7 @@ youtube_response = call_youtube_api(categories_url).parse
 File.write('spec/fixtures/youtube_categories_results.yml', youtube_response.to_yaml)
 
 videos_url = produce_youtube_api_path(config, YOUTUBE_API_PATH[:VIDEOS],
-                                      { regionCode: REGIONS[:GUATEMALA], part: 'snippet', chart: 'mostPopular' })
+                                      { regionCode: REGIONS[:MEXICO], part: 'snippet', chart: 'mostPopular' })
 youtube_response = call_youtube_api(videos_url).parse
 
 File.write('spec/fixtures/youtube_videos_results.yml', youtube_response.to_yaml)

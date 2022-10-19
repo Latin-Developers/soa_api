@@ -37,7 +37,7 @@ module YoutubeAnalytics
 
     def videos
       videos_url = produce_youtube_api_path(YOUTUBE_API_PATH[:VIDEOS],
-                                           { regionCode: REGIONS[:GUATEMALA], part: 'snippet', chart: 'mostPopular' })
+                                           { regionCode: REGIONS[:MEXICO], part: 'snippet', chart: 'mostPopular' })
       youtube_response = call_youtube_api(videos_url).parse
       youtube_response['items'].map { |video_data| Video.new(video_data) }
     end
