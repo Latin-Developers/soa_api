@@ -3,9 +3,11 @@
 require 'http'
 require 'yaml'
 
-YOUTUBE_API_PATH = { VIDEO_CATEGORIES: 'videoCategories', VIDEOS: 'videos' }.freeze
+YOUTUBE_API_PATH = { VIDEO_CATEGORIES: 'videoCategories', VIDEOS: 'videos', COMMENTS: 'commentThreads' }.freeze
 
 REGIONS = { TAIWAN: 'TW', MEXICO: 'MX', GUATEMALA: 'GT', NICARAGUA: 'NI' }.freeze
+
+VIDEOS_ID = {VIDEO_ID: 'BZqQpIGGZ30'}.freeze
 
 YOUTUBE_API_KEY = 'YOUTUBE_API_KEY'
 YOUTUBE_API = 'YOUTUBE_API'
@@ -24,13 +26,19 @@ def call_youtube_api(url)
 end
 
 categories_url = produce_youtube_api_path(config, YOUTUBE_API_PATH[:VIDEO_CATEGORIES],
-                                          { regionCode: REGIONS[:GUATEMALA] })
+                                          { regionCode: REGIONS[:MEXICO] })
 youtube_response = call_youtube_api(categories_url).parse
 
 File.write('spec/fixtures/youtube_categories_results.yml', youtube_response.to_yaml)
 
 videos_url = produce_youtube_api_path(config, YOUTUBE_API_PATH[:VIDEOS],
-                                      { regionCode: REGIONS[:GUATEMALA], part: 'snippet', chart: 'mostPopular' })
+                                      { regionCode: REGIONS[:MEXICO], part: 'snippet', chart: 'mostPopular' })
 youtube_response = call_youtube_api(videos_url).parse
 
 File.write('spec/fixtures/youtube_videos_results.yml', youtube_response.to_yaml)
+
+comments_url = produce_youtube_api_path(config, YOUTUBE_API_PATH[:COMMENTS],
+                                        { videoId: VIDEOS_ID[:VIDEO_ID], part: 'snippet,replies' }) 
+youtube_response = call_youtube_api(comments_url).parse
+
+File.write('spec/fixtures/youtube_comments_results.yml', youtube_response.to_yaml)
