@@ -44,7 +44,7 @@ module YoutubeAnalytics
 
     def comments 
       comments_url = produce_youtube_api_path(YOUTUBE_API_PATH[:COMMENTS],
-                                             { videoId: VIDEOS_ID[:VIDEO_ID], part: 'snippet,replies' })
+                                             { videoId: VIDEOS_ID[:VIDEO_ID], part: 'snippet' })
       youtube_response = call_youtube_api(comments_url).parse
       youtube_response['items'].map { |comment_data| Comment.new(comment_data) }
     end
