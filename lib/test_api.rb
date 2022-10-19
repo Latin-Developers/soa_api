@@ -43,10 +43,8 @@ youtube_response = call_youtube_api(comments_url).parse
 
 File.write('spec/fixtures/youtube_comments_results.yml', youtube_response.to_yaml)
 
-=begin
 videos_detail_url = produce_youtube_api_path(config, YOUTUBE_API_PATH[:VIDEOS],
                                              { id: VIDEOS_ID[:VIDEO_ID], part: 'snippet,contentDetails,statistics' }) 
 youtube_response = call_youtube_api(videos_detail_url).parse
 
 File.write('spec/fixtures/youtube_videos_detail_results.yml', youtube_response.to_yaml)
-=end
