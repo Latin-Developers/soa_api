@@ -48,4 +48,18 @@ describe 'Tests Youtube API library' do
       end).must_raise YoutubeAnalytics::YoutubeApi::Errors::BadRequest
     end
   end
+
+  describe 'Youtube detail video information' do
+    it 'HAPPY: should provide list of youtube video detail' do
+      details = YoutubeAnalytics::YoutubeApi.new(YOUTUBE_API_KEY).comments
+      _(comments.size).must_be :>, 0
+    end
+
+    it 'SAD: should raise exception when unauthorized' do
+      _(proc do
+        YoutubeAnalytics::YoutubeApi.new('BAD_TOKEN').comments
+      end).must_raise YoutubeAnalytics::YoutubeApi::Errors::BadRequest
+    end
+  end
+
 end
