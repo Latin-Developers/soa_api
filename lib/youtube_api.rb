@@ -12,7 +12,7 @@ module YoutubeAnalytics
     YOUTUBE_API_ROOT = 'https://www.googleapis.com/youtube/v3'
     YOUTUBE_API_PATH = { VIDEO_CATEGORIES: 'videoCategories', VIDEOS: 'videos', COMMENTS: 'commentThreads' }.freeze
     REGIONS = { TAIWAN: 'TW', MEXICO: 'MX', GUATEMALA: 'GT', NICARAGUA: 'NI' }.freeze
-    VIDEOS_ID = {VIDEO_ID: 'ggGINmj5EQE'}.freeze
+    VIDEOS_ID = { VIDEO_ID: 'ggGINmj5EQE' }.freeze
 
     module Errors
       class NotFound < StandardError; end
@@ -38,23 +38,23 @@ module YoutubeAnalytics
 
     def videos
       videos_url = produce_youtube_api_path(YOUTUBE_API_PATH[:VIDEOS],
-                                           { regionCode: REGIONS[:MEXICO], part: 'snippet', chart: 'mostPopular' })
+                                            { regionCode: REGIONS[:MEXICO], part: 'snippet', chart: 'mostPopular' })
       youtube_response = call_youtube_api(videos_url).parse
       youtube_response['items'].map { |video_data| Video.new(video_data) }
     end
 
-    def comments 
+    def comments
       comments_url = produce_youtube_api_path(YOUTUBE_API_PATH[:COMMENTS],
-                                             { videoId: VIDEOS_ID[:VIDEO_ID], part: 'snippet,replies' })
+                                              { videoId: VIDEOS_ID[:VIDEO_ID], part: 'snippet,replies' })
       youtube_response = call_youtube_api(comments_url).parse
       youtube_response['items'].map { |comment_data| Comment.new(comment_data) }
     end
 
-    def details 
+    def details
       details_url = produce_youtube_api_path(YOUTUBE_API_PATH[:VIDEOS],
-                                             { id: VIDEOS_ID[:VIDEO_ID], part: 'snippet,contentDetails,statistics' }) 
+                                             { id: VIDEOS_ID[:VIDEO_ID], part: 'snippet,contentDetails,statistics' })
       youtube_response = call_youtube_api(details_url).parse
-      youtube_response['items'].map { |detail_data| Detail.new(detail_data) }
+      youtube_response['items'].map { |detail_data| Detail.new(detail_data) }.first
     end
 
     private
