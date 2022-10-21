@@ -18,36 +18,26 @@ module YoutubeAnalytics
       @token = token
     end
 
-    def categories(region)
-      youtube_response = HTTPRequest.new(YOUTUBE_API_PATH[:VIDEO_CATEGORIES],
-                                         @token,
-                                         YoutubeAPIFilters.categories(region))
+    def video_resource(resource_type, filters, resource_class)
+      youtube_response = HTTPRequest.new(YOUTUBE_API_PATH[resource_type], @token, filters)
                                     .youtube_api_http_get
-      youtube_response['items'].map { |category_data| Category.new(category_data) }
+      youtube_response['items'].map { |item| resource_class.new(item) }
+    end
+
+    def categories(region)
+      video_resource(:VIDEO_CATEGORIES, YoutubeAPIFilters.categories(region), Category)
     end
 
     def popular_videos(region)
-      youtube_response = HTTPRequest.new(YOUTUBE_API_PATH[:VIDEOS],
-                                         @token,
-                                         YoutubeAPIFilters.popular_videos(region))
-                                    .youtube_api_http_get
-      youtube_response['items'].map { |video_data| Video.new(video_data) }
+      video_resource(:VIDEOS, YoutubeAPIFilters.popular_videos(region), Video)
     end
 
     def video_comments(video_id)
-      youtube_response = HTTPRequest.new(YOUTUBE_API_PATH[:COMMENTS],
-                                         @token,
-                                         YoutubeAPIFilters.video_comments(video_id))
-                                    .youtube_api_http_get
-      youtube_response['items'].map { |comment_data| Comment.new(comment_data) }
+      video_resource(:COMMENTS, YoutubeAPIFilters.video_comments(video_id), Comment)
     end
 
     def video_details(video_id)
-      youtube_response = HTTPRequest.new(YOUTUBE_API_PATH[:VIDEOS],
-                                         @token,
-                                         YoutubeAPIFilters.video_details(video_id))
-                                    .youtube_api_http_get
-      Detail.new(youtube_response['items'].first)
+      video_resource(:VIDEOS, YoutubeAPIFilters.video_details(video_id), Detail).first
     end
   end
 end
