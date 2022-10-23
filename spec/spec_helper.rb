@@ -7,8 +7,6 @@ require 'minitest/rg'
 require 'vcr'
 require 'webmock'
 
-require_relative '../lib/youtube_api_explorer'
-
 CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
 YOUTUBE_API_KEY = CONFIG['YOUTUBE_API_KEY']
 

@@ -84,8 +84,8 @@ describe 'Tests Youtube API library' do
 
     it 'SAD: should raise exception when unauthorized' do
       _(proc do
-        YoutubeAnalytics::YoutubeAPI.new('BAD_TOKEN').details
-      end).must_raise YoutubeAnalytics::YoutubeAPI::Errors::BadRequest
+        YoutubeAnalytics::YoutubeAPI.new('BAD_TOKEN').video_details('ggGINmj5EQE')
+      end).must_raise Errors::BadRequest
     end
   end
 end
