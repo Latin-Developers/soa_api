@@ -11,11 +11,11 @@ module YoutubeAnalytics
       @comment['id']
     end
 
-    def videoId
+    def video_id
       @comment['snippet']['videoId']
     end
 
-    def textDisplay
+    def text_display
       @comment['snippet']['textDisplay']
     end
   end

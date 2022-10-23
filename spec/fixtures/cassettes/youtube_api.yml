@@ -2,88 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=BAD_TOKEN&part=snippet,contentDetails,statistics
+    uri: https://www.googleapis.com/youtube/v3/videoCategories?key=<YOUTUBE_API_KEY>&regionCode=GT
     body:
       encoding: UTF-8
       string: ''
     headers:
       Connection:
       - close
-      Host:
-      - www.googleapis.com
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Sun, 23 Oct 2022 09:56:41 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "error": {
-            "code": 400,
-            "message": "API key not valid. Please pass a valid API key.",
-            "errors": [
-              {
-                "message": "API key not valid. Please pass a valid API key.",
-                "domain": "global",
-                "reason": "badRequest"
-              }
-            ],
-            "status": "INVALID_ARGUMENT",
-            "details": [
-              {
-                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
-                "reason": "API_KEY_INVALID",
-                "domain": "googleapis.com",
-                "metadata": {
-                  "service": "youtube.googleapis.com"
-                }
-              }
-            ]
-          }
-        }
-  recorded_at: Sun, 23 Oct 2022 09:56:41 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=<YOUTUBE_API_KEY>&part=snippet,contentDetails,statistics
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - www.googleapis.com
       User-Agent:
       - http.rb/5.1.0
   response:
@@ -98,7 +23,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sun, 23 Oct 2022 09:56:42 GMT
+      - Sun, 23 Oct 2022 10:22:26 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -122,98 +47,331 @@ http_interactions:
       encoding: UTF-8
       string: |
         {
-          "kind": "youtube#videoListResponse",
-          "etag": "3CfeNS4PgUPtxNelWQ7qTnGzxlg",
+          "kind": "youtube#videoCategoryListResponse",
+          "etag": "fIIv2-q7-AkaOeJf0LPrlnu-0As",
           "items": [
             {
-              "kind": "youtube#video",
-              "etag": "ECxkIzzLWFfAJKjayX87u57kvpY",
-              "id": "ggGINmj5EQE",
+              "kind": "youtube#videoCategory",
+              "etag": "grPOPYEUUZN3ltuDUGEWlrTR90U",
+              "id": "1",
               "snippet": {
-                "publishedAt": "2022-09-08T21:01:43Z",
-                "channelId": "UCWI2X2x3KASrvEZXdBVNxkA",
-                "title": "El Señor de los Anillos : La Saga en 1 Video I Fedewolf",
-                "description": "Ya tenemos playeras! https://worales.mx/collections/fedelobo \n\nDirectos de Lunes a Viernes 8:00 pm (MX) en mi pagina de Facebook: https://www.facebook.com/soyfedelobo\n\nTe dejo mis demás canales: \n\nFedelobo: https://www.youtube.com/user/elfedelobo\nCanal de videojuegos: https://www.youtube.com/c/Pixelteca \nCanal con Nadia: https://www.youtube.com/amorsindistancia\n\n\nMis redes sociales:\n\nTwitter: https://twitter.com/SoyFedelobo\nFacebook: https://www.facebook.com/soyfedelobo/\nInstagram: https://www.instagram.com/soyfedelobo",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  },
-                  "standard": {
-                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/sddefault.jpg",
-                    "width": 640,
-                    "height": 480
-                  }
-                },
-                "channelTitle": "El FedeWolf",
-                "tags": [
-                  "series",
-                  "peliculas",
-                  "comedia",
-                  "resumen",
-                  "la historia en 1 video",
-                  "la saga en 1 video",
-                  "fedelobo",
-                  "fedewolf",
-                  "resumen fedelobo",
-                  "resumen fedewolf",
-                  "historia fedelobo",
-                  "historia fedewolf",
-                  "fede lobo",
-                  "fede wolf"
-                ],
-                "categoryId": "1",
-                "liveBroadcastContent": "none",
-                "localized": {
-                  "title": "El Señor de los Anillos : La Saga en 1 Video I Fedewolf",
-                  "description": "Ya tenemos playeras! https://worales.mx/collections/fedelobo \n\nDirectos de Lunes a Viernes 8:00 pm (MX) en mi pagina de Facebook: https://www.facebook.com/soyfedelobo\n\nTe dejo mis demás canales: \n\nFedelobo: https://www.youtube.com/user/elfedelobo\nCanal de videojuegos: https://www.youtube.com/c/Pixelteca \nCanal con Nadia: https://www.youtube.com/amorsindistancia\n\n\nMis redes sociales:\n\nTwitter: https://twitter.com/SoyFedelobo\nFacebook: https://www.facebook.com/soyfedelobo/\nInstagram: https://www.instagram.com/soyfedelobo"
-                }
-              },
-              "contentDetails": {
-                "duration": "PT43M16S",
-                "dimension": "2d",
-                "definition": "hd",
-                "caption": "false",
-                "licensedContent": true,
-                "contentRating": {},
-                "projection": "rectangular"
-              },
-              "statistics": {
-                "viewCount": "2942079",
-                "likeCount": "160418",
-                "favoriteCount": "0",
-                "commentCount": "6257"
+                "title": "Film & Animation",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Q0xgUf8BFM8rW3W0R9wNq809xyA",
+              "id": "2",
+              "snippet": {
+                "title": "Autos & Vehicles",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "qnpwjh5QlWM5hrnZCvHisquztC4",
+              "id": "10",
+              "snippet": {
+                "title": "Music",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "HyFIixS5BZaoBdkQdLzPdoXWipg",
+              "id": "15",
+              "snippet": {
+                "title": "Pets & Animals",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "PNU8SwXhjsF90fmkilVohofOi4I",
+              "id": "17",
+              "snippet": {
+                "title": "Sports",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "5kFljz9YJ4lEgSfVwHWi5kTAwAs",
+              "id": "18",
+              "snippet": {
+                "title": "Short Movies",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "ANnLQyzEA_9m3bMyJXMhKTCOiyg",
+              "id": "19",
+              "snippet": {
+                "title": "Travel & Events",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "0Hh6gbZ9zWjnV3sfdZjKB5LQr6E",
+              "id": "20",
+              "snippet": {
+                "title": "Gaming",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "q8Cp4pUfCD8Fuh8VJ_yl5cBCVNw",
+              "id": "21",
+              "snippet": {
+                "title": "Videoblogging",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "cHDaaqPDZsJT1FPr1-MwtyIhR28",
+              "id": "22",
+              "snippet": {
+                "title": "People & Blogs",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "3Uz364xBbKY50a2s0XQlv-gXJds",
+              "id": "23",
+              "snippet": {
+                "title": "Comedy",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "0srcLUqQzO7-NGLF7QnhdVzJQmY",
+              "id": "24",
+              "snippet": {
+                "title": "Entertainment",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "bQlQMjmYX7DyFkX4w3kT0osJyIc",
+              "id": "25",
+              "snippet": {
+                "title": "News & Politics",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Y06N41HP_WlZmeREZvkGF0HW5pg",
+              "id": "26",
+              "snippet": {
+                "title": "Howto & Style",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "yBaNkLx4sX9NcDmFgAmxQcV4Y30",
+              "id": "27",
+              "snippet": {
+                "title": "Education",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Mxy3A-SkmnR7MhJDZRS4DuAIbQA",
+              "id": "28",
+              "snippet": {
+                "title": "Science & Technology",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "4pIHL_AdN2kO7btAGAP1TvPucNk",
+              "id": "30",
+              "snippet": {
+                "title": "Movies",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Iqol1myDwh2AuOnxjtn2AfYwJTU",
+              "id": "31",
+              "snippet": {
+                "title": "Anime/Animation",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "tzhBKCBcYWZLPai5INY4id91ss8",
+              "id": "32",
+              "snippet": {
+                "title": "Action/Adventure",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "ii8nBGYpKyl6FyzP3cmBCevdrbs",
+              "id": "33",
+              "snippet": {
+                "title": "Classics",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Y0u9UAQCCGp60G11Arac5Mp46z4",
+              "id": "34",
+              "snippet": {
+                "title": "Comedy",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "_YDnyT205AMuX8etu8loOiQjbD4",
+              "id": "35",
+              "snippet": {
+                "title": "Documentary",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "eAl2b-uqIGRDgnlMa0EsGZjXmWg",
+              "id": "36",
+              "snippet": {
+                "title": "Drama",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "HDAW2HFOt3SqeDI00X-eL7OELfY",
+              "id": "37",
+              "snippet": {
+                "title": "Family",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "QHiWh3niw5hjDrim85M8IGF45eE",
+              "id": "38",
+              "snippet": {
+                "title": "Foreign",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "ztKcSS7GpH9uEyZk9nQCdNujvGg",
+              "id": "39",
+              "snippet": {
+                "title": "Horror",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Ids1sm8QFeSo_cDlpcUNrnEBYWA",
+              "id": "40",
+              "snippet": {
+                "title": "Sci-Fi/Fantasy",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "qhfgS7MzzZHIy_UZ1dlawl1GbnY",
+              "id": "41",
+              "snippet": {
+                "title": "Thriller",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "TxVSfGoUyT7CJ7h7ebjg4vhIt6g",
+              "id": "42",
+              "snippet": {
+                "title": "Shorts",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "o9w6eNqzjHPnNbKDujnQd8pklXM",
+              "id": "43",
+              "snippet": {
+                "title": "Shows",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "mLdyKd0VgXKDI6GevTLBAcvRlIU",
+              "id": "44",
+              "snippet": {
+                "title": "Trailers",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
               }
             }
-          ],
-          "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 1
-          }
+          ]
         }
-  recorded_at: Sun, 23 Oct 2022 09:56:41 GMT
+  recorded_at: Sun, 23 Oct 2022 10:22:26 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/youtube/v3/commentThreads?key=BAD_TOKEN&part=snippet,replies&videoId=ggGINmj5EQE
+    uri: https://www.googleapis.com/youtube/v3/videoCategories?key=BAD_TOKEN&regionCode=GT
     body:
       encoding: UTF-8
       string: ''
     headers:
       Connection:
       - close
-      Host:
-      - www.googleapis.com
       User-Agent:
       - http.rb/5.1.0
   response:
@@ -228,7 +386,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sun, 23 Oct 2022 09:56:42 GMT
+      - Sun, 23 Oct 2022 10:22:26 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -275,7 +433,577 @@ http_interactions:
             ]
           }
         }
-  recorded_at: Sun, 23 Oct 2022 09:56:42 GMT
+  recorded_at: Sun, 23 Oct 2022 10:22:26 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=<YOUTUBE_API_KEY>&part=snippet&regionCode=GT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 23 Oct 2022 10:22:26 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n  \"kind\": \"youtube#videoListResponse\",\n  \"etag\": \"KrIip5i5VBivAjJXIhQo5HSTiB8\",\n
+        \ \"items\": [\n    {\n      \"kind\": \"youtube#video\",\n      \"etag\":
+        \"dFrn9teBXJsMpNiuNUhJ5aJr-hM\",\n      \"id\": \"Zm0LjUBZyUY\",\n      \"snippet\":
+        {\n        \"publishedAt\": \"2022-10-22T12:00:11Z\",\n        \"channelId\":
+        \"UC_F8DoJf9MZogEOU51TpTbQ\",\n        \"title\": \"Clash Royale: NEW UPDATE!
+        \U0001F9D8 Two New Cards and much more! (TV Royale)\",\n        \"description\":
+        \"The biggest update of the year! \U0001F389\\nTwo new cards, a new ranked
+        mode, a reworked Trophy Road, the Deck Explorer, new King Levels... and much
+        more! Coming on October 26th!\\nFind out in this TV Royale!\\n\\nFollow us
+        on our Socials!\\nTwitter ► https://twitter.com/ClashRoyale/\\nInstagram ►
+        https://www.instagram.com/clashroyale\\nTikTok ► https://www.tiktok.com/@clashroyale\\nFacebook
+        ► https://www.facebook.com/ClashRoyale/\\n\\nSubscribe for more! ►► http://supr.cl/SubRoyale\\n\\nSubscribe
+        for more! ►► http://supr.cl/SubRoyale\\n\\nEnter the Arena! \\nFrom the creators
+        of Clash of Clans comes a real-time multiplayer game starring the Royales,
+        your favorite Clash characters and much, much more.\\nCollect and upgrade
+        dozens of cards featuring the Clash of Clans troops, spells and defenses you
+        know and love, as well as the Royales: Princes, Knights, Baby Dragons and
+        more. Knock the enemy King and Princesses from their towers to defeat your
+        opponents and win Trophies, Crowns and glory in the Arena. Form a Clan to
+        share cards and build your very own battle community.\\nLead the Clash Royale
+        Family to victory!\\n\\nFEATURES\\n• Duel players from around the world in
+        real-time in both 1v1 and 2v2 Battles\\n• Earn chests to unlock rewards, collect
+        powerful new cards and upgrade existing ones\\n• Destroy opponent’s towers
+        and win Crowns to earn epic Crown chests in the Pass Royale\\n• Build and
+        upgrade your card collection with the Clash Royale Family along with dozens
+        of your favorite Clash troops, spells and defenses\\n• Construct your ultimate
+        Battle Deck to defeat your opponents\\n• Progress through multiple Arenas
+        all the way to the top\\n• Form a Clan to share cards and build your very
+        own battle community\\n• Challenge your Clanmates and friends to a private
+        duel, or play side-by-side in a 2v2 Battle\\n• Battle with your Clan in the
+        Clan Wars\\n• Play in events and special challenges every week\\n• Learn different
+        battle tactics by watching the best duels on TV Royale\\n\\n\\nPLEASE NOTE!
+        Clash Royale is free to download and play, however, some game items can also
+        be purchased for real money. If you don’t want to use this feature, please
+        disable in-app purchases in your device’s settings. Also, under our Terms
+        of Service and Privacy Policy, you must be at least 13 years of age to play
+        or download Clash Royale. A network connection is also required.\\n\\nSupport:\\nAre
+        you having problems? Visit http://supercell.helpshift.com/a/clas... or contact
+        us in-game by going to Settings, Help and support.\\n\\nPrivacy Policy:\\nhttp://supercell.com/en/privacy-policy/\\n\\nTerms
+        of Service:\\nhttp://supercell.com/en/terms-of-serv...\\n\\nParent’s Guide:\\nhttp://supercell.com/en/parents/\\n\\n#ClashRoyale\",\n
+        \       \"thumbnails\": {\n          \"default\": {\n            \"url\":
+        \"https://i.ytimg.com/vi/Zm0LjUBZyUY/default.jpg\",\n            \"width\":
+        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
+        \           \"url\": \"https://i.ytimg.com/vi/Zm0LjUBZyUY/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/Zm0LjUBZyUY/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/Zm0LjUBZyUY/sddefault.jpg\",\n
+        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/Zm0LjUBZyUY/maxresdefault.jpg\",\n
+        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
+        \       \"channelTitle\": \"Clash Royale\",\n        \"tags\": [\n          \"Clash
+        Royale\",\n          \"Clash Royale Game\",\n          \"Supercell\",\n          \"Supercell
+        Game\",\n          \"Clash Royale Supercell\",\n          \"Mobile Game\",\n
+        \         \"tv royale\"\n        ],\n        \"categoryId\": \"20\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"defaultLanguage\": \"en\",\n        \"localized\": {\n
+        \         \"title\": \"Clash Royale: NEW UPDATE! \U0001F9D8 Two New Cards
+        and much more! (TV Royale)\",\n          \"description\": \"The biggest update
+        of the year! \U0001F389\\nTwo new cards, a new ranked mode, a reworked Trophy
+        Road, the Deck Explorer, new King Levels... and much more! Coming on October
+        26th!\\nFind out in this TV Royale!\\n\\nFollow us on our Socials!\\nTwitter
+        ► https://twitter.com/ClashRoyale/\\nInstagram ► https://www.instagram.com/clashroyale\\nTikTok
+        ► https://www.tiktok.com/@clashroyale\\nFacebook ► https://www.facebook.com/ClashRoyale/\\n\\nSubscribe
+        for more! ►► http://supr.cl/SubRoyale\\n\\nSubscribe for more! ►► http://supr.cl/SubRoyale\\n\\nEnter
+        the Arena! \\nFrom the creators of Clash of Clans comes a real-time multiplayer
+        game starring the Royales, your favorite Clash characters and much, much more.\\nCollect
+        and upgrade dozens of cards featuring the Clash of Clans troops, spells and
+        defenses you know and love, as well as the Royales: Princes, Knights, Baby
+        Dragons and more. Knock the enemy King and Princesses from their towers to
+        defeat your opponents and win Trophies, Crowns and glory in the Arena. Form
+        a Clan to share cards and build your very own battle community.\\nLead the
+        Clash Royale Family to victory!\\n\\nFEATURES\\n• Duel players from around
+        the world in real-time in both 1v1 and 2v2 Battles\\n• Earn chests to unlock
+        rewards, collect powerful new cards and upgrade existing ones\\n• Destroy
+        opponent’s towers and win Crowns to earn epic Crown chests in the Pass Royale\\n•
+        Build and upgrade your card collection with the Clash Royale Family along
+        with dozens of your favorite Clash troops, spells and defenses\\n• Construct
+        your ultimate Battle Deck to defeat your opponents\\n• Progress through multiple
+        Arenas all the way to the top\\n• Form a Clan to share cards and build your
+        very own battle community\\n• Challenge your Clanmates and friends to a private
+        duel, or play side-by-side in a 2v2 Battle\\n• Battle with your Clan in the
+        Clan Wars\\n• Play in events and special challenges every week\\n• Learn different
+        battle tactics by watching the best duels on TV Royale\\n\\n\\nPLEASE NOTE!
+        Clash Royale is free to download and play, however, some game items can also
+        be purchased for real money. If you don’t want to use this feature, please
+        disable in-app purchases in your device’s settings. Also, under our Terms
+        of Service and Privacy Policy, you must be at least 13 years of age to play
+        or download Clash Royale. A network connection is also required.\\n\\nSupport:\\nAre
+        you having problems? Visit http://supercell.helpshift.com/a/clas... or contact
+        us in-game by going to Settings, Help and support.\\n\\nPrivacy Policy:\\nhttp://supercell.com/en/privacy-policy/\\n\\nTerms
+        of Service:\\nhttp://supercell.com/en/terms-of-serv...\\n\\nParent’s Guide:\\nhttp://supercell.com/en/parents/\\n\\n#ClashRoyale\"\n
+        \       },\n        \"defaultAudioLanguage\": \"en\"\n      }\n    },\n    {\n
+        \     \"kind\": \"youtube#video\",\n      \"etag\": \"2XBI2GZmC5uR1-s5ROXpvTEpcpQ\",\n
+        \     \"id\": \"mxF58TYuPaM\",\n      \"snippet\": {\n        \"publishedAt\":
+        \"2022-10-21T04:01:22Z\",\n        \"channelId\": \"UCgmUtgxaeaT6CSHc70AQMEg\",\n
+        \       \"title\": \"Kim Loaiza - DEVOTO (Video Oficial) Ft. Elvis De Yongol\",\n
+        \       \"description\": \"DEVOTO • Kim Loaiza • Space Music • Elvis De Yongol
+        \\n\\n\\n✨ SIGUEME AQUI ✨\\n\\n\\n• INSTAGRAM: @Kimberly.Loaiza http://bit.ly/IGKim\\n\\n•
+        PAGINA DE FACEBOOK: Kimberly Loaiza http://bit.ly/FBKimL\\n\\n• TWITTER: KimberlyLoaiza_
+        \  http://bit.ly/KimLTW\\n\\n•SUSCRÍBETE AQUÍ: https://bit.ly/3oYuGUW\\n\\nLETRA
+        ✍\U0001F3FB \\n\\nPor la boca muere el pez \\ny tú la abriste mucho y te me
+        ahogaste \\nla herida que dejaste \\nyo la curo con unos tequilas \\nhay que
+        cosas de la vida \\nalguien como tú fácil de olvida \\nno vuelvo a caer.\\n \\nCuando
+        me veas a través del vaso \\ny sepas que fuiste un total fracaso \\nTe acuerdes
+        de mi estando bien borracho \\nY te quieras pegar un balazo \\nviendo mis
+        fotos, \\ncon el corazón roto \\nConmigo te sacaste la loto\\nAhora estás
+        de luto \\nyo soy tu santa y tu mi devoto \\n \\nCuando me veas a través del
+        vaso \\ny sepas que fuiste un total fracaso \\nTe acuerdes de mi estando bien
+        borracho \\nY te quieras pegar un balazo \\nviendo mis fotos, \\ncon el corazón
+        roto \\nConmigo te sacaste la loto\\nAhora estás de luto \\nyo soy tu santa
+        y tu mi devoto \\n \\n \\n \\nTe acuerdas cuando te reías \\nYo aguantando
+        tus tonterías\\nNo veías lo que me dolía \\nO quizá lo sabías, pero te valía
+        \\nEsta no te la dejo pasar \\nAsí que no me mandes mas whatsapp \\nSe cayo
+        la red pa ti \\nYa no estoy en línea pa ti \\n \\n \\nEres de esos que solo
+        prometen\\nMe canse de ser tu juguete \\nAunque en tu casa me pongas un altar
+        \\nCon unas velas te pongas a rezar \\nYa nada va a pasar \\n \\n \\nCuando
+        me veas a través del vaso \\ny sepas que fuiste un total fracaso \\nTe acuerdes
+        de mi estando bien borracho \\nte quieras pegar un balazo \\nviendo mis fotos,
+        \\ncon el corazón roto \\nConmigo te sacaste la loto\\nAhora estás de luto
+        \\nyo soy tu santa y tu mi devoto \\n \\n \\nA ti te gusta que te rece todo
+        los días \\nTe pida perdón y confiese que te quería \\nTu no eres Virgen aunque
+        te llames María \\nMe saliste mala que suerte la mía \\nTiraba la piedra y
+        yo que te veía \\nNo eres ostia pero los domingos te comía \\nTu eres mi santa
+        y yo siempre seré tu mesías \\nHey \\n \\n \\nA mi no me engañas \\nme tienes
+        ganas \\nPa que te ensañas \\nNos vemos mañana \\nYa déjate de tantas mentiras
+        \\nen el fondo a mi tu a mi no me olvidas \\nMami dame beso \\nDisfruta del
+        proceso\\nTu serás la presa \\nDe este preso \\nCaliente como café expreso
+        \\nNo estamos en el polo pero súbete a mi expreso\\n \\nCuando me veas a través
+        del vaso y sepas que fuiste un total fracaso \\nTe acuerdes de mi estando
+        bien borracho \\nte quieras pegar un balazo viendo mis fotos, con el corazón
+        roto \\nConmigo te sacaste la loto\\nAhora estás de luto yo soy tu santa y
+        tu mi devoto\\n \\nPor la  boca muere el pez \\ny tú la abriste mucho y te
+        me ahogaste \\nla herida que dejaste \\nyo la curo con unos tequilas \\nhay
+        que cosas de la vida \\nalguien como tú fácil de olvida \\nno vuelvo a caer.\\n\\n\\n\\nCONTACTO
+        \U0001F48C: Marcaskim@gmail.com\",\n        \"thumbnails\": {\n          \"default\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/sddefault.jpg\",\n
+        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/maxresdefault.jpg\",\n
+        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
+        \       \"channelTitle\": \"Kim Loaiza\",\n        \"tags\": [\n          \"MUSICA\",\n
+        \         \"SPACE\",\n          \"MUSIC\",\n          \"KIM\",\n          \"LOAIZA\",\n
+        \         \"POP\",\n          \"TRAP\",\n          \"REGGAETON\"\n        ],\n
+        \       \"categoryId\": \"10\",\n        \"liveBroadcastContent\": \"none\",\n
+        \       \"localized\": {\n          \"title\": \"Kim Loaiza - DEVOTO (Video
+        Oficial) Ft. Elvis De Yongol\",\n          \"description\": \"DEVOTO • Kim
+        Loaiza • Space Music • Elvis De Yongol \\n\\n\\n✨ SIGUEME AQUI ✨\\n\\n\\n•
+        INSTAGRAM: @Kimberly.Loaiza http://bit.ly/IGKim\\n\\n• PAGINA DE FACEBOOK:
+        Kimberly Loaiza http://bit.ly/FBKimL\\n\\n• TWITTER: KimberlyLoaiza_   http://bit.ly/KimLTW\\n\\n•SUSCRÍBETE
+        AQUÍ: https://bit.ly/3oYuGUW\\n\\nLETRA ✍\U0001F3FB \\n\\nPor la boca muere
+        el pez \\ny tú la abriste mucho y te me ahogaste \\nla herida que dejaste
+        \\nyo la curo con unos tequilas \\nhay que cosas de la vida \\nalguien como
+        tú fácil de olvida \\nno vuelvo a caer.\\n \\nCuando me veas a través del
+        vaso \\ny sepas que fuiste un total fracaso \\nTe acuerdes de mi estando bien
+        borracho \\nY te quieras pegar un balazo \\nviendo mis fotos, \\ncon el corazón
+        roto \\nConmigo te sacaste la loto\\nAhora estás de luto \\nyo soy tu santa
+        y tu mi devoto \\n \\nCuando me veas a través del vaso \\ny sepas que fuiste
+        un total fracaso \\nTe acuerdes de mi estando bien borracho \\nY te quieras
+        pegar un balazo \\nviendo mis fotos, \\ncon el corazón roto \\nConmigo te
+        sacaste la loto\\nAhora estás de luto \\nyo soy tu santa y tu mi devoto \\n \\n \\n \\nTe
+        acuerdas cuando te reías \\nYo aguantando tus tonterías\\nNo veías lo que
+        me dolía \\nO quizá lo sabías, pero te valía \\nEsta no te la dejo pasar \\nAsí
+        que no me mandes mas whatsapp \\nSe cayo la red pa ti \\nYa no estoy en línea
+        pa ti \\n \\n \\nEres de esos que solo prometen\\nMe canse de ser tu juguete
+        \\nAunque en tu casa me pongas un altar \\nCon unas velas te pongas a rezar
+        \\nYa nada va a pasar \\n \\n \\nCuando me veas a través del vaso \\ny sepas
+        que fuiste un total fracaso \\nTe acuerdes de mi estando bien borracho \\nte
+        quieras pegar un balazo \\nviendo mis fotos, \\ncon el corazón roto \\nConmigo
+        te sacaste la loto\\nAhora estás de luto \\nyo soy tu santa y tu mi devoto
+        \\n \\n \\nA ti te gusta que te rece todo los días \\nTe pida perdón y confiese
+        que te quería \\nTu no eres Virgen aunque te llames María \\nMe saliste mala
+        que suerte la mía \\nTiraba la piedra y yo que te veía \\nNo eres ostia pero
+        los domingos te comía \\nTu eres mi santa y yo siempre seré tu mesías \\nHey
+        \\n \\n \\nA mi no me engañas \\nme tienes ganas \\nPa que te ensañas \\nNos
+        vemos mañana \\nYa déjate de tantas mentiras \\nen el fondo a mi tu a mi no
+        me olvidas \\nMami dame beso \\nDisfruta del proceso\\nTu serás la presa \\nDe
+        este preso \\nCaliente como café expreso \\nNo estamos en el polo pero súbete
+        a mi expreso\\n \\nCuando me veas a través del vaso y sepas que fuiste un
+        total fracaso \\nTe acuerdes de mi estando bien borracho \\nte quieras pegar
+        un balazo viendo mis fotos, con el corazón roto \\nConmigo te sacaste la loto\\nAhora
+        estás de luto yo soy tu santa y tu mi devoto\\n \\nPor la  boca muere el pez
+        \\ny tú la abriste mucho y te me ahogaste \\nla herida que dejaste \\nyo la
+        curo con unos tequilas \\nhay que cosas de la vida \\nalguien como tú fácil
+        de olvida \\nno vuelvo a caer.\\n\\n\\n\\nCONTACTO \U0001F48C: Marcaskim@gmail.com\"\n
+        \       },\n        \"defaultAudioLanguage\": \"es-419\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#video\",\n      \"etag\": \"YP6TyvsjP5u6Kx_k4Hhuz9zrPL4\",\n
+        \     \"id\": \"Dn_noN00sPo\",\n      \"snippet\": {\n        \"publishedAt\":
+        \"2022-10-22T15:00:10Z\",\n        \"channelId\": \"UCooVYzDxdwTtGYAkcPmOgOw\",\n
+        \       \"title\": \"Brawl Stars: Brawl Talk - Gears Rework, Shield Brawler,
+        and MORE!\",\n        \"description\": \"Download NOW!! ►► https://supr.cl/2K62CZG\\nBe
+        a BRAWLER! Subscribe! ►► https://supr.cl/subscribe\\nInteract with the World
+        Finals on ►► https://event.brawlstars.com \\n\\n#brawltalk #ghoststation \\n\\nAn
+        epic battle royale made for mobile! Play with friends or solo across a variety
+        of game modes in under three minutes.\\n\\nUnlock and upgrade dozens of Brawlers
+        with powerful Super abilities, Star Powers and Gadgets! Collect unique skins
+        to stand out and show off. Battle in a variety of mysterious locations within
+        the Brawliverse!\\n\\nBATTLE IN MULTIPLE GAME MODES\\n- Gem Grab (3v3): Team
+        up and out-strategize the opposing team. Collect and hold 10 gems to win,
+        but get fragged and lose your gems.\\n- Showdown (Solo/Duo): A battle royale
+        style fight for survival. Collect power ups for your Brawler. Grab a friend
+        or play solo - be the last Brawler standing in the rowdiest battle royale
+        yet. Winner take all!\\n- Brawl Ball (3v3): It's a whole new Brawl game! Show
+        off your soccer/football skills and score two goals before the other team.
+        There are no red cards here.\\n- Bounty (3v3): Take out opponents to earn
+        stars, but don’t let them pick you off. The squad with the most stars wins
+        the match!\\n- Heist (3v3): Protect your team’s safe and try to crack open
+        your opponents’. Navigate the map to sneak, blast and blow your way clear
+        to the enemies treasure.\\n- Special Events: Limited time special PvE and
+        PvP game modes.\\n- Championship Challenge: Join Brawl Stars' esports scene
+        with in-game qualifiers!\\n\\nUNLOCK AND UPGRADE BRAWLERS\\nCollect and upgrade
+        a variety of Brawlers with powerful Super abilities, Star Powers and Gadgets!
+        Level them up and collect unique skins.\\n\\nBRAWL PASS\\nComplete quests,
+        open Brawl Boxes, earn Gems, pins and an exclusive Brawl Pass skin! Fresh
+        content every season.\\n\\nBECOME THE STAR PLAYER\\nClimb the local and regional
+        leaderboards to prove you’re the greatest Brawler of them all!\\n\\nCONSTANTLY
+        EVOLVING\\nLook out for new Brawlers, skins, maps, special events and games
+        modes in the future.\\n\\nPLEASE NOTE! Brawl Stars is free to download and
+        play, however, some game items can also be purchased for real money. If you
+        don't want to use this feature, please disable in-app purchases in your device's
+        settings. Also, under our Terms of Service and Privacy Policy, you must be
+        at least 9 years of age to play or download Brawl Stars.\\n\\nFeatures:\\n-
+        Team up for real-time 3v3 battles against players from across the world\\n-
+        A fast-paced multiplayer battle royale mode made for mobile\\n- Unlock and
+        collect new, powerful Brawlers - each with a signature attack and Super ability\\n-
+        New events and game modes daily\\n- Battle solo or with friends\\n- Climb
+        to the top of the leaderboards in global and local rankings \\n- Join or start
+        your own Club with fellow players to share tips and battle together\\n- Customize
+        Brawlers with unlockable skins\\n- Player-designed maps offer challenging
+        new terrain to master\\n\\nFrom the makers of Clash of Clans, Clash Royale
+        and Boom Beach!\\n\\nSupport:\\nContact us in-game via Settings, Help and
+        Support — or visit http://supercell.helpshift.com/a/brawl-stars/\\n\\nPrivacy
+        Policy:\\nhttp://supercell.com/en/privacy-policy/\\n\\nTerms of Service:\\nhttp://supercell.com/en/terms-of-service/\\n\\nParent's
+        Guide:\\nhttp://supercell.com/en/parents/\",\n        \"thumbnails\": {\n
+        \         \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/Dn_noN00sPo/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/Dn_noN00sPo/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/Dn_noN00sPo/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/Dn_noN00sPo/sddefault.jpg\",\n
+        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/Dn_noN00sPo/maxresdefault.jpg\",\n
+        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
+        \       \"channelTitle\": \"Brawl Stars\",\n        \"tags\": [\n          \"brawl
+        stars\",\n          \"mobile game\",\n          \"mobile strategy game\",\n
+        \         \"mobile rpg\",\n          \"mobile battle royale\",\n          \"battle
+        royale\",\n          \"supercell game\",\n          \"brawl talk\",\n          \"ghost
+        station\",\n          \"gears rework\"\n        ],\n        \"categoryId\":
+        \"20\",\n        \"liveBroadcastContent\": \"none\",\n        \"defaultLanguage\":
+        \"en\",\n        \"localized\": {\n          \"title\": \"Brawl Stars: Brawl
+        Talk - Gears Rework, Shield Brawler, and MORE!\",\n          \"description\":
+        \"Download NOW!! ►► https://supr.cl/2K62CZG\\nBe a BRAWLER! Subscribe! ►►
+        https://supr.cl/subscribe\\nInteract with the World Finals on ►► https://event.brawlstars.com
+        \\n\\n#brawltalk #ghoststation \\n\\nAn epic battle royale made for mobile!
+        Play with friends or solo across a variety of game modes in under three minutes.\\n\\nUnlock
+        and upgrade dozens of Brawlers with powerful Super abilities, Star Powers
+        and Gadgets! Collect unique skins to stand out and show off. Battle in a variety
+        of mysterious locations within the Brawliverse!\\n\\nBATTLE IN MULTIPLE GAME
+        MODES\\n- Gem Grab (3v3): Team up and out-strategize the opposing team. Collect
+        and hold 10 gems to win, but get fragged and lose your gems.\\n- Showdown
+        (Solo/Duo): A battle royale style fight for survival. Collect power ups for
+        your Brawler. Grab a friend or play solo - be the last Brawler standing in
+        the rowdiest battle royale yet. Winner take all!\\n- Brawl Ball (3v3): It's
+        a whole new Brawl game! Show off your soccer/football skills and score two
+        goals before the other team. There are no red cards here.\\n- Bounty (3v3):
+        Take out opponents to earn stars, but don’t let them pick you off. The squad
+        with the most stars wins the match!\\n- Heist (3v3): Protect your team’s safe
+        and try to crack open your opponents’. Navigate the map to sneak, blast and
+        blow your way clear to the enemies treasure.\\n- Special Events: Limited time
+        special PvE and PvP game modes.\\n- Championship Challenge: Join Brawl Stars'
+        esports scene with in-game qualifiers!\\n\\nUNLOCK AND UPGRADE BRAWLERS\\nCollect
+        and upgrade a variety of Brawlers with powerful Super abilities, Star Powers
+        and Gadgets! Level them up and collect unique skins.\\n\\nBRAWL PASS\\nComplete
+        quests, open Brawl Boxes, earn Gems, pins and an exclusive Brawl Pass skin!
+        Fresh content every season.\\n\\nBECOME THE STAR PLAYER\\nClimb the local
+        and regional leaderboards to prove you’re the greatest Brawler of them all!\\n\\nCONSTANTLY
+        EVOLVING\\nLook out for new Brawlers, skins, maps, special events and games
+        modes in the future.\\n\\nPLEASE NOTE! Brawl Stars is free to download and
+        play, however, some game items can also be purchased for real money. If you
+        don't want to use this feature, please disable in-app purchases in your device's
+        settings. Also, under our Terms of Service and Privacy Policy, you must be
+        at least 9 years of age to play or download Brawl Stars.\\n\\nFeatures:\\n-
+        Team up for real-time 3v3 battles against players from across the world\\n-
+        A fast-paced multiplayer battle royale mode made for mobile\\n- Unlock and
+        collect new, powerful Brawlers - each with a signature attack and Super ability\\n-
+        New events and game modes daily\\n- Battle solo or with friends\\n- Climb
+        to the top of the leaderboards in global and local rankings \\n- Join or start
+        your own Club with fellow players to share tips and battle together\\n- Customize
+        Brawlers with unlockable skins\\n- Player-designed maps offer challenging
+        new terrain to master\\n\\nFrom the makers of Clash of Clans, Clash Royale
+        and Boom Beach!\\n\\nSupport:\\nContact us in-game via Settings, Help and
+        Support — or visit http://supercell.helpshift.com/a/brawl-stars/\\n\\nPrivacy
+        Policy:\\nhttp://supercell.com/en/privacy-policy/\\n\\nTerms of Service:\\nhttp://supercell.com/en/terms-of-service/\\n\\nParent's
+        Guide:\\nhttp://supercell.com/en/parents/\"\n        },\n        \"defaultAudioLanguage\":
+        \"en\"\n      }\n    },\n    {\n      \"kind\": \"youtube#video\",\n      \"etag\":
+        \"xFICenpoRvgoOP67vKeJ34Ggcus\",\n      \"id\": \"j5y6xLpRwx4\",\n      \"snippet\":
+        {\n        \"publishedAt\": \"2022-10-20T00:00:11Z\",\n        \"channelId\":
+        \"UCGnjeahCJW1AF34HBmQTJ-Q\",\n        \"title\": \"Shakira, Ozuna - Monotonía
+        (Official Video)\",\n        \"description\": \"Shakira & Ozuna - Monotonía
+        (Official Video)\\n\\nMusic: \\nApple Music: https://SML.lnk.to/Monotonia/applemusic\\nSpotify:
+        https://SML.lnk.to/Monotonia/spotify\\nAmazon: https://SML.lnk.to/Monotonia/amazonmusicstreaming\\nYouTube:
+        https://SML.lnk.to/Monotonia/youtube\\niTunes: https://SML.lnk.to/Monotonia/itunes\\nDeezer:
+        https://SML.lnk.to/Monotonia/deezer\\nTikTok: https://SML.lnk.to/Monotonia/tiktokusemysound\\nPandora:
+        https://SML.lnk.to/Monotonia/pandora\\n\\nDirected by Jaume de la Iguana and
+        Shakira\\n\\nLyrics: \\n\\n2X\\nNo fue culpa tuya \\nni tampoco mía \\nfue
+        culpa de la monotonía \\nnunca dije nada pero me dolía \\nyo sabía que esto
+        pasaría \\n\\nTu en lo tuyo y haciendo lo mismo \\nsiempre buscando protagonismo
+        \\nte olvidaste de lo que un dia fuimos\\ny lo peor es que \\n\\nNo fue culpa
+        tuya \\nni tampoco mía \\nfue culpa de la monotonía \\nnunca dije nada pero
+        me dolía \\nyo sabía que esto pasaría \\n\\nDe repente no eras el mismo\\nme
+        dejaste por tu narcisismo \\nte olvidaste de lo que un día fuimos \\n\\nTu
+        distante con tu actitud \\ny eso me llenaba de inquietud \\ntú no daba ni
+        la mitad \\npero sí sé que di más que tú \\nestaba corriendo por alguien       \\nque
+        por mí ni estaba caminando \\n\\nEste amor no muerto pero esta delirando\\nya
+        de lo que había ya no hay na\\nte lo digo con sinceridad \\ntu estas frío
+        como en Navidad \\nes mejor que esto se acabe ya \\nno me repita la movie
+        otra vez que esa ya la vi \\n\\nBebe yo te quiero pero es que yo me quiero
+        más a mí \\nes un adios necesario \\nlo que un día fue increíble se volvió
+        rutinario\\nno me saben a nada tus labios \\nahora es todo lo contrario \\ny
+        lo peor es que\\n\\nNo fue culpa tuya \\nni tampoco mía \\nfue culpa de la
+        monotonía \\nnunca dije nada pero me dolía \\nyo sabía que esto pasaría \\n\\nTu
+        en lo tuyo y haciendo lo mismo \\nsiempre buscando protagonismo\\nte olvidaste
+        de lo que un día fuimos (ambos)\\neh eh eh (ambos)\\n\\nOfficial site: http://www.shakira.com\\nFacebook:
+        http://www.facebook.com/shakira\\nTwitter: http://www.twitter.com/shakira\\nInstagram:
+        http://www.instagram.com/shakira\\n\\n#Shakira #Ozuna #Monotonía\\n\\nMusic
+        video by Shakira, Ozuna performing Monotonía (Official Video). (C) 2022 Ace
+        Entertainment S.ar.l. under exclusive license to Sony Music Entertainment
+        US Latin\",\n        \"thumbnails\": {\n          \"default\": {\n            \"url\":
+        \"https://i.ytimg.com/vi/j5y6xLpRwx4/default.jpg\",\n            \"width\":
+        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
+        \           \"url\": \"https://i.ytimg.com/vi/j5y6xLpRwx4/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/j5y6xLpRwx4/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/j5y6xLpRwx4/sddefault.jpg\",\n
+        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/j5y6xLpRwx4/maxresdefault.jpg\",\n
+        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
+        \       \"channelTitle\": \"shakiraVEVO\",\n        \"tags\": [\n          \"Shakira\",\n
+        \         \"Ozuna\",\n          \"Shakira Ozuna Monotonía\",\n          \"Shakira
+        Ozuna\",\n          \"Monotonía Video\",\n          \"Monotonía Letra\",\n
+        \         \"Monotonía Lyrics\",\n          \"Shakira 2022\",\n          \"Ozuna
+        2022\",\n          \"Te Felicito\",\n          \"Latin Pop\",\n          \"Monotonía\",\n
+        \         \"Sony Music Latin\"\n        ],\n        \"categoryId\": \"10\",\n
+        \       \"liveBroadcastContent\": \"none\",\n        \"localized\": {\n          \"title\":
+        \"Shakira, Ozuna - Monotonía (Official Video)\",\n          \"description\":
+        \"Shakira & Ozuna - Monotonía (Official Video)\\n\\nMusic: \\nApple Music:
+        https://SML.lnk.to/Monotonia/applemusic\\nSpotify: https://SML.lnk.to/Monotonia/spotify\\nAmazon:
+        https://SML.lnk.to/Monotonia/amazonmusicstreaming\\nYouTube: https://SML.lnk.to/Monotonia/youtube\\niTunes:
+        https://SML.lnk.to/Monotonia/itunes\\nDeezer: https://SML.lnk.to/Monotonia/deezer\\nTikTok:
+        https://SML.lnk.to/Monotonia/tiktokusemysound\\nPandora: https://SML.lnk.to/Monotonia/pandora\\n\\nDirected
+        by Jaume de la Iguana and Shakira\\n\\nLyrics: \\n\\n2X\\nNo fue culpa tuya
+        \\nni tampoco mía \\nfue culpa de la monotonía \\nnunca dije nada pero me
+        dolía \\nyo sabía que esto pasaría \\n\\nTu en lo tuyo y haciendo lo mismo
+        \\nsiempre buscando protagonismo \\nte olvidaste de lo que un dia fuimos\\ny
+        lo peor es que \\n\\nNo fue culpa tuya \\nni tampoco mía \\nfue culpa de la
+        monotonía \\nnunca dije nada pero me dolía \\nyo sabía que esto pasaría \\n\\nDe
+        repente no eras el mismo\\nme dejaste por tu narcisismo \\nte olvidaste de
+        lo que un día fuimos \\n\\nTu distante con tu actitud \\ny eso me llenaba
+        de inquietud \\ntú no daba ni la mitad \\npero sí sé que di más que tú \\nestaba
+        corriendo por alguien       \\nque por mí ni estaba caminando \\n\\nEste amor
+        no muerto pero esta delirando\\nya de lo que había ya no hay na\\nte lo digo
+        con sinceridad \\ntu estas frío como en Navidad \\nes mejor que esto se acabe
+        ya \\nno me repita la movie otra vez que esa ya la vi \\n\\nBebe yo te quiero
+        pero es que yo me quiero más a mí \\nes un adios necesario \\nlo que un día
+        fue increíble se volvió rutinario\\nno me saben a nada tus labios \\nahora
+        es todo lo contrario \\ny lo peor es que\\n\\nNo fue culpa tuya \\nni tampoco
+        mía \\nfue culpa de la monotonía \\nnunca dije nada pero me dolía \\nyo sabía
+        que esto pasaría \\n\\nTu en lo tuyo y haciendo lo mismo \\nsiempre buscando
+        protagonismo\\nte olvidaste de lo que un día fuimos (ambos)\\neh eh eh (ambos)\\n\\nOfficial
+        site: http://www.shakira.com\\nFacebook: http://www.facebook.com/shakira\\nTwitter:
+        http://www.twitter.com/shakira\\nInstagram: http://www.instagram.com/shakira\\n\\n#Shakira
+        #Ozuna #Monotonía\\n\\nMusic video by Shakira, Ozuna performing Monotonía
+        (Official Video). (C) 2022 Ace Entertainment S.ar.l. under exclusive license
+        to Sony Music Entertainment US Latin\"\n        }\n      }\n    },\n    {\n
+        \     \"kind\": \"youtube#video\",\n      \"etag\": \"Ql8YRy3NeyNWZM_jHjRhN3tV6B4\",\n
+        \     \"id\": \"XL8_vrx4dRU\",\n      \"snippet\": {\n        \"publishedAt\":
+        \"2022-10-21T21:00:07Z\",\n        \"channelId\": \"UChX2haJZZJOtIIrdqLPvQWA\",\n
+        \       \"title\": \"La Patrona - Edwin Luna y La Trakalosa de Monterrey -
+        Leandro Ríos (Video Oficial)\",\n        \"description\": \"Escúchalo en tu
+        plataforma favorita:\\nhttps://orcd.co/lapatrona_all\\n\\nPARA CONTRATACIONES:\\nMEXICO:\\nTELS.
+        +52 (81) 1873-8066 / +52 (81) 1873-8067\\nCEL/WHATSAPP: +52-1-812-640-8822\\nUSA:\\nTEL.
+        (956) 282-4423\\n------\\nEMAIL: ventas@remexmusic.net\\n\\nSuscríbete al
+        canal: http://bit.ly/RemexYT\\n\\nSíguenos en:\\nFacebook: https://www.facebook.com/RepresentacionesRemexMusic\\nInstagram:
+        https://www.instagram.com/remexmusicoficial/\\nTwitter: https://twitter.com/remex_music\\n\\nLetra:\\nVeo
+        cómo te mueves caminas diferente\\nPor más que disimules eres distinta al
+        resto de la gente\\nAndas entaconada y con Dolce & Gabanna\\nEn el trabajo
+        tú no tienes jefe \\n\\nPor bonita no llegaste a donde estas\\nCada verde
+        te lo supiste ganar \\n\\nY la patrona se la rifa en un carro deportivo\\nCon
+        los cristales blindados se le mira bien arriba \\nEn lugares elegantes haciendo
+        negocios grandes \\n\\nLa patrona es canija, no le gustan los problemas\\nPero
+        si le buscas pleito en un segundo te aniquila\\nEs la jefa de la plaza, en
+        los antros siempre se le ve enfiestada y escoltada \\nTiene todo un arsenal
+        es muy valiente ella no le teme a nada\\n\\nPor bonita no llegaste a donde
+        estas\\nCada verde te lo supiste ganar \\n\\nLa patrona se la rifa en un carro
+        deportivo\\nCon los cristales blindados se le mira bien arriba \\nEn lugares
+        elegantes haciendo negocios grandes \\n\\nLa patrona es canija, no le gustan
+        los problemas\\nPero si le buscas pleito en un segundo te aniquila\\nEs la
+        jefa de la plaza, en los antros siempre se le ve enfiestada y escoltada \\nTiene
+        todo un arsenal es muy valiente ella no le teme a nada.\\n\\n#EdwinLuna #LaTrakalosaDeMonterrey
+        #LeandroRíos #lapatrona  #musicabanda  #RemexMusic #latrakalosa #kimflores\",\n
+        \       \"thumbnails\": {\n          \"default\": {\n            \"url\":
+        \"https://i.ytimg.com/vi/XL8_vrx4dRU/default.jpg\",\n            \"width\":
+        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
+        \           \"url\": \"https://i.ytimg.com/vi/XL8_vrx4dRU/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/XL8_vrx4dRU/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/XL8_vrx4dRU/sddefault.jpg\",\n
+        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/XL8_vrx4dRU/maxresdefault.jpg\",\n
+        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
+        \       \"channelTitle\": \"RemexMusic\",\n        \"tags\": [\n          \"edwin
+        luna\",\n          \"la trakalosa de monterrey\",\n          \"edwin luna
+        y la trakalosa de monterrey\",\n          \"musica de la trakalosa\",\n          \"remex
+        music\",\n          \"banda\",\n          \"exitos banda\",\n          \"éxitos
+        banda\",\n          \"musica banda\",\n          \"playlist banda\",\n          \"la
+        trakalosa\",\n          \"banda la trakalosa\",\n          \"musica de banda
+        la trakalosa\",\n          \"banda la trakalosa letra\",\n          \"la patrona\",\n
+        \         \"edwin luna la patrona\",\n          \"leandro ríos la patrona\",\n
+        \         \"liandro rios la patrona\",\n          \"kim flores la patrona\",\n
+        \         \"kim flores\",\n          \"musica de leandro ríos\",\n          \"la
+        trakalosa la patrona\"\n        ],\n        \"categoryId\": \"10\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"localized\": {\n          \"title\": \"La Patrona - Edwin
+        Luna y La Trakalosa de Monterrey - Leandro Ríos (Video Oficial)\",\n          \"description\":
+        \"Escúchalo en tu plataforma favorita:\\nhttps://orcd.co/lapatrona_all\\n\\nPARA
+        CONTRATACIONES:\\nMEXICO:\\nTELS. +52 (81) 1873-8066 / +52 (81) 1873-8067\\nCEL/WHATSAPP:
+        +52-1-812-640-8822\\nUSA:\\nTEL. (956) 282-4423\\n------\\nEMAIL: ventas@remexmusic.net\\n\\nSuscríbete
+        al canal: http://bit.ly/RemexYT\\n\\nSíguenos en:\\nFacebook: https://www.facebook.com/RepresentacionesRemexMusic\\nInstagram:
+        https://www.instagram.com/remexmusicoficial/\\nTwitter: https://twitter.com/remex_music\\n\\nLetra:\\nVeo
+        cómo te mueves caminas diferente\\nPor más que disimules eres distinta al
+        resto de la gente\\nAndas entaconada y con Dolce & Gabanna\\nEn el trabajo
+        tú no tienes jefe \\n\\nPor bonita no llegaste a donde estas\\nCada verde
+        te lo supiste ganar \\n\\nY la patrona se la rifa en un carro deportivo\\nCon
+        los cristales blindados se le mira bien arriba \\nEn lugares elegantes haciendo
+        negocios grandes \\n\\nLa patrona es canija, no le gustan los problemas\\nPero
+        si le buscas pleito en un segundo te aniquila\\nEs la jefa de la plaza, en
+        los antros siempre se le ve enfiestada y escoltada \\nTiene todo un arsenal
+        es muy valiente ella no le teme a nada\\n\\nPor bonita no llegaste a donde
+        estas\\nCada verde te lo supiste ganar \\n\\nLa patrona se la rifa en un carro
+        deportivo\\nCon los cristales blindados se le mira bien arriba \\nEn lugares
+        elegantes haciendo negocios grandes \\n\\nLa patrona es canija, no le gustan
+        los problemas\\nPero si le buscas pleito en un segundo te aniquila\\nEs la
+        jefa de la plaza, en los antros siempre se le ve enfiestada y escoltada \\nTiene
+        todo un arsenal es muy valiente ella no le teme a nada.\\n\\n#EdwinLuna #LaTrakalosaDeMonterrey
+        #LeandroRíos #lapatrona  #musicabanda  #RemexMusic #latrakalosa #kimflores\"\n
+        \       }\n      }\n    }\n  ],\n  \"nextPageToken\": \"CAUQAA\",\n  \"pageInfo\":
+        {\n    \"totalResults\": 200,\n    \"resultsPerPage\": 5\n  }\n}\n"
+  recorded_at: Sun, 23 Oct 2022 10:22:26 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=BAD_TOKEN&part=snippet&regionCode=GT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 23 Oct 2022 10:22:27 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "code": 400,
+            "message": "API key not valid. Please pass a valid API key.",
+            "errors": [
+              {
+                "message": "API key not valid. Please pass a valid API key.",
+                "domain": "global",
+                "reason": "badRequest"
+              }
+            ],
+            "status": "INVALID_ARGUMENT",
+            "details": [
+              {
+                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+                "reason": "API_KEY_INVALID",
+                "domain": "googleapis.com",
+                "metadata": {
+                  "service": "youtube.googleapis.com"
+                }
+              }
+            ]
+          }
+        }
+  recorded_at: Sun, 23 Oct 2022 10:22:27 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/commentThreads?key=<YOUTUBE_API_KEY>&part=snippet,replies&videoId=ggGINmj5EQE
@@ -285,8 +1013,6 @@ http_interactions:
     headers:
       Connection:
       - close
-      Host:
-      - www.googleapis.com
       User-Agent:
       - http.rb/5.1.0
   response:
@@ -301,7 +1027,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sun, 23 Oct 2022 09:56:42 GMT
+      - Sun, 23 Oct 2022 10:22:27 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -324,7 +1050,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "{\n  \"kind\": \"youtube#commentThreadListResponse\",\n  \"etag\":
-        \"DcXGnBZWuLrotDX-JaDFFQ-Ln1Q\",\n  \"nextPageToken\": \"QURTSl9pM21oQlQzN00tenplcjVtaFdrYm9iaGtJbGRyRVhuX1VLN0Z4QVREVlhkSWltOHFIeld4NmUxSXpyTTlOT19mbEhrSUF1X1RTeUJDVnh2Wkl0bmlzZVVsdE43LXc=\",\n
+        \"6XLfCOjWUP6Fg8ixn3BXnrsPvUE\",\n  \"nextPageToken\": \"QURTSl9pM1I4WU90RWYtdW5pdGdxbERIeUFGaHJzNFlKaDd4SnVoMkNTZW44TFYzdC1FaGdJYl9WVVZNdFVia0EweVh5QVJSd0JZSDZDTlp4RWg4M085Xzh4bC1lVmpNTkE=\",\n
         \ \"pageInfo\": {\n    \"totalResults\": 20,\n    \"resultsPerPage\": 20\n
         \ },\n  \"items\": [\n    {\n      \"kind\": \"youtube#commentThread\",\n
         \     \"etag\": \"cjqe60V12bAIx0c-nijl9VMfTMY\",\n      \"id\": \"UgwVnoC8Iy-N7vukGVZ4AaABAg\",\n
@@ -691,18 +1417,16 @@ http_interactions:
         \           \"updatedAt\": \"2022-10-21T21:39:39Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    }\n  ]\n}\n"
-  recorded_at: Sun, 23 Oct 2022 09:56:42 GMT
+  recorded_at: Sun, 23 Oct 2022 10:22:27 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=BAD_TOKEN&part=snippet&regionCode=MX
+    uri: https://www.googleapis.com/youtube/v3/commentThreads?key=BAD_TOKEN&part=snippet,replies&videoId=ggGINmj5EQE
     body:
       encoding: UTF-8
       string: ''
     headers:
       Connection:
       - close
-      Host:
-      - www.googleapis.com
       User-Agent:
       - http.rb/5.1.0
   response:
@@ -717,7 +1441,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sun, 23 Oct 2022 09:56:42 GMT
+      - Sun, 23 Oct 2022 10:22:27 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -764,18 +1488,16 @@ http_interactions:
             ]
           }
         }
-  recorded_at: Sun, 23 Oct 2022 09:56:42 GMT
+  recorded_at: Sun, 23 Oct 2022 10:22:27 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=<YOUTUBE_API_KEY>&part=snippet&regionCode=MX
+    uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=<YOUTUBE_API_KEY>&part=snippet,statistics,contentDetails
     body:
       encoding: UTF-8
       string: ''
     headers:
       Connection:
       - close
-      Host:
-      - www.googleapis.com
       User-Agent:
       - http.rb/5.1.0
   response:
@@ -790,441 +1512,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sun, 23 Oct 2022 09:56:42 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: "{\n  \"kind\": \"youtube#videoListResponse\",\n  \"etag\": \"sXvYgt_nUqx12BtCgUXr_6y9Ae4\",\n
-        \ \"items\": [\n    {\n      \"kind\": \"youtube#video\",\n      \"etag\":
-        \"2XBI2GZmC5uR1-s5ROXpvTEpcpQ\",\n      \"id\": \"mxF58TYuPaM\",\n      \"snippet\":
-        {\n        \"publishedAt\": \"2022-10-21T04:01:22Z\",\n        \"channelId\":
-        \"UCgmUtgxaeaT6CSHc70AQMEg\",\n        \"title\": \"Kim Loaiza - DEVOTO (Video
-        Oficial) Ft. Elvis De Yongol\",\n        \"description\": \"DEVOTO • Kim Loaiza
-        • Space Music • Elvis De Yongol \\n\\n\\n✨ SIGUEME AQUI ✨\\n\\n\\n• INSTAGRAM:
-        @Kimberly.Loaiza http://bit.ly/IGKim\\n\\n• PAGINA DE FACEBOOK: Kimberly Loaiza
-        http://bit.ly/FBKimL\\n\\n• TWITTER: KimberlyLoaiza_   http://bit.ly/KimLTW\\n\\n•SUSCRÍBETE
-        AQUÍ: https://bit.ly/3oYuGUW\\n\\nLETRA ✍\U0001F3FB \\n\\nPor la boca muere
-        el pez \\ny tú la abriste mucho y te me ahogaste \\nla herida que dejaste
-        \\nyo la curo con unos tequilas \\nhay que cosas de la vida \\nalguien como
-        tú fácil de olvida \\nno vuelvo a caer.\\n \\nCuando me veas a través del
-        vaso \\ny sepas que fuiste un total fracaso \\nTe acuerdes de mi estando bien
-        borracho \\nY te quieras pegar un balazo \\nviendo mis fotos, \\ncon el corazón
-        roto \\nConmigo te sacaste la loto\\nAhora estás de luto \\nyo soy tu santa
-        y tu mi devoto \\n \\nCuando me veas a través del vaso \\ny sepas que fuiste
-        un total fracaso \\nTe acuerdes de mi estando bien borracho \\nY te quieras
-        pegar un balazo \\nviendo mis fotos, \\ncon el corazón roto \\nConmigo te
-        sacaste la loto\\nAhora estás de luto \\nyo soy tu santa y tu mi devoto \\n \\n \\n \\nTe
-        acuerdas cuando te reías \\nYo aguantando tus tonterías\\nNo veías lo que
-        me dolía \\nO quizá lo sabías, pero te valía \\nEsta no te la dejo pasar \\nAsí
-        que no me mandes mas whatsapp \\nSe cayo la red pa ti \\nYa no estoy en línea
-        pa ti \\n \\n \\nEres de esos que solo prometen\\nMe canse de ser tu juguete
-        \\nAunque en tu casa me pongas un altar \\nCon unas velas te pongas a rezar
-        \\nYa nada va a pasar \\n \\n \\nCuando me veas a través del vaso \\ny sepas
-        que fuiste un total fracaso \\nTe acuerdes de mi estando bien borracho \\nte
-        quieras pegar un balazo \\nviendo mis fotos, \\ncon el corazón roto \\nConmigo
-        te sacaste la loto\\nAhora estás de luto \\nyo soy tu santa y tu mi devoto
-        \\n \\n \\nA ti te gusta que te rece todo los días \\nTe pida perdón y confiese
-        que te quería \\nTu no eres Virgen aunque te llames María \\nMe saliste mala
-        que suerte la mía \\nTiraba la piedra y yo que te veía \\nNo eres ostia pero
-        los domingos te comía \\nTu eres mi santa y yo siempre seré tu mesías \\nHey
-        \\n \\n \\nA mi no me engañas \\nme tienes ganas \\nPa que te ensañas \\nNos
-        vemos mañana \\nYa déjate de tantas mentiras \\nen el fondo a mi tu a mi no
-        me olvidas \\nMami dame beso \\nDisfruta del proceso\\nTu serás la presa \\nDe
-        este preso \\nCaliente como café expreso \\nNo estamos en el polo pero súbete
-        a mi expreso\\n \\nCuando me veas a través del vaso y sepas que fuiste un
-        total fracaso \\nTe acuerdes de mi estando bien borracho \\nte quieras pegar
-        un balazo viendo mis fotos, con el corazón roto \\nConmigo te sacaste la loto\\nAhora
-        estás de luto yo soy tu santa y tu mi devoto\\n \\nPor la  boca muere el pez
-        \\ny tú la abriste mucho y te me ahogaste \\nla herida que dejaste \\nyo la
-        curo con unos tequilas \\nhay que cosas de la vida \\nalguien como tú fácil
-        de olvida \\nno vuelvo a caer.\\n\\n\\n\\nCONTACTO \U0001F48C: Marcaskim@gmail.com\",\n
-        \       \"thumbnails\": {\n          \"default\": {\n            \"url\":
-        \"https://i.ytimg.com/vi/mxF58TYuPaM/default.jpg\",\n            \"width\":
-        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
-        \           \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/mqdefault.jpg\",\n
-        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/hqdefault.jpg\",\n
-        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/sddefault.jpg\",\n
-        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/maxresdefault.jpg\",\n
-        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
-        \       \"channelTitle\": \"Kim Loaiza\",\n        \"tags\": [\n          \"MUSICA\",\n
-        \         \"SPACE\",\n          \"MUSIC\",\n          \"KIM\",\n          \"LOAIZA\",\n
-        \         \"POP\",\n          \"TRAP\",\n          \"REGGAETON\"\n        ],\n
-        \       \"categoryId\": \"10\",\n        \"liveBroadcastContent\": \"none\",\n
-        \       \"localized\": {\n          \"title\": \"Kim Loaiza - DEVOTO (Video
-        Oficial) Ft. Elvis De Yongol\",\n          \"description\": \"DEVOTO • Kim
-        Loaiza • Space Music • Elvis De Yongol \\n\\n\\n✨ SIGUEME AQUI ✨\\n\\n\\n•
-        INSTAGRAM: @Kimberly.Loaiza http://bit.ly/IGKim\\n\\n• PAGINA DE FACEBOOK:
-        Kimberly Loaiza http://bit.ly/FBKimL\\n\\n• TWITTER: KimberlyLoaiza_   http://bit.ly/KimLTW\\n\\n•SUSCRÍBETE
-        AQUÍ: https://bit.ly/3oYuGUW\\n\\nLETRA ✍\U0001F3FB \\n\\nPor la boca muere
-        el pez \\ny tú la abriste mucho y te me ahogaste \\nla herida que dejaste
-        \\nyo la curo con unos tequilas \\nhay que cosas de la vida \\nalguien como
-        tú fácil de olvida \\nno vuelvo a caer.\\n \\nCuando me veas a través del
-        vaso \\ny sepas que fuiste un total fracaso \\nTe acuerdes de mi estando bien
-        borracho \\nY te quieras pegar un balazo \\nviendo mis fotos, \\ncon el corazón
-        roto \\nConmigo te sacaste la loto\\nAhora estás de luto \\nyo soy tu santa
-        y tu mi devoto \\n \\nCuando me veas a través del vaso \\ny sepas que fuiste
-        un total fracaso \\nTe acuerdes de mi estando bien borracho \\nY te quieras
-        pegar un balazo \\nviendo mis fotos, \\ncon el corazón roto \\nConmigo te
-        sacaste la loto\\nAhora estás de luto \\nyo soy tu santa y tu mi devoto \\n \\n \\n \\nTe
-        acuerdas cuando te reías \\nYo aguantando tus tonterías\\nNo veías lo que
-        me dolía \\nO quizá lo sabías, pero te valía \\nEsta no te la dejo pasar \\nAsí
-        que no me mandes mas whatsapp \\nSe cayo la red pa ti \\nYa no estoy en línea
-        pa ti \\n \\n \\nEres de esos que solo prometen\\nMe canse de ser tu juguete
-        \\nAunque en tu casa me pongas un altar \\nCon unas velas te pongas a rezar
-        \\nYa nada va a pasar \\n \\n \\nCuando me veas a través del vaso \\ny sepas
-        que fuiste un total fracaso \\nTe acuerdes de mi estando bien borracho \\nte
-        quieras pegar un balazo \\nviendo mis fotos, \\ncon el corazón roto \\nConmigo
-        te sacaste la loto\\nAhora estás de luto \\nyo soy tu santa y tu mi devoto
-        \\n \\n \\nA ti te gusta que te rece todo los días \\nTe pida perdón y confiese
-        que te quería \\nTu no eres Virgen aunque te llames María \\nMe saliste mala
-        que suerte la mía \\nTiraba la piedra y yo que te veía \\nNo eres ostia pero
-        los domingos te comía \\nTu eres mi santa y yo siempre seré tu mesías \\nHey
-        \\n \\n \\nA mi no me engañas \\nme tienes ganas \\nPa que te ensañas \\nNos
-        vemos mañana \\nYa déjate de tantas mentiras \\nen el fondo a mi tu a mi no
-        me olvidas \\nMami dame beso \\nDisfruta del proceso\\nTu serás la presa \\nDe
-        este preso \\nCaliente como café expreso \\nNo estamos en el polo pero súbete
-        a mi expreso\\n \\nCuando me veas a través del vaso y sepas que fuiste un
-        total fracaso \\nTe acuerdes de mi estando bien borracho \\nte quieras pegar
-        un balazo viendo mis fotos, con el corazón roto \\nConmigo te sacaste la loto\\nAhora
-        estás de luto yo soy tu santa y tu mi devoto\\n \\nPor la  boca muere el pez
-        \\ny tú la abriste mucho y te me ahogaste \\nla herida que dejaste \\nyo la
-        curo con unos tequilas \\nhay que cosas de la vida \\nalguien como tú fácil
-        de olvida \\nno vuelvo a caer.\\n\\n\\n\\nCONTACTO \U0001F48C: Marcaskim@gmail.com\"\n
-        \       },\n        \"defaultAudioLanguage\": \"es-419\"\n      }\n    },\n
-        \   {\n      \"kind\": \"youtube#video\",\n      \"etag\": \"dFrn9teBXJsMpNiuNUhJ5aJr-hM\",\n
-        \     \"id\": \"Zm0LjUBZyUY\",\n      \"snippet\": {\n        \"publishedAt\":
-        \"2022-10-22T12:00:11Z\",\n        \"channelId\": \"UC_F8DoJf9MZogEOU51TpTbQ\",\n
-        \       \"title\": \"Clash Royale: NEW UPDATE! \U0001F9D8 Two New Cards and
-        much more! (TV Royale)\",\n        \"description\": \"The biggest update of
-        the year! \U0001F389\\nTwo new cards, a new ranked mode, a reworked Trophy
-        Road, the Deck Explorer, new King Levels... and much more! Coming on October
-        26th!\\nFind out in this TV Royale!\\n\\nFollow us on our Socials!\\nTwitter
-        ► https://twitter.com/ClashRoyale/\\nInstagram ► https://www.instagram.com/clashroyale\\nTikTok
-        ► https://www.tiktok.com/@clashroyale\\nFacebook ► https://www.facebook.com/ClashRoyale/\\n\\nSubscribe
-        for more! ►► http://supr.cl/SubRoyale\\n\\nSubscribe for more! ►► http://supr.cl/SubRoyale\\n\\nEnter
-        the Arena! \\nFrom the creators of Clash of Clans comes a real-time multiplayer
-        game starring the Royales, your favorite Clash characters and much, much more.\\nCollect
-        and upgrade dozens of cards featuring the Clash of Clans troops, spells and
-        defenses you know and love, as well as the Royales: Princes, Knights, Baby
-        Dragons and more. Knock the enemy King and Princesses from their towers to
-        defeat your opponents and win Trophies, Crowns and glory in the Arena. Form
-        a Clan to share cards and build your very own battle community.\\nLead the
-        Clash Royale Family to victory!\\n\\nFEATURES\\n• Duel players from around
-        the world in real-time in both 1v1 and 2v2 Battles\\n• Earn chests to unlock
-        rewards, collect powerful new cards and upgrade existing ones\\n• Destroy
-        opponent’s towers and win Crowns to earn epic Crown chests in the Pass Royale\\n•
-        Build and upgrade your card collection with the Clash Royale Family along
-        with dozens of your favorite Clash troops, spells and defenses\\n• Construct
-        your ultimate Battle Deck to defeat your opponents\\n• Progress through multiple
-        Arenas all the way to the top\\n• Form a Clan to share cards and build your
-        very own battle community\\n• Challenge your Clanmates and friends to a private
-        duel, or play side-by-side in a 2v2 Battle\\n• Battle with your Clan in the
-        Clan Wars\\n• Play in events and special challenges every week\\n• Learn different
-        battle tactics by watching the best duels on TV Royale\\n\\n\\nPLEASE NOTE!
-        Clash Royale is free to download and play, however, some game items can also
-        be purchased for real money. If you don’t want to use this feature, please
-        disable in-app purchases in your device’s settings. Also, under our Terms
-        of Service and Privacy Policy, you must be at least 13 years of age to play
-        or download Clash Royale. A network connection is also required.\\n\\nSupport:\\nAre
-        you having problems? Visit http://supercell.helpshift.com/a/clas... or contact
-        us in-game by going to Settings, Help and support.\\n\\nPrivacy Policy:\\nhttp://supercell.com/en/privacy-policy/\\n\\nTerms
-        of Service:\\nhttp://supercell.com/en/terms-of-serv...\\n\\nParent’s Guide:\\nhttp://supercell.com/en/parents/\\n\\n#ClashRoyale\",\n
-        \       \"thumbnails\": {\n          \"default\": {\n            \"url\":
-        \"https://i.ytimg.com/vi/Zm0LjUBZyUY/default.jpg\",\n            \"width\":
-        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
-        \           \"url\": \"https://i.ytimg.com/vi/Zm0LjUBZyUY/mqdefault.jpg\",\n
-        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Zm0LjUBZyUY/hqdefault.jpg\",\n
-        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Zm0LjUBZyUY/sddefault.jpg\",\n
-        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Zm0LjUBZyUY/maxresdefault.jpg\",\n
-        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
-        \       \"channelTitle\": \"Clash Royale\",\n        \"tags\": [\n          \"Clash
-        Royale\",\n          \"Clash Royale Game\",\n          \"Supercell\",\n          \"Supercell
-        Game\",\n          \"Clash Royale Supercell\",\n          \"Mobile Game\",\n
-        \         \"tv royale\"\n        ],\n        \"categoryId\": \"20\",\n        \"liveBroadcastContent\":
-        \"none\",\n        \"defaultLanguage\": \"en\",\n        \"localized\": {\n
-        \         \"title\": \"Clash Royale: NEW UPDATE! \U0001F9D8 Two New Cards
-        and much more! (TV Royale)\",\n          \"description\": \"The biggest update
-        of the year! \U0001F389\\nTwo new cards, a new ranked mode, a reworked Trophy
-        Road, the Deck Explorer, new King Levels... and much more! Coming on October
-        26th!\\nFind out in this TV Royale!\\n\\nFollow us on our Socials!\\nTwitter
-        ► https://twitter.com/ClashRoyale/\\nInstagram ► https://www.instagram.com/clashroyale\\nTikTok
-        ► https://www.tiktok.com/@clashroyale\\nFacebook ► https://www.facebook.com/ClashRoyale/\\n\\nSubscribe
-        for more! ►► http://supr.cl/SubRoyale\\n\\nSubscribe for more! ►► http://supr.cl/SubRoyale\\n\\nEnter
-        the Arena! \\nFrom the creators of Clash of Clans comes a real-time multiplayer
-        game starring the Royales, your favorite Clash characters and much, much more.\\nCollect
-        and upgrade dozens of cards featuring the Clash of Clans troops, spells and
-        defenses you know and love, as well as the Royales: Princes, Knights, Baby
-        Dragons and more. Knock the enemy King and Princesses from their towers to
-        defeat your opponents and win Trophies, Crowns and glory in the Arena. Form
-        a Clan to share cards and build your very own battle community.\\nLead the
-        Clash Royale Family to victory!\\n\\nFEATURES\\n• Duel players from around
-        the world in real-time in both 1v1 and 2v2 Battles\\n• Earn chests to unlock
-        rewards, collect powerful new cards and upgrade existing ones\\n• Destroy
-        opponent’s towers and win Crowns to earn epic Crown chests in the Pass Royale\\n•
-        Build and upgrade your card collection with the Clash Royale Family along
-        with dozens of your favorite Clash troops, spells and defenses\\n• Construct
-        your ultimate Battle Deck to defeat your opponents\\n• Progress through multiple
-        Arenas all the way to the top\\n• Form a Clan to share cards and build your
-        very own battle community\\n• Challenge your Clanmates and friends to a private
-        duel, or play side-by-side in a 2v2 Battle\\n• Battle with your Clan in the
-        Clan Wars\\n• Play in events and special challenges every week\\n• Learn different
-        battle tactics by watching the best duels on TV Royale\\n\\n\\nPLEASE NOTE!
-        Clash Royale is free to download and play, however, some game items can also
-        be purchased for real money. If you don’t want to use this feature, please
-        disable in-app purchases in your device’s settings. Also, under our Terms
-        of Service and Privacy Policy, you must be at least 13 years of age to play
-        or download Clash Royale. A network connection is also required.\\n\\nSupport:\\nAre
-        you having problems? Visit http://supercell.helpshift.com/a/clas... or contact
-        us in-game by going to Settings, Help and support.\\n\\nPrivacy Policy:\\nhttp://supercell.com/en/privacy-policy/\\n\\nTerms
-        of Service:\\nhttp://supercell.com/en/terms-of-serv...\\n\\nParent’s Guide:\\nhttp://supercell.com/en/parents/\\n\\n#ClashRoyale\"\n
-        \       },\n        \"defaultAudioLanguage\": \"en\"\n      }\n    },\n    {\n
-        \     \"kind\": \"youtube#video\",\n      \"etag\": \"YP6TyvsjP5u6Kx_k4Hhuz9zrPL4\",\n
-        \     \"id\": \"Dn_noN00sPo\",\n      \"snippet\": {\n        \"publishedAt\":
-        \"2022-10-22T15:00:10Z\",\n        \"channelId\": \"UCooVYzDxdwTtGYAkcPmOgOw\",\n
-        \       \"title\": \"Brawl Stars: Brawl Talk - Gears Rework, Shield Brawler,
-        and MORE!\",\n        \"description\": \"Download NOW!! ►► https://supr.cl/2K62CZG\\nBe
-        a BRAWLER! Subscribe! ►► https://supr.cl/subscribe\\nInteract with the World
-        Finals on ►► https://event.brawlstars.com \\n\\n#brawltalk #ghoststation \\n\\nAn
-        epic battle royale made for mobile! Play with friends or solo across a variety
-        of game modes in under three minutes.\\n\\nUnlock and upgrade dozens of Brawlers
-        with powerful Super abilities, Star Powers and Gadgets! Collect unique skins
-        to stand out and show off. Battle in a variety of mysterious locations within
-        the Brawliverse!\\n\\nBATTLE IN MULTIPLE GAME MODES\\n- Gem Grab (3v3): Team
-        up and out-strategize the opposing team. Collect and hold 10 gems to win,
-        but get fragged and lose your gems.\\n- Showdown (Solo/Duo): A battle royale
-        style fight for survival. Collect power ups for your Brawler. Grab a friend
-        or play solo - be the last Brawler standing in the rowdiest battle royale
-        yet. Winner take all!\\n- Brawl Ball (3v3): It's a whole new Brawl game! Show
-        off your soccer/football skills and score two goals before the other team.
-        There are no red cards here.\\n- Bounty (3v3): Take out opponents to earn
-        stars, but don’t let them pick you off. The squad with the most stars wins
-        the match!\\n- Heist (3v3): Protect your team’s safe and try to crack open
-        your opponents’. Navigate the map to sneak, blast and blow your way clear
-        to the enemies treasure.\\n- Special Events: Limited time special PvE and
-        PvP game modes.\\n- Championship Challenge: Join Brawl Stars' esports scene
-        with in-game qualifiers!\\n\\nUNLOCK AND UPGRADE BRAWLERS\\nCollect and upgrade
-        a variety of Brawlers with powerful Super abilities, Star Powers and Gadgets!
-        Level them up and collect unique skins.\\n\\nBRAWL PASS\\nComplete quests,
-        open Brawl Boxes, earn Gems, pins and an exclusive Brawl Pass skin! Fresh
-        content every season.\\n\\nBECOME THE STAR PLAYER\\nClimb the local and regional
-        leaderboards to prove you’re the greatest Brawler of them all!\\n\\nCONSTANTLY
-        EVOLVING\\nLook out for new Brawlers, skins, maps, special events and games
-        modes in the future.\\n\\nPLEASE NOTE! Brawl Stars is free to download and
-        play, however, some game items can also be purchased for real money. If you
-        don't want to use this feature, please disable in-app purchases in your device's
-        settings. Also, under our Terms of Service and Privacy Policy, you must be
-        at least 9 years of age to play or download Brawl Stars.\\n\\nFeatures:\\n-
-        Team up for real-time 3v3 battles against players from across the world\\n-
-        A fast-paced multiplayer battle royale mode made for mobile\\n- Unlock and
-        collect new, powerful Brawlers - each with a signature attack and Super ability\\n-
-        New events and game modes daily\\n- Battle solo or with friends\\n- Climb
-        to the top of the leaderboards in global and local rankings \\n- Join or start
-        your own Club with fellow players to share tips and battle together\\n- Customize
-        Brawlers with unlockable skins\\n- Player-designed maps offer challenging
-        new terrain to master\\n\\nFrom the makers of Clash of Clans, Clash Royale
-        and Boom Beach!\\n\\nSupport:\\nContact us in-game via Settings, Help and
-        Support — or visit http://supercell.helpshift.com/a/brawl-stars/\\n\\nPrivacy
-        Policy:\\nhttp://supercell.com/en/privacy-policy/\\n\\nTerms of Service:\\nhttp://supercell.com/en/terms-of-service/\\n\\nParent's
-        Guide:\\nhttp://supercell.com/en/parents/\",\n        \"thumbnails\": {\n
-        \         \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/Dn_noN00sPo/default.jpg\",\n
-        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Dn_noN00sPo/mqdefault.jpg\",\n
-        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Dn_noN00sPo/hqdefault.jpg\",\n
-        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Dn_noN00sPo/sddefault.jpg\",\n
-        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Dn_noN00sPo/maxresdefault.jpg\",\n
-        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
-        \       \"channelTitle\": \"Brawl Stars\",\n        \"tags\": [\n          \"brawl
-        stars\",\n          \"mobile game\",\n          \"mobile strategy game\",\n
-        \         \"mobile rpg\",\n          \"mobile battle royale\",\n          \"battle
-        royale\",\n          \"supercell game\",\n          \"brawl talk\",\n          \"ghost
-        station\",\n          \"gears rework\"\n        ],\n        \"categoryId\":
-        \"20\",\n        \"liveBroadcastContent\": \"none\",\n        \"defaultLanguage\":
-        \"en\",\n        \"localized\": {\n          \"title\": \"Brawl Stars: Brawl
-        Talk - Gears Rework, Shield Brawler, and MORE!\",\n          \"description\":
-        \"Download NOW!! ►► https://supr.cl/2K62CZG\\nBe a BRAWLER! Subscribe! ►►
-        https://supr.cl/subscribe\\nInteract with the World Finals on ►► https://event.brawlstars.com
-        \\n\\n#brawltalk #ghoststation \\n\\nAn epic battle royale made for mobile!
-        Play with friends or solo across a variety of game modes in under three minutes.\\n\\nUnlock
-        and upgrade dozens of Brawlers with powerful Super abilities, Star Powers
-        and Gadgets! Collect unique skins to stand out and show off. Battle in a variety
-        of mysterious locations within the Brawliverse!\\n\\nBATTLE IN MULTIPLE GAME
-        MODES\\n- Gem Grab (3v3): Team up and out-strategize the opposing team. Collect
-        and hold 10 gems to win, but get fragged and lose your gems.\\n- Showdown
-        (Solo/Duo): A battle royale style fight for survival. Collect power ups for
-        your Brawler. Grab a friend or play solo - be the last Brawler standing in
-        the rowdiest battle royale yet. Winner take all!\\n- Brawl Ball (3v3): It's
-        a whole new Brawl game! Show off your soccer/football skills and score two
-        goals before the other team. There are no red cards here.\\n- Bounty (3v3):
-        Take out opponents to earn stars, but don’t let them pick you off. The squad
-        with the most stars wins the match!\\n- Heist (3v3): Protect your team’s safe
-        and try to crack open your opponents’. Navigate the map to sneak, blast and
-        blow your way clear to the enemies treasure.\\n- Special Events: Limited time
-        special PvE and PvP game modes.\\n- Championship Challenge: Join Brawl Stars'
-        esports scene with in-game qualifiers!\\n\\nUNLOCK AND UPGRADE BRAWLERS\\nCollect
-        and upgrade a variety of Brawlers with powerful Super abilities, Star Powers
-        and Gadgets! Level them up and collect unique skins.\\n\\nBRAWL PASS\\nComplete
-        quests, open Brawl Boxes, earn Gems, pins and an exclusive Brawl Pass skin!
-        Fresh content every season.\\n\\nBECOME THE STAR PLAYER\\nClimb the local
-        and regional leaderboards to prove you’re the greatest Brawler of them all!\\n\\nCONSTANTLY
-        EVOLVING\\nLook out for new Brawlers, skins, maps, special events and games
-        modes in the future.\\n\\nPLEASE NOTE! Brawl Stars is free to download and
-        play, however, some game items can also be purchased for real money. If you
-        don't want to use this feature, please disable in-app purchases in your device's
-        settings. Also, under our Terms of Service and Privacy Policy, you must be
-        at least 9 years of age to play or download Brawl Stars.\\n\\nFeatures:\\n-
-        Team up for real-time 3v3 battles against players from across the world\\n-
-        A fast-paced multiplayer battle royale mode made for mobile\\n- Unlock and
-        collect new, powerful Brawlers - each with a signature attack and Super ability\\n-
-        New events and game modes daily\\n- Battle solo or with friends\\n- Climb
-        to the top of the leaderboards in global and local rankings \\n- Join or start
-        your own Club with fellow players to share tips and battle together\\n- Customize
-        Brawlers with unlockable skins\\n- Player-designed maps offer challenging
-        new terrain to master\\n\\nFrom the makers of Clash of Clans, Clash Royale
-        and Boom Beach!\\n\\nSupport:\\nContact us in-game via Settings, Help and
-        Support — or visit http://supercell.helpshift.com/a/brawl-stars/\\n\\nPrivacy
-        Policy:\\nhttp://supercell.com/en/privacy-policy/\\n\\nTerms of Service:\\nhttp://supercell.com/en/terms-of-service/\\n\\nParent's
-        Guide:\\nhttp://supercell.com/en/parents/\"\n        },\n        \"defaultAudioLanguage\":
-        \"en\"\n      }\n    },\n    {\n      \"kind\": \"youtube#video\",\n      \"etag\":
-        \"2u1RMc8OAPZx__BHdegPUH4A3mY\",\n      \"id\": \"H7crWAUyJhM\",\n      \"snippet\":
-        {\n        \"publishedAt\": \"2022-10-21T23:00:09Z\",\n        \"channelId\":
-        \"UCFlC8U0Uif2hF0FIgsSIIYQ\",\n        \"title\": \"Grupo Firme + La Ventaja
-        \ - A Mi Modo  (Official Video)\",\n        \"description\": \"by Grupo Firme
-        performing - A Mi Modo \\nIsael Gutierrez + Evert Gutierrez © 2022, Exclusive
-        License To Music Vip Entertainment \\nSuscribete Aqui https://bit.ly/333fXen\\n\\nDirector:
-        Isael Gutierrez + Evert Gutierrez \\nTema: A Mi Modo\\nAutor: Luciano Luna\\nAutor:
-        Tony Montoya\\nAutor: Eduin Caz \\nDirector De Fotografia : Mane Borja \\nDuración:
-        3:28\\nDisquera: Music VIP Entertainment  ℗ 2022\\nGénero: Regional Mexicano
-        \\nEditora:Music VIP Entertainment\\n\\nProvided to YouTube by  Music VIP
-        Entertainment Inc. ℗ 2022\\nReleased on: 2022-08-03 Auto-generated by YouTube.\\n#EDUINCAZ
-        #GRUPOFIRME\",\n        \"thumbnails\": {\n          \"default\": {\n            \"url\":
-        \"https://i.ytimg.com/vi/H7crWAUyJhM/default.jpg\",\n            \"width\":
-        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
-        \           \"url\": \"https://i.ytimg.com/vi/H7crWAUyJhM/mqdefault.jpg\",\n
-        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/H7crWAUyJhM/hqdefault.jpg\",\n
-        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/H7crWAUyJhM/sddefault.jpg\",\n
-        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/H7crWAUyJhM/maxresdefault.jpg\",\n
-        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
-        \       \"channelTitle\": \"Grupo Firme\",\n        \"tags\": [\n          \"Grupo
-        Firme\",\n          \"Grupo Firme music\",\n          \"Grupo Firme nuevo
-        video\",\n          \"Grupo Firme video\",\n          \"Grupo Firme video
-        oficial\",\n          \"Grupo Firme mix 2021\",\n          \"Grupo Firme Covers\",\n
-        \         \"Grupo Firme new video\",\n          \"Grupo Firme official video\",\n
-        \         \"Grupo Firme video nuevo\",\n          \"new single Grupo Firme\",\n
-        \         \"Firme\",\n          \"Firme music\",\n          \"Firme nuevo
-        video\",\n          \"Firme video\",\n          \"Firme video oficial\",\n
-        \         \"Firme Covers\",\n          \"Firme mix 2021\",\n          \"Firme
-        new video\",\n          \"Firme official video\",\n          \"Firme video
-        nuevo\",\n          \"new single Firme\"\n        ],\n        \"categoryId\":
-        \"10\",\n        \"liveBroadcastContent\": \"none\",\n        \"defaultLanguage\":
-        \"es-MX\",\n        \"localized\": {\n          \"title\": \"Grupo Firme +
-        La Ventaja  - A Mi Modo  (Official Video)\",\n          \"description\": \"by
-        Grupo Firme performing - A Mi Modo \\nIsael Gutierrez + Evert Gutierrez ©
-        2022, Exclusive License To Music Vip Entertainment \\nSuscribete Aqui https://bit.ly/333fXen\\n\\nDirector:
-        Isael Gutierrez + Evert Gutierrez \\nTema: A Mi Modo\\nAutor: Luciano Luna\\nAutor:
-        Tony Montoya\\nAutor: Eduin Caz \\nDirector De Fotografia : Mane Borja \\nDuración:
-        3:28\\nDisquera: Music VIP Entertainment  ℗ 2022\\nGénero: Regional Mexicano
-        \\nEditora:Music VIP Entertainment\\n\\nProvided to YouTube by  Music VIP
-        Entertainment Inc. ℗ 2022\\nReleased on: 2022-08-03 Auto-generated by YouTube.\\n#EDUINCAZ
-        #GRUPOFIRME\"\n        },\n        \"defaultAudioLanguage\": \"es-MX\"\n      }\n
-        \   },\n    {\n      \"kind\": \"youtube#video\",\n      \"etag\": \"oTvtzH4otGrQw101LQh6yIeln-E\",\n
-        \     \"id\": \"wVzep1f5Yxc\",\n      \"snippet\": {\n        \"publishedAt\":
-        \"2022-10-21T21:00:32Z\",\n        \"channelId\": \"UCFmMw7yTuLTCuMhpZD5dVsg\",\n
-        \       \"title\": \"¡GOLAZO DE MESSI, DOBLETE DE MBAPPÉ Y GOLEADA DEL LÍDER!
-        | Ajaccio 0-3 PSG | RESUMEN\",\n        \"description\": \"Disfruta la Ligue
-        1 por #ESPNenStarPlus ingresando a este link: http://dis.la/ESPNenStarPlus_YT\\n\\nLigue
-        1 2022/2023\\nFecha 12\\nGoles: 24' K. Mbappé (PSG); 78' L. Messi (PSG) y
-        82' K. Mbappé (PSG).\\n\\nNo te pierdas los videos de la Ligue 1 2022/2023
-        en nuestra playlist: https://bit.ly/3plkV2s\\n\\n¿Ya te suscribiste a nuestro
-        canal? https://bit.ly/3bAT9rx\\u200b\\u200b\\u200b\\u200b\\u200b\\n\\nPara
-        más información, visita http://www.espn.com\\u200b\\u200b\\u200b\\u200b\\u200b\\u200b\\u200b\\u200b\\u200b\\u200b\\u200b\\u200b\\u200b\\n\\nNo
-        te olvides de seguirnos en TODAS las redes:\\n\\n- https://www.facebook.com/ESPNFutbol\\n-
-        https://twitter.com/ESPNFutbolarg\\n- https://www.instagram.com/espnfutbolarg\\n\\n-
-        https://www.facebook.com/ESPNFans\\u200b\\u200b\\u200b\\u200b\\n- https://twitter.com/ESPNArgentina\\u200b\\u200b\\u200b\\u200b\\n-
-        https://www.instagram.com/espnargentina\",\n        \"thumbnails\": {\n          \"default\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/wVzep1f5Yxc/default.jpg\",\n
-        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/wVzep1f5Yxc/mqdefault.jpg\",\n
-        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/wVzep1f5Yxc/hqdefault.jpg\",\n
-        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/wVzep1f5Yxc/sddefault.jpg\",\n
-        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/wVzep1f5Yxc/maxresdefault.jpg\",\n
-        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
-        \       \"channelTitle\": \"ESPN Fans\",\n        \"tags\": [\n          \"Ligue
-        1\",\n          \"ESPN\",\n          \"PSG\",\n          \"RESUMEN\",\n          \"Ajaccio\",\n
-        \         \"Fecha 12\"\n        ],\n        \"categoryId\": \"17\",\n        \"liveBroadcastContent\":
-        \"none\",\n        \"localized\": {\n          \"title\": \"¡GOLAZO DE MESSI,
-        DOBLETE DE MBAPPÉ Y GOLEADA DEL LÍDER! | Ajaccio 0-3 PSG | RESUMEN\",\n          \"description\":
-        \"Disfruta la Ligue 1 por #ESPNenStarPlus ingresando a este link: http://dis.la/ESPNenStarPlus_YT\\n\\nLigue
-        1 2022/2023\\nFecha 12\\nGoles: 24' K. Mbappé (PSG); 78' L. Messi (PSG) y
-        82' K. Mbappé (PSG).\\n\\nNo te pierdas los videos de la Ligue 1 2022/2023
-        en nuestra playlist: https://bit.ly/3plkV2s\\n\\n¿Ya te suscribiste a nuestro
-        canal? https://bit.ly/3bAT9rx\\u200b\\u200b\\u200b\\u200b\\u200b\\n\\nPara
-        más información, visita http://www.espn.com\\u200b\\u200b\\u200b\\u200b\\u200b\\u200b\\u200b\\u200b\\u200b\\u200b\\u200b\\u200b\\u200b\\n\\nNo
-        te olvides de seguirnos en TODAS las redes:\\n\\n- https://www.facebook.com/ESPNFutbol\\n-
-        https://twitter.com/ESPNFutbolarg\\n- https://www.instagram.com/espnfutbolarg\\n\\n-
-        https://www.facebook.com/ESPNFans\\u200b\\u200b\\u200b\\u200b\\n- https://twitter.com/ESPNArgentina\\u200b\\u200b\\u200b\\u200b\\n-
-        https://www.instagram.com/espnargentina\"\n        }\n      }\n    }\n  ],\n
-        \ \"nextPageToken\": \"CAUQAA\",\n  \"pageInfo\": {\n    \"totalResults\":
-        200,\n    \"resultsPerPage\": 5\n  }\n}\n"
-  recorded_at: Sun, 23 Oct 2022 09:56:42 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/videoCategories?key=BAD_TOKEN&regionCode=GT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - www.googleapis.com
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Sun, 23 Oct 2022 09:56:42 GMT
+      - Sun, 23 Oct 2022 10:22:27 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -1248,393 +1536,156 @@ http_interactions:
       encoding: UTF-8
       string: |
         {
-          "error": {
-            "code": 400,
-            "message": "API key not valid. Please pass a valid API key.",
-            "errors": [
-              {
-                "message": "API key not valid. Please pass a valid API key.",
-                "domain": "global",
-                "reason": "badRequest"
-              }
-            ],
-            "status": "INVALID_ARGUMENT",
-            "details": [
-              {
-                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
-                "reason": "API_KEY_INVALID",
-                "domain": "googleapis.com",
-                "metadata": {
-                  "service": "youtube.googleapis.com"
-                }
-              }
-            ]
-          }
-        }
-  recorded_at: Sun, 23 Oct 2022 09:56:42 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/videoCategories?key=<YOUTUBE_API_KEY>&regionCode=GT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - www.googleapis.com
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Date:
-      - Sun, 23 Oct 2022 09:56:42 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "kind": "youtube#videoCategoryListResponse",
-          "etag": "fIIv2-q7-AkaOeJf0LPrlnu-0As",
+          "kind": "youtube#videoListResponse",
+          "etag": "aRUW35QMalzfRiMvnRTVZTH_Vk8",
           "items": [
             {
-              "kind": "youtube#videoCategory",
-              "etag": "grPOPYEUUZN3ltuDUGEWlrTR90U",
-              "id": "1",
+              "kind": "youtube#video",
+              "etag": "RX2Frv2V1V6Y-cpXJBWwGpxk3No",
+              "id": "ggGINmj5EQE",
               "snippet": {
-                "title": "Film & Animation",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "Q0xgUf8BFM8rW3W0R9wNq809xyA",
-              "id": "2",
-              "snippet": {
-                "title": "Autos & Vehicles",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "qnpwjh5QlWM5hrnZCvHisquztC4",
-              "id": "10",
-              "snippet": {
-                "title": "Music",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "HyFIixS5BZaoBdkQdLzPdoXWipg",
-              "id": "15",
-              "snippet": {
-                "title": "Pets & Animals",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "PNU8SwXhjsF90fmkilVohofOi4I",
-              "id": "17",
-              "snippet": {
-                "title": "Sports",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "5kFljz9YJ4lEgSfVwHWi5kTAwAs",
-              "id": "18",
-              "snippet": {
-                "title": "Short Movies",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "ANnLQyzEA_9m3bMyJXMhKTCOiyg",
-              "id": "19",
-              "snippet": {
-                "title": "Travel & Events",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "0Hh6gbZ9zWjnV3sfdZjKB5LQr6E",
-              "id": "20",
-              "snippet": {
-                "title": "Gaming",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "q8Cp4pUfCD8Fuh8VJ_yl5cBCVNw",
-              "id": "21",
-              "snippet": {
-                "title": "Videoblogging",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "cHDaaqPDZsJT1FPr1-MwtyIhR28",
-              "id": "22",
-              "snippet": {
-                "title": "People & Blogs",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "3Uz364xBbKY50a2s0XQlv-gXJds",
-              "id": "23",
-              "snippet": {
-                "title": "Comedy",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "0srcLUqQzO7-NGLF7QnhdVzJQmY",
-              "id": "24",
-              "snippet": {
-                "title": "Entertainment",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "bQlQMjmYX7DyFkX4w3kT0osJyIc",
-              "id": "25",
-              "snippet": {
-                "title": "News & Politics",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "Y06N41HP_WlZmeREZvkGF0HW5pg",
-              "id": "26",
-              "snippet": {
-                "title": "Howto & Style",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "yBaNkLx4sX9NcDmFgAmxQcV4Y30",
-              "id": "27",
-              "snippet": {
-                "title": "Education",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "Mxy3A-SkmnR7MhJDZRS4DuAIbQA",
-              "id": "28",
-              "snippet": {
-                "title": "Science & Technology",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "4pIHL_AdN2kO7btAGAP1TvPucNk",
-              "id": "30",
-              "snippet": {
-                "title": "Movies",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "Iqol1myDwh2AuOnxjtn2AfYwJTU",
-              "id": "31",
-              "snippet": {
-                "title": "Anime/Animation",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "tzhBKCBcYWZLPai5INY4id91ss8",
-              "id": "32",
-              "snippet": {
-                "title": "Action/Adventure",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "ii8nBGYpKyl6FyzP3cmBCevdrbs",
-              "id": "33",
-              "snippet": {
-                "title": "Classics",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "Y0u9UAQCCGp60G11Arac5Mp46z4",
-              "id": "34",
-              "snippet": {
-                "title": "Comedy",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "_YDnyT205AMuX8etu8loOiQjbD4",
-              "id": "35",
-              "snippet": {
-                "title": "Documentary",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "eAl2b-uqIGRDgnlMa0EsGZjXmWg",
-              "id": "36",
-              "snippet": {
-                "title": "Drama",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "HDAW2HFOt3SqeDI00X-eL7OELfY",
-              "id": "37",
-              "snippet": {
-                "title": "Family",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "QHiWh3niw5hjDrim85M8IGF45eE",
-              "id": "38",
-              "snippet": {
-                "title": "Foreign",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "ztKcSS7GpH9uEyZk9nQCdNujvGg",
-              "id": "39",
-              "snippet": {
-                "title": "Horror",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "Ids1sm8QFeSo_cDlpcUNrnEBYWA",
-              "id": "40",
-              "snippet": {
-                "title": "Sci-Fi/Fantasy",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "qhfgS7MzzZHIy_UZ1dlawl1GbnY",
-              "id": "41",
-              "snippet": {
-                "title": "Thriller",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "TxVSfGoUyT7CJ7h7ebjg4vhIt6g",
-              "id": "42",
-              "snippet": {
-                "title": "Shorts",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "o9w6eNqzjHPnNbKDujnQd8pklXM",
-              "id": "43",
-              "snippet": {
-                "title": "Shows",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "mLdyKd0VgXKDI6GevTLBAcvRlIU",
-              "id": "44",
-              "snippet": {
-                "title": "Trailers",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+                "publishedAt": "2022-09-08T21:01:43Z",
+                "channelId": "UCWI2X2x3KASrvEZXdBVNxkA",
+                "title": "El Señor de los Anillos : La Saga en 1 Video I Fedewolf",
+                "description": "Ya tenemos playeras! https://worales.mx/collections/fedelobo \n\nDirectos de Lunes a Viernes 8:00 pm (MX) en mi pagina de Facebook: https://www.facebook.com/soyfedelobo\n\nTe dejo mis demás canales: \n\nFedelobo: https://www.youtube.com/user/elfedelobo\nCanal de videojuegos: https://www.youtube.com/c/Pixelteca \nCanal con Nadia: https://www.youtube.com/amorsindistancia\n\n\nMis redes sociales:\n\nTwitter: https://twitter.com/SoyFedelobo\nFacebook: https://www.facebook.com/soyfedelobo/\nInstagram: https://www.instagram.com/soyfedelobo",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  }
+                },
+                "channelTitle": "El FedeWolf",
+                "tags": [
+                  "series",
+                  "peliculas",
+                  "comedia",
+                  "resumen",
+                  "la historia en 1 video",
+                  "la saga en 1 video",
+                  "fedelobo",
+                  "fedewolf",
+                  "resumen fedelobo",
+                  "resumen fedewolf",
+                  "historia fedelobo",
+                  "historia fedewolf",
+                  "fede lobo",
+                  "fede wolf"
+                ],
+                "categoryId": "1",
+                "liveBroadcastContent": "none",
+                "localized": {
+                  "title": "El Señor de los Anillos : La Saga en 1 Video I Fedewolf",
+                  "description": "Ya tenemos playeras! https://worales.mx/collections/fedelobo \n\nDirectos de Lunes a Viernes 8:00 pm (MX) en mi pagina de Facebook: https://www.facebook.com/soyfedelobo\n\nTe dejo mis demás canales: \n\nFedelobo: https://www.youtube.com/user/elfedelobo\nCanal de videojuegos: https://www.youtube.com/c/Pixelteca \nCanal con Nadia: https://www.youtube.com/amorsindistancia\n\n\nMis redes sociales:\n\nTwitter: https://twitter.com/SoyFedelobo\nFacebook: https://www.facebook.com/soyfedelobo/\nInstagram: https://www.instagram.com/soyfedelobo"
+                }
+              },
+              "contentDetails": {
+                "duration": "PT43M16S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              },
+              "statistics": {
+                "viewCount": "2942362",
+                "likeCount": "160420",
+                "favoriteCount": "0",
+                "commentCount": "6257"
               }
             }
-          ]
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
         }
-  recorded_at: Sun, 23 Oct 2022 09:56:42 GMT
+  recorded_at: Sun, 23 Oct 2022 10:22:27 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=BAD_TOKEN&part=snippet,statistics,contentDetails
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 23 Oct 2022 10:22:27 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "code": 400,
+            "message": "API key not valid. Please pass a valid API key.",
+            "errors": [
+              {
+                "message": "API key not valid. Please pass a valid API key.",
+                "domain": "global",
+                "reason": "badRequest"
+              }
+            ],
+            "status": "INVALID_ARGUMENT",
+            "details": [
+              {
+                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+                "reason": "API_KEY_INVALID",
+                "domain": "googleapis.com",
+                "metadata": {
+                  "service": "youtube.googleapis.com"
+                }
+              }
+            ]
+          }
+        }
+  recorded_at: Sun, 23 Oct 2022 10:22:27 GMT
 recorded_with: VCR 6.1.0
