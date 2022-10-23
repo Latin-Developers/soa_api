@@ -1,5 +1,4 @@
 config/secrets.yml
-spec/fixtures/
 _snippets/
 
 *.gem
@@ -58,3 +57,6 @@ build-iPhoneSimulator/
 
 # Used by RuboCop. Remote config files pulled in from inherit_from directive.
 # .rubocop-https?--*
+config/secrets..yml
+.gitignore
+.gitignore
