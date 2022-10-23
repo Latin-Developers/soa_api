@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
+require_relative '../spec/spec_helper'
 require 'minitest/autorun'
 require 'minitest/rg'
 require 'yaml'
 
-require_relative '../spec/spec_helper'
 require_relative '../lib/youtube_api'
 
 CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
