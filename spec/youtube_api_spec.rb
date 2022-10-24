@@ -36,20 +36,20 @@ describe 'Tests Youtube API library' do
     end
   end
 
-  # describe 'Youtube videos information' do
-  #   it 'HAPPY: should provide list of youtube videos' do
-  #     videos = YoutubeAnalytics::YoutubeAPI.new(YOUTUBE_API_KEY)
-  #                                          .popular_videos(YoutubeAnalytics::REGIONS[:GUATEMALA])
-  #     _(videos.size).must_be :>, 0
-  #   end
+  describe 'Youtube videos information' do
+    it 'HAPPY: should provide list of youtube videos' do
+      videos = YoutubeAnalytics::Youtube::VideoMapper.new(YOUTUBE_API_KEY)
+                                                     .popular_videos(YoutubeAnalytics::REGIONS[:GUATEMALA])
+      _(videos.size).must_be :>, 0
+    end
 
-  #   it 'SAD: should raise exception when unauthorized' do
-  #     _(proc do
-  #       YoutubeAnalytics::YoutubeAPI.new('BAD_TOKEN')
-  #                                             .popular_videos(YoutubeAnalytics::REGIONS[:GUATEMALA])
-  #     end).must_raise Errors::BadRequest
-  #   end
-  # end
+    it 'SAD: should raise exception when unauthorized' do
+      _(proc do
+        YoutubeAnalytics::Youtube::VideoMapper.new('BAD_TOKEN')
+                                              .popular_videos(YoutubeAnalytics::REGIONS[:GUATEMALA])
+      end).must_raise Errors::BadRequest
+    end
+  end
 
   # describe 'Youtube comments information' do
   #   it 'HAPPY: should provide list of youtube comments' do
