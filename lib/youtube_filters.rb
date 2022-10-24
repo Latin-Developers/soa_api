@@ -4,7 +4,7 @@ require_relative 'youtube_constants'
 
 module YoutubeAnalytics
   # YoutubeAPI Filters
-  class YoutubeAPIFilters < SimpleDelegator
+  class YoutubeAPIFilters
     def self.categories(region)
       { regionCode: region }
     end
