@@ -1,1 +1,18 @@
-
+.container
+  form role="form" action="/project" method='POST' id='show-project-form'
+    .row.vertical-align.query-bar
+      .col-md-2.col-sm-3
+        .text-right Choose a Country:
+      .col-md-8.col-sm-6
+        input { 
+          type='text' name='country'
+          id='country' class="form-control"
+          placeholder="MX, GT or NI"
+        }
+      .col-md-2.col-sm-3
+        button { 
+          type='submit' id='repo-form-submit' class='submit' 
+          value='submit' class="btn btn-success"
+        } Get Analysis
+    .row
+      .col-md-12.blank-row

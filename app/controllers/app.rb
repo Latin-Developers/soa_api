@@ -47,4 +47,3 @@ module CodePraise
     end
   end
 end
-
