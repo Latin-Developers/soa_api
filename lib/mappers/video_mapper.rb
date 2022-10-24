@@ -2,7 +2,7 @@
 
 module YoutubeAnalytics
   module Youtube
-    # Data Mapper: Youtube -> Entity
+    # Data Mapper: Youtube Video -> Entity Video
     class VideoMapper
       def initialize(youtube_token, gateway_class = Youtube::Api)
         @token = youtube_token
@@ -31,10 +31,27 @@ module YoutubeAnalytics
         end
 
         def build_entity
-          YoutubeAnalytics::Entity::VideoCategory.new(
+          YoutubeAnalytics::Entity::Video.new(
             id: nil,
             origin_id:,
-            title:
+            published_at:,
+            origin_channel_id:,
+            title:,
+            description:,
+            thumbnails:,
+            channel_title:,
+            origin_category_id:,
+            live_broadcast_content:,
+            duration:,
+            dimension:,
+            definition:,
+            caption:,
+            licensed_content:,
+            projection:,
+            view_count:,
+            like_count:,
+            favorite_count:,
+            comment_count:
           )
         end
 

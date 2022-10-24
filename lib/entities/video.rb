@@ -8,7 +8,7 @@ require_relative 'video_thumbnail'
 module YoutubeAnalytics
   module Entity
     # Provides access to Category data
-    class Category < Dry::Struct
+    class Video < Dry::Struct
       include Dry.Types
 
       attribute :id,                      Integer.optional
@@ -17,20 +17,20 @@ module YoutubeAnalytics
       attribute :origin_channel_id,       Strict::String
       attribute :title,                   Strict::String
       attribute :description,             Strict::String
-      attribute :thumbnails,              VideoThumbnail
+      attribute :thumbnails,              Array.of(VideoThumbnail)
       attribute :channel_title,           Strict::String
-      attribute :origin_category_id,      Integer
+      attribute :origin_category_id,      Strict::String
       attribute :live_broadcast_content,  Strict::String
-      attribute :duration,                String
-      attribute :dimension,               Strict::String
-      attribute :definition,              Strict::String
-      attribute :caption,                 Strict::Integer
-      attribute :licensed_content,        Strict::Integer
-      attribute :projection,              Strict::Integer
-      attribute :view_count,              Integer
-      attribute :like_count,              Integer
-      attribute :favorite_count,          Integer
-      attribute :comment_count,           Integer
+      attribute :duration,                String.optional
+      attribute :dimension,               Strict::String.optional
+      attribute :definition,              Strict::String.optional
+      attribute :caption,                 Strict::Integer.optional
+      attribute :licensed_content,        Strict::Integer.optional
+      attribute :projection,              Strict::Integer.optional
+      attribute :view_count,              Integer.optional
+      attribute :like_count,              Integer.optional
+      attribute :favorite_count,          Integer.optional
+      attribute :comment_count,           Integer.optional
     end
   end
 end

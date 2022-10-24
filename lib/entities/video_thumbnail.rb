@@ -10,7 +10,7 @@ module YoutubeAnalytics
       include Dry.Types
 
       attribute :id,          Integer.optional
-      attribute :resolution,  Strict::String
+      attribute :resolution,  String
       attribute :url,         Strict::String
       attribute :width,       Integer
       attribute :height,      Integer

@@ -18,8 +18,9 @@ module YoutubeAnalytics
         end
 
         def build_entity
-          YoutubeAnalytics::Entity::VideoCategory.new(
-            resolution: nil,
+          YoutubeAnalytics::Entity::VideoThumbnail.new(
+            id: nil,
+            resolution:,
             url:,
             width:,
             height:
