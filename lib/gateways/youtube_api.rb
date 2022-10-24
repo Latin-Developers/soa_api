@@ -7,7 +7,7 @@ require_relative 'youtube_category'
 require_relative 'youtube_video'
 require_relative 'youtube_comment'
 require_relative 'youtube_detail'
-require_relative 'http_utils/request'
+require_relative 'http_utils/youtube_request'
 
 module YoutubeAnalytics
   # Library for Youtube Web API
