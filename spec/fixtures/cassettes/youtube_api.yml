@@ -837,4 +837,203 @@ http_interactions:
         \ \"nextPageToken\": \"CAUQAA\",\n  \"pageInfo\": {\n    \"totalResults\":
         200,\n    \"resultsPerPage\": 5\n  }\n}\n"
   recorded_at: Mon, 24 Oct 2022 12:24:21 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=<YOUTUBE_API_KEY>&part=snippet,statistics,contentDetails
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Mon, 24 Oct 2022 12:38:00 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "yakZGtSp6UbUKHHvho8cLzfFlig",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "DdHdVhaggfdU2wPElzvJwYFGc5g",
+              "id": "ggGINmj5EQE",
+              "snippet": {
+                "publishedAt": "2022-09-08T21:01:43Z",
+                "channelId": "UCWI2X2x3KASrvEZXdBVNxkA",
+                "title": "El Señor de los Anillos : La Saga en 1 Video I Fedewolf",
+                "description": "Ya tenemos playeras! https://worales.mx/collections/fedelobo \n\nDirectos de Lunes a Viernes 8:00 pm (MX) en mi pagina de Facebook: https://www.facebook.com/soyfedelobo\n\nTe dejo mis demás canales: \n\nFedelobo: https://www.youtube.com/user/elfedelobo\nCanal de videojuegos: https://www.youtube.com/c/Pixelteca \nCanal con Nadia: https://www.youtube.com/amorsindistancia\n\n\nMis redes sociales:\n\nTwitter: https://twitter.com/SoyFedelobo\nFacebook: https://www.facebook.com/soyfedelobo/\nInstagram: https://www.instagram.com/soyfedelobo",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  }
+                },
+                "channelTitle": "El FedeWolf",
+                "tags": [
+                  "series",
+                  "peliculas",
+                  "comedia",
+                  "resumen",
+                  "la historia en 1 video",
+                  "la saga en 1 video",
+                  "fedelobo",
+                  "fedewolf",
+                  "resumen fedelobo",
+                  "resumen fedewolf",
+                  "historia fedelobo",
+                  "historia fedewolf",
+                  "fede lobo",
+                  "fede wolf"
+                ],
+                "categoryId": "1",
+                "liveBroadcastContent": "none",
+                "localized": {
+                  "title": "El Señor de los Anillos : La Saga en 1 Video I Fedewolf",
+                  "description": "Ya tenemos playeras! https://worales.mx/collections/fedelobo \n\nDirectos de Lunes a Viernes 8:00 pm (MX) en mi pagina de Facebook: https://www.facebook.com/soyfedelobo\n\nTe dejo mis demás canales: \n\nFedelobo: https://www.youtube.com/user/elfedelobo\nCanal de videojuegos: https://www.youtube.com/c/Pixelteca \nCanal con Nadia: https://www.youtube.com/amorsindistancia\n\n\nMis redes sociales:\n\nTwitter: https://twitter.com/SoyFedelobo\nFacebook: https://www.facebook.com/soyfedelobo/\nInstagram: https://www.instagram.com/soyfedelobo"
+                }
+              },
+              "contentDetails": {
+                "duration": "PT43M16S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              },
+              "statistics": {
+                "viewCount": "2971968",
+                "likeCount": "160898",
+                "favoriteCount": "0",
+                "commentCount": "6265"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Mon, 24 Oct 2022 12:38:00 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=BAD_TOKEN&part=snippet,statistics,contentDetails
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 24 Oct 2022 12:38:00 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "code": 400,
+            "message": "API key not valid. Please pass a valid API key.",
+            "errors": [
+              {
+                "message": "API key not valid. Please pass a valid API key.",
+                "domain": "global",
+                "reason": "badRequest"
+              }
+            ],
+            "status": "INVALID_ARGUMENT",
+            "details": [
+              {
+                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+                "reason": "API_KEY_INVALID",
+                "domain": "googleapis.com",
+                "metadata": {
+                  "service": "youtube.googleapis.com"
+                }
+              }
+            ]
+          }
+        }
+  recorded_at: Mon, 24 Oct 2022 12:38:00 GMT
 recorded_with: VCR 6.1.0

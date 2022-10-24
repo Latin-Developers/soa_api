@@ -24,13 +24,13 @@ module YoutubeAnalytics
       attribute :duration,                String.optional
       attribute :dimension,               Strict::String.optional
       attribute :definition,              Strict::String.optional
-      attribute :caption,                 Strict::Integer.optional
-      attribute :licensed_content,        Strict::Integer.optional
-      attribute :projection,              Strict::Integer.optional
-      attribute :view_count,              Integer.optional
-      attribute :like_count,              Integer.optional
-      attribute :favorite_count,          Integer.optional
-      attribute :comment_count,           Integer.optional
+      attribute :caption,                 Strict::String.optional
+      attribute :licensed_content,        Strict::Bool.optional
+      attribute :projection,              Strict::String.optional
+      attribute :view_count,              Strict::String.optional
+      attribute :like_count,              Strict::String.optional
+      attribute :favorite_count,          Strict::String.optional
+      attribute :comment_count,           Strict::String.optional
     end
   end
 end

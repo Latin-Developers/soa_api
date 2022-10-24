@@ -66,16 +66,16 @@ describe 'Tests Youtube API library' do
   #   end
   # end
 
-  # describe 'Youtube detail video information' do
-  #   it 'HAPPY: should provide list of youtube video detail' do
-  #     details = YoutubeAnalytics::YoutubeAPI.new(YOUTUBE_API_KEY).video_details('ggGINmj5EQE')
-  #     _(details.id).must_equal 'ggGINmj5EQE'
-  #   end
+  describe 'Youtube detail video information' do
+    it 'HAPPY: should provide list of youtube video detail' do
+      details = YoutubeAnalytics::Youtube::VideoMapper.new(YOUTUBE_API_KEY).video_details('ggGINmj5EQE')
+      _(details.origin_id).must_equal 'ggGINmj5EQE'
+    end
 
-  #   it 'SAD: should raise exception when unauthorized' do
-  #     _(proc do
-  #       YoutubeAnalytics::YoutubeAPI.new('BAD_TOKEN').video_details('ggGINmj5EQE')
-  #     end).must_raise Errors::BadRequest
-  #   end
-  # end
+    it 'SAD: should raise exception when unauthorized' do
+      _(proc do
+        YoutubeAnalytics::Youtube::VideoMapper.new('BAD_TOKEN').video_details('ggGINmj5EQE')
+      end).must_raise Errors::BadRequest
+    end
+  end
 end
