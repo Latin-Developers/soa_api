@@ -2,135 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=<YOUTUBE_API_KEY>&part=snippet,statistics,contentDetails
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Date:
-      - Mon, 24 Oct 2022 03:12:56 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "kind": "youtube#videoListResponse",
-          "etag": "sAhHBptwo-AHf654oBFEZWRNWYs",
-          "items": [
-            {
-              "kind": "youtube#video",
-              "etag": "YuIxazH2o4FOWFDWbUDcy15980E",
-              "id": "ggGINmj5EQE",
-              "snippet": {
-                "publishedAt": "2022-09-08T21:01:43Z",
-                "channelId": "UCWI2X2x3KASrvEZXdBVNxkA",
-                "title": "El Señor de los Anillos : La Saga en 1 Video I Fedewolf",
-                "description": "Ya tenemos playeras! https://worales.mx/collections/fedelobo \n\nDirectos de Lunes a Viernes 8:00 pm (MX) en mi pagina de Facebook: https://www.facebook.com/soyfedelobo\n\nTe dejo mis demás canales: \n\nFedelobo: https://www.youtube.com/user/elfedelobo\nCanal de videojuegos: https://www.youtube.com/c/Pixelteca \nCanal con Nadia: https://www.youtube.com/amorsindistancia\n\n\nMis redes sociales:\n\nTwitter: https://twitter.com/SoyFedelobo\nFacebook: https://www.facebook.com/soyfedelobo/\nInstagram: https://www.instagram.com/soyfedelobo",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  },
-                  "standard": {
-                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/sddefault.jpg",
-                    "width": 640,
-                    "height": 480
-                  }
-                },
-                "channelTitle": "El FedeWolf",
-                "tags": [
-                  "series",
-                  "peliculas",
-                  "comedia",
-                  "resumen",
-                  "la historia en 1 video",
-                  "la saga en 1 video",
-                  "fedelobo",
-                  "fedewolf",
-                  "resumen fedelobo",
-                  "resumen fedewolf",
-                  "historia fedelobo",
-                  "historia fedewolf",
-                  "fede lobo",
-                  "fede wolf"
-                ],
-                "categoryId": "1",
-                "liveBroadcastContent": "none",
-                "localized": {
-                  "title": "El Señor de los Anillos : La Saga en 1 Video I Fedewolf",
-                  "description": "Ya tenemos playeras! https://worales.mx/collections/fedelobo \n\nDirectos de Lunes a Viernes 8:00 pm (MX) en mi pagina de Facebook: https://www.facebook.com/soyfedelobo\n\nTe dejo mis demás canales: \n\nFedelobo: https://www.youtube.com/user/elfedelobo\nCanal de videojuegos: https://www.youtube.com/c/Pixelteca \nCanal con Nadia: https://www.youtube.com/amorsindistancia\n\n\nMis redes sociales:\n\nTwitter: https://twitter.com/SoyFedelobo\nFacebook: https://www.facebook.com/soyfedelobo/\nInstagram: https://www.instagram.com/soyfedelobo"
-                }
-              },
-              "contentDetails": {
-                "duration": "PT43M16S",
-                "dimension": "2d",
-                "definition": "hd",
-                "caption": "false",
-                "licensedContent": true,
-                "contentRating": {},
-                "projection": "rectangular"
-              },
-              "statistics": {
-                "viewCount": "2961754",
-                "likeCount": "160778",
-                "favoriteCount": "0",
-                "commentCount": "6264"
-              }
-            }
-          ],
-          "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 1
-          }
-        }
-  recorded_at: Mon, 24 Oct 2022 03:12:56 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=BAD_TOKEN&part=snippet,statistics,contentDetails
+    uri: https://www.googleapis.com/youtube/v3/videoCategories?key=BAD_TOKEN&regionCode=GT
     body:
       encoding: UTF-8
       string: ''
@@ -151,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 24 Oct 2022 03:12:56 GMT
+      - Mon, 24 Oct 2022 12:24:20 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -198,7 +70,7 @@ http_interactions:
             ]
           }
         }
-  recorded_at: Mon, 24 Oct 2022 03:12:56 GMT
+  recorded_at: Mon, 24 Oct 2022 12:24:20 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/videoCategories?key=<YOUTUBE_API_KEY>&regionCode=GT
@@ -222,7 +94,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 24 Oct 2022 03:12:57 GMT
+      - Mon, 24 Oct 2022 12:24:20 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -561,10 +433,10 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Mon, 24 Oct 2022 03:12:56 GMT
+  recorded_at: Mon, 24 Oct 2022 12:24:20 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/youtube/v3/videoCategories?key=BAD_TOKEN&regionCode=GT
+    uri: https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=BAD_TOKEN&part=snippet&regionCode=GT
     body:
       encoding: UTF-8
       string: ''
@@ -585,7 +457,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 24 Oct 2022 03:12:57 GMT
+      - Mon, 24 Oct 2022 12:24:21 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -632,7 +504,7 @@ http_interactions:
             ]
           }
         }
-  recorded_at: Mon, 24 Oct 2022 03:12:57 GMT
+  recorded_at: Mon, 24 Oct 2022 12:24:21 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=<YOUTUBE_API_KEY>&part=snippet&regionCode=GT
@@ -656,7 +528,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 24 Oct 2022 03:12:57 GMT
+      - Mon, 24 Oct 2022 12:24:21 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -678,7 +550,7 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: "{\n  \"kind\": \"youtube#videoListResponse\",\n  \"etag\": \"QG8TIyD-5Au6Yjo01qaLMC91ZQ8\",\n
+      string: "{\n  \"kind\": \"youtube#videoListResponse\",\n  \"etag\": \"T3xMm7NFWK_XmVvvE_t9WrxWLC4\",\n
         \ \"items\": [\n    {\n      \"kind\": \"youtube#video\",\n      \"etag\":
         \"b3dR78ibAby5ecjmK-fEp-CbacI\",\n      \"id\": \"oBlTjRm9fgs\",\n      \"snippet\":
         {\n        \"publishedAt\": \"2022-10-23T03:24:44Z\",\n        \"channelId\":
@@ -735,52 +607,91 @@ http_interactions:
         ¡Sigueme por aqui! \U0001F440\\n• Instagram: https://www.instagram.com/ivan_buhaje/\\n•
         Twitter (Personal): https://twitter.com/ivan_buhaje\\n• Twitter: https://twitter.com/SpreenDMC\"\n
         \       }\n      }\n    },\n    {\n      \"kind\": \"youtube#video\",\n      \"etag\":
-        \"2XBI2GZmC5uR1-s5ROXpvTEpcpQ\",\n      \"id\": \"mxF58TYuPaM\",\n      \"snippet\":
-        {\n        \"publishedAt\": \"2022-10-21T04:01:22Z\",\n        \"channelId\":
-        \"UCgmUtgxaeaT6CSHc70AQMEg\",\n        \"title\": \"Kim Loaiza - DEVOTO (Video
-        Oficial) Ft. Elvis De Yongol\",\n        \"description\": \"DEVOTO • Kim Loaiza
-        • Space Music • Elvis De Yongol \\n\\n\\n✨ SIGUEME AQUI ✨\\n\\n\\n• INSTAGRAM:
-        @Kimberly.Loaiza http://bit.ly/IGKim\\n\\n• PAGINA DE FACEBOOK: Kimberly Loaiza
-        http://bit.ly/FBKimL\\n\\n• TWITTER: KimberlyLoaiza_   http://bit.ly/KimLTW\\n\\n•SUSCRÍBETE
-        AQUÍ: https://bit.ly/3oYuGUW\\n\\nLETRA ✍\U0001F3FB \\n\\nPor la boca muere
-        el pez \\ny tú la abriste mucho y te me ahogaste \\nla herida que dejaste
-        \\nyo la curo con unos tequilas \\nhay que cosas de la vida \\nalguien como
-        tú fácil de olvida \\nno vuelvo a caer.\\n \\nCuando me veas a través del
+        \"DilQ1cBfwB2E2IoD6qZ5fP7bv_Y\",\n      \"id\": \"hb2rk32QWHc\",\n      \"snippet\":
+        {\n        \"publishedAt\": \"2022-10-23T15:00:33Z\",\n        \"channelId\":
+        \"UCV85bPNU9wdY6JHgnGWZEbQ\",\n        \"title\": \"SOBREVIVÍ 100 DÍAS como
+        un GODZILLA en MINECRAFT HARDCORE!\",\n        \"description\": \"¡SOBREVIVÍ
+        100 DÍAS COMO UN GODZILLA EN MINECRFAFT Pesado! ¡Ahora, voy a explorar el
+        OSCURO PROFUNDO como nunca antes! \\n\\nMods Used:\\n\\nThe original Minecraft
+        Godzilla Model was made by Monster122. We took inspiration to make it! You
+        can find his channel here: https://youtube.com/c/Monster122\\n\\nDawn of Time:
+        https://www.curseforge.com/minecraft/mc-mods/dawn-of-time\\nGojicraft: https://www.curseforge.com/minecraft/mc-mods/gojicraft\\nKaijuKraft:
+        https://www.curseforge.com/minecraft/mc-mods/kaijukraft\\nExotic Critters:
+        https://www.curseforge.com/minecraft/mc-mods/exotic-critters\\n\\n\\n► ¡SUSCRÍBETE
+        al Canal! -\\nhttps://www.youtube.com/channel/UCV85bPNU9wdY6JHgnGWZEbQ\\n\\nDoblado
+        por:\\n\U0001F846 Chris Cisneros - https://www.instagram.com/cisneroscomedy/
+        \\n\\n¡No olvides dar me gusta, comentar, suscribirte y compartir para mostrar
+        tu apoyo a este canal!\",\n        \"thumbnails\": {\n          \"default\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/hb2rk32QWHc/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/hb2rk32QWHc/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/hb2rk32QWHc/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/hb2rk32QWHc/sddefault.jpg\",\n
+        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/hb2rk32QWHc/maxresdefault.jpg\",\n
+        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
+        \       \"channelTitle\": \"Bronzo Español\",\n        \"categoryId\": \"22\",\n
+        \       \"liveBroadcastContent\": \"none\",\n        \"localized\": {\n          \"title\":
+        \"SOBREVIVÍ 100 DÍAS como un GODZILLA en MINECRAFT HARDCORE!\",\n          \"description\":
+        \"¡SOBREVIVÍ 100 DÍAS COMO UN GODZILLA EN MINECRFAFT Pesado! ¡Ahora, voy a
+        explorar el OSCURO PROFUNDO como nunca antes! \\n\\nMods Used:\\n\\nThe original
+        Minecraft Godzilla Model was made by Monster122. We took inspiration to make
+        it! You can find his channel here: https://youtube.com/c/Monster122\\n\\nDawn
+        of Time: https://www.curseforge.com/minecraft/mc-mods/dawn-of-time\\nGojicraft:
+        https://www.curseforge.com/minecraft/mc-mods/gojicraft\\nKaijuKraft: https://www.curseforge.com/minecraft/mc-mods/kaijukraft\\nExotic
+        Critters: https://www.curseforge.com/minecraft/mc-mods/exotic-critters\\n\\n\\n►
+        ¡SUSCRÍBETE al Canal! -\\nhttps://www.youtube.com/channel/UCV85bPNU9wdY6JHgnGWZEbQ\\n\\nDoblado
+        por:\\n\U0001F846 Chris Cisneros - https://www.instagram.com/cisneroscomedy/
+        \\n\\n¡No olvides dar me gusta, comentar, suscribirte y compartir para mostrar
+        tu apoyo a este canal!\"\n        }\n      }\n    },\n    {\n      \"kind\":
+        \"youtube#video\",\n      \"etag\": \"2XBI2GZmC5uR1-s5ROXpvTEpcpQ\",\n      \"id\":
+        \"mxF58TYuPaM\",\n      \"snippet\": {\n        \"publishedAt\": \"2022-10-21T04:01:22Z\",\n
+        \       \"channelId\": \"UCgmUtgxaeaT6CSHc70AQMEg\",\n        \"title\": \"Kim
+        Loaiza - DEVOTO (Video Oficial) Ft. Elvis De Yongol\",\n        \"description\":
+        \"DEVOTO • Kim Loaiza • Space Music • Elvis De Yongol \\n\\n\\n✨ SIGUEME AQUI
+        ✨\\n\\n\\n• INSTAGRAM: @Kimberly.Loaiza http://bit.ly/IGKim\\n\\n• PAGINA
+        DE FACEBOOK: Kimberly Loaiza http://bit.ly/FBKimL\\n\\n• TWITTER: KimberlyLoaiza_
+        \  http://bit.ly/KimLTW\\n\\n•SUSCRÍBETE AQUÍ: https://bit.ly/3oYuGUW\\n\\nLETRA
+        ✍\U0001F3FB \\n\\nPor la boca muere el pez \\ny tú la abriste mucho y te me
+        ahogaste \\nla herida que dejaste \\nyo la curo con unos tequilas \\nhay que
+        cosas de la vida \\nalguien como tú fácil de olvida \\nno vuelvo a caer.\\n \\nCuando
+        me veas a través del vaso \\ny sepas que fuiste un total fracaso \\nTe acuerdes
+        de mi estando bien borracho \\nY te quieras pegar un balazo \\nviendo mis
+        fotos, \\ncon el corazón roto \\nConmigo te sacaste la loto\\nAhora estás
+        de luto \\nyo soy tu santa y tu mi devoto \\n \\nCuando me veas a través del
         vaso \\ny sepas que fuiste un total fracaso \\nTe acuerdes de mi estando bien
         borracho \\nY te quieras pegar un balazo \\nviendo mis fotos, \\ncon el corazón
         roto \\nConmigo te sacaste la loto\\nAhora estás de luto \\nyo soy tu santa
-        y tu mi devoto \\n \\nCuando me veas a través del vaso \\ny sepas que fuiste
-        un total fracaso \\nTe acuerdes de mi estando bien borracho \\nY te quieras
-        pegar un balazo \\nviendo mis fotos, \\ncon el corazón roto \\nConmigo te
-        sacaste la loto\\nAhora estás de luto \\nyo soy tu santa y tu mi devoto \\n \\n \\n \\nTe
-        acuerdas cuando te reías \\nYo aguantando tus tonterías\\nNo veías lo que
-        me dolía \\nO quizá lo sabías, pero te valía \\nEsta no te la dejo pasar \\nAsí
-        que no me mandes mas whatsapp \\nSe cayo la red pa ti \\nYa no estoy en línea
-        pa ti \\n \\n \\nEres de esos que solo prometen\\nMe canse de ser tu juguete
-        \\nAunque en tu casa me pongas un altar \\nCon unas velas te pongas a rezar
-        \\nYa nada va a pasar \\n \\n \\nCuando me veas a través del vaso \\ny sepas
-        que fuiste un total fracaso \\nTe acuerdes de mi estando bien borracho \\nte
-        quieras pegar un balazo \\nviendo mis fotos, \\ncon el corazón roto \\nConmigo
-        te sacaste la loto\\nAhora estás de luto \\nyo soy tu santa y tu mi devoto
-        \\n \\n \\nA ti te gusta que te rece todo los días \\nTe pida perdón y confiese
-        que te quería \\nTu no eres Virgen aunque te llames María \\nMe saliste mala
-        que suerte la mía \\nTiraba la piedra y yo que te veía \\nNo eres ostia pero
-        los domingos te comía \\nTu eres mi santa y yo siempre seré tu mesías \\nHey
-        \\n \\n \\nA mi no me engañas \\nme tienes ganas \\nPa que te ensañas \\nNos
-        vemos mañana \\nYa déjate de tantas mentiras \\nen el fondo a mi tu a mi no
-        me olvidas \\nMami dame beso \\nDisfruta del proceso\\nTu serás la presa \\nDe
-        este preso \\nCaliente como café expreso \\nNo estamos en el polo pero súbete
-        a mi expreso\\n \\nCuando me veas a través del vaso y sepas que fuiste un
-        total fracaso \\nTe acuerdes de mi estando bien borracho \\nte quieras pegar
-        un balazo viendo mis fotos, con el corazón roto \\nConmigo te sacaste la loto\\nAhora
-        estás de luto yo soy tu santa y tu mi devoto\\n \\nPor la  boca muere el pez
-        \\ny tú la abriste mucho y te me ahogaste \\nla herida que dejaste \\nyo la
-        curo con unos tequilas \\nhay que cosas de la vida \\nalguien como tú fácil
-        de olvida \\nno vuelvo a caer.\\n\\n\\n\\nCONTACTO \U0001F48C: Marcaskim@gmail.com\",\n
-        \       \"thumbnails\": {\n          \"default\": {\n            \"url\":
-        \"https://i.ytimg.com/vi/mxF58TYuPaM/default.jpg\",\n            \"width\":
-        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
-        \           \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/mqdefault.jpg\",\n
+        y tu mi devoto \\n \\n \\n \\nTe acuerdas cuando te reías \\nYo aguantando
+        tus tonterías\\nNo veías lo que me dolía \\nO quizá lo sabías, pero te valía
+        \\nEsta no te la dejo pasar \\nAsí que no me mandes mas whatsapp \\nSe cayo
+        la red pa ti \\nYa no estoy en línea pa ti \\n \\n \\nEres de esos que solo
+        prometen\\nMe canse de ser tu juguete \\nAunque en tu casa me pongas un altar
+        \\nCon unas velas te pongas a rezar \\nYa nada va a pasar \\n \\n \\nCuando
+        me veas a través del vaso \\ny sepas que fuiste un total fracaso \\nTe acuerdes
+        de mi estando bien borracho \\nte quieras pegar un balazo \\nviendo mis fotos,
+        \\ncon el corazón roto \\nConmigo te sacaste la loto\\nAhora estás de luto
+        \\nyo soy tu santa y tu mi devoto \\n \\n \\nA ti te gusta que te rece todo
+        los días \\nTe pida perdón y confiese que te quería \\nTu no eres Virgen aunque
+        te llames María \\nMe saliste mala que suerte la mía \\nTiraba la piedra y
+        yo que te veía \\nNo eres ostia pero los domingos te comía \\nTu eres mi santa
+        y yo siempre seré tu mesías \\nHey \\n \\n \\nA mi no me engañas \\nme tienes
+        ganas \\nPa que te ensañas \\nNos vemos mañana \\nYa déjate de tantas mentiras
+        \\nen el fondo a mi tu a mi no me olvidas \\nMami dame beso \\nDisfruta del
+        proceso\\nTu serás la presa \\nDe este preso \\nCaliente como café expreso
+        \\nNo estamos en el polo pero súbete a mi expreso\\n \\nCuando me veas a través
+        del vaso y sepas que fuiste un total fracaso \\nTe acuerdes de mi estando
+        bien borracho \\nte quieras pegar un balazo viendo mis fotos, con el corazón
+        roto \\nConmigo te sacaste la loto\\nAhora estás de luto yo soy tu santa y
+        tu mi devoto\\n \\nPor la  boca muere el pez \\ny tú la abriste mucho y te
+        me ahogaste \\nla herida que dejaste \\nyo la curo con unos tequilas \\nhay
+        que cosas de la vida \\nalguien como tú fácil de olvida \\nno vuelvo a caer.\\n\\n\\n\\nCONTACTO
+        \U0001F48C: Marcaskim@gmail.com\",\n        \"thumbnails\": {\n          \"default\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/mqdefault.jpg\",\n
         \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
         {\n            \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/hqdefault.jpg\",\n
         \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
@@ -833,7 +744,7 @@ http_interactions:
         curo con unos tequilas \\nhay que cosas de la vida \\nalguien como tú fácil
         de olvida \\nno vuelvo a caer.\\n\\n\\n\\nCONTACTO \U0001F48C: Marcaskim@gmail.com\"\n
         \       },\n        \"defaultAudioLanguage\": \"es-419\"\n      }\n    },\n
-        \   {\n      \"kind\": \"youtube#video\",\n      \"etag\": \"dFrn9teBXJsMpNiuNUhJ5aJr-hM\",\n
+        \   {\n      \"kind\": \"youtube#video\",\n      \"etag\": \"A1ZWQU-yHkODMQD6-Jv74OmcwJ4\",\n
         \     \"id\": \"Zm0LjUBZyUY\",\n      \"snippet\": {\n        \"publishedAt\":
         \"2022-10-22T12:00:11Z\",\n        \"channelId\": \"UC_F8DoJf9MZogEOU51TpTbQ\",\n
         \       \"title\": \"Clash Royale: NEW UPDATE! \U0001F9D8 Two New Cards and
@@ -922,122 +833,141 @@ http_interactions:
         you having problems? Visit http://supercell.helpshift.com/a/clas... or contact
         us in-game by going to Settings, Help and support.\\n\\nPrivacy Policy:\\nhttp://supercell.com/en/privacy-policy/\\n\\nTerms
         of Service:\\nhttp://supercell.com/en/terms-of-serv...\\n\\nParent’s Guide:\\nhttp://supercell.com/en/parents/\\n\\n#ClashRoyale\"\n
-        \       },\n        \"defaultAudioLanguage\": \"en\"\n      }\n    },\n    {\n
-        \     \"kind\": \"youtube#video\",\n      \"etag\": \"88dptODfUgS3MOuxB3ZIDcgzHHo\",\n
-        \     \"id\": \"Dn_noN00sPo\",\n      \"snippet\": {\n        \"publishedAt\":
-        \"2022-10-22T15:00:10Z\",\n        \"channelId\": \"UCooVYzDxdwTtGYAkcPmOgOw\",\n
-        \       \"title\": \"Brawl Stars: Brawl Talk - Gears Rework, Shield Brawler,
-        and MORE!\",\n        \"description\": \"Download NOW!! ►► https://supr.cl/2K62CZG\\nBe
-        a BRAWLER! Subscribe! ►► https://supr.cl/subscribe\\nInteract with the World
-        Finals on ►► https://event.brawlstars.com \\n\\n#brawltalk #ghoststation \\n\\nAn
-        epic battle royale made for mobile! Play with friends or solo across a variety
-        of game modes in under three minutes.\\n\\nUnlock and upgrade dozens of Brawlers
-        with powerful Super abilities, Star Powers and Gadgets! Collect unique skins
-        to stand out and show off. Battle in a variety of mysterious locations within
-        the Brawliverse!\\n\\nBATTLE IN MULTIPLE GAME MODES\\n- Gem Grab (3v3): Team
-        up and out-strategize the opposing team. Collect and hold 10 gems to win,
-        but get fragged and lose your gems.\\n- Showdown (Solo/Duo): A battle royale
-        style fight for survival. Collect power ups for your Brawler. Grab a friend
-        or play solo - be the last Brawler standing in the rowdiest battle royale
-        yet. Winner take all!\\n- Brawl Ball (3v3): It's a whole new Brawl game! Show
-        off your soccer/football skills and score two goals before the other team.
-        There are no red cards here.\\n- Bounty (3v3): Take out opponents to earn
-        stars, but don’t let them pick you off. The squad with the most stars wins
-        the match!\\n- Heist (3v3): Protect your team’s safe and try to crack open
-        your opponents’. Navigate the map to sneak, blast and blow your way clear
-        to the enemies treasure.\\n- Special Events: Limited time special PvE and
-        PvP game modes.\\n- Championship Challenge: Join Brawl Stars' esports scene
-        with in-game qualifiers!\\n\\nUNLOCK AND UPGRADE BRAWLERS\\nCollect and upgrade
-        a variety of Brawlers with powerful Super abilities, Star Powers and Gadgets!
-        Level them up and collect unique skins.\\n\\nBRAWL PASS\\nComplete quests,
-        open Brawl Boxes, earn Gems, pins and an exclusive Brawl Pass skin! Fresh
-        content every season.\\n\\nBECOME THE STAR PLAYER\\nClimb the local and regional
-        leaderboards to prove you’re the greatest Brawler of them all!\\n\\nCONSTANTLY
-        EVOLVING\\nLook out for new Brawlers, skins, maps, special events and games
-        modes in the future.\\n\\nPLEASE NOTE! Brawl Stars is free to download and
-        play, however, some game items can also be purchased for real money. If you
-        don't want to use this feature, please disable in-app purchases in your device's
-        settings. Also, under our Terms of Service and Privacy Policy, you must be
-        at least 9 years of age to play or download Brawl Stars.\\n\\nFeatures:\\n-
-        Team up for real-time 3v3 battles against players from across the world\\n-
-        A fast-paced multiplayer battle royale mode made for mobile\\n- Unlock and
-        collect new, powerful Brawlers - each with a signature attack and Super ability\\n-
-        New events and game modes daily\\n- Battle solo or with friends\\n- Climb
-        to the top of the leaderboards in global and local rankings \\n- Join or start
-        your own Club with fellow players to share tips and battle together\\n- Customize
-        Brawlers with unlockable skins\\n- Player-designed maps offer challenging
-        new terrain to master\\n\\nFrom the makers of Clash of Clans, Clash Royale
-        and Boom Beach!\\n\\nSupport:\\nContact us in-game via Settings, Help and
-        Support — or visit http://supercell.helpshift.com/a/brawl-stars/\\n\\nPrivacy
-        Policy:\\nhttp://supercell.com/en/privacy-policy/\\n\\nTerms of Service:\\nhttp://supercell.com/en/terms-of-service/\\n\\nParent's
-        Guide:\\nhttp://supercell.com/en/parents/\",\n        \"thumbnails\": {\n
-        \         \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/Dn_noN00sPo/default.jpg\",\n
-        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Dn_noN00sPo/mqdefault.jpg\",\n
-        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Dn_noN00sPo/hqdefault.jpg\",\n
-        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Dn_noN00sPo/sddefault.jpg\",\n
-        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Dn_noN00sPo/maxresdefault.jpg\",\n
-        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
-        \       \"channelTitle\": \"Brawl Stars\",\n        \"tags\": [\n          \"brawl
-        stars\",\n          \"mobile game\",\n          \"mobile strategy game\",\n
-        \         \"mobile rpg\",\n          \"mobile battle royale\",\n          \"battle
-        royale\",\n          \"supercell game\",\n          \"brawl talk\",\n          \"ghost
-        station\",\n          \"gears rework\"\n        ],\n        \"categoryId\":
-        \"20\",\n        \"liveBroadcastContent\": \"none\",\n        \"defaultLanguage\":
-        \"en\",\n        \"localized\": {\n          \"title\": \"Brawl Stars: Brawl
-        Talk - Gears Rework, Shield Brawler, and MORE!\",\n          \"description\":
-        \"Download NOW!! ►► https://supr.cl/2K62CZG\\nBe a BRAWLER! Subscribe! ►►
-        https://supr.cl/subscribe\\nInteract with the World Finals on ►► https://event.brawlstars.com
-        \\n\\n#brawltalk #ghoststation \\n\\nAn epic battle royale made for mobile!
-        Play with friends or solo across a variety of game modes in under three minutes.\\n\\nUnlock
-        and upgrade dozens of Brawlers with powerful Super abilities, Star Powers
-        and Gadgets! Collect unique skins to stand out and show off. Battle in a variety
-        of mysterious locations within the Brawliverse!\\n\\nBATTLE IN MULTIPLE GAME
-        MODES\\n- Gem Grab (3v3): Team up and out-strategize the opposing team. Collect
-        and hold 10 gems to win, but get fragged and lose your gems.\\n- Showdown
-        (Solo/Duo): A battle royale style fight for survival. Collect power ups for
-        your Brawler. Grab a friend or play solo - be the last Brawler standing in
-        the rowdiest battle royale yet. Winner take all!\\n- Brawl Ball (3v3): It's
-        a whole new Brawl game! Show off your soccer/football skills and score two
-        goals before the other team. There are no red cards here.\\n- Bounty (3v3):
-        Take out opponents to earn stars, but don’t let them pick you off. The squad
-        with the most stars wins the match!\\n- Heist (3v3): Protect your team’s safe
-        and try to crack open your opponents’. Navigate the map to sneak, blast and
-        blow your way clear to the enemies treasure.\\n- Special Events: Limited time
-        special PvE and PvP game modes.\\n- Championship Challenge: Join Brawl Stars'
-        esports scene with in-game qualifiers!\\n\\nUNLOCK AND UPGRADE BRAWLERS\\nCollect
-        and upgrade a variety of Brawlers with powerful Super abilities, Star Powers
-        and Gadgets! Level them up and collect unique skins.\\n\\nBRAWL PASS\\nComplete
-        quests, open Brawl Boxes, earn Gems, pins and an exclusive Brawl Pass skin!
-        Fresh content every season.\\n\\nBECOME THE STAR PLAYER\\nClimb the local
-        and regional leaderboards to prove you’re the greatest Brawler of them all!\\n\\nCONSTANTLY
-        EVOLVING\\nLook out for new Brawlers, skins, maps, special events and games
-        modes in the future.\\n\\nPLEASE NOTE! Brawl Stars is free to download and
-        play, however, some game items can also be purchased for real money. If you
-        don't want to use this feature, please disable in-app purchases in your device's
-        settings. Also, under our Terms of Service and Privacy Policy, you must be
-        at least 9 years of age to play or download Brawl Stars.\\n\\nFeatures:\\n-
-        Team up for real-time 3v3 battles against players from across the world\\n-
-        A fast-paced multiplayer battle royale mode made for mobile\\n- Unlock and
-        collect new, powerful Brawlers - each with a signature attack and Super ability\\n-
-        New events and game modes daily\\n- Battle solo or with friends\\n- Climb
-        to the top of the leaderboards in global and local rankings \\n- Join or start
-        your own Club with fellow players to share tips and battle together\\n- Customize
-        Brawlers with unlockable skins\\n- Player-designed maps offer challenging
-        new terrain to master\\n\\nFrom the makers of Clash of Clans, Clash Royale
-        and Boom Beach!\\n\\nSupport:\\nContact us in-game via Settings, Help and
-        Support — or visit http://supercell.helpshift.com/a/brawl-stars/\\n\\nPrivacy
-        Policy:\\nhttp://supercell.com/en/privacy-policy/\\n\\nTerms of Service:\\nhttp://supercell.com/en/terms-of-service/\\n\\nParent's
-        Guide:\\nhttp://supercell.com/en/parents/\"\n        },\n        \"defaultAudioLanguage\":
-        \"en\"\n      }\n    }\n  ],\n  \"nextPageToken\": \"CAUQAA\",\n  \"pageInfo\":
-        {\n    \"totalResults\": 200,\n    \"resultsPerPage\": 5\n  }\n}\n"
-  recorded_at: Mon, 24 Oct 2022 03:12:57 GMT
+        \       },\n        \"defaultAudioLanguage\": \"en\"\n      }\n    }\n  ],\n
+        \ \"nextPageToken\": \"CAUQAA\",\n  \"pageInfo\": {\n    \"totalResults\":
+        200,\n    \"resultsPerPage\": 5\n  }\n}\n"
+  recorded_at: Mon, 24 Oct 2022 12:24:21 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=BAD_TOKEN&part=snippet&regionCode=GT
+    uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=<YOUTUBE_API_KEY>&part=snippet,statistics,contentDetails
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Mon, 24 Oct 2022 12:38:00 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "yakZGtSp6UbUKHHvho8cLzfFlig",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "DdHdVhaggfdU2wPElzvJwYFGc5g",
+              "id": "ggGINmj5EQE",
+              "snippet": {
+                "publishedAt": "2022-09-08T21:01:43Z",
+                "channelId": "UCWI2X2x3KASrvEZXdBVNxkA",
+                "title": "El Señor de los Anillos : La Saga en 1 Video I Fedewolf",
+                "description": "Ya tenemos playeras! https://worales.mx/collections/fedelobo \n\nDirectos de Lunes a Viernes 8:00 pm (MX) en mi pagina de Facebook: https://www.facebook.com/soyfedelobo\n\nTe dejo mis demás canales: \n\nFedelobo: https://www.youtube.com/user/elfedelobo\nCanal de videojuegos: https://www.youtube.com/c/Pixelteca \nCanal con Nadia: https://www.youtube.com/amorsindistancia\n\n\nMis redes sociales:\n\nTwitter: https://twitter.com/SoyFedelobo\nFacebook: https://www.facebook.com/soyfedelobo/\nInstagram: https://www.instagram.com/soyfedelobo",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  }
+                },
+                "channelTitle": "El FedeWolf",
+                "tags": [
+                  "series",
+                  "peliculas",
+                  "comedia",
+                  "resumen",
+                  "la historia en 1 video",
+                  "la saga en 1 video",
+                  "fedelobo",
+                  "fedewolf",
+                  "resumen fedelobo",
+                  "resumen fedewolf",
+                  "historia fedelobo",
+                  "historia fedewolf",
+                  "fede lobo",
+                  "fede wolf"
+                ],
+                "categoryId": "1",
+                "liveBroadcastContent": "none",
+                "localized": {
+                  "title": "El Señor de los Anillos : La Saga en 1 Video I Fedewolf",
+                  "description": "Ya tenemos playeras! https://worales.mx/collections/fedelobo \n\nDirectos de Lunes a Viernes 8:00 pm (MX) en mi pagina de Facebook: https://www.facebook.com/soyfedelobo\n\nTe dejo mis demás canales: \n\nFedelobo: https://www.youtube.com/user/elfedelobo\nCanal de videojuegos: https://www.youtube.com/c/Pixelteca \nCanal con Nadia: https://www.youtube.com/amorsindistancia\n\n\nMis redes sociales:\n\nTwitter: https://twitter.com/SoyFedelobo\nFacebook: https://www.facebook.com/soyfedelobo/\nInstagram: https://www.instagram.com/soyfedelobo"
+                }
+              },
+              "contentDetails": {
+                "duration": "PT43M16S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              },
+              "statistics": {
+                "viewCount": "2971968",
+                "likeCount": "160898",
+                "favoriteCount": "0",
+                "commentCount": "6265"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Mon, 24 Oct 2022 12:38:00 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=BAD_TOKEN&part=snippet,statistics,contentDetails
     body:
       encoding: UTF-8
       string: ''
@@ -1058,7 +988,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 24 Oct 2022 03:12:57 GMT
+      - Mon, 24 Oct 2022 12:38:00 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -1105,7 +1035,78 @@ http_interactions:
             ]
           }
         }
-  recorded_at: Mon, 24 Oct 2022 03:12:57 GMT
+  recorded_at: Mon, 24 Oct 2022 12:38:00 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/commentThreads?key=BAD_TOKEN&part=snippet,replies&videoId=ggGINmj5EQE
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 24 Oct 2022 13:09:37 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "code": 400,
+            "message": "API key not valid. Please pass a valid API key.",
+            "errors": [
+              {
+                "message": "API key not valid. Please pass a valid API key.",
+                "domain": "global",
+                "reason": "badRequest"
+              }
+            ],
+            "status": "INVALID_ARGUMENT",
+            "details": [
+              {
+                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+                "reason": "API_KEY_INVALID",
+                "domain": "googleapis.com",
+                "metadata": {
+                  "service": "youtube.googleapis.com"
+                }
+              }
+            ]
+          }
+        }
+  recorded_at: Mon, 24 Oct 2022 13:09:37 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/commentThreads?key=<YOUTUBE_API_KEY>&part=snippet,replies&videoId=ggGINmj5EQE
@@ -1129,7 +1130,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 24 Oct 2022 03:12:57 GMT
+      - Mon, 24 Oct 2022 13:09:38 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -1152,7 +1153,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "{\n  \"kind\": \"youtube#commentThreadListResponse\",\n  \"etag\":
-        \"XzKgUZGhueSKJf4joCUaREmJ0g0\",\n  \"nextPageToken\": \"QURTSl9pMzhxZzRsdnpJNlRNVHAxZjNPcDRaempZTGs3eHFMNXcxUUxBdU1NTFNBSVRySzRjQVduNm5RUW5kZmN0ckpZNF9zVkt0VUZQbDlMMXBHNzY3SHcyamE0aEtvUnc=\",\n
+        \"0_4jJ5xJbEFyWv9N45Nt1sEHP40\",\n  \"nextPageToken\": \"QURTSl9pMkhtQmFxZXdsSlkzWkM2M1dXeTdWNmRPRW5vS2VaUXg5X3JBcGQ5QUp1Rmt0SHZYanlRbmFFcE5RMWJrUDV0VmZWSHpaNm1jVkd1N21Ta0tJSWNoM1NRUlNiZHc=\",\n
         \ \"pageInfo\": {\n    \"totalResults\": 20,\n    \"resultsPerPage\": 20\n
         \ },\n  \"items\": [\n    {\n      \"kind\": \"youtube#commentThread\",\n
         \     \"etag\": \"3sMgNhqeNYsbFcHpYGWg3DjKxYQ\",\n      \"id\": \"UgwVnoC8Iy-N7vukGVZ4AaABAg\",\n
@@ -1211,11 +1212,26 @@ http_interactions:
         \"none\",\n              \"likeCount\": 0,\n              \"publishedAt\":
         \"2022-09-29T04:07:50Z\",\n              \"updatedAt\": \"2022-09-29T04:07:50Z\"\n
         \           }\n          }\n        ]\n      }\n    },\n    {\n      \"kind\":
-        \"youtube#commentThread\",\n      \"etag\": \"NfKOKWfkILM297oJwNmES98H1y4\",\n
-        \     \"id\": \"UgykMvF2LXTj1MvaW0B4AaABAg\",\n      \"snippet\": {\n        \"videoId\":
+        \"youtube#commentThread\",\n      \"etag\": \"XZ84F7EUzTzvu4U-SOjw4ZQ10SI\",\n
+        \     \"id\": \"UgznzO_bVCQ_48x5Bsp4AaABAg\",\n      \"snippet\": {\n        \"videoId\":
         \"ggGINmj5EQE\",\n        \"topLevelComment\": {\n          \"kind\": \"youtube#comment\",\n
-        \         \"etag\": \"-FePDmni7GAXs6qwFJse2LOc7xU\",\n          \"id\": \"UgykMvF2LXTj1MvaW0B4AaABAg\",\n
+        \         \"etag\": \"O3K1Wd0Gi3g13j_93zQQYpfT4Ck\",\n          \"id\": \"UgznzO_bVCQ_48x5Bsp4AaABAg\",\n
         \         \"snippet\": {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
+        \"Cuando el pipin canta una de Juan Gabriel jajajajaja\",\n            \"textOriginal\":
+        \"Cuando el pipin canta una de Juan Gabriel jajajajaja\",\n            \"authorDisplayName\":
+        \"Luis Campos\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu-bPvRJV2mgoAAWWtbxoNJLl19yLG3OjOWNsMTomqOwju83OgRoSZZwr4Bcddqw=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCDLy3TIzQbEJphu_L4eGzBw\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCDLy3TIzQbEJphu_L4eGzBw\"\n
+        \           },\n            \"canRate\": true,\n            \"viewerRating\":
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-24T11:01:19Z\",\n
+        \           \"updatedAt\": \"2022-10-24T11:01:37Z\"\n          }\n        },\n
+        \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
+        true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
+        \     \"etag\": \"NfKOKWfkILM297oJwNmES98H1y4\",\n      \"id\": \"UgykMvF2LXTj1MvaW0B4AaABAg\",\n
+        \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"-FePDmni7GAXs6qwFJse2LOc7xU\",\n
+        \         \"id\": \"UgykMvF2LXTj1MvaW0B4AaABAg\",\n          \"snippet\":
+        {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
         \"Como  sobrevivio la elfa? &quot;un hechicero lo izo&quot;\",\n            \"textOriginal\":
         \"Como  sobrevivio la elfa? \\\"un hechicero lo izo\\\"\",\n            \"authorDisplayName\":
         \"Freddy Vega\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu9peRO0pwemgd6blXFRvP-gDGRI3hJK3d2gGQ=s48-c-k-c0x00ffffff-no-rj\",\n
@@ -1496,96 +1512,6 @@ http_interactions:
         \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-22T07:15:32Z\",\n
         \           \"updatedAt\": \"2022-10-22T07:15:32Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
-        true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"NShdWNAXUXoqSHSofQyjcQwCKA0\",\n      \"id\": \"UgycTu4mAWtldztsrFV4AaABAg\",\n
-        \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"GPgHwueWfKDLOU4s29qnX8bU6oc\",\n
-        \         \"id\": \"UgycTu4mAWtldztsrFV4AaABAg\",\n          \"snippet\":
-        {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"\\u003ca href=\\\"https://www.youtube.com/watch?v=ggGINmj5EQE&amp;t=2m00s\\\"\\u003e2:00\\u003c/a\\u003e
-        dice que golum tiene el anillo Miles de años , pero golum tuvo el anillo casi
-        700 años y bilbo tío de frodo apena 100 años pequeños errores xD\",\n            \"textOriginal\":
-        \"2:00 dice que golum tiene el anillo Miles de años , pero golum tuvo el anillo
-        casi 700 años y bilbo tío de frodo apena 100 años pequeños errores xD\",\n
-        \           \"authorDisplayName\": \"Cesar Zamora\",\n            \"authorProfileImageUrl\":
-        \"https://yt3.ggpht.com/ytc/AMLnZu9qmC07LwkOS1Dtz0iD0KAls1WUIypax0fmbpdsOg=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCciWCjurv7isFzo4APtTOJQ\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCciWCjurv7isFzo4APtTOJQ\"\n
-        \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-22T05:16:31Z\",\n
-        \           \"updatedAt\": \"2022-10-22T05:16:31Z\"\n          }\n        },\n
-        \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    }\n  ]\n}\n"
-  recorded_at: Mon, 24 Oct 2022 03:12:57 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/commentThreads?key=BAD_TOKEN&part=snippet,replies&videoId=ggGINmj5EQE
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Mon, 24 Oct 2022 03:12:58 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "error": {
-            "code": 400,
-            "message": "API key not valid. Please pass a valid API key.",
-            "errors": [
-              {
-                "message": "API key not valid. Please pass a valid API key.",
-                "domain": "global",
-                "reason": "badRequest"
-              }
-            ],
-            "status": "INVALID_ARGUMENT",
-            "details": [
-              {
-                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
-                "reason": "API_KEY_INVALID",
-                "domain": "googleapis.com",
-                "metadata": {
-                  "service": "youtube.googleapis.com"
-                }
-              }
-            ]
-          }
-        }
-  recorded_at: Mon, 24 Oct 2022 03:12:58 GMT
+  recorded_at: Mon, 24 Oct 2022 13:09:38 GMT
 recorded_with: VCR 6.1.0
