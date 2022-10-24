@@ -4,6 +4,9 @@ require_relative '../spec/spec_helper'
 require 'minitest/autorun'
 require 'minitest/rg'
 require 'yaml'
+require 'simplecov'
+
+SimpleCov.start
 
 require_relative '../lib/youtube_api'
 require_relative '../lib/youtube_constants'
