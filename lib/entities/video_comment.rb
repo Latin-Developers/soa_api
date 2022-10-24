@@ -6,7 +6,9 @@ require 'dry-struct'
 module YoutubeAnalytics
   module Entity
     # Provides access to comment data
-    class Comment < Dry::Struct
+    class VideoComment < Dry::Struct
+      include Dry.Types
+      
       attribute :id,                        Integer.optional
       attribute :origin_id,                 Strict::String
       attribute :origin_video_id,           Strict::String

@@ -6,12 +6,14 @@ require 'dry-struct'
 module YoutubeAnalytics
   module Entity
     # Provides access to Thumbnail data
-    class Thumbnail < Dry::Struct
+    class VideoThumbnail < Dry::Struct
+      include Dry.Types
+
       attribute :id,          Integer.optional
       attribute :resolution,  Strict::String
       attribute :url,         Strict::String
-      attribute :width,       Strict::Integer
-      attribute :height,      Strict::Integer
+      attribute :width,       Integer
+      attribute :height,      Integer
     end
   end
 end
