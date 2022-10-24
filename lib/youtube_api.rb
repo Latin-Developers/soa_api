@@ -19,8 +19,8 @@ module YoutubeAnalytics
     end
 
     def video_resource(resource_type, filters, resource_class)
-      youtube_response = HTTPRequest.new(YOUTUBE_API_PATH[resource_type], @token, filters)
-                                    .youtube_api_http_get
+      youtube_response = YoutubeHttpRequest.new(YOUTUBE_API_PATH[resource_type], @token, filters)
+                                           .http_get
       youtube_response['items'].map { |item| resource_class.new(item) }
     end
 
