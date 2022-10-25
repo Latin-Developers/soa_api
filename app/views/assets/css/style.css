@@ -1,11 +1,11 @@
 h1 {
-    font-weight: Monospace;
-    background-color: #178653;
+    font-weight: 100;
+    background-color: #0b31da;
     text-decoration: none;
   }
   
   .text-underline-hover {
-    font-weight: Monospace;
+    font-weight: 100;
     text-decoration: none;
     color:#ffffff;
     font-size:65px;
