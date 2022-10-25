@@ -4,7 +4,7 @@ h1 {
   
   .text-underline-hover {
     text-decoration: none;
-    color:#FF0000;
+    color:#e5ff00;
   }
   
   .top-buffer { margin-top:20px; }
@@ -18,7 +18,7 @@ h1 {
   }
   
   .project.detail {
-    color: red;
+    color: rgb(55, 0, 255);
   }
   
   .project.owner {
@@ -55,13 +55,14 @@ h1 {
   }
   
   .query-bar {
-    background-color: #FF0000;
+    background-color: #ff00005d;
     color:#ffffff;
+    font-size:17px;
     padding: 5px 5px 5px 5px;
   }
   
   footer {
     padding: 0.0in;
     font-size:11px;
-    color:rgb(0, 0, 0);
+    color:rgb(196, 35, 35);
   }
