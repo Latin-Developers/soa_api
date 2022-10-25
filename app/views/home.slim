@@ -4,11 +4,13 @@
       .col-md-2.col-sm-3
         .text-right Region:
       .col-md-8.col-sm-6
-        input { 
-          type='text' name='country'
-          id='country' class="form-control"
-          placeholder="Please choose one of these countries: MX, GT or NI"
-        }
+        
+        select#repo-form-submit.form-select name="id" required="true"
+          option value = "Select an Option" Select an Option
+          option value = "MX" MX
+          option value = "GT" GT
+          option value = "NI" NI
+       
       .col-md-2.col-sm-3
         button { 
           type='submit' id='repo-form-submit' class='submit' 
@@ -18,9 +20,4 @@
       .col-md-12.blank-row
     .row
       .col-md-2.col-sm-3
-        button { 
-          type='button' id='repo-form-submit' class='btn btn-secondary dropdown-toggle' 
-          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
-        } Prueba
-
-
+    
