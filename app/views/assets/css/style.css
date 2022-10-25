@@ -4,7 +4,7 @@ h1 {
   
   .text-underline-hover {
     text-decoration: none;
-    color:#e5ff00;
+    color:#d40404af;
   }
   
   .top-buffer { margin-top:20px; }
@@ -64,5 +64,5 @@ h1 {
   footer {
     padding: 0.0in;
     font-size:11px;
-    color:rgb(196, 35, 35);
+    color:rgb(41, 41, 41);
   }
