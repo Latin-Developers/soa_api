@@ -1,20 +1,24 @@
 h1 {
-    font-weight: bold;
+    font-weight: Monospace;
+    background-color: #178653;
+    text-decoration: none;
   }
   
   .text-underline-hover {
+    font-weight: Monospace;
     text-decoration: none;
-    color:#d40404af;
+    color:#ffffff;
+    font-size:65px;
   }
   
-  .top-buffer { margin-top:20px; }
+  .top-buffer { margin-top:40px; }
   
   .posting.body {
     font-size: 1.2em;
   }
   
   .project.attribute {
-    font-weight: bold;
+    font-weight: sans-serif;
   }
   
   .project.detail {
@@ -22,7 +26,7 @@ h1 {
   }
   
   .project.owner {
-    font-weight: bold
+    font-weight: sans-serif;
   }
   
   .project.name {
@@ -55,7 +59,7 @@ h1 {
   }
   
   .query-bar {
-    background-color: #ff00005d;
+    background-color: #178653;
     color:#ffffff;
     font-size:17px;
     padding: 5px 5px 5px 5px;
