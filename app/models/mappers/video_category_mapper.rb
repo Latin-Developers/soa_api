@@ -12,10 +12,10 @@ module YoutubeAnalytics
 
       def categories(region)
         data_items = @gateway.categories(region)
-        data_items.map { |data| build_entity(data) }
+        data_items.map { |data| VideoCategoryMapper.build_entity(data) }
       end
 
-      def build_entity(data)
+      def self.build_entity(data)
         DataMapper.new(data).build_entity
       end
 

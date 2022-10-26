@@ -12,10 +12,10 @@ module YoutubeAnalytics
 
       def video_comments(video_id)
         data_items = @gateway.video_comments(video_id)
-        data_items.map { |data| build_entity(data) }
+        data_items.map { |data| VideoCommentMapper.build_entity(data) }
       end
 
-      def build_entity(data)
+      def self.build_entity(data)
         DataMapper.new(data).build_entity
       end
 
@@ -34,15 +34,11 @@ module YoutubeAnalytics
             text_original:,
             author_display_name:,
             author_profile_image_url:,
-            origin_author_channel_id:,
-            can_rate:,
             viewer_rating:,
             like_count:,
             published_at:,
             updated_at:,
-            can_reply:,
-            total_reply_count:,
-            public: public?
+            comment_replies:
           )
         end
 
@@ -51,71 +47,69 @@ module YoutubeAnalytics
         end
 
         def origin_video_id
-          @data['snippet']['videoId'] if @data['snippet']
-        end
-
-        def comment
-          @data['snippet']['topLevelComment']['snippet'] if contains_comment?
+          top_level_comment_snippet['videoId']
         end
 
         def text_display
-          comment['textDisplay'] if contains_comment?
+          top_level_comment_snippet['textDisplay']
         end
 
         def text_original
-          comment['textOriginal'] if contains_comment?
+          top_level_comment_snippet['textOriginal']
         end
 
         def author_display_name
-          comment['authorDisplayName'] if contains_comment?
+          top_level_comment_snippet['authorDisplayName']
         end
 
         def author_profile_image_url
-          comment['authorProfileImageUrl'] if contains_comment?
-        end
-
-        def origin_author_channel_id
-          comment['authorChannelId']['value'] if contains_author_channel_id?
-        end
-
-        def can_rate
-          comment['canRate'] if contains_comment?
+          top_level_comment_snippet['authorProfileImageUrl']
         end
 
         def viewer_rating
-          comment['viewerRating'] if contains_comment?
+          top_level_comment_snippet['viewerRating']
         end
 
         def like_count
-          comment['likeCount'] if contains_comment?
+          top_level_comment_snippet['likeCount']
         end
 
         def published_at
-          comment['publishedAt'] if contains_comment?
+          top_level_comment_snippet['publishedAt']
         end
 
         def updated_at
-          comment['updatedAt'] if contains_comment?
+          top_level_comment_snippet['updatedAt']
         end
 
-        def can_reply
-          @data['snippet']['canReply'] if contains_comment?
+        def comment_replies
+          replies_comments.map { |replies_comment| VideoCommentMapper.build_entity(replies_comment) }
         end
 
-        def total_reply_count
-          @data['snippet']['totalReplyCount'] if contains_comment?
+        private
+
+        def replies
+          @data['replies'] || {}
         end
 
-        def public?
-          @data['snippet']['isPublic'] if contains_comment?
+        def replies_comments
+          replies['comments'] || []
         end
 
-        def contains_comment?
-          @data['snippet'] && @data['snippet']['topLevelComment'] && @data['snippet']['topLevelComment']['snippet']
+        def snippet
+          @data['snippet'] || {}
         end
 
-        def contains_author_channel_id?
-          contains_comment? && comment['authorChannelId']
+        def top_level_comment
+          snippet['topLevelComment'] || {}
+        end
+
+        def top_level_comment_snippet
+          top_level_comment['snippet'] || snippet
+        end
+
+        def author_channel_id
+          top_level_comment_snippet['authorChannelId'] || {}
         end
       end
     end

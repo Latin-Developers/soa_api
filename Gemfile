@@ -21,6 +21,7 @@ gem 'rerun', '~> 0'
 gem 'simplecov', '~> 0'
 gem 'vcr', '~> 6'
 gem 'webmock', '~> 3'
+gem 'pry', '~> 0.13.1'
 
 # Utility Tools
 gem 'rake'
