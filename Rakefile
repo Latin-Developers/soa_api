@@ -10,7 +10,7 @@ end
 
 desc 'run tests'
 task :spec do
-  sh 'ruby spec/youtube_api_spec.rb'
+  sh 'bundle exec ruby spec/youtube_api_spec.rb'
 end
 
 desc 'Keep rerunning tests upon changes'

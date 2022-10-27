@@ -3,7 +3,7 @@
 require 'roda'
 require 'slim'
 
-module CodePraise
+module YoutubeAnalytics
   # Web App
   class App < Roda
     plugin :render, engine: 'slim', views: 'app/views'
@@ -25,48 +25,26 @@ module CodePraise
         routing.is do
           # POST /videos/
           routing.post do
-            youtube_url = routing.params['youtube_url'].downcase
-            routing.halt 400 unless (youtube_url.include? 'www.googleapis.com') &&
-                                    (youtube_url.split('/').count >= 3)
+            region_code = routing.params['region_code'].uppercase
 
-            owner, project = gh_url.split('/')[-2..]
-
-            routing.redirect "video/#{origin_id}}"
+            routing.redirect "/videos/region/#{region_code}/video_category/"
           end
         end
 
-        routing.on String, String do |_video, project|
-          # GET /project/owner/project
-          routing.get do
-            video = Youtube::VideoMapper
-                    .new(GH_TOKEN)
-                    .find(owner, project)
+        routing.on 'region' do
+          # GET /videos/region
 
-            view 'project', locals: { project: github_project }
+          routing.on String do |region_code|
+            # GET /videos/
+            routing.on 'video_category' do
+              routing.get do
+                categories = YoutubeAnalytics::Youtube::VideoCategoryMapper.new(YOUTUBE_API_KEY)
+                                                                           .categories(region_code)
+
+                view 'project', locals: { categories: }
+              end
+            end
           end
-
-          # routing.on 'project' do
-          # routing.is do
-          #   # POST /project/
-          #   routing.post do
-          #     gh_url = routing.params['github_url'].downcase
-          #     routing.halt 400 unless (gh_url.include? 'github.com') &&
-          #                             (gh_url.split('/').count >= 3)
-          #     owner, project = gh_url.split('/')[-2..]
-
-          #     routing.redirect "project/#{owner}/#{project}"
-          #   end
-          # end
-
-          # routing.on String, String do |owner, project|
-          #   # GET /project/owner/project
-          #   routing.get do
-          #     github_project = Github::ProjectMapper
-          #                      .new(GH_TOKEN)
-          #                      .find(owner, project)
-
-          #     view 'project', locals: { project: github_project }
-          #   end
         end
       end
     end
