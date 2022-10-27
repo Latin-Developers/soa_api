@@ -24,7 +24,7 @@ module CodePraise
         routing.is do
           # POST /project/
           routing.post do
-            gh_url = routing.params['github_url'].downcase
+            region_code = routing.params['github_url'].downcase
             routing.halt 400 unless (gh_url.include? 'github.com') &&
                                     (gh_url.split('/').count >= 3)
             owner, project = gh_url.split('/')[-2..]
