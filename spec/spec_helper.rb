@@ -6,6 +6,7 @@ require 'minitest/autorun'
 require 'minitest/rg'
 require 'vcr'
 require 'webmock'
+require 'pry'
 
 require_relative '../require_app'
 require_app

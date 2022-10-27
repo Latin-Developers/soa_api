@@ -16,15 +16,11 @@ module YoutubeAnalytics
       attribute :text_original,             Strict::String
       attribute :author_display_name,       Strict::String
       attribute :author_profile_image_url,  Strict::String
-      attribute :origin_author_channel_id,  Strict::String
-      attribute :can_rate,                  Strict::Bool
       attribute :viewer_rating,             Strict::String
       attribute :like_count,                Strict::Integer
       attribute :published_at,              Strict::String
       attribute :updated_at,                Strict::String
-      attribute :can_reply,                 Strict::Bool
-      attribute :total_reply_count,         Strict::Integer
-      attribute :public,                    Strict::Bool
+      attribute :comment_replies,           Array.of(VideoComment)
     end
   end
 end

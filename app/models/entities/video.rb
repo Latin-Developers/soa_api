@@ -18,15 +18,8 @@ module YoutubeAnalytics
       attribute :title,                   Strict::String
       attribute :description,             Strict::String
       attribute :thumbnails,              Array.of(VideoThumbnail)
-      attribute :channel_title,           Strict::String
       attribute :origin_category_id,      Strict::String
-      attribute :live_broadcast_content,  Strict::String
       attribute :duration,                String.optional
-      attribute :dimension,               Strict::String.optional
-      attribute :definition,              Strict::String.optional
-      attribute :caption,                 Strict::String.optional
-      attribute :licensed_content,        Strict::Bool.optional
-      attribute :projection,              Strict::String.optional
       attribute :view_count,              Strict::String.optional
       attribute :like_count,              Strict::String.optional
       attribute :favorite_count,          Strict::String.optional
