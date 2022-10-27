@@ -25,7 +25,7 @@ module YoutubeAnalytics
         routing.is do
           # POST /videos/
           routing.post do
-            region_code = routing.params['region_code'].uppercase
+            region_code = routing.params['region_code'].upcase
 
             routing.redirect "/videos/region/#{region_code}/video_category/"
           end
