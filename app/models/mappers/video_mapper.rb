@@ -12,15 +12,15 @@ module YoutubeAnalytics
 
       def popular_videos(region)
         data_items = @gateway.popular_videos(region)
-        data_items.map { |data| build_entity(data) }
+        data_items.map { |data| VideoMapper.build_entity(data) }
       end
 
       def video_details(video_id)
         data = @gateway.video_details(video_id)
-        build_entity(data)
+        VideoMapper.build_entity(data)
       end
 
-      def build_entity(data)
+      def self.build_entity(data)
         DataMapper.new(data).build_entity
       end
 
@@ -39,15 +39,8 @@ module YoutubeAnalytics
             title:,
             description:,
             thumbnails:,
-            channel_title:,
             origin_category_id:,
-            live_broadcast_content:,
             duration:,
-            dimension:,
-            definition:,
-            caption:,
-            licensed_content:,
-            projection:,
             view_count:,
             like_count:,
             favorite_count:,
@@ -60,75 +53,61 @@ module YoutubeAnalytics
         end
 
         def published_at
-          @data['snippet']['publishedAt'] if @data['snippet']
+          snippet['publishedAt']
         end
 
         def origin_channel_id
-          @data['snippet']['channelId'] if @data['snippet']
+          snippet['channelId']
         end
 
         def title
-          @data['snippet']['title'] if @data['snippet']
+          snippet['title']
         end
 
         def description
-          @data['snippet']['description'] if @data['snippet']
+          snippet['description']
         end
 
         def thumbnails
-          VideoThumbnailMapper.build_entity(@data['snippet']['thumbnails']) if @data['snippet']
-        end
-
-        def channel_title
-          @data['snippet']['channelTitle'] if @data['snippet']
+          VideoThumbnailMapper.build_entity(snippet['thumbnails'])
         end
 
         def origin_category_id
-          @data['snippet']['categoryId'] if @data['snippet']
-        end
-
-        def live_broadcast_content
-          @data['snippet']['liveBroadcastContent'] if @data['snippet']
+          snippet['categoryId']
         end
 
         def duration
-          @data['contentDetails']['duration'] if @data['contentDetails']
-        end
-
-        def dimension
-          @data['contentDetails']['dimension'] if @data['contentDetails']
-        end
-
-        def definition
-          @data['contentDetails']['definition'] if @data['contentDetails']
-        end
-
-        def caption
-          @data['contentDetails']['caption'] if @data['contentDetails']
-        end
-
-        def licensed_content
-          @data['contentDetails']['licensedContent'] if @data['contentDetails']
-        end
-
-        def projection
-          @data['contentDetails']['projection'] if @data['contentDetails']
+          content_details['duration']
         end
 
         def view_count
-          @data['statistics']['viewCount'] if @data['statistics']
+          statistics['viewCount']
         end
 
         def like_count
-          @data['statistics']['likeCount'] if @data['statistics']
+          statistics['likeCount']
         end
 
         def favorite_count
-          @data['statistics']['favoriteCount'] if @data['statistics']
+          statistics['favoriteCount']
         end
 
         def comment_count
-          @data['statistics']['commentCount'] if @data['statistics']
+          statistics['commentCount']
+        end
+
+        private
+
+        def snippet
+          @data['snippet'] || {}
+        end
+
+        def content_details
+          @data['contentDetails'] || {}
+        end
+
+        def statistics
+          @data['statistics'] || {}
         end
       end
     end
