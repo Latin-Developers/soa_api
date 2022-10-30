@@ -1,0 +1,17 @@
+.container
+  .row
+    h2
+      table.table.table-hover
+        thead
+          tr
+            th scope="Col" Country id
+            th scope="Col" Category
+        tbody
+        - categories.each do |category|
+          tr
+            td = category.origin_id
+            td = category.title
+
+
+       
+          

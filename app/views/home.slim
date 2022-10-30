@@ -1,0 +1,23 @@
+.container
+  form role="form" action="/videos" method='POST' id='show-video-categories'
+    .row.vertical-align.query-bar
+      .col-md-2.col-sm-3
+        .text-right Region:
+      .col-md-8.col-sm-6
+        
+        select#region_code.form-select name="region_code" required="true"
+          option value = "Select an Option" Select an Option
+          option value = "MX" MX
+          option value = "GT" GT
+          option value = "NI" NI
+       
+      .col-md-2.col-sm-3
+        button { 
+          type='submit' id='show-video-categories-submit' class='submit' 
+          value='submit' class="btn btn-light"
+        } Get Analysis
+    .row
+      .col-md-12.blank-row
+    .row
+      .col-md-2.col-sm-3
+    
