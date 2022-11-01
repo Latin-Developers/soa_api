@@ -18,10 +18,13 @@ module YoutubeAnalytics
         youtube_response['items']
       end
 
+      # TODO: channels
+
       def categories(region)
         video_resource(:VIDEO_CATEGORIES, ApiFilters.categories(region))
       end
 
+      # !Deprecated, not needed for the project scope
       def popular_videos(region)
         video_resource(:VIDEOS, ApiFilters.popular_videos(region))
       end
