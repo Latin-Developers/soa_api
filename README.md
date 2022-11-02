@@ -20,11 +20,11 @@
 
 In this case we are planning to have 5 entities:
 
-* Video_Categories
-* Videos
-* Videos_Log
-* Comments_Log
-* Channel
+* video_categories
+* videos
+* videos_log
+* comments_log
+* channels
 
 ## Entity-Relationship Diagram
 
