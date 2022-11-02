@@ -6,7 +6,7 @@
 
 # Short-term usability goals
 
-* Analyze the sentiment of the YouTube viewers
+* Analyze the sentiment of the YouTube users
 * Pull data from Youtube API, and take advantage of it
 * Display daily information about the comments on the videos
 
