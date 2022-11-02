@@ -25,3 +25,6 @@ In this case we are planning to have 5 entities:
 * Videos_Log
 * Comments_Log
 * Channel
+
+## Entity-Relationship Diagram
+
