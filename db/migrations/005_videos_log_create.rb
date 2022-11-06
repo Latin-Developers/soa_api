@@ -4,19 +4,20 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_table(:comments_log) do
+    create_table(:videos_log) do
       primary_key :id
       foreign_key :video_id, :videos
-      foreign_key :author_channel_id, :channels
-      String      :text_display
-      String      :text_original
-      DateTime    :published_at
-      DateTime    :updated_at
+      Integer     :view_count
       Integer     :like_count
-      Integer     :total_reply_Count
+      Integer     :favorite_count
+      Integer     :comment_count
+      DateTime    :date_info
       String      :day
       String      :month
       String      :year
+      Float       :sentimental_score
+      DateTime    :created_at
+      DateTime    :updated_at
     end
   end
 end
