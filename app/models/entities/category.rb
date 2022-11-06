@@ -3,7 +3,7 @@
 require 'dry-types'
 require 'dry-struct'
 
-module YoutubeAnalytics
+module UFeeling
   module Entity
     # Provides access to category data
     class Category < Dry::Struct
@@ -12,6 +12,10 @@ module YoutubeAnalytics
       attribute :id,        Coercible::Integer.optional
       attribute :origin_id, Strict::String
       attribute :title,     Strict::String
+
+      def to_attr_hash
+        to_hash.except(:id)
+      end
     end
   end
 end

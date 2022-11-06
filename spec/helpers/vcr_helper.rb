@@ -21,9 +21,11 @@ module VcrHelper
       c.filter_sensitive_data('<YOUTUBE_API_KEY_ESC>') { CGI.escape(YOUTUBE_API_KEY) }
     end
 
-    VCR.insert_cassette CASSETTE_FILE,
-                        record: :new_episodes,
-                        match_requests_on: %i[method uri headers]
+    VCR.insert_cassette(
+      CASSETTE_FILE,
+      record: :new_episodes,
+      match_requests_on: %i[method uri headers]
+    )
   end
 
   def self.eject_vcr

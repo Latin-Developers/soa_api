@@ -3,4 +3,4 @@
 require_relative 'require_app'
 require_app
 
-run YoutubeAnalytics::App.freeze.app
+run UFeeling::App.freeze.app

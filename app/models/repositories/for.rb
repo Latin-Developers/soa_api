@@ -6,7 +6,7 @@ require_relative 'categories'
 # require_relative 'video'
 # require_relative 'video_log'
 
-module YoutubeAnalytics
+module UFeeling
   module Repository
     # Finds the right repository for an entity object or class
     module For

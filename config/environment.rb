@@ -5,7 +5,7 @@ require 'roda'
 require 'sequel'
 require 'yaml'
 
-module YoutubeAnalytics
+module UFeeling
   # Configuration for the App
   class App < Roda
     plugin :environments

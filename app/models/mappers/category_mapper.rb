@@ -1,6 +1,6 @@
 # frozen_string_literal: false
 
-module YoutubeAnalytics
+module UFeeling
   module Youtube
     # Data Mapper: Youtube Category -> Category Entity
     class CategoryMapper
@@ -26,7 +26,7 @@ module YoutubeAnalytics
         end
 
         def build_entity
-          YoutubeAnalytics::Entity::Category.new(
+          UFeeling::Entity::Category.new(
             id: nil,
             origin_id:,
             title:

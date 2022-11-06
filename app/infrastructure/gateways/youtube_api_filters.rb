@@ -2,7 +2,7 @@
 
 require_relative 'youtube_constants'
 
-module YoutubeAnalytics
+module UFeeling
   module Youtube
     # YoutubeAPI Filters
     class ApiFilters

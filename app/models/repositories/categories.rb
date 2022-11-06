@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
-module YoutubeAnalytics
+module UFeeling
   module Repository
     # Repository for Categories
     class Categories
+      def self.find(entity)
+        find_origin_id(entity.origin_id)
+      end
+
       def self.find_id(id)
         rebuild_entity Database::CategoryOrm.first(id:)
       end
@@ -14,6 +18,11 @@ module YoutubeAnalytics
 
       def self.find_origin_id(origin_id)
         rebuild_entity Database::CategoryOrm.first(origin_id:)
+      end
+
+      def self.find_by_region(region)
+        categories = Database::CategoryOrm.all()
+        rebuild_many(categories)
       end
 
       def self.rebuild_entity(db_record)
@@ -32,8 +41,8 @@ module YoutubeAnalytics
         end
       end
 
-      def self.db_find_or_create(entity)
-        Database::Category.find_or_create(entity.to_attr_hash)
+      def self.find_or_create(entity)
+        Database::CategoryOrm.find_or_create(entity.to_attr_hash)
       end
     end
   end

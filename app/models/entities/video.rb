@@ -5,7 +5,7 @@ require 'dry-struct'
 
 require_relative 'video_thumbnail'
 
-module YoutubeAnalytics
+module UFeeling
   module Entity
     # Provides access to Category data
     class Video < Dry::Struct
@@ -24,6 +24,10 @@ module YoutubeAnalytics
       attribute :like_count,              Strict::String.optional
       attribute :favorite_count,          Strict::String.optional
       attribute :comment_count,           Strict::String.optional
+
+      def to_attr_hash
+        to_hash.except(:id)
+      end
     end
   end
 end

@@ -2,7 +2,7 @@
 
 require 'http'
 
-module YoutubeAnalytics
+module UFeeling
   module Youtube
     # Library for Youtube Web API
     class Api

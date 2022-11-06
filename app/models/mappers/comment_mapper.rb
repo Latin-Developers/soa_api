@@ -1,6 +1,6 @@
 # frozen_string_literal: false
 
-module YoutubeAnalytics
+module UFeeling
   module Youtube
     # Data Mapper: Youtube Video -> Entity Video
     class CommentMapper
@@ -26,7 +26,7 @@ module YoutubeAnalytics
         end
 
         def build_entity
-          YoutubeAnalytics::Entity::Comment.new(
+          UFeeling::Entity::Comment.new(
             id: nil,
             origin_id:,
             origin_video_id:,

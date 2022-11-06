@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
 require 'rake/testtask'
-
-CODE = 'lib/'
+require_relative 'require_app'
 
 task :default do
   puts `rake -T`
 end
 
-desc 'run tests'
-task :spec do
-  sh 'bundle exec ruby spec/gateway_youtube_spec.rb'
+desc 'Run tests once'
+Rake::TestTask.new(:spec) do |t|
+  t.pattern = 'spec/*_spec.rb'
+  t.warning = false
 end
 
 desc 'Keep rerunning tests upon changes'
@@ -68,7 +68,7 @@ namespace :db do
     require_relative 'config/environment' # load config info
     require_relative 'spec/helpers/database_helper'
 
-    def app = YoutubeAnalytics::App
+    def app = UFeeling::App
   end
 
   desc 'Run migrations'
@@ -96,7 +96,7 @@ namespace :db do
       return
     end
 
-    FileUtils.rm(YoutubeAnalytics::App.config.DB_FILENAME)
-    puts "Deleted #{YoutubeAnalytics::App.config.DB_FILENAME}"
+    FileUtils.rm(UFeeling::App.config.DB_FILENAME)
+    puts "Deleted #{UFeeling::App.config.DB_FILENAME}"
   end
 end
