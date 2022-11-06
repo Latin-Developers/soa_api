@@ -20,7 +20,7 @@
 
 In this case we are planning to have 5 entities:
 
-* video_categories: All the categories that exist in youtube
+* categories: All the categories that exist in youtube
 * videos: Record of all the videos that have been requested in the app
 * videos_log: Daily record about information and some statistics of all the videos that have been requested in the app
 * comments_log: Daily record about information and some statistics of all the comments from the videos that have been requested in the app
