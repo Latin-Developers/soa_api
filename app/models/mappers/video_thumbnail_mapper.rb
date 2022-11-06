@@ -1,6 +1,6 @@
 # frozen_string_literal: false
 
-module YoutubeAnalytics
+module UFeeling
   module Youtube
     # Data Mapper: Youtube Video Thumbnail -> Video Thumbnail Entity
     class VideoThumbnailMapper
@@ -18,7 +18,7 @@ module YoutubeAnalytics
         end
 
         def build_entity
-          YoutubeAnalytics::Entity::VideoThumbnail.new(
+          UFeeling::Entity::VideoThumbnail.new(
             id: nil,
             resolution:,
             url:,
@@ -26,6 +26,8 @@ module YoutubeAnalytics
             height:
           )
         end
+
+        private
 
         def url
           @data['url']

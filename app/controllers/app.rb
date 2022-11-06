@@ -3,7 +3,7 @@
 require 'roda'
 require 'slim'
 
-module YoutubeAnalytics
+module UFeeling
   # Web App
   class App < Roda
     plugin :render, engine: 'slim', views: 'app/views'
@@ -27,6 +27,9 @@ module YoutubeAnalytics
           routing.post do
             region_code = routing.params['region_code'].upcase
 
+            categories = UFeeling::Youtube::CategoryMapper.new(App.config.YOUTUBE_API_KEY).categories(region_code)
+            categories.each { |category| Repository::For.klass(Entity::Category).find_or_create(category) }
+
             routing.redirect "/videos/region/#{region_code}/video_category/"
           end
         end
@@ -38,8 +41,8 @@ module YoutubeAnalytics
             # GET /videos/
             routing.on 'video_category' do
               routing.get do
-                categories = YoutubeAnalytics::Youtube::VideoCategoryMapper.new(YOUTUBE_API_KEY)
-                                                                           .categories(region_code)
+                # Gets regions
+                categories = Repository::For.klass(Entity::Category).find_by_region(region_code)
 
                 view 'project', locals: { categories: }
               end

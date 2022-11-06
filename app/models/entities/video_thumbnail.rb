@@ -3,7 +3,7 @@
 require 'dry-types'
 require 'dry-struct'
 
-module YoutubeAnalytics
+module UFeeling
   module Entity
     # Provides access to Thumbnail data
     class VideoThumbnail < Dry::Struct
@@ -14,6 +14,10 @@ module YoutubeAnalytics
       attribute :url,         Strict::String
       attribute :width,       Integer
       attribute :height,      Integer
+
+      def to_attr_hash
+        to_hash.except(:id)
+      end
     end
   end
 end

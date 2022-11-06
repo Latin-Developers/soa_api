@@ -1,128 +1,31 @@
-# Youtube API Client
+# Ü-Feeling
 
-## Resources
+## Overview
 
-- Video Categories
-- Videos
-- Comments
+Ü-Feeling is a web app that will pull data from YouTube's API, and generate sentiment analysis based on the comments in this platform.
 
-## Elements
+# Short-term usability goals
 
-- video category
-  - id
-  - snippet
-    - title
-    - channel id
-- video
-  - id
-  - snippet
-    - published at
-    - channel id
-    - title
-    - description
-    - thumbails
-      - url
-      - width
-      - height
-    - channel title
-    - list of tags
-    - category id
-    - live broadcast content
-    - localized
-      - title
-      - description
-- comment
-  - id
-  - snippet
-    - video id
-    - top level comment
-      - id
-        - snippet
-          - video id
-          - text display
-          - text original
-          - author display name
-          - author profiile image url
-          - author channel url
-          - author channel id
-          - can rate
-          - viewer rating
-          - published at
-          - updated at
-    - can reply
-    - replies
-      - comments
-        - id
-        - snippet
-          - video id
-          - text display
-          - text original
-          - author display name
-          - author profiile image url
-          - author channel url
-          - author channel id
-          - can rate
-          - viewer rating
-          - published at
-          - updated at
+- Analyze the sentiment of the YouTube users
+- Pull data from Youtube API, and take advantage of it
+- Display daily information about the comments on the videos
+
+# Long-term usability goals
+
+- Create a flexible tool where you can create your own metrics inside the web app, and upload your own inputs.
+
+# Database tables
 
 ## Entities
 
-These are objects that are important to the project:
+In this case we are planning to have 5 entities:
 
-- Video
-- Category
-- Comment
+- categories: All the categories that exist in youtube
+- videos: Record of all the videos that have been requested in the app
+- videos_log: Daily record about information and some statistics of all the videos that have been requested in the app
+- comments: Daily record about information and some statistics of all the comments from the videos that have been requested in the app
+- channels: Information about the channels from the videos that have been requested in the app
 
-# Mexican Central Bank API Client
+## Entity-Relationship Diagram
 
-
-## Resources
-** Some examples of indicators:
-
-- Exchange rate historical series U.S. dollar - MXN exchange rate since 1954 (SF63528)
-- Indice Nacional de Precios al consumidor Variación mensual (SP30577)
-
-## Elements
-
-- Exchange Rate
-{
-    "bmx": {
-        "series": [
-            {
-                "idSerie": "SF63528",
-                "titulo": "Serie histórica del tipo de cambio Tipo de cambio peso dólar desde 1954",
-                "fechaInicio": "19/04/1954",
-                "fechaFin": "14/10/2022",
-                "periodicidad": "Diaria",
-                "cifra": "Tipo de Cambio",
-                "unidad": "Pesos por Dólar",
-                "versionada": false
-            }
-        ]
-    }
-}
-
--INPC
-
-{
-    "bmx": {
-        "series": [
-            {
-                "idSerie": "SP30577",
-                "titulo": "Índice Nacional de Precios al consumidor Variación mensual",
-                "fechaInicio": "01/01/1969",
-                "fechaFin": "01/09/2022",
-                "periodicidad": "Mensual",
-                "cifra": "Porcentajes",
-                "unidad": "Sin Unidad",
-                "versionada": false
-            }
-        ]
-    }
-}
-
-## Entities
-
-exchange_rate
-inpc
+![](images/Entity_Relationship_Diagram.png)

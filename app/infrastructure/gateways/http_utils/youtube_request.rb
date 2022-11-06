@@ -2,7 +2,7 @@
 
 require_relative 'response'
 
-# Sends out HTTP requests to Github
+# Sends out HTTP requests to Youtube
 class YoutubeHttpRequest
   YOUTUBE_API_ROOT = 'https://www.googleapis.com/youtube/v3'
 

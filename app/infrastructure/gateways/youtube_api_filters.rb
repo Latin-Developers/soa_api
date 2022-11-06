@@ -2,7 +2,7 @@
 
 require_relative 'youtube_constants'
 
-module YoutubeAnalytics
+module UFeeling
   module Youtube
     # YoutubeAPI Filters
     class ApiFilters
@@ -18,14 +18,14 @@ module YoutubeAnalytics
         }
       end
 
-      def self.video_comments(video_id)
+      def self.comments(video_id)
         {
           part: "#{PATH_FILTERS[:SNIPPET]},#{PATH_FILTERS[:REPLIES]}",
           videoId: video_id
         }
       end
 
-      def self.video_details(video_id)
+      def self.details(video_id)
         {
           part: "#{PATH_FILTERS[:SNIPPET]},#{PATH_FILTERS[:STATISTICS]},#{PATH_FILTERS[:CONTENT_DETAILS]}",
           id: video_id

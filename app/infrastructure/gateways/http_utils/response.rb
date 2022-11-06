@@ -2,7 +2,7 @@
 
 require_relative 'errors'
 
-# Decorates HTTP responses from Github with success/error reporting
+# Decorates HTTP responses from Youtube with success/error reporting
 class Response < SimpleDelegator
   HTTP_ERROR = {
     400 => Errors::BadRequest,

@@ -1,6 +1,6 @@
 # frozen_string_literal: false
 
-module YoutubeAnalytics
+module UFeeling
   module Youtube
     # Data Mapper: Youtube Video -> Entity Video
     class VideoMapper
@@ -15,8 +15,8 @@ module YoutubeAnalytics
         data_items.map { |data| VideoMapper.build_entity(data) }
       end
 
-      def video_details(video_id)
-        data = @gateway.video_details(video_id)
+      def details(video_id)
+        data = @gateway.details(video_id)
         VideoMapper.build_entity(data)
       end
 
@@ -31,7 +31,7 @@ module YoutubeAnalytics
         end
 
         def build_entity
-          YoutubeAnalytics::Entity::Video.new(
+          UFeeling::Entity::Video.new(
             id: nil,
             origin_id:,
             published_at:,
@@ -48,6 +48,8 @@ module YoutubeAnalytics
           )
         end
 
+        private
+        
         def origin_id
           @data['id']
         end
@@ -95,8 +97,6 @@ module YoutubeAnalytics
         def comment_count
           statistics['commentCount']
         end
-
-        private
 
         def snippet
           @data['snippet'] || {}

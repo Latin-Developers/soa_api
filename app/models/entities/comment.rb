@@ -3,10 +3,10 @@
 require 'dry-types'
 require 'dry-struct'
 
-module YoutubeAnalytics
+module UFeeling
   module Entity
     # Provides access to comment data
-    class VideoComment < Dry::Struct
+    class Comment < Dry::Struct
       include Dry.Types
 
       attribute :id,                        Integer.optional
@@ -20,7 +20,11 @@ module YoutubeAnalytics
       attribute :like_count,                Strict::Integer
       attribute :published_at,              Strict::String
       attribute :updated_at,                Strict::String
-      attribute :comment_replies,           Array.of(VideoComment)
+      attribute :comment_replies,           Array.of(Comment)
+
+      def to_attr_hash
+        to_hash.except(:id)
+      end
     end
   end
 end

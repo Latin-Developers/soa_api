@@ -2,7 +2,7 @@
 
 require 'http'
 
-module YoutubeAnalytics
+module UFeeling
   module Youtube
     # Library for Youtube Web API
     class Api
@@ -13,25 +13,27 @@ module YoutubeAnalytics
       end
 
       def video_resource(resource_type, filters)
-        youtube_response = YoutubeHttpRequest.new(YOUTUBE_API_PATH[resource_type], @token, filters)
-                                             .http_get
+        youtube_response = YoutubeHttpRequest.new(YOUTUBE_API_PATH[resource_type], @token, filters).http_get
         youtube_response['items']
       end
+
+      # TODO: channels
 
       def categories(region)
         video_resource(:VIDEO_CATEGORIES, ApiFilters.categories(region))
       end
 
+      # !Deprecated, not needed for the project scope
       def popular_videos(region)
         video_resource(:VIDEOS, ApiFilters.popular_videos(region))
       end
 
-      def video_comments(video_id)
-        video_resource(:COMMENTS, ApiFilters.video_comments(video_id))
+      def comments(video_id)
+        video_resource(:COMMENTS, ApiFilters.comments(video_id))
       end
 
-      def video_details(video_id)
-        video_resource(:VIDEOS, ApiFilters.video_details(video_id)).first
+      def details(video_id)
+        video_resource(:VIDEOS, ApiFilters.details(video_id)).first
       end
     end
   end

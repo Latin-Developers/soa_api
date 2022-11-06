@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 24 Oct 2022 12:24:20 GMT
+      - Sun, 06 Nov 2022 11:29:31 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -70,7 +70,7 @@ http_interactions:
             ]
           }
         }
-  recorded_at: Mon, 24 Oct 2022 12:24:20 GMT
+  recorded_at: Sun, 06 Nov 2022 11:29:31 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/videoCategories?key=<YOUTUBE_API_KEY>&regionCode=GT
@@ -94,7 +94,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 24 Oct 2022 12:24:20 GMT
+      - Sun, 06 Nov 2022 11:29:31 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -433,10 +433,10 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Mon, 24 Oct 2022 12:24:20 GMT
+  recorded_at: Sun, 06 Nov 2022 11:29:31 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=BAD_TOKEN&part=snippet&regionCode=GT
+    uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=BAD_TOKEN&part=snippet,statistics,contentDetails
     body:
       encoding: UTF-8
       string: ''
@@ -457,7 +457,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 24 Oct 2022 12:24:21 GMT
+      - Sun, 06 Nov 2022 11:29:31 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -504,339 +504,7 @@ http_interactions:
             ]
           }
         }
-  recorded_at: Mon, 24 Oct 2022 12:24:21 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=<YOUTUBE_API_KEY>&part=snippet&regionCode=GT
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Date:
-      - Mon, 24 Oct 2022 12:24:21 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: "{\n  \"kind\": \"youtube#videoListResponse\",\n  \"etag\": \"T3xMm7NFWK_XmVvvE_t9WrxWLC4\",\n
-        \ \"items\": [\n    {\n      \"kind\": \"youtube#video\",\n      \"etag\":
-        \"b3dR78ibAby5ecjmK-fEp-CbacI\",\n      \"id\": \"oBlTjRm9fgs\",\n      \"snippet\":
-        {\n        \"publishedAt\": \"2022-10-23T03:24:44Z\",\n        \"channelId\":
-        \"UCTIyEyDNHPrwVFPhpi5dm0A\",\n        \"title\": \"Resumen y goles | América
-        1(2)-(3)1 Toluca | Liga Mx AP2022 - Semis VUELTA | TUDN\",\n        \"description\":
-        \"Toluca eliminó a las águilas en su propia cancha y avanzan a la gran final
-        del A0 2022.\",\n        \"thumbnails\": {\n          \"default\": {\n            \"url\":
-        \"https://i.ytimg.com/vi/oBlTjRm9fgs/default.jpg\",\n            \"width\":
-        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
-        \           \"url\": \"https://i.ytimg.com/vi/oBlTjRm9fgs/mqdefault.jpg\",\n
-        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/oBlTjRm9fgs/hqdefault.jpg\",\n
-        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"maxres\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/oBlTjRm9fgs/maxresdefault.jpg\",\n
-        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
-        \       \"channelTitle\": \"TUDN México\",\n        \"tags\": [\n          \"Televisa\",\n
-        \         \"Univision\",\n          \"TUDN\",\n          \"Televisa deportes\",\n
-        \         \"TUDN México\",\n          \"TUDN USA\",\n          \"Deportes\",\n
-        \         \"soccer\",\n          \"futbol mexicano\",\n          \"Liga Mx\",\n
-        \         \"Liga Mx 2022\",\n          \"Apertura 2022\",\n          \"goles
-        liga mx\",\n          \"resumen liga mx\",\n          \"america vs toluca
-        resumen\",\n          \"america liguilla 2022\",\n          \"toluca liguilla
-        2022\",\n          \"tano ortiz\",\n          \"gol Henry martín\",\n          \"gol
-        anulado America\",\n          \"america eliminado\",\n          \"gol torres
-        nilo vs america\"\n        ],\n        \"categoryId\": \"17\",\n        \"liveBroadcastContent\":
-        \"none\",\n        \"defaultLanguage\": \"es-419\",\n        \"localized\":
-        {\n          \"title\": \"Resumen y goles | América 1(2)-(3)1 Toluca | Liga
-        Mx AP2022 - Semis VUELTA | TUDN\",\n          \"description\": \"Toluca eliminó
-        a las águilas en su propia cancha y avanzan a la gran final del A0 2022.\"\n
-        \       },\n        \"defaultAudioLanguage\": \"es-419\"\n      }\n    },\n
-        \   {\n      \"kind\": \"youtube#video\",\n      \"etag\": \"5n63FvsIiEkvrYsWZvCMn2PSz4w\",\n
-        \     \"id\": \"EnvrZved2uY\",\n      \"snippet\": {\n        \"publishedAt\":
-        \"2022-10-22T18:56:13Z\",\n        \"channelId\": \"UCgTOIiEgjm58xLjHvDjmgdA\",\n
-        \       \"title\": \"Me banearon\",\n        \"description\": \"• Canal Primario
-        : https://www.youtube.com/channel/UC4DLCrt55UwaDvAswIr_59A\\n\\n● ¡Sigueme
-        por aqui! \U0001F440\\n• Instagram: https://www.instagram.com/ivan_buhaje/\\n•
-        Twitter (Personal): https://twitter.com/ivan_buhaje\\n• Twitter: https://twitter.com/SpreenDMC\",\n
-        \       \"thumbnails\": {\n          \"default\": {\n            \"url\":
-        \"https://i.ytimg.com/vi/EnvrZved2uY/default.jpg\",\n            \"width\":
-        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
-        \           \"url\": \"https://i.ytimg.com/vi/EnvrZved2uY/mqdefault.jpg\",\n
-        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/EnvrZved2uY/hqdefault.jpg\",\n
-        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"maxres\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/EnvrZved2uY/maxresdefault.jpg\",\n
-        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
-        \       \"channelTitle\": \"Spreen\",\n        \"tags\": [\n          \"Juego
-        Spreen Español ARGENTINA\",\n          \"GRATIS\",\n          \"PRO\",\n          \"NOOB\",\n
-        \         \"SPREENDMC\",\n          \"SPREEN\",\n          \"PVP\",\n          \"ARGENTINA\",\n
-        \         \"ARGENTINO\",\n          \"CRAFT\",\n          \"EPICO\",\n          \"GRACISOSO\",\n
-        \         \"DIVERTIDO\"\n        ],\n        \"categoryId\": \"20\",\n        \"liveBroadcastContent\":
-        \"none\",\n        \"localized\": {\n          \"title\": \"Me banearon\",\n
-        \         \"description\": \"• Canal Primario : https://www.youtube.com/channel/UC4DLCrt55UwaDvAswIr_59A\\n\\n●
-        ¡Sigueme por aqui! \U0001F440\\n• Instagram: https://www.instagram.com/ivan_buhaje/\\n•
-        Twitter (Personal): https://twitter.com/ivan_buhaje\\n• Twitter: https://twitter.com/SpreenDMC\"\n
-        \       }\n      }\n    },\n    {\n      \"kind\": \"youtube#video\",\n      \"etag\":
-        \"DilQ1cBfwB2E2IoD6qZ5fP7bv_Y\",\n      \"id\": \"hb2rk32QWHc\",\n      \"snippet\":
-        {\n        \"publishedAt\": \"2022-10-23T15:00:33Z\",\n        \"channelId\":
-        \"UCV85bPNU9wdY6JHgnGWZEbQ\",\n        \"title\": \"SOBREVIVÍ 100 DÍAS como
-        un GODZILLA en MINECRAFT HARDCORE!\",\n        \"description\": \"¡SOBREVIVÍ
-        100 DÍAS COMO UN GODZILLA EN MINECRFAFT Pesado! ¡Ahora, voy a explorar el
-        OSCURO PROFUNDO como nunca antes! \\n\\nMods Used:\\n\\nThe original Minecraft
-        Godzilla Model was made by Monster122. We took inspiration to make it! You
-        can find his channel here: https://youtube.com/c/Monster122\\n\\nDawn of Time:
-        https://www.curseforge.com/minecraft/mc-mods/dawn-of-time\\nGojicraft: https://www.curseforge.com/minecraft/mc-mods/gojicraft\\nKaijuKraft:
-        https://www.curseforge.com/minecraft/mc-mods/kaijukraft\\nExotic Critters:
-        https://www.curseforge.com/minecraft/mc-mods/exotic-critters\\n\\n\\n► ¡SUSCRÍBETE
-        al Canal! -\\nhttps://www.youtube.com/channel/UCV85bPNU9wdY6JHgnGWZEbQ\\n\\nDoblado
-        por:\\n\U0001F846 Chris Cisneros - https://www.instagram.com/cisneroscomedy/
-        \\n\\n¡No olvides dar me gusta, comentar, suscribirte y compartir para mostrar
-        tu apoyo a este canal!\",\n        \"thumbnails\": {\n          \"default\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/hb2rk32QWHc/default.jpg\",\n
-        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/hb2rk32QWHc/mqdefault.jpg\",\n
-        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/hb2rk32QWHc/hqdefault.jpg\",\n
-        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/hb2rk32QWHc/sddefault.jpg\",\n
-        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/hb2rk32QWHc/maxresdefault.jpg\",\n
-        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
-        \       \"channelTitle\": \"Bronzo Español\",\n        \"categoryId\": \"22\",\n
-        \       \"liveBroadcastContent\": \"none\",\n        \"localized\": {\n          \"title\":
-        \"SOBREVIVÍ 100 DÍAS como un GODZILLA en MINECRAFT HARDCORE!\",\n          \"description\":
-        \"¡SOBREVIVÍ 100 DÍAS COMO UN GODZILLA EN MINECRFAFT Pesado! ¡Ahora, voy a
-        explorar el OSCURO PROFUNDO como nunca antes! \\n\\nMods Used:\\n\\nThe original
-        Minecraft Godzilla Model was made by Monster122. We took inspiration to make
-        it! You can find his channel here: https://youtube.com/c/Monster122\\n\\nDawn
-        of Time: https://www.curseforge.com/minecraft/mc-mods/dawn-of-time\\nGojicraft:
-        https://www.curseforge.com/minecraft/mc-mods/gojicraft\\nKaijuKraft: https://www.curseforge.com/minecraft/mc-mods/kaijukraft\\nExotic
-        Critters: https://www.curseforge.com/minecraft/mc-mods/exotic-critters\\n\\n\\n►
-        ¡SUSCRÍBETE al Canal! -\\nhttps://www.youtube.com/channel/UCV85bPNU9wdY6JHgnGWZEbQ\\n\\nDoblado
-        por:\\n\U0001F846 Chris Cisneros - https://www.instagram.com/cisneroscomedy/
-        \\n\\n¡No olvides dar me gusta, comentar, suscribirte y compartir para mostrar
-        tu apoyo a este canal!\"\n        }\n      }\n    },\n    {\n      \"kind\":
-        \"youtube#video\",\n      \"etag\": \"2XBI2GZmC5uR1-s5ROXpvTEpcpQ\",\n      \"id\":
-        \"mxF58TYuPaM\",\n      \"snippet\": {\n        \"publishedAt\": \"2022-10-21T04:01:22Z\",\n
-        \       \"channelId\": \"UCgmUtgxaeaT6CSHc70AQMEg\",\n        \"title\": \"Kim
-        Loaiza - DEVOTO (Video Oficial) Ft. Elvis De Yongol\",\n        \"description\":
-        \"DEVOTO • Kim Loaiza • Space Music • Elvis De Yongol \\n\\n\\n✨ SIGUEME AQUI
-        ✨\\n\\n\\n• INSTAGRAM: @Kimberly.Loaiza http://bit.ly/IGKim\\n\\n• PAGINA
-        DE FACEBOOK: Kimberly Loaiza http://bit.ly/FBKimL\\n\\n• TWITTER: KimberlyLoaiza_
-        \  http://bit.ly/KimLTW\\n\\n•SUSCRÍBETE AQUÍ: https://bit.ly/3oYuGUW\\n\\nLETRA
-        ✍\U0001F3FB \\n\\nPor la boca muere el pez \\ny tú la abriste mucho y te me
-        ahogaste \\nla herida que dejaste \\nyo la curo con unos tequilas \\nhay que
-        cosas de la vida \\nalguien como tú fácil de olvida \\nno vuelvo a caer.\\n \\nCuando
-        me veas a través del vaso \\ny sepas que fuiste un total fracaso \\nTe acuerdes
-        de mi estando bien borracho \\nY te quieras pegar un balazo \\nviendo mis
-        fotos, \\ncon el corazón roto \\nConmigo te sacaste la loto\\nAhora estás
-        de luto \\nyo soy tu santa y tu mi devoto \\n \\nCuando me veas a través del
-        vaso \\ny sepas que fuiste un total fracaso \\nTe acuerdes de mi estando bien
-        borracho \\nY te quieras pegar un balazo \\nviendo mis fotos, \\ncon el corazón
-        roto \\nConmigo te sacaste la loto\\nAhora estás de luto \\nyo soy tu santa
-        y tu mi devoto \\n \\n \\n \\nTe acuerdas cuando te reías \\nYo aguantando
-        tus tonterías\\nNo veías lo que me dolía \\nO quizá lo sabías, pero te valía
-        \\nEsta no te la dejo pasar \\nAsí que no me mandes mas whatsapp \\nSe cayo
-        la red pa ti \\nYa no estoy en línea pa ti \\n \\n \\nEres de esos que solo
-        prometen\\nMe canse de ser tu juguete \\nAunque en tu casa me pongas un altar
-        \\nCon unas velas te pongas a rezar \\nYa nada va a pasar \\n \\n \\nCuando
-        me veas a través del vaso \\ny sepas que fuiste un total fracaso \\nTe acuerdes
-        de mi estando bien borracho \\nte quieras pegar un balazo \\nviendo mis fotos,
-        \\ncon el corazón roto \\nConmigo te sacaste la loto\\nAhora estás de luto
-        \\nyo soy tu santa y tu mi devoto \\n \\n \\nA ti te gusta que te rece todo
-        los días \\nTe pida perdón y confiese que te quería \\nTu no eres Virgen aunque
-        te llames María \\nMe saliste mala que suerte la mía \\nTiraba la piedra y
-        yo que te veía \\nNo eres ostia pero los domingos te comía \\nTu eres mi santa
-        y yo siempre seré tu mesías \\nHey \\n \\n \\nA mi no me engañas \\nme tienes
-        ganas \\nPa que te ensañas \\nNos vemos mañana \\nYa déjate de tantas mentiras
-        \\nen el fondo a mi tu a mi no me olvidas \\nMami dame beso \\nDisfruta del
-        proceso\\nTu serás la presa \\nDe este preso \\nCaliente como café expreso
-        \\nNo estamos en el polo pero súbete a mi expreso\\n \\nCuando me veas a través
-        del vaso y sepas que fuiste un total fracaso \\nTe acuerdes de mi estando
-        bien borracho \\nte quieras pegar un balazo viendo mis fotos, con el corazón
-        roto \\nConmigo te sacaste la loto\\nAhora estás de luto yo soy tu santa y
-        tu mi devoto\\n \\nPor la  boca muere el pez \\ny tú la abriste mucho y te
-        me ahogaste \\nla herida que dejaste \\nyo la curo con unos tequilas \\nhay
-        que cosas de la vida \\nalguien como tú fácil de olvida \\nno vuelvo a caer.\\n\\n\\n\\nCONTACTO
-        \U0001F48C: Marcaskim@gmail.com\",\n        \"thumbnails\": {\n          \"default\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/default.jpg\",\n
-        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/mqdefault.jpg\",\n
-        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/hqdefault.jpg\",\n
-        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/sddefault.jpg\",\n
-        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/mxF58TYuPaM/maxresdefault.jpg\",\n
-        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
-        \       \"channelTitle\": \"Kim Loaiza\",\n        \"tags\": [\n          \"MUSICA\",\n
-        \         \"SPACE\",\n          \"MUSIC\",\n          \"KIM\",\n          \"LOAIZA\",\n
-        \         \"POP\",\n          \"TRAP\",\n          \"REGGAETON\"\n        ],\n
-        \       \"categoryId\": \"10\",\n        \"liveBroadcastContent\": \"none\",\n
-        \       \"localized\": {\n          \"title\": \"Kim Loaiza - DEVOTO (Video
-        Oficial) Ft. Elvis De Yongol\",\n          \"description\": \"DEVOTO • Kim
-        Loaiza • Space Music • Elvis De Yongol \\n\\n\\n✨ SIGUEME AQUI ✨\\n\\n\\n•
-        INSTAGRAM: @Kimberly.Loaiza http://bit.ly/IGKim\\n\\n• PAGINA DE FACEBOOK:
-        Kimberly Loaiza http://bit.ly/FBKimL\\n\\n• TWITTER: KimberlyLoaiza_   http://bit.ly/KimLTW\\n\\n•SUSCRÍBETE
-        AQUÍ: https://bit.ly/3oYuGUW\\n\\nLETRA ✍\U0001F3FB \\n\\nPor la boca muere
-        el pez \\ny tú la abriste mucho y te me ahogaste \\nla herida que dejaste
-        \\nyo la curo con unos tequilas \\nhay que cosas de la vida \\nalguien como
-        tú fácil de olvida \\nno vuelvo a caer.\\n \\nCuando me veas a través del
-        vaso \\ny sepas que fuiste un total fracaso \\nTe acuerdes de mi estando bien
-        borracho \\nY te quieras pegar un balazo \\nviendo mis fotos, \\ncon el corazón
-        roto \\nConmigo te sacaste la loto\\nAhora estás de luto \\nyo soy tu santa
-        y tu mi devoto \\n \\nCuando me veas a través del vaso \\ny sepas que fuiste
-        un total fracaso \\nTe acuerdes de mi estando bien borracho \\nY te quieras
-        pegar un balazo \\nviendo mis fotos, \\ncon el corazón roto \\nConmigo te
-        sacaste la loto\\nAhora estás de luto \\nyo soy tu santa y tu mi devoto \\n \\n \\n \\nTe
-        acuerdas cuando te reías \\nYo aguantando tus tonterías\\nNo veías lo que
-        me dolía \\nO quizá lo sabías, pero te valía \\nEsta no te la dejo pasar \\nAsí
-        que no me mandes mas whatsapp \\nSe cayo la red pa ti \\nYa no estoy en línea
-        pa ti \\n \\n \\nEres de esos que solo prometen\\nMe canse de ser tu juguete
-        \\nAunque en tu casa me pongas un altar \\nCon unas velas te pongas a rezar
-        \\nYa nada va a pasar \\n \\n \\nCuando me veas a través del vaso \\ny sepas
-        que fuiste un total fracaso \\nTe acuerdes de mi estando bien borracho \\nte
-        quieras pegar un balazo \\nviendo mis fotos, \\ncon el corazón roto \\nConmigo
-        te sacaste la loto\\nAhora estás de luto \\nyo soy tu santa y tu mi devoto
-        \\n \\n \\nA ti te gusta que te rece todo los días \\nTe pida perdón y confiese
-        que te quería \\nTu no eres Virgen aunque te llames María \\nMe saliste mala
-        que suerte la mía \\nTiraba la piedra y yo que te veía \\nNo eres ostia pero
-        los domingos te comía \\nTu eres mi santa y yo siempre seré tu mesías \\nHey
-        \\n \\n \\nA mi no me engañas \\nme tienes ganas \\nPa que te ensañas \\nNos
-        vemos mañana \\nYa déjate de tantas mentiras \\nen el fondo a mi tu a mi no
-        me olvidas \\nMami dame beso \\nDisfruta del proceso\\nTu serás la presa \\nDe
-        este preso \\nCaliente como café expreso \\nNo estamos en el polo pero súbete
-        a mi expreso\\n \\nCuando me veas a través del vaso y sepas que fuiste un
-        total fracaso \\nTe acuerdes de mi estando bien borracho \\nte quieras pegar
-        un balazo viendo mis fotos, con el corazón roto \\nConmigo te sacaste la loto\\nAhora
-        estás de luto yo soy tu santa y tu mi devoto\\n \\nPor la  boca muere el pez
-        \\ny tú la abriste mucho y te me ahogaste \\nla herida que dejaste \\nyo la
-        curo con unos tequilas \\nhay que cosas de la vida \\nalguien como tú fácil
-        de olvida \\nno vuelvo a caer.\\n\\n\\n\\nCONTACTO \U0001F48C: Marcaskim@gmail.com\"\n
-        \       },\n        \"defaultAudioLanguage\": \"es-419\"\n      }\n    },\n
-        \   {\n      \"kind\": \"youtube#video\",\n      \"etag\": \"A1ZWQU-yHkODMQD6-Jv74OmcwJ4\",\n
-        \     \"id\": \"Zm0LjUBZyUY\",\n      \"snippet\": {\n        \"publishedAt\":
-        \"2022-10-22T12:00:11Z\",\n        \"channelId\": \"UC_F8DoJf9MZogEOU51TpTbQ\",\n
-        \       \"title\": \"Clash Royale: NEW UPDATE! \U0001F9D8 Two New Cards and
-        much more! (TV Royale)\",\n        \"description\": \"The biggest update of
-        the year! \U0001F389\\nTwo new cards, a new ranked mode, a reworked Trophy
-        Road, the Deck Explorer, new King Levels... and much more! Coming on October
-        26th!\\nFind out in this TV Royale!\\n\\nFollow us on our Socials!\\nTwitter
-        ► https://twitter.com/ClashRoyale/\\nInstagram ► https://www.instagram.com/clashroyale\\nTikTok
-        ► https://www.tiktok.com/@clashroyale\\nFacebook ► https://www.facebook.com/ClashRoyale/\\n\\nSubscribe
-        for more! ►► http://supr.cl/SubRoyale\\n\\nSubscribe for more! ►► http://supr.cl/SubRoyale\\n\\nEnter
-        the Arena! \\nFrom the creators of Clash of Clans comes a real-time multiplayer
-        game starring the Royales, your favorite Clash characters and much, much more.\\nCollect
-        and upgrade dozens of cards featuring the Clash of Clans troops, spells and
-        defenses you know and love, as well as the Royales: Princes, Knights, Baby
-        Dragons and more. Knock the enemy King and Princesses from their towers to
-        defeat your opponents and win Trophies, Crowns and glory in the Arena. Form
-        a Clan to share cards and build your very own battle community.\\nLead the
-        Clash Royale Family to victory!\\n\\nFEATURES\\n• Duel players from around
-        the world in real-time in both 1v1 and 2v2 Battles\\n• Earn chests to unlock
-        rewards, collect powerful new cards and upgrade existing ones\\n• Destroy
-        opponent’s towers and win Crowns to earn epic Crown chests in the Pass Royale\\n•
-        Build and upgrade your card collection with the Clash Royale Family along
-        with dozens of your favorite Clash troops, spells and defenses\\n• Construct
-        your ultimate Battle Deck to defeat your opponents\\n• Progress through multiple
-        Arenas all the way to the top\\n• Form a Clan to share cards and build your
-        very own battle community\\n• Challenge your Clanmates and friends to a private
-        duel, or play side-by-side in a 2v2 Battle\\n• Battle with your Clan in the
-        Clan Wars\\n• Play in events and special challenges every week\\n• Learn different
-        battle tactics by watching the best duels on TV Royale\\n\\n\\nPLEASE NOTE!
-        Clash Royale is free to download and play, however, some game items can also
-        be purchased for real money. If you don’t want to use this feature, please
-        disable in-app purchases in your device’s settings. Also, under our Terms
-        of Service and Privacy Policy, you must be at least 13 years of age to play
-        or download Clash Royale. A network connection is also required.\\n\\nSupport:\\nAre
-        you having problems? Visit http://supercell.helpshift.com/a/clas... or contact
-        us in-game by going to Settings, Help and support.\\n\\nPrivacy Policy:\\nhttp://supercell.com/en/privacy-policy/\\n\\nTerms
-        of Service:\\nhttp://supercell.com/en/terms-of-serv...\\n\\nParent’s Guide:\\nhttp://supercell.com/en/parents/\\n\\n#ClashRoyale\",\n
-        \       \"thumbnails\": {\n          \"default\": {\n            \"url\":
-        \"https://i.ytimg.com/vi/Zm0LjUBZyUY/default.jpg\",\n            \"width\":
-        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
-        \           \"url\": \"https://i.ytimg.com/vi/Zm0LjUBZyUY/mqdefault.jpg\",\n
-        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Zm0LjUBZyUY/hqdefault.jpg\",\n
-        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Zm0LjUBZyUY/sddefault.jpg\",\n
-        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Zm0LjUBZyUY/maxresdefault.jpg\",\n
-        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
-        \       \"channelTitle\": \"Clash Royale\",\n        \"tags\": [\n          \"Clash
-        Royale\",\n          \"Clash Royale Game\",\n          \"Supercell\",\n          \"Supercell
-        Game\",\n          \"Clash Royale Supercell\",\n          \"Mobile Game\",\n
-        \         \"tv royale\"\n        ],\n        \"categoryId\": \"20\",\n        \"liveBroadcastContent\":
-        \"none\",\n        \"defaultLanguage\": \"en\",\n        \"localized\": {\n
-        \         \"title\": \"Clash Royale: NEW UPDATE! \U0001F9D8 Two New Cards
-        and much more! (TV Royale)\",\n          \"description\": \"The biggest update
-        of the year! \U0001F389\\nTwo new cards, a new ranked mode, a reworked Trophy
-        Road, the Deck Explorer, new King Levels... and much more! Coming on October
-        26th!\\nFind out in this TV Royale!\\n\\nFollow us on our Socials!\\nTwitter
-        ► https://twitter.com/ClashRoyale/\\nInstagram ► https://www.instagram.com/clashroyale\\nTikTok
-        ► https://www.tiktok.com/@clashroyale\\nFacebook ► https://www.facebook.com/ClashRoyale/\\n\\nSubscribe
-        for more! ►► http://supr.cl/SubRoyale\\n\\nSubscribe for more! ►► http://supr.cl/SubRoyale\\n\\nEnter
-        the Arena! \\nFrom the creators of Clash of Clans comes a real-time multiplayer
-        game starring the Royales, your favorite Clash characters and much, much more.\\nCollect
-        and upgrade dozens of cards featuring the Clash of Clans troops, spells and
-        defenses you know and love, as well as the Royales: Princes, Knights, Baby
-        Dragons and more. Knock the enemy King and Princesses from their towers to
-        defeat your opponents and win Trophies, Crowns and glory in the Arena. Form
-        a Clan to share cards and build your very own battle community.\\nLead the
-        Clash Royale Family to victory!\\n\\nFEATURES\\n• Duel players from around
-        the world in real-time in both 1v1 and 2v2 Battles\\n• Earn chests to unlock
-        rewards, collect powerful new cards and upgrade existing ones\\n• Destroy
-        opponent’s towers and win Crowns to earn epic Crown chests in the Pass Royale\\n•
-        Build and upgrade your card collection with the Clash Royale Family along
-        with dozens of your favorite Clash troops, spells and defenses\\n• Construct
-        your ultimate Battle Deck to defeat your opponents\\n• Progress through multiple
-        Arenas all the way to the top\\n• Form a Clan to share cards and build your
-        very own battle community\\n• Challenge your Clanmates and friends to a private
-        duel, or play side-by-side in a 2v2 Battle\\n• Battle with your Clan in the
-        Clan Wars\\n• Play in events and special challenges every week\\n• Learn different
-        battle tactics by watching the best duels on TV Royale\\n\\n\\nPLEASE NOTE!
-        Clash Royale is free to download and play, however, some game items can also
-        be purchased for real money. If you don’t want to use this feature, please
-        disable in-app purchases in your device’s settings. Also, under our Terms
-        of Service and Privacy Policy, you must be at least 13 years of age to play
-        or download Clash Royale. A network connection is also required.\\n\\nSupport:\\nAre
-        you having problems? Visit http://supercell.helpshift.com/a/clas... or contact
-        us in-game by going to Settings, Help and support.\\n\\nPrivacy Policy:\\nhttp://supercell.com/en/privacy-policy/\\n\\nTerms
-        of Service:\\nhttp://supercell.com/en/terms-of-serv...\\n\\nParent’s Guide:\\nhttp://supercell.com/en/parents/\\n\\n#ClashRoyale\"\n
-        \       },\n        \"defaultAudioLanguage\": \"en\"\n      }\n    }\n  ],\n
-        \ \"nextPageToken\": \"CAUQAA\",\n  \"pageInfo\": {\n    \"totalResults\":
-        200,\n    \"resultsPerPage\": 5\n  }\n}\n"
-  recorded_at: Mon, 24 Oct 2022 12:24:21 GMT
+  recorded_at: Sun, 06 Nov 2022 11:29:31 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=<YOUTUBE_API_KEY>&part=snippet,statistics,contentDetails
@@ -860,7 +528,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 24 Oct 2022 12:38:00 GMT
+      - Sun, 06 Nov 2022 11:29:31 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -885,11 +553,11 @@ http_interactions:
       string: |
         {
           "kind": "youtube#videoListResponse",
-          "etag": "yakZGtSp6UbUKHHvho8cLzfFlig",
+          "etag": "7d8GkyLf3te8E4zmXgP9DE0rUKs",
           "items": [
             {
               "kind": "youtube#video",
-              "etag": "DdHdVhaggfdU2wPElzvJwYFGc5g",
+              "etag": "SPisg03uqd_SUl4IovSkRpR3YN4",
               "id": "ggGINmj5EQE",
               "snippet": {
                 "publishedAt": "2022-09-08T21:01:43Z",
@@ -952,10 +620,10 @@ http_interactions:
                 "projection": "rectangular"
               },
               "statistics": {
-                "viewCount": "2971968",
-                "likeCount": "160898",
+                "viewCount": "3251762",
+                "likeCount": "164731",
                 "favoriteCount": "0",
-                "commentCount": "6265"
+                "commentCount": "6342"
               }
             }
           ],
@@ -964,10 +632,10 @@ http_interactions:
             "resultsPerPage": 1
           }
         }
-  recorded_at: Mon, 24 Oct 2022 12:38:00 GMT
+  recorded_at: Sun, 06 Nov 2022 11:29:31 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=BAD_TOKEN&part=snippet,statistics,contentDetails
+    uri: https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=BAD_TOKEN&part=snippet&regionCode=GT
     body:
       encoding: UTF-8
       string: ''
@@ -988,7 +656,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 24 Oct 2022 12:38:00 GMT
+      - Sun, 06 Nov 2022 11:29:31 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -1035,7 +703,304 @@ http_interactions:
             ]
           }
         }
-  recorded_at: Mon, 24 Oct 2022 12:38:00 GMT
+  recorded_at: Sun, 06 Nov 2022 11:29:31 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=<YOUTUBE_API_KEY>&part=snippet&regionCode=GT
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 06 Nov 2022 11:29:31 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n  \"kind\": \"youtube#videoListResponse\",\n  \"etag\": \"NCPhGL8_sMGJ3zaYV3ArzdaRb58\",\n
+        \ \"items\": [\n    {\n      \"kind\": \"youtube#video\",\n      \"etag\":
+        \"RZ9nmCAtHqITsB8Mocib3lqrvEw\",\n      \"id\": \"C3iLF8e0i0o\",\n      \"snippet\":
+        {\n        \"publishedAt\": \"2022-11-04T18:30:19Z\",\n        \"channelId\":
+        \"UCzoUWqjCbcfWFdOMvoep8FA\",\n        \"title\": \"Fuimos al museo de las
+        ilusiones \U0001F631 Jukilop | Juan de Dios Pantoja\",\n        \"description\":
+        \"Hola familia PANTOJITA \U0001F48E gracias por tenerme de nuevo en sus pantallas
+        \U0001F603 estoy muy contento y agradecido por todo el apoyo que siempre me
+        dan, GRACIAS POR SER PARTE DE ESTA FAMILIA QUE TANTO AMO ❤️\U0001F64F\U0001F3FB\\r\\n\\r\\n\\r\\n▪️SIGUEME
+        EN MIS REDES SOCIALES QUIERO CONECTARME MAS CONTIGO:\\r\\n\\r\\n• INSTAGRAM:
+        @JuandediosPantoja -  https://bit.ly/2vWtdSj\\r\\n\\r\\n • TWITTER:  @Juandedios_P
+        - https://bit.ly/2OY3UYN\\r\\n\\r\\n• PAGINA DE FACE: Juan De Dios Pantoja
+        Corona - https://bit.ly/2KHVW2E \\r\\n\\r\\n\\r\\n\U0001F4E9 : marcasjddp@gmail.com\",\n
+        \       \"thumbnails\": {\n          \"default\": {\n            \"url\":
+        \"https://i.ytimg.com/vi/C3iLF8e0i0o/default.jpg\",\n            \"width\":
+        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
+        \           \"url\": \"https://i.ytimg.com/vi/C3iLF8e0i0o/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/C3iLF8e0i0o/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/C3iLF8e0i0o/sddefault.jpg\",\n
+        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/C3iLF8e0i0o/maxresdefault.jpg\",\n
+        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
+        \       \"channelTitle\": \"Juan De Dios Pantoja\",\n        \"tags\": [\n
+        \         \"Team\",\n          \"juki\",\n          \"Juan\",\n          \"De\",\n
+        \         \"Dios\",\n          \"Pantoja\",\n          \"jd\",\n          \"youtube\",\n
+        \         \"retos\",\n          \"reto\",\n          \"tag\",\n          \"tags\",\n
+        \         \"Challenge\",\n          \"nuevo\",\n          \"video\",\n          \"risa\",\n
+        \         \"comedia\",\n          \"diversión\",\n          \"extremo\",\n
+        \         \"música\",\n          \"roast\"\n        ],\n        \"categoryId\":
+        \"22\",\n        \"liveBroadcastContent\": \"none\",\n        \"localized\":
+        {\n          \"title\": \"Fuimos al museo de las ilusiones \U0001F631 Jukilop
+        | Juan de Dios Pantoja\",\n          \"description\": \"Hola familia PANTOJITA
+        \U0001F48E gracias por tenerme de nuevo en sus pantallas \U0001F603 estoy
+        muy contento y agradecido por todo el apoyo que siempre me dan, GRACIAS POR
+        SER PARTE DE ESTA FAMILIA QUE TANTO AMO ❤️\U0001F64F\U0001F3FB\\r\\n\\r\\n\\r\\n▪️SIGUEME
+        EN MIS REDES SOCIALES QUIERO CONECTARME MAS CONTIGO:\\r\\n\\r\\n• INSTAGRAM:
+        @JuandediosPantoja -  https://bit.ly/2vWtdSj\\r\\n\\r\\n • TWITTER:  @Juandedios_P
+        - https://bit.ly/2OY3UYN\\r\\n\\r\\n• PAGINA DE FACE: Juan De Dios Pantoja
+        Corona - https://bit.ly/2KHVW2E \\r\\n\\r\\n\\r\\n\U0001F4E9 : marcasjddp@gmail.com\"\n
+        \       },\n        \"defaultAudioLanguage\": \"es-MX\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#video\",\n      \"etag\": \"fwaREpACT3HRqmKAxugjc8bXsUs\",\n
+        \     \"id\": \"0BNbXDqHULU\",\n      \"snippet\": {\n        \"publishedAt\":
+        \"2022-11-04T20:00:06Z\",\n        \"channelId\": \"UCs8qka8tfhdc69wzXYdtZ3A\",\n
+        \       \"title\": \"LES PRESENTO A MI NOVIA \\\"A\\\" | LOS POLINESIOS VLOGS\",\n
+        \       \"description\": \"Boletos para JUMP https://platicapolinesia.com/jump\\n\\nNUEVA
+        COLECCION EN PPMARKET \\nhttps://www.myppmarket.com/collections/ppop-art\\n\\nAquí
+        les dejamos el link de nuestro nuevo álbum:\\nhttps://bfan.link/jump-6\\n\\nSigue
+        las redes sociales de PPMARKET para estar enterado de TODO\\nIntagram @myppmarket\\nFacebook
+        @myppmarket\\nTwitter @myppmarket\\n\\nNUESTROS CANALES:\\nMúsica: http://www.youtube.com/platicapolinesa\\nRetos
+        y bromas: http://www.youtube.com/ppextras\\nTutoriales: http://www.youtube.com/ppmussas\\nVideojuegos:
+        http://www.youtube.com/ppjuxiis\\n\\n\\nNUESTROS INSTAGRAMS:\\nhttp://www.instagram.com/PlaticaPolinesi\\nhttp://www.instagram.com/PPTeamKaren\\nhttp://www.instagram.com/PPTeamLesslie\\nhttp://www.instagram.com/PPTeamRafa\\nhttp://www.instagram.com/PPTeamAria\\nhttp://www.instagram.com/PPTeamKler\\nhttp://www.instagram.com/PPTeamKoco\\n\\n\\nFacebook\\nhttp://www.facebook.com/PlaticaPolinesia\\nhttp://www.facebook.com/TeamRaffa\\nhttp://www.facebook.com/TeamKaren\\nhttp://www.facebook.com/TeamLesslie\\n\\n\\nTwitter\\nhttp://twitter.com/platicapolinesi\\nhttp://twitter.com/ppteamrafa\\nhttp://twitter.com/ppteamkaren\\nhttp://twitter.com/ppteamlesslie\\nhttp://twitter.com/ppteamaria\\nhttp://twitter.com/ppteamkler\\nhttp://twitter.com/ppteamkocoBoletos
+        para JUMP https://platicapolinesia.com/jump\\n\\nNUEVA COLECCION EN PPMARKET
+        \\nhttps://www.myppmarket.com/collections/ppop-art\\n\\nAquí les dejamos el
+        link de nuestro nuevo álbum:\\nhttps://bfan.link/jump-6\\n\\nSigue las redes
+        sociales de PPMARKET para estar enterado de TODO\\nIntagram @myppmarket\\nFacebook
+        @myppmarket\\nTwitter @myppmarket\\n\\nNUESTROS CANALES:\\nMúsica: http://www.youtube.com/platicapolinesa\\nRetos
+        y bromas: http://www.youtube.com/ppextras\\nTutoriales: http://www.youtube.com/ppmussas\\nVideojuegos:
+        http://www.youtube.com/ppjuxiis\\n\\n\\nNUESTROS INSTAGRAMS:\\nhttp://www.instagram.com/PlaticaPolinesi\\nhttp://www.instagram.com/PPTeamKaren\\nhttp://www.instagram.com/PPTeamLesslie\\nhttp://www.instagram.com/PPTeamRafa\\nhttp://www.instagram.com/PPTeamAria\\nhttp://www.instagram.com/PPTeamKler\\nhttp://www.instagram.com/PPTeamKoco\\n\\n\\nFacebook\\nhttp://www.facebook.com/PlaticaPolinesia\\nhttp://www.facebook.com/TeamRaffa\\nhttp://www.facebook.com/TeamKaren\\nhttp://www.facebook.com/TeamLesslie\\n\\n\\nTwitter\\nhttp://twitter.com/platicapolinesi\\nhttp://twitter.com/ppteamrafa\\nhttp://twitter.com/ppteamkaren\\nhttp://twitter.com/ppteamlesslie\\nhttp://twitter.com/ppteamaria\\nhttp://twitter.com/ppteamkler\\nhttp://twitter.com/ppteamkoco\",\n
+        \       \"thumbnails\": {\n          \"default\": {\n            \"url\":
+        \"https://i.ytimg.com/vi/0BNbXDqHULU/default.jpg\",\n            \"width\":
+        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
+        \           \"url\": \"https://i.ytimg.com/vi/0BNbXDqHULU/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/0BNbXDqHULU/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/0BNbXDqHULU/sddefault.jpg\",\n
+        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/0BNbXDqHULU/maxresdefault.jpg\",\n
+        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
+        \       \"channelTitle\": \"LosPolinesios\",\n        \"tags\": [\n          \"Platica
+        polinesia\",\n          \"los polinesios\",\n          \"karen\",\n          \"rafa\",\n
+        \         \"lesslie\",\n          \"bromas\",\n          \"extras\",\n          \"personales\",\n
+        \         \"mi novia A\",\n          \"asi es la novia de rafa\",\n          \"la
+        novia de rafa\",\n          \"esta es la cara de la novia de rafa\",\n          \"novia\",\n
+        \         \"a muestra su cara\",\n          \"la identidad de la novia de
+        rafa\",\n          \"asi es A\",\n          \"rafa presenta a su novia\",\n
+        \         \"les presento a mi novia\",\n          \"aventuras\",\n          \"mi
+        novia\",\n          \"la novia de rafa polinesio\"\n        ],\n        \"categoryId\":
+        \"22\",\n        \"liveBroadcastContent\": \"none\",\n        \"defaultLanguage\":
+        \"es-419\",\n        \"localized\": {\n          \"title\": \"LES PRESENTO
+        A MI NOVIA \\\"A\\\" | LOS POLINESIOS VLOGS\",\n          \"description\":
+        \"Boletos para JUMP https://platicapolinesia.com/jump\\n\\nNUEVA COLECCION
+        EN PPMARKET \\nhttps://www.myppmarket.com/collections/ppop-art\\n\\nAquí les
+        dejamos el link de nuestro nuevo álbum:\\nhttps://bfan.link/jump-6\\n\\nSigue
+        las redes sociales de PPMARKET para estar enterado de TODO\\nIntagram @myppmarket\\nFacebook
+        @myppmarket\\nTwitter @myppmarket\\n\\nNUESTROS CANALES:\\nMúsica: http://www.youtube.com/platicapolinesa\\nRetos
+        y bromas: http://www.youtube.com/ppextras\\nTutoriales: http://www.youtube.com/ppmussas\\nVideojuegos:
+        http://www.youtube.com/ppjuxiis\\n\\n\\nNUESTROS INSTAGRAMS:\\nhttp://www.instagram.com/PlaticaPolinesi\\nhttp://www.instagram.com/PPTeamKaren\\nhttp://www.instagram.com/PPTeamLesslie\\nhttp://www.instagram.com/PPTeamRafa\\nhttp://www.instagram.com/PPTeamAria\\nhttp://www.instagram.com/PPTeamKler\\nhttp://www.instagram.com/PPTeamKoco\\n\\n\\nFacebook\\nhttp://www.facebook.com/PlaticaPolinesia\\nhttp://www.facebook.com/TeamRaffa\\nhttp://www.facebook.com/TeamKaren\\nhttp://www.facebook.com/TeamLesslie\\n\\n\\nTwitter\\nhttp://twitter.com/platicapolinesi\\nhttp://twitter.com/ppteamrafa\\nhttp://twitter.com/ppteamkaren\\nhttp://twitter.com/ppteamlesslie\\nhttp://twitter.com/ppteamaria\\nhttp://twitter.com/ppteamkler\\nhttp://twitter.com/ppteamkocoBoletos
+        para JUMP https://platicapolinesia.com/jump\\n\\nNUEVA COLECCION EN PPMARKET
+        \\nhttps://www.myppmarket.com/collections/ppop-art\\n\\nAquí les dejamos el
+        link de nuestro nuevo álbum:\\nhttps://bfan.link/jump-6\\n\\nSigue las redes
+        sociales de PPMARKET para estar enterado de TODO\\nIntagram @myppmarket\\nFacebook
+        @myppmarket\\nTwitter @myppmarket\\n\\nNUESTROS CANALES:\\nMúsica: http://www.youtube.com/platicapolinesa\\nRetos
+        y bromas: http://www.youtube.com/ppextras\\nTutoriales: http://www.youtube.com/ppmussas\\nVideojuegos:
+        http://www.youtube.com/ppjuxiis\\n\\n\\nNUESTROS INSTAGRAMS:\\nhttp://www.instagram.com/PlaticaPolinesi\\nhttp://www.instagram.com/PPTeamKaren\\nhttp://www.instagram.com/PPTeamLesslie\\nhttp://www.instagram.com/PPTeamRafa\\nhttp://www.instagram.com/PPTeamAria\\nhttp://www.instagram.com/PPTeamKler\\nhttp://www.instagram.com/PPTeamKoco\\n\\n\\nFacebook\\nhttp://www.facebook.com/PlaticaPolinesia\\nhttp://www.facebook.com/TeamRaffa\\nhttp://www.facebook.com/TeamKaren\\nhttp://www.facebook.com/TeamLesslie\\n\\n\\nTwitter\\nhttp://twitter.com/platicapolinesi\\nhttp://twitter.com/ppteamrafa\\nhttp://twitter.com/ppteamkaren\\nhttp://twitter.com/ppteamlesslie\\nhttp://twitter.com/ppteamaria\\nhttp://twitter.com/ppteamkler\\nhttp://twitter.com/ppteamkoco\"\n
+        \       },\n        \"defaultAudioLanguage\": \"es-419\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#video\",\n      \"etag\": \"J1YILQvZRIP9X2CqYTCMZSBHMBM\",\n
+        \     \"id\": \"4z5F83gytbI\",\n      \"snippet\": {\n        \"publishedAt\":
+        \"2022-11-03T23:59:09Z\",\n        \"channelId\": \"UCzI7wZyqk7jpXWT_MILjepw\",\n
+        \       \"title\": \"Paulo Londra - A Veces (feat. Feid) [Official Video]\",\n
+        \       \"description\": \"Official Video for \\\"A Veces\\\" by Paulo Londra
+        feat. Feid\\n\\nListen & Download \\\"A Veces\\\": https://WML.link/PauloLondraFeidAVeces\\n\\nFollow
+        Paulo Londra:\\nInstagram:  https://www.instagram.com/paulolondra/ \\nTwitter:
+        https://twitter.com/paulolondra \\nYouTube: https://bit.ly/PauloLondra_YouTube\\nTikTok:
+        https://www.tiktok.com/@paulolondra \\nFacebook: https://www.facebook.com/paulolondra\\n\\n#LeonesConFlow
+        #PauloIsBack #CreoQueLoTengo\\n#PauloLondra #Feid #AVeces\",\n        \"thumbnails\":
+        {\n          \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/4z5F83gytbI/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/4z5F83gytbI/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/4z5F83gytbI/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/4z5F83gytbI/sddefault.jpg\",\n
+        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/4z5F83gytbI/maxresdefault.jpg\",\n
+        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
+        \       \"channelTitle\": \"Paulo Londra\",\n        \"tags\": [\n          \"paulo
+        londra\",\n          \"A Veces\",\n          \"paulo A Veces\",\n          \"feid\",\n
+        \         \"paulo y feid\",\n          \"feid feat paulo londra\",\n          \"aveces\",\n
+        \         \"paulo londra música\",\n          \"música\",\n          \"canciones
+        de Paulo Londra\",\n          \"canciones\",\n          \"quinto escalon\",\n
+        \         \"freestyle\",\n          \"batallas de gallos\",\n          \"rap
+        en español\",\n          \"musica\",\n          \"paulo\",\n          \"paulo
+        londra letra\",\n          \"la nueva canción de paulo londra\",\n          \"la
+        nueva cancion de feid\",\n          \"el asper master\",\n          \"lyrics\",\n
+        \         \"23\",\n          \"leones con flow\",\n          \"condenado para
+        el millon\",\n          \"trap argentino\",\n          \"musica en español\",\n
+        \         \"medellin\",\n          \"Londra 2022\",\n          \"Feid 2022\",\n
+        \         \"Ferxxo\",\n          \"Feliz Cumpleaños Ferxxo\"\n        ],\n
+        \       \"categoryId\": \"10\",\n        \"liveBroadcastContent\": \"none\",\n
+        \       \"localized\": {\n          \"title\": \"Paulo Londra - A Veces (feat.
+        Feid) [Official Video]\",\n          \"description\": \"Official Video for
+        \\\"A Veces\\\" by Paulo Londra feat. Feid\\n\\nListen & Download \\\"A Veces\\\":
+        https://WML.link/PauloLondraFeidAVeces\\n\\nFollow Paulo Londra:\\nInstagram:
+        \ https://www.instagram.com/paulolondra/ \\nTwitter: https://twitter.com/paulolondra
+        \\nYouTube: https://bit.ly/PauloLondra_YouTube\\nTikTok: https://www.tiktok.com/@paulolondra
+        \\nFacebook: https://www.facebook.com/paulolondra\\n\\n#LeonesConFlow #PauloIsBack
+        #CreoQueLoTengo\\n#PauloLondra #Feid #AVeces\"\n        },\n        \"defaultAudioLanguage\":
+        \"es-419\"\n      }\n    },\n    {\n      \"kind\": \"youtube#video\",\n      \"etag\":
+        \"N8zS4O2XZVOM_EXEfJHEI04a7MY\",\n      \"id\": \"VCBIxQyxH0s\",\n      \"snippet\":
+        {\n        \"publishedAt\": \"2022-11-05T02:55:31Z\",\n        \"channelId\":
+        \"UCgEpKLovTRuqO97euGZEHNg\",\n        \"title\": \"Chavita sin que hacer
+        se pone a CRITICAR VIDA AJENA\",\n        \"description\": \"INSTAGRAM: https://www.instagram.com/danielarodrice/\\r\\n\\r\\nFACEBOOK:
+        https://www.facebook.com/DanielaRodrice/\\r\\n\\r\\nTWITTER: https://twitter.com/Danielarodrice\",\n
+        \       \"thumbnails\": {\n          \"default\": {\n            \"url\":
+        \"https://i.ytimg.com/vi/VCBIxQyxH0s/default.jpg\",\n            \"width\":
+        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
+        \           \"url\": \"https://i.ytimg.com/vi/VCBIxQyxH0s/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/VCBIxQyxH0s/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/VCBIxQyxH0s/sddefault.jpg\",\n
+        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/VCBIxQyxH0s/maxresdefault.jpg\",\n
+        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
+        \       \"channelTitle\": \"Daniela Rodrice\",\n        \"categoryId\": \"22\",\n
+        \       \"liveBroadcastContent\": \"none\",\n        \"defaultLanguage\":
+        \"es-419\",\n        \"localized\": {\n          \"title\": \"Chavita sin
+        que hacer se pone a CRITICAR VIDA AJENA\",\n          \"description\": \"INSTAGRAM:
+        https://www.instagram.com/danielarodrice/\\r\\n\\r\\nFACEBOOK: https://www.facebook.com/DanielaRodrice/\\r\\n\\r\\nTWITTER:
+        https://twitter.com/Danielarodrice\"\n        },\n        \"defaultAudioLanguage\":
+        \"es-419\"\n      }\n    },\n    {\n      \"kind\": \"youtube#video\",\n      \"etag\":
+        \"nDSJtXY9nJ91kQy29nEas02nhyc\",\n      \"id\": \"So10gTOBRWg\",\n      \"snippet\":
+        {\n        \"publishedAt\": \"2022-11-04T22:00:08Z\",\n        \"channelId\":
+        \"UCXQIVincj_W4CYfWKB1iPVQ\",\n        \"title\": \"Camilo, Myke Towers -
+        Bebiendo Sola (Official Video)\",\n        \"description\": \"Camilo & Myke
+        Towers - Bebiendo Sola (Official Video)\\n \\nMusic: \\nApple Music: https://Camilo.lnk.to/DeAdentroPaAfuera\\nSpotify:
+        https://Camilo.lnk.to/DeAdentroPaAfuera\\nAmazon: https://Camilo.lnk.to/DeAdentroPaAfuera\\nYouTube:
+        https://Camilo.lnk.to/DeAdentroPaAfuera\\niTunes: https://Camilo.lnk.to/DeAdentroPaAfuera\\nDeezer:
+        https://Camilo.lnk.to/DeAdentroPaAfuera\\nTikTok: https://Camilo.lnk.to/DeAdentroPaAfuera\\nPandora:
+        https://Camilo.lnk.to/DeAdentroPaAfuera\\n\\nLyrics: \\n\\nDe lejos se ve
+        que tiene el corazón roto,\\nYo con solo mirarla lo noto,\\nSi pa ayudarla
+        hay que anotarse, me anoto,\\nYo estoy pa usted, me declaro devoto.\\n\\nDígame
+        por qué una bebe como usted no se ve feliz,\\nY anda por ahí bebiendo sola,
+        \\nY por la calle a estas horas.\\nDígame por qué trae los ojos así,\\nQuién
+        la hizo llorar, quién la hizo sufrir,\\nAy! dígame ahora,\\nQue yo no la dejo
+        sola.\\n\\nElla ahora tiene el corazón hecho pedazos,\\nSi quieres llorar
+        en mis hombros, te hacen falta brazos, yo te los doy.\\nAmores como el tuyo
+        están escasos,\\nSiempre la trato con respeto nunca me propaso,\\nSus llamadas
+        no rechazo,\\nCupido tiene mala puntería en los flechazos, \\nDonde lo vea
+        por ahí le meto un derechazo,\\nYo contigo me caso,\\nPero estoy consciente
+        que hay que llevarlo paso a paso.\\nPor ti yo soy capaz de lo no creen, yo
+        te lo demostré, \\nUn comportamiento extraño yo le note,\\nSe reveló con una
+        foto, esa no es usted,\\nYo hasta me preocupé.\\n\\nDígame por qué una bebe
+        como usted no se ve feliz,\\nY anda por ahí bebiendo sola, \\nY por la calle
+        a estas horas.\\nDígame por qué trae los ojos así,\\nQuién la hizo llorar,
+        quién la hizo sufrir,\\nAy! dígame ahora,\\nQue yo no la dejo sola.\\n\\nYo
+        se que usted trae broncas con cupido,\\nPero no cierre el cora se lo pido,\\nUsted
+        quiere olvidarlo y no ha podido,\\nY ya intentó con todo pero no intentó conmigo.\\nHazme
+        caso, relájate en mis brazos,\\nQue yo te propongo olvidar a ese payaso,\\nY
+        si te gusta el arte, aquí te va un Picasso, Muah!\\n\\nDígame por qué una
+        bebe como usted no se ve feliz,\\nY anda por ahí bebiendo sola, \\nY por la
+        calle a estas horas.\\nDígame por qué trae los ojos así,\\nQuién la hizo llorar,
+        quién la hizo sufrir,\\nAy! dígame ahora,\\nQue yo no la dejo sola.\\n\\nFacebook:
+        https://www.facebook.com/camilomusica \\nTwitter: https://twitter.com/camilomusica
+        \\nInstagram: https://www.instagram.com/camilo\\nTikTok: https://www.tiktok.com/@camilo\\n\\n#Camilo
+        #MykeTowers #BebiendoSola\\n\\nCamilo & Myke Towers performing Bebiendo Sola
+        (Official Video). (C) 2022 Sony Music Entertainment US Latin LLC/Hecho A Mano
+        Music (HAMM)\",\n        \"thumbnails\": {\n          \"default\": {\n            \"url\":
+        \"https://i.ytimg.com/vi/So10gTOBRWg/default.jpg\",\n            \"width\":
+        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
+        \           \"url\": \"https://i.ytimg.com/vi/So10gTOBRWg/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/So10gTOBRWg/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/So10gTOBRWg/sddefault.jpg\",\n
+        \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/So10gTOBRWg/maxresdefault.jpg\",\n
+        \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
+        \       \"channelTitle\": \"CamiloVEVO\",\n        \"tags\": [\n          \"Bebiendo
+        Sola\",\n          \"Camilo Myke Towers\",\n          \"Latin Pop\",\n          \"Sony
+        Music Latin\"\n        ],\n        \"categoryId\": \"10\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"localized\": {\n          \"title\": \"Camilo, Myke Towers
+        - Bebiendo Sola (Official Video)\",\n          \"description\": \"Camilo &
+        Myke Towers - Bebiendo Sola (Official Video)\\n \\nMusic: \\nApple Music:
+        https://Camilo.lnk.to/DeAdentroPaAfuera\\nSpotify: https://Camilo.lnk.to/DeAdentroPaAfuera\\nAmazon:
+        https://Camilo.lnk.to/DeAdentroPaAfuera\\nYouTube: https://Camilo.lnk.to/DeAdentroPaAfuera\\niTunes:
+        https://Camilo.lnk.to/DeAdentroPaAfuera\\nDeezer: https://Camilo.lnk.to/DeAdentroPaAfuera\\nTikTok:
+        https://Camilo.lnk.to/DeAdentroPaAfuera\\nPandora: https://Camilo.lnk.to/DeAdentroPaAfuera\\n\\nLyrics:
+        \\n\\nDe lejos se ve que tiene el corazón roto,\\nYo con solo mirarla lo noto,\\nSi
+        pa ayudarla hay que anotarse, me anoto,\\nYo estoy pa usted, me declaro devoto.\\n\\nDígame
+        por qué una bebe como usted no se ve feliz,\\nY anda por ahí bebiendo sola,
+        \\nY por la calle a estas horas.\\nDígame por qué trae los ojos así,\\nQuién
+        la hizo llorar, quién la hizo sufrir,\\nAy! dígame ahora,\\nQue yo no la dejo
+        sola.\\n\\nElla ahora tiene el corazón hecho pedazos,\\nSi quieres llorar
+        en mis hombros, te hacen falta brazos, yo te los doy.\\nAmores como el tuyo
+        están escasos,\\nSiempre la trato con respeto nunca me propaso,\\nSus llamadas
+        no rechazo,\\nCupido tiene mala puntería en los flechazos, \\nDonde lo vea
+        por ahí le meto un derechazo,\\nYo contigo me caso,\\nPero estoy consciente
+        que hay que llevarlo paso a paso.\\nPor ti yo soy capaz de lo no creen, yo
+        te lo demostré, \\nUn comportamiento extraño yo le note,\\nSe reveló con una
+        foto, esa no es usted,\\nYo hasta me preocupé.\\n\\nDígame por qué una bebe
+        como usted no se ve feliz,\\nY anda por ahí bebiendo sola, \\nY por la calle
+        a estas horas.\\nDígame por qué trae los ojos así,\\nQuién la hizo llorar,
+        quién la hizo sufrir,\\nAy! dígame ahora,\\nQue yo no la dejo sola.\\n\\nYo
+        se que usted trae broncas con cupido,\\nPero no cierre el cora se lo pido,\\nUsted
+        quiere olvidarlo y no ha podido,\\nY ya intentó con todo pero no intentó conmigo.\\nHazme
+        caso, relájate en mis brazos,\\nQue yo te propongo olvidar a ese payaso,\\nY
+        si te gusta el arte, aquí te va un Picasso, Muah!\\n\\nDígame por qué una
+        bebe como usted no se ve feliz,\\nY anda por ahí bebiendo sola, \\nY por la
+        calle a estas horas.\\nDígame por qué trae los ojos así,\\nQuién la hizo llorar,
+        quién la hizo sufrir,\\nAy! dígame ahora,\\nQue yo no la dejo sola.\\n\\nFacebook:
+        https://www.facebook.com/camilomusica \\nTwitter: https://twitter.com/camilomusica
+        \\nInstagram: https://www.instagram.com/camilo\\nTikTok: https://www.tiktok.com/@camilo\\n\\n#Camilo
+        #MykeTowers #BebiendoSola\\n\\nCamilo & Myke Towers performing Bebiendo Sola
+        (Official Video). (C) 2022 Sony Music Entertainment US Latin LLC/Hecho A Mano
+        Music (HAMM)\"\n        }\n      }\n    }\n  ],\n  \"nextPageToken\": \"CAUQAA\",\n
+        \ \"pageInfo\": {\n    \"totalResults\": 200,\n    \"resultsPerPage\": 5\n
+        \ }\n}\n"
+  recorded_at: Sun, 06 Nov 2022 11:29:31 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/commentThreads?key=BAD_TOKEN&part=snippet,replies&videoId=ggGINmj5EQE
@@ -1059,7 +1024,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 24 Oct 2022 13:09:37 GMT
+      - Sun, 06 Nov 2022 11:29:31 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -1106,7 +1071,7 @@ http_interactions:
             ]
           }
         }
-  recorded_at: Mon, 24 Oct 2022 13:09:37 GMT
+  recorded_at: Sun, 06 Nov 2022 11:29:31 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/commentThreads?key=<YOUTUBE_API_KEY>&part=snippet,replies&videoId=ggGINmj5EQE
@@ -1130,7 +1095,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 24 Oct 2022 13:09:38 GMT
+      - Sun, 06 Nov 2022 11:29:31 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -1153,12 +1118,12 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "{\n  \"kind\": \"youtube#commentThreadListResponse\",\n  \"etag\":
-        \"0_4jJ5xJbEFyWv9N45Nt1sEHP40\",\n  \"nextPageToken\": \"QURTSl9pMkhtQmFxZXdsSlkzWkM2M1dXeTdWNmRPRW5vS2VaUXg5X3JBcGQ5QUp1Rmt0SHZYanlRbmFFcE5RMWJrUDV0VmZWSHpaNm1jVkd1N21Ta0tJSWNoM1NRUlNiZHc=\",\n
+        \"Jeu0KesxWmB8Bc5qMzzc73hkGus\",\n  \"nextPageToken\": \"QURTSl9pM2Q1bGtDdWdmdXd4OUNaVm53Nk1jZUxVQzQwdWhVaWdaT010SEhrRGhiQnY3dEtpOVYxZDc5aXVhblN3Ymw3dGdsMExqZkJESnM2bWpHUllMV3E4VldfM3h3Q3c=\",\n
         \ \"pageInfo\": {\n    \"totalResults\": 20,\n    \"resultsPerPage\": 20\n
         \ },\n  \"items\": [\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"3sMgNhqeNYsbFcHpYGWg3DjKxYQ\",\n      \"id\": \"UgwVnoC8Iy-N7vukGVZ4AaABAg\",\n
+        \     \"etag\": \"ykGB5xrU4w_SNqOJi-nUNRCxs_o\",\n      \"id\": \"UgwVnoC8Iy-N7vukGVZ4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"Bi7p5mW1uBkIf0rJpup8AfWfrkg\",\n
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"D1BZWCk6U8tooI-3SHx4eayG3O4\",\n
         \         \"id\": \"UgwVnoC8Iy-N7vukGVZ4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
         \"Otra saga así de chula: \\u003ca href=\\\"https://www.youtube.com/watch?v=Mc_u5XEWVNw\\\"\\u003ehttps://www.youtube.com/watch?v=Mc_u5XEWVNw\\u003c/a\\u003e\",\n
@@ -1168,18 +1133,43 @@ http_interactions:
         \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCWI2X2x3KASrvEZXdBVNxkA\",\n
         \           \"authorChannelId\": {\n              \"value\": \"UCWI2X2x3KASrvEZXdBVNxkA\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 1389,\n            \"publishedAt\":
+        \"none\",\n            \"likeCount\": 1417,\n            \"publishedAt\":
         \"2022-09-08T21:03:10Z\",\n            \"updatedAt\": \"2022-09-08T21:03:10Z\"\n
         \         }\n        },\n        \"canReply\": true,\n        \"totalReplyCount\":
-        82,\n        \"isPublic\": true\n      },\n      \"replies\": {\n        \"comments\":
+        81,\n        \"isPublic\": true\n      },\n      \"replies\": {\n        \"comments\":
         [\n          {\n            \"kind\": \"youtube#comment\",\n            \"etag\":
-        \"dSvz1Y4lnwsrhYUpb9KtfFSuoDY\",\n            \"id\": \"UgwVnoC8Iy-N7vukGVZ4AaABAg.9fj9LeWRE-39gzB6IOBIdI\",\n
+        \"4E2jt4YDl-SbGmt6zJH-oIw-iFw\",\n            \"id\": \"UgwVnoC8Iy-N7vukGVZ4AaABAg.9fj9LeWRE-39hUKYO-MM8T\",\n
         \           \"snippet\": {\n              \"videoId\": \"ggGINmj5EQE\",\n
-        \             \"textDisplay\": \"Cuando harás la saga en 1 video de Piratas
-        del Caribe??\",\n              \"textOriginal\": \"Cuando harás la saga en
-        1 video de Piratas del Caribe??\",\n              \"parentId\": \"UgwVnoC8Iy-N7vukGVZ4AaABAg\",\n
-        \             \"authorDisplayName\": \"AliXu Fáyruz\",\n              \"authorProfileImageUrl\":
-        \"https://yt3.ggpht.com/YLhZbXVpau5j_im0C2CAsSSojweWTDFJ-7GleAiSfQKksmMwyChk9Hk26mMkXpwT43sboUEo=s48-c-k-c0x00ffffff-no-rj\",\n
+        \             \"textDisplay\": \"\\u003ca href=\\\"https://youtu.be/A_FC3BeqSYk\\\"\\u003ehttps://youtu.be/A_FC3BeqSYk\\u003c/a\\u003e\",\n
+        \             \"textOriginal\": \"https://youtu.be/A_FC3BeqSYk\",\n              \"parentId\":
+        \"UgwVnoC8Iy-N7vukGVZ4AaABAg\",\n              \"authorDisplayName\": \"GASEMM
+        CASCAR\",\n              \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu9ymQG0uoT3_gk0E16-tFifGvAeI8gus8g_jCxLvA=s48-c-k-c0x00ffffff-no-rj\",\n
+        \             \"authorChannelUrl\": \"http://www.youtube.com/channel/UC7gZTsxm2Q1BU9KhvBVjZeA\",\n
+        \             \"authorChannelId\": {\n                \"value\": \"UC7gZTsxm2Q1BU9KhvBVjZeA\"\n
+        \             },\n              \"canRate\": true,\n              \"viewerRating\":
+        \"none\",\n              \"likeCount\": 0,\n              \"publishedAt\":
+        \"2022-10-22T10:35:58Z\",\n              \"updatedAt\": \"2022-10-22T10:35:58Z\"\n
+        \           }\n          },\n          {\n            \"kind\": \"youtube#comment\",\n
+        \           \"etag\": \"y2hfKbMeCIYKRqojOXBYGrPT15E\",\n            \"id\":
+        \"UgwVnoC8Iy-N7vukGVZ4AaABAg.9fj9LeWRE-39hUKXlE3Waw\",\n            \"snippet\":
+        {\n              \"videoId\": \"ggGINmj5EQE\",\n              \"textDisplay\":
+        \"\\u003ca href=\\\"https://youtu.be/A_FC3BeqSYk\\\"\\u003ehttps://youtu.be/A_FC3BeqSYk\\u003c/a\\u003e\",\n
+        \             \"textOriginal\": \"https://youtu.be/A_FC3BeqSYk\",\n              \"parentId\":
+        \"UgwVnoC8Iy-N7vukGVZ4AaABAg\",\n              \"authorDisplayName\": \"GASEMM
+        CASCAR\",\n              \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu9ymQG0uoT3_gk0E16-tFifGvAeI8gus8g_jCxLvA=s48-c-k-c0x00ffffff-no-rj\",\n
+        \             \"authorChannelUrl\": \"http://www.youtube.com/channel/UC7gZTsxm2Q1BU9KhvBVjZeA\",\n
+        \             \"authorChannelId\": {\n                \"value\": \"UC7gZTsxm2Q1BU9KhvBVjZeA\"\n
+        \             },\n              \"canRate\": true,\n              \"viewerRating\":
+        \"none\",\n              \"likeCount\": 0,\n              \"publishedAt\":
+        \"2022-10-22T10:35:53Z\",\n              \"updatedAt\": \"2022-10-22T10:35:53Z\"\n
+        \           }\n          },\n          {\n            \"kind\": \"youtube#comment\",\n
+        \           \"etag\": \"dSvz1Y4lnwsrhYUpb9KtfFSuoDY\",\n            \"id\":
+        \"UgwVnoC8Iy-N7vukGVZ4AaABAg.9fj9LeWRE-39gzB6IOBIdI\",\n            \"snippet\":
+        {\n              \"videoId\": \"ggGINmj5EQE\",\n              \"textDisplay\":
+        \"Cuando harás la saga en 1 video de Piratas del Caribe??\",\n              \"textOriginal\":
+        \"Cuando harás la saga en 1 video de Piratas del Caribe??\",\n              \"parentId\":
+        \"UgwVnoC8Iy-N7vukGVZ4AaABAg\",\n              \"authorDisplayName\": \"AliXu
+        Fáyruz\",\n              \"authorProfileImageUrl\": \"https://yt3.ggpht.com/YLhZbXVpau5j_im0C2CAsSSojweWTDFJ-7GleAiSfQKksmMwyChk9Hk26mMkXpwT43sboUEo=s48-c-k-c0x00ffffff-no-rj\",\n
         \             \"authorChannelUrl\": \"http://www.youtube.com/channel/UCwVZ9OCpbqluU2lXDvHGILA\",\n
         \             \"authorChannelId\": {\n                \"value\": \"UCwVZ9OCpbqluU2lXDvHGILA\"\n
         \             },\n              \"canRate\": true,\n              \"viewerRating\":
@@ -1212,306 +1202,675 @@ http_interactions:
         \"none\",\n              \"likeCount\": 0,\n              \"publishedAt\":
         \"2022-09-29T04:07:50Z\",\n              \"updatedAt\": \"2022-09-29T04:07:50Z\"\n
         \           }\n          }\n        ]\n      }\n    },\n    {\n      \"kind\":
-        \"youtube#commentThread\",\n      \"etag\": \"XZ84F7EUzTzvu4U-SOjw4ZQ10SI\",\n
-        \     \"id\": \"UgznzO_bVCQ_48x5Bsp4AaABAg\",\n      \"snippet\": {\n        \"videoId\":
+        \"youtube#commentThread\",\n      \"etag\": \"CKLx8AMSQlywzO2q0luUHKWNHTM\",\n
+        \     \"id\": \"Ugx4R0rKbp5EMJxOwCF4AaABAg\",\n      \"snippet\": {\n        \"videoId\":
         \"ggGINmj5EQE\",\n        \"topLevelComment\": {\n          \"kind\": \"youtube#comment\",\n
-        \         \"etag\": \"O3K1Wd0Gi3g13j_93zQQYpfT4Ck\",\n          \"id\": \"UgznzO_bVCQ_48x5Bsp4AaABAg\",\n
+        \         \"etag\": \"m-AlNXdzzhkyShULDOCgykKBunE\",\n          \"id\": \"Ugx4R0rKbp5EMJxOwCF4AaABAg\",\n
         \         \"snippet\": {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"Cuando el pipin canta una de Juan Gabriel jajajajaja\",\n            \"textOriginal\":
-        \"Cuando el pipin canta una de Juan Gabriel jajajajaja\",\n            \"authorDisplayName\":
-        \"Luis Campos\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu-bPvRJV2mgoAAWWtbxoNJLl19yLG3OjOWNsMTomqOwju83OgRoSZZwr4Bcddqw=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCDLy3TIzQbEJphu_L4eGzBw\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCDLy3TIzQbEJphu_L4eGzBw\"\n
+        \"Pa cuando la de harry potaaaaa\",\n            \"textOriginal\": \"Pa cuando
+        la de harry potaaaaa\",\n            \"authorDisplayName\": \"JUANMANTS\",\n
+        \           \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu-sZyZwyNzHt3hVCYckYU6hkjj0YobatW7tZWLBDw=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCvDGFAF66c7m3pABSMSrnHw\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCvDGFAF66c7m3pABSMSrnHw\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-24T11:01:19Z\",\n
-        \           \"updatedAt\": \"2022-10-24T11:01:37Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-06T05:09:15Z\",\n
+        \           \"updatedAt\": \"2022-11-06T05:09:15Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"NfKOKWfkILM297oJwNmES98H1y4\",\n      \"id\": \"UgykMvF2LXTj1MvaW0B4AaABAg\",\n
+        \     \"etag\": \"OGu0epYXg5GDGRuWHByH4Z22Uhg\",\n      \"id\": \"UgxCe9uxnGqnjr4T3bp4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"-FePDmni7GAXs6qwFJse2LOc7xU\",\n
-        \         \"id\": \"UgykMvF2LXTj1MvaW0B4AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"oAR_TpSA-26VPgB4-XiyUe8tRl8\",\n
+        \         \"id\": \"UgxCe9uxnGqnjr4T3bp4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"Como  sobrevivio la elfa? &quot;un hechicero lo izo&quot;\",\n            \"textOriginal\":
-        \"Como  sobrevivio la elfa? \\\"un hechicero lo izo\\\"\",\n            \"authorDisplayName\":
-        \"Freddy Vega\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu9peRO0pwemgd6blXFRvP-gDGRI3hJK3d2gGQ=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCXmrM-QwoJvbJeY58WeAacg\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCXmrM-QwoJvbJeY58WeAacg\"\n
+        \"Vengo de ver la trilogía completa, la versión normal y la extendida. Y en
+        varias partes de las películas pensé, como sería el relato de las películas
+        del fedewolf?? la verdad que es tal cual lo pensé...\",\n            \"textOriginal\":
+        \"Vengo de ver la trilogía completa, la versión normal y la extendida. Y en
+        varias partes de las películas pensé, como sería el relato de las películas
+        del fedewolf?? la verdad que es tal cual lo pensé...\",\n            \"authorDisplayName\":
+        \"Alejandro Mancuso\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu9QleDgjlkOUc2TQnJc5enmrzm20QWqScG8VJ-QAw=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCTJAHXG3miHgWatfK88P9rQ\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCTJAHXG3miHgWatfK88P9rQ\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-23T20:49:19Z\",\n
-        \           \"updatedAt\": \"2022-10-23T20:49:19Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-05T14:23:31Z\",\n
+        \           \"updatedAt\": \"2022-11-05T14:23:31Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"gOrAxQYKy8GzJjrEO7auPgOTWrU\",\n      \"id\": \"UgyyraTaBsNd_ZFRl-94AaABAg\",\n
+        \     \"etag\": \"rfAyVriDI2jWjtHifkZvx_J7wz4\",\n      \"id\": \"Ugy_GuY2VxahV_yPKBV4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"cwNGUF_zFDrf3GIWHoLwVUizOtY\",\n
-        \         \"id\": \"UgyyraTaBsNd_ZFRl-94AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"fLZoe50gHxAjDXwest4eJ_7xda8\",\n
+        \         \"id\": \"Ugy_GuY2VxahV_yPKBV4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"Fede modo ultra instinto\",\n            \"textOriginal\": \"Fede modo ultra
-        instinto\",\n            \"authorDisplayName\": \"Miguel Guzman\",\n            \"authorProfileImageUrl\":
-        \"https://yt3.ggpht.com/ytc/AMLnZu_fV6JOVA3Ivqvv6eQjNnRqGpU6OE6Li_t2AQ=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCVZQUoGQ6KPZlRUX35zBMBQ\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCVZQUoGQ6KPZlRUX35zBMBQ\"\n
+        \"La comunidad del anillo de la policía colombiana\",\n            \"textOriginal\":
+        \"La comunidad del anillo de la policía colombiana\",\n            \"authorDisplayName\":
+        \"JUANMANTS\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu-sZyZwyNzHt3hVCYckYU6hkjj0YobatW7tZWLBDw=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCvDGFAF66c7m3pABSMSrnHw\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCvDGFAF66c7m3pABSMSrnHw\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-23T20:44:08Z\",\n
-        \           \"updatedAt\": \"2022-10-23T20:44:08Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-05T03:30:33Z\",\n
+        \           \"updatedAt\": \"2022-11-05T03:30:33Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"0z3g7_ROmGiHtgurYGd7g3FirTk\",\n      \"id\": \"UgxAFJZPS5B6gyYtm254AaABAg\",\n
+        \     \"etag\": \"Ysmp_eayaH5wk2HvpgEUNI5WIPo\",\n      \"id\": \"UgzvmxO3IB3Omr_pB3V4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"rzL3gEoacHkdAaVzw6MHbbONWHI\",\n
-        \         \"id\": \"UgxAFJZPS5B6gyYtm254AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"RiT1WOiy6hYDR-bKly1FKbTElOs\",\n
+        \         \"id\": \"UgzvmxO3IB3Omr_pB3V4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"Men, como que la futura esposa de Sam ya anda bien anal* xDD \\u003ca href=\\\"https://www.youtube.com/watch?v=ggGINmj5EQE&amp;t=2m59s\\\"\\u003e2:59\\u003c/a\\u003e\",\n
-        \           \"textOriginal\": \"Men, como que la futura esposa de Sam ya anda
-        bien anal* xDD 2:59\",\n            \"authorDisplayName\": \"Yelsin Velasco
-        Montalvo\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu-HgssbbrdF_PcdDxECvpIIeovLongB2T82sVjH=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCxO1xlEUkkPiX-hi_2crz3Q\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCxO1xlEUkkPiX-hi_2crz3Q\"\n
+        \"Felicitaciones, excelente video ... sobre todo los sonidos y efectos utilizados,
+        me recordaron años pasados.\",\n            \"textOriginal\": \"Felicitaciones,
+        excelente video ... sobre todo los sonidos y efectos utilizados, me recordaron
+        años pasados.\",\n            \"authorDisplayName\": \"Luis Mejia\",\n            \"authorProfileImageUrl\":
+        \"https://yt3.ggpht.com/ytc/AMLnZu-r5Sfv_hzBffQ7tAmM_VhR8-Q-rUBctgNv9A=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCkEolz-6EIJaCHfsyjr2BVw\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCkEolz-6EIJaCHfsyjr2BVw\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-23T20:06:38Z\",\n
-        \           \"updatedAt\": \"2022-10-23T20:06:38Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-04T20:22:03Z\",\n
+        \           \"updatedAt\": \"2022-11-04T20:22:03Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"mi5yGtKk9OxwC1hRMMNUAqlgzJM\",\n      \"id\": \"UgxCQjHxN9A3Ew5tjDV4AaABAg\",\n
+        \     \"etag\": \"wbaLj80TtcABAymXjR280JY1Weo\",\n      \"id\": \"Ugw11qEZKevwydSgQUN4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"bgWqd9yIltKtjFCRXxIigUk1rvs\",\n
-        \         \"id\": \"UgxCQjHxN9A3Ew5tjDV4AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"pyyT453nKKV4BuwSLBJTOPX5KrY\",\n
+        \         \"id\": \"Ugw11qEZKevwydSgQUN4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"\\u003ca href=\\\"https://www.youtube.com/watch?v=ggGINmj5EQE&amp;t=42m40s\\\"\\u003e42:40\\u003c/a\\u003e
-        \ Asuma Sarutobi se hizo canon de golpe !!!\",\n            \"textOriginal\":
-        \"42:40  Asuma Sarutobi se hizo canon de golpe !!!\",\n            \"authorDisplayName\":
-        \"Joel Kevin Zeballos\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu-tCLYyQHytDUUqDM5fxnL-StnzwZAzaBGeiYhX=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCRn39JxMqnbj8XTni-80Jcw\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCRn39JxMqnbj8XTni-80Jcw\"\n
+        \"Pero le dedicaste 12 minutos a La Historia en un Video de Breaking Bad...\",\n
+        \           \"textOriginal\": \"Pero le dedicaste 12 minutos a La Historia
+        en un Video de Breaking Bad...\",\n            \"authorDisplayName\": \"Omar
+        Briones\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu8TLDAGYlE0lrp5kRC0foRbrbqxQKKar8xECJOhrv0=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCrBnWoDdVYQyisBFYnondzA\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCrBnWoDdVYQyisBFYnondzA\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-23T20:01:37Z\",\n
-        \           \"updatedAt\": \"2022-10-23T20:01:37Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-04T19:16:57Z\",\n
+        \           \"updatedAt\": \"2022-11-04T19:16:57Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"nFIakBCrjqFKnVEWWxBTpO_GPhE\",\n      \"id\": \"Ugz3U6qSpXKGuEMZmCx4AaABAg\",\n
+        \     \"etag\": \"9zADl4Gk-ZiClQFyIk2HwO0YYrw\",\n      \"id\": \"Ugxqse9u6oaff5fE-ZR4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"x1ffHh79EZwtz3h1vW8UrM1YoGY\",\n
-        \         \"id\": \"Ugz3U6qSpXKGuEMZmCx4AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"kTTj_e-rFeZ6wzim7RfYR2EA5uA\",\n
+        \         \"id\": \"Ugxqse9u6oaff5fE-ZR4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"Elrond no es un rey, el es el señor de Imladris. El último gran rey de los
-        elfos fue Gil-Galad que murió en la guerra de la última alianza.\",\n            \"textOriginal\":
-        \"Elrond no es un rey, el es el señor de Imladris. El último gran rey de los
-        elfos fue Gil-Galad que murió en la guerra de la última alianza.\",\n            \"authorDisplayName\":
-        \"Santiago Portilla Diaz\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu8f7U9XNnT_PGorupGpJ3TuV5a7e1hUrUK_vRIr=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCR37RIrxXSRg_St8OxEpmlw\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCR37RIrxXSRg_St8OxEpmlw\"\n
+        \"Mi ojito, mi ojito \U0001F602\U0001F923 esa parte me mató jajjjaja\",\n
+        \           \"textOriginal\": \"Mi ojito, mi ojito \U0001F602\U0001F923 esa
+        parte me mató jajjjaja\",\n            \"authorDisplayName\": \"Acuña Salvatierra
+        Jose Fernando\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu-q8bA-K1oi4YTxdlaL_EGYASP45YhoZC4a_A=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCuoAcfAccKGMTzcsAI2oy0g\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCuoAcfAccKGMTzcsAI2oy0g\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-23T18:06:10Z\",\n
-        \           \"updatedAt\": \"2022-10-23T18:06:10Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-04T02:41:01Z\",\n
+        \           \"updatedAt\": \"2022-11-04T02:41:01Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"47OEM4GTa8ffqI33jgqcsnX57rY\",\n      \"id\": \"UgyxJ6Jl-gZoQIXHFjh4AaABAg\",\n
+        \     \"etag\": \"NMedNxG4BSeReoNLDxqP1F_ohu0\",\n      \"id\": \"UgwbNWyZzY457OHYMzJ4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"ltG8x7aw-jH3D4WoSQ0rGi5WdIE\",\n
-        \         \"id\": \"UgyxJ6Jl-gZoQIXHFjh4AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"_ELr56uycOxVqNysfiLdbJW24RU\",\n
+        \         \"id\": \"UgwbNWyZzY457OHYMzJ4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"De hecho a Gandalf no es revivido por el concilio blanco sino por Eru Ilúvatar,
-        el que vendría siendo Dios en este universo.\",\n            \"textOriginal\":
-        \"De hecho a Gandalf no es revivido por el concilio blanco sino por Eru Ilúvatar,
-        el que vendría siendo Dios en este universo.\",\n            \"authorDisplayName\":
-        \"Mystik Spiral\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ym9XvoEfXtNmKlLYiEHOsvfiPUra0N8xszgeqZRYNog3xdfBrkBdyZej5bA_Skzgtw7Kj_Dabg=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UC26rfv_7dq4hU2KyfeG5Wlw\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UC26rfv_7dq4hU2KyfeG5Wlw\"\n
+        \"El hobbit y el señor de los anillos, junto a Harry Potter están muy bien
+        adaptadas respecto a sus libros,  y por supuesto tienen escritores de genio.
+        crean todo un universo al rededor de su historia! alguien más entenderá a
+        lo que me refiero. ..\",\n            \"textOriginal\": \"El hobbit y el señor
+        de los anillos, junto a Harry Potter están muy bien adaptadas respecto a sus
+        libros,  y por supuesto tienen escritores de genio. crean todo un universo
+        al rededor de su historia! alguien más entenderá a lo que me refiero. ..\",\n
+        \           \"authorDisplayName\": \"EdenFarid PeñateRomero\",\n            \"authorProfileImageUrl\":
+        \"https://yt3.ggpht.com/ytc/AMLnZu-PbWZ8Z3Dwo0METFS_bBUI3AHdN2Jrbiqk45QULtk8DT4YAfQiBCINAUpasjHN=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UC2-0xLt0kzlUrMilrz0IWTA\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UC2-0xLt0kzlUrMilrz0IWTA\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 1,\n            \"publishedAt\": \"2022-10-23T17:52:17Z\",\n
-        \           \"updatedAt\": \"2022-10-23T17:52:17Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-04T02:37:46Z\",\n
+        \           \"updatedAt\": \"2022-11-04T02:37:46Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"w7Va6RKIEnBeZbdmbctT5_7FNKM\",\n      \"id\": \"Ugzgk6hptXdL7oXcCUp4AaABAg\",\n
+        \     \"etag\": \"BPVA1dNYdlcs2sH-DQJjjX7H6TA\",\n      \"id\": \"UgxFti5reu9R7exvUFV4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"c5Oeli8upSBHHMTwkm0gWUnC2Qg\",\n
-        \         \"id\": \"Ugzgk6hptXdL7oXcCUp4AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"2FhRC5Qi2OTObp9J3SJh1xhxVHY\",\n
+        \         \"id\": \"UgxFti5reu9R7exvUFV4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"me hiciste llorar con este resumen fede te amo\",\n            \"textOriginal\":
-        \"me hiciste llorar con este resumen fede te amo\",\n            \"authorDisplayName\":
-        \"marianela pastrana\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu97xut5D57yKU6MMhzhECQ3LMCd-MX_8W7kVh0jEMieoU0FrA0VmH83WlqaWxnj=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCkB42LxqUJ0Dy8KrirfHoBg\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCkB42LxqUJ0Dy8KrirfHoBg\"\n
+        \"lo mejor, realmente buenas, como los libros \\u003cbr\\u003etolkien es un
+        escritor de genio !\",\n            \"textOriginal\": \"lo mejor, realmente
+        buenas, como los libros \\ntolkien es un escritor de genio !\",\n            \"authorDisplayName\":
+        \"EdenFarid PeñateRomero\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu-PbWZ8Z3Dwo0METFS_bBUI3AHdN2Jrbiqk45QULtk8DT4YAfQiBCINAUpasjHN=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UC2-0xLt0kzlUrMilrz0IWTA\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UC2-0xLt0kzlUrMilrz0IWTA\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-23T15:36:38Z\",\n
-        \           \"updatedAt\": \"2022-10-23T15:36:38Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-04T02:33:46Z\",\n
+        \           \"updatedAt\": \"2022-11-04T02:33:46Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"Mh00qUoYpd58HE7t0GAUoIe2f50\",\n      \"id\": \"Ugy-tP_PIkvsi6srUwp4AaABAg\",\n
+        \     \"etag\": \"QgENU-rWJMSthT15uzhUmvkxwUw\",\n      \"id\": \"UgwVUw-4adSWdujVZsx4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"fyTyiJzpzUxWoAJg2V6RldzjJ1s\",\n
-        \         \"id\": \"Ugy-tP_PIkvsi6srUwp4AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"ZG73jtRWZwcS7m2givc2VrMwfec\",\n
+        \         \"id\": \"UgwVUw-4adSWdujVZsx4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"El señor de los anillos, si no es la mejor trilogía del cine, seguro esta
-        entre las mejores\",\n            \"textOriginal\": \"El señor de los anillos,
-        si no es la mejor trilogía del cine, seguro esta entre las mejores\",\n            \"authorDisplayName\":
-        \"Michael Acosta\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu9ZZObiRitrSdxL9qtsGQHDD2jvzWPF5x_H0znh=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UC4BfDmaKVo8lFI2fAjeKUUQ\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UC4BfDmaKVo8lFI2fAjeKUUQ\"\n
+        \"La orden de los magos jajajajaja quien revive a gamdalf son los dioses\",\n
+        \           \"textOriginal\": \"La orden de los magos jajajajaja quien revive
+        a gamdalf son los dioses\",\n            \"authorDisplayName\": \"miguel diaz\",\n
+        \           \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu-e2x2bYoUuDgy_hMj64lw3xDy-Sb-lphVCSZcP=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCuJTp-pp1jfNDZPqsM5kDjA\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCuJTp-pp1jfNDZPqsM5kDjA\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-23T06:57:34Z\",\n
-        \           \"updatedAt\": \"2022-10-23T06:57:34Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-03T21:04:05Z\",\n
+        \           \"updatedAt\": \"2022-11-03T21:04:05Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"_6BLC7s3gjFMI-nQaW4MhXsizyY\",\n      \"id\": \"Ugw-bd5faPI2sxNNgCt4AaABAg\",\n
+        \     \"etag\": \"4pxY0xDu7gOuN2lEJm0I9FEy7VM\",\n      \"id\": \"UgzSs-y1aUx2qld-vHl4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"rG3DXwFV0baSyveJpo5wXyUx5lw\",\n
-        \         \"id\": \"Ugw-bd5faPI2sxNNgCt4AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"4I0vrxuI80XNcPfDo4-JTRR4aFk\",\n
+        \         \"id\": \"UgzSs-y1aUx2qld-vHl4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"\\u003ca href=\\\"https://www.youtube.com/watch?v=ggGINmj5EQE&amp;t=21m10s\\\"\\u003e21:10\\u003c/a\\u003e
-        \\u003cbr\\u003eEstán siendo destruídos, por dónde?? \U0001F630\U0001F628\",\n
-        \           \"textOriginal\": \"21:10 \\nEstán siendo destruídos, por dónde??
-        \U0001F630\U0001F628\",\n            \"authorDisplayName\": \"SaidLink of
-        Lothric\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/4zCv_4UucYFrq6elwN7wU6eM-CyXdfdQQD9Ss8tRxRQpLiXqwzWlbEGvc5eHpPA7ppPFQ4wPQA=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCUF4CB363t5QTgT6OBB0lqw\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCUF4CB363t5QTgT6OBB0lqw\"\n
+        \"no fue la orden de los magos quien revivio a gandalf fue iluvatar el dios
+        que creo toda la existencia y todas las razas incluidos los vallar\",\n            \"textOriginal\":
+        \"no fue la orden de los magos quien revivio a gandalf fue iluvatar el dios
+        que creo toda la existencia y todas las razas incluidos los vallar\",\n            \"authorDisplayName\":
+        \"varcanaz\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu_A7S9jxM3WI-5niuqubxtUtGL2oR3WV6XwvQ=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCLiOmTiMNRMzPj1zZq32KBg\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCLiOmTiMNRMzPj1zZq32KBg\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-23T05:51:38Z\",\n
-        \           \"updatedAt\": \"2022-10-23T05:51:38Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-03T04:02:59Z\",\n
+        \           \"updatedAt\": \"2022-11-03T04:02:59Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"rNicT49zrCSSa3P5JciX4bFecns\",\n      \"id\": \"UgwZDnpxIvBu3FTNtll4AaABAg\",\n
+        \     \"etag\": \"Axf8-RyN3R9N5vcQb78CeTRSRkY\",\n      \"id\": \"Ugznmw3pqJlH1TgnYPF4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"fdtX-gi37GawAuo41whV0qbD9gE\",\n
-        \         \"id\": \"UgwZDnpxIvBu3FTNtll4AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"yA-MDZqro6LxsohnxkF2M-h3W6w\",\n
+        \         \"id\": \"Ugznmw3pqJlH1TgnYPF4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"Gracias Fede. 20 años tuvimos que esperar para ver este épico resumen \U0001F44F\U0001F44F\U0001F44F\",\n
-        \           \"textOriginal\": \"Gracias Fede. 20 años tuvimos que esperar
-        para ver este épico resumen \U0001F44F\U0001F44F\U0001F44F\",\n            \"authorDisplayName\":
-        \"SaidLink of Lothric\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/4zCv_4UucYFrq6elwN7wU6eM-CyXdfdQQD9Ss8tRxRQpLiXqwzWlbEGvc5eHpPA7ppPFQ4wPQA=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCUF4CB363t5QTgT6OBB0lqw\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCUF4CB363t5QTgT6OBB0lqw\"\n
+        \"¿eres tu Asuma sensei?\",\n            \"textOriginal\": \"¿eres tu Asuma
+        sensei?\",\n            \"authorDisplayName\": \"Omar Rafael Gonzáez Aguirre\",\n
+        \           \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu8AwjxKa8Q1PB3p5oNilFUMpvYIZ_GlO4hGcI1CPQ=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCosrV4ZroZvBTDb6L3gGwfQ\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCosrV4ZroZvBTDb6L3gGwfQ\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-23T05:50:32Z\",\n
-        \           \"updatedAt\": \"2022-10-23T05:50:32Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-02T17:28:29Z\",\n
+        \           \"updatedAt\": \"2022-11-02T17:28:29Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"4T-1k7SJld9iXTFeBdptBf6cSUs\",\n      \"id\": \"Ugx_D8bqnLwhwn8eR854AaABAg\",\n
+        \     \"etag\": \"rNt8OEk1hhCDjIRQg_BTaUrgAM8\",\n      \"id\": \"UgyTJR0NQFQlZKwWiFV4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"HYKQWQ6nvyRNtsWEmrtOBFCXnkQ\",\n
-        \         \"id\": \"Ugx_D8bqnLwhwn8eR854AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"vmvsDDjoDGdPbe8bgL0Whv4fEsM\",\n
+        \         \"id\": \"UgyTJR0NQFQlZKwWiFV4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"tremendo esfuerzo, excelente! Ahora sigue el resumen de El Hobbit jajaja\",\n
-        \           \"textOriginal\": \"tremendo esfuerzo, excelente! Ahora sigue
-        el resumen de El Hobbit jajaja\",\n            \"authorDisplayName\": \"Elvis
-        Orlando\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu91QAH256nhF_KVxlqsxIzGS6qQi0feBxMsWYMANA=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCQMOn9toLXSkbe-w64AHIYw\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCQMOn9toLXSkbe-w64AHIYw\"\n
+        \"SAM la polla con cebolla\",\n            \"textOriginal\": \"SAM la polla
+        con cebolla\",\n            \"authorDisplayName\": \"Edy Garcia\",\n            \"authorProfileImageUrl\":
+        \"https://yt3.ggpht.com/ytc/AMLnZu9xWlArjdpc5esqVRNigcKzxTZLeo-8eejuJe0lXQ=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCnFKJfC9OAMNy1ttcvmxmIA\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCnFKJfC9OAMNy1ttcvmxmIA\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-23T04:52:54Z\",\n
-        \           \"updatedAt\": \"2022-10-23T04:52:54Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-02T10:20:53Z\",\n
+        \           \"updatedAt\": \"2022-11-02T10:20:53Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"DGm42ama5iY_V5lD7Pvn9U3-1Yw\",\n      \"id\": \"UgwmaEMVt5orqZeQCZ94AaABAg\",\n
+        \     \"etag\": \"HcUMEy5FPJtYKufTEoJ0c1EDQD4\",\n      \"id\": \"Ugx1w3axJFfLreJ4mIV4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"wzRAnNEAp5zvGpjASdRzlZJ8YSg\",\n
-        \         \"id\": \"UgwmaEMVt5orqZeQCZ94AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"b9JhO7VeOyO_WFYcLkENKnDgJpI\",\n
+        \         \"id\": \"Ugx1w3axJFfLreJ4mIV4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"buen video, sigue así!\",\n            \"textOriginal\": \"buen video, sigue
-        así!\",\n            \"authorDisplayName\": \"abraham espinoza\",\n            \"authorProfileImageUrl\":
-        \"https://yt3.ggpht.com/ytc/AMLnZu8BKuikOpIZUzO0RchHp9yVy2f5KP_dY1x7aQ=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UC1YCrgBQxXfkLE9GwndPLgQ\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UC1YCrgBQxXfkLE9GwndPLgQ\"\n
+        \"Sam era el que tenia que ser el verdadero portador del anillo su voluntad
+        inquebrantable\",\n            \"textOriginal\": \"Sam era el que tenia que
+        ser el verdadero portador del anillo su voluntad inquebrantable\",\n            \"authorDisplayName\":
+        \"Renny Valencia Quispe\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu-YZoKJjorZib5Gf5QX7Qx5hthnzcQlyJzKoA=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCoK1e8Z2RW6eX832TyvHS6w\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCoK1e8Z2RW6eX832TyvHS6w\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-23T03:27:07Z\",\n
-        \           \"updatedAt\": \"2022-10-23T03:27:07Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-02T05:50:04Z\",\n
+        \           \"updatedAt\": \"2022-11-02T05:50:04Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"-0quLKIVFPFACly5SHV5WkZzobM\",\n      \"id\": \"Ugyv8YK1BLMYUIY4alJ4AaABAg\",\n
+        \     \"etag\": \"UWYURTcQGuGxeVI7UibQUvC7OmE\",\n      \"id\": \"Ugy6HJyU6gVAVgk46nN4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"onWTX3NTlV44Xdm_QdblIQ9xTzQ\",\n
-        \         \"id\": \"Ugyv8YK1BLMYUIY4alJ4AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"mwI5huaeezUBc1VUJhgLD60dTbM\",\n
+        \         \"id\": \"Ugy6HJyU6gVAVgk46nN4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"ya que chingados!! bueno hay esta tú like.. \U0001F92A\U0001F44D\",\n            \"textOriginal\":
-        \"ya que chingados!! bueno hay esta tú like.. \U0001F92A\U0001F44D\",\n            \"authorDisplayName\":
-        \"Adn ,\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu8WSiRyOQX3B3truJiZhXr7CedBJDwWXlKg_8VEYMEZim3wYnl74rh2a6qsCb3i=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCdm-yjMS55GqENKtk_-bfeA\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCdm-yjMS55GqENKtk_-bfeA\"\n
+        \"Que buen video Fede!\",\n            \"textOriginal\": \"Que buen video
+        Fede!\",\n            \"authorDisplayName\": \"Sebastian Calamardo\",\n            \"authorProfileImageUrl\":
+        \"https://yt3.ggpht.com/ytc/AMLnZu8n2FirIkBSoX9pQ8vti_yfKKL76zOfYTaKPZmd=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCtZLcLuTmn-Az1u3FOMZ6Gw\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCtZLcLuTmn-Az1u3FOMZ6Gw\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-22T21:55:49Z\",\n
-        \           \"updatedAt\": \"2022-10-22T21:55:49Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-02T02:57:17Z\",\n
+        \           \"updatedAt\": \"2022-11-02T02:57:17Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"hbLJBgjaQGw-Z4iXF72EWiAMBmk\",\n      \"id\": \"UgwRJ_KczgdEvaXSFgl4AaABAg\",\n
+        \     \"etag\": \"5K-cWssnIcpefAvgBv9ctXJEC60\",\n      \"id\": \"Ugw6vKWZsbpPwqBVLeB4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"GNHlVaG9UR72XNZPPcdLLdWjYXs\",\n
-        \         \"id\": \"UgwRJ_KczgdEvaXSFgl4AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"5W3ZKrkne5ysGuh2SRyZLzWIQD8\",\n
+        \         \"id\": \"Ugw6vKWZsbpPwqBVLeB4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"Una observacion creo que las arañas no pican, no tienen agíjon.. muerden..
-        \U0001F914 pero bueno!!.. \U0001F926\\u200d♂️\U0001F92A\",\n            \"textOriginal\":
-        \"Una observacion creo que las arañas no pican, no tienen agíjon.. muerden..
-        \U0001F914 pero bueno!!.. \U0001F926\\u200d♂️\U0001F92A\",\n            \"authorDisplayName\":
-        \"Adn ,\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu8WSiRyOQX3B3truJiZhXr7CedBJDwWXlKg_8VEYMEZim3wYnl74rh2a6qsCb3i=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCdm-yjMS55GqENKtk_-bfeA\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCdm-yjMS55GqENKtk_-bfeA\"\n
+        \"Es un genio este pibe, aplausos y gracias mil desde Argentina\",\n            \"textOriginal\":
+        \"Es un genio este pibe, aplausos y gracias mil desde Argentina\",\n            \"authorDisplayName\":
+        \"charliescomplement\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu_ooFmpuv9IcTW7-b-tQglVD04W6qUq0TGvQ5VQ=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UC0ONsmvmLyXKcjtaySqZQwA\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UC0ONsmvmLyXKcjtaySqZQwA\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-22T21:46:59Z\",\n
-        \           \"updatedAt\": \"2022-10-22T21:46:59Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 1,\n            \"publishedAt\": \"2022-11-02T02:23:59Z\",\n
+        \           \"updatedAt\": \"2022-11-02T02:23:59Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"aMpSthjyO84yeeG165HInsFHxuc\",\n      \"id\": \"Ugyc2D6o9s4n9A3SxMh4AaABAg\",\n
+        \     \"etag\": \"uSR5w0EphYKFq_3v4raGlmQfoIo\",\n      \"id\": \"UgwTbpDPJ7PhZnPaU1B4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"ESCI54omrhzpjDI3-alT7L5o0LE\",\n
-        \         \"id\": \"Ugyc2D6o9s4n9A3SxMh4AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"lsEnZcoP36SQt94Wx1198MCFZoA\",\n
+        \         \"id\": \"UgwTbpDPJ7PhZnPaU1B4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"Elrond no era el rey delos elfos\",\n            \"textOriginal\": \"Elrond
-        no era el rey delos elfos\",\n            \"authorDisplayName\": \"Miguel
-        Isiordia García\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu9LNkEyaVZO-_hSCFEEOGysK9ZRUf-Jww-Lag=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCjBQntyU-jlImAUqMLfxDDA\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCjBQntyU-jlImAUqMLfxDDA\"\n
+        \"Magneto anda haciendo Breakdance jajajaja\",\n            \"textOriginal\":
+        \"Magneto anda haciendo Breakdance jajajaja\",\n            \"authorDisplayName\":
+        \"Angel Minga\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu_HDU6kwF_z0uevl6WKR-kXaRr9POtiUFlseuyE7WZQlLW3nSpqh3rtS2wvmQP0=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCPD_aJD_FQT0dnNmjBUfsKw\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCPD_aJD_FQT0dnNmjBUfsKw\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-22T21:41:24Z\",\n
-        \           \"updatedAt\": \"2022-10-22T21:41:24Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 1,\n            \"publishedAt\": \"2022-11-02T01:19:23Z\",\n
+        \           \"updatedAt\": \"2022-11-02T01:19:23Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"56Up9KBd-51X5ANBd25Ft6SvwmE\",\n      \"id\": \"Ugy0nS5R7zXFHD8dhX54AaABAg\",\n
+        \     \"etag\": \"p8oZXLDE7lExUTBcmHJJV-Fntpk\",\n      \"id\": \"Ugx73sdM773AnhCICc14AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"ubqUfojP1iVdvpBFijm3iwuPW14\",\n
-        \         \"id\": \"Ugy0nS5R7zXFHD8dhX54AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"mO9B6IgWQ7nWk48flLeMOUsKJVk\",\n
+        \         \"id\": \"Ugx73sdM773AnhCICc14AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"Sigue la del hobbit !! Porfa Fede\",\n            \"textOriginal\": \"Sigue
-        la del hobbit !! Porfa Fede\",\n            \"authorDisplayName\": \"ERIK
-        MENDOZA VÁZQUEZ\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/JWntaZ9-5F-9jSVAh0TLjVbncWmuCUV18WLVOZtaOyb8KrcaewLR7TEtHmoas-AZi9i3eRhMXA=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCSQWqEBjI1NJ0z3GQVKpgIg\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCSQWqEBjI1NJ0z3GQVKpgIg\"\n
+        \"jajajaajjajaja si me hiciste reir buenisimo resumen\",\n            \"textOriginal\":
+        \"jajajaajjajaja si me hiciste reir buenisimo resumen\",\n            \"authorDisplayName\":
+        \"Jesury rivas\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu9Uxd7sSSaVWowFPx2-LnR_xL8UtFHKuOooF3J0_YhaD2iyEZxVIan1467cASrz=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCdeSfy4rV0DsVjSZB3DMTQw\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCdeSfy4rV0DsVjSZB3DMTQw\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-22T20:40:53Z\",\n
-        \           \"updatedAt\": \"2022-10-22T20:40:53Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-01T19:44:22Z\",\n
+        \           \"updatedAt\": \"2022-11-01T19:44:22Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"BuxpwZcwwhFfZ3wTmdTNlj2r7Zk\",\n      \"id\": \"Ugyr-Onvgz1tP_2x3Mt4AaABAg\",\n
+        \     \"etag\": \"HgcbZUoN4ZXSQUYx3bz8t0oEVaM\",\n      \"id\": \"Ugwi3dRPb6CxjpiW8s94AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"aEgOkzf6TBR7EbfUj1lS0yVQZd0\",\n
-        \         \"id\": \"Ugyr-Onvgz1tP_2x3Mt4AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"_6RbHLbS-O4SJuF4JzB40x-zooM\",\n
+        \         \"id\": \"Ugwi3dRPb6CxjpiW8s94AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"\\u003ca href=\\\"https://www.youtube.com/watch?v=ggGINmj5EQE&amp;t=4m48s\\\"\\u003e4:48\\u003c/a\\u003e
-        &quot;Sauron da pensión&quot; \U0001F923 \U0001F923, saben si hay vacantes?
-        Eso de la pensión me interesa \U0001F61D\",\n            \"textOriginal\":
-        \"4:48 \\\"Sauron da pensión\\\" \U0001F923 \U0001F923, saben si hay vacantes?
-        Eso de la pensión me interesa \U0001F61D\",\n            \"authorDisplayName\":
-        \"Rosaura Avila\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu9FSyDLin2Qd5Rr2_jX41fAMvWKXLgD1UmGDY0VkA=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCNlAHxfSJFFdTMeEsz3kCHg\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCNlAHxfSJFFdTMeEsz3kCHg\"\n
+        \"Nada que ver qué ese Bodrio de serie...\",\n            \"textOriginal\":
+        \"Nada que ver qué ese Bodrio de serie...\",\n            \"authorDisplayName\":
+        \"Juncar G.C.\",\n            \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu_ofxQLaUcToHVutzGQNbRQf7wkXrkFnHviJklW=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCexJWvfmKuFLqvKSSJQ4PpQ\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCexJWvfmKuFLqvKSSJQ4PpQ\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-22T19:10:32Z\",\n
-        \           \"updatedAt\": \"2022-10-22T19:10:32Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-01T18:10:33Z\",\n
+        \           \"updatedAt\": \"2022-11-01T18:10:33Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    },\n    {\n      \"kind\": \"youtube#commentThread\",\n
-        \     \"etag\": \"cDTxCPqp2CoEiuQVhhIooUVdee4\",\n      \"id\": \"UgwkNkiXj2KVSErZEaZ4AaABAg\",\n
+        \     \"etag\": \"dTqO5FpLBUBxzrcIVl-D8Oewi7s\",\n      \"id\": \"Ugwt4yRs0onxfX_9s2t4AaABAg\",\n
         \     \"snippet\": {\n        \"videoId\": \"ggGINmj5EQE\",\n        \"topLevelComment\":
-        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"2q5AzkvTKRBjawYwv3SL64vP5m4\",\n
-        \         \"id\": \"UgwkNkiXj2KVSErZEaZ4AaABAg\",\n          \"snippet\":
+        {\n          \"kind\": \"youtube#comment\",\n          \"etag\": \"4qREN500hC5FD6nZPqZNB4EEosI\",\n
+        \         \"id\": \"Ugwt4yRs0onxfX_9s2t4AaABAg\",\n          \"snippet\":
         {\n            \"videoId\": \"ggGINmj5EQE\",\n            \"textDisplay\":
-        \"Muy buen video!\",\n            \"textOriginal\": \"Muy buen video!\",\n
-        \           \"authorDisplayName\": \"Fer King\",\n            \"authorProfileImageUrl\":
-        \"https://yt3.ggpht.com/uqaTFkrjD8dazm-q8NPFCDURs4m-2yHuKjHiqk7UmoEPylxPMZjK6ge-T-_XVsW8UFYtT0C8KA=s48-c-k-c0x00ffffff-no-rj\",\n
-        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCtU8Fgt-TcWFwOWOgM920pg\",\n
-        \           \"authorChannelId\": {\n              \"value\": \"UCtU8Fgt-TcWFwOWOgM920pg\"\n
+        \"una pregunta el señor de los anillos y secreto en la montaña trata de los
+        mismo de la destrucción de un anillo en una montaña o me equivoco ? \U0001F914\",\n
+        \           \"textOriginal\": \"una pregunta el señor de los anillos y secreto
+        en la montaña trata de los mismo de la destrucción de un anillo en una montaña
+        o me equivoco ? \U0001F914\",\n            \"authorDisplayName\": \"ANBUALE\",\n
+        \           \"authorProfileImageUrl\": \"https://yt3.ggpht.com/ytc/AMLnZu_ywvVrBn16kDNCqJJJNt7IFc9rK0DPQHg9ks-4=s48-c-k-c0x00ffffff-no-rj\",\n
+        \           \"authorChannelUrl\": \"http://www.youtube.com/channel/UCiulgqXEwuaKwgUjS7HxhLg\",\n
+        \           \"authorChannelId\": {\n              \"value\": \"UCiulgqXEwuaKwgUjS7HxhLg\"\n
         \           },\n            \"canRate\": true,\n            \"viewerRating\":
-        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-10-22T07:15:32Z\",\n
-        \           \"updatedAt\": \"2022-10-22T07:15:32Z\"\n          }\n        },\n
+        \"none\",\n            \"likeCount\": 0,\n            \"publishedAt\": \"2022-11-01T17:54:39Z\",\n
+        \           \"updatedAt\": \"2022-11-01T17:54:39Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    }\n  ]\n}\n"
-  recorded_at: Mon, 24 Oct 2022 13:09:38 GMT
+  recorded_at: Sun, 06 Nov 2022 11:29:31 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videoCategories?key=<YOUTUBE_API_KEY>&regionCode=MX
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 06 Nov 2022 12:20:42 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoCategoryListResponse",
+          "etag": "fIIv2-q7-AkaOeJf0LPrlnu-0As",
+          "items": [
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "grPOPYEUUZN3ltuDUGEWlrTR90U",
+              "id": "1",
+              "snippet": {
+                "title": "Film & Animation",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Q0xgUf8BFM8rW3W0R9wNq809xyA",
+              "id": "2",
+              "snippet": {
+                "title": "Autos & Vehicles",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "qnpwjh5QlWM5hrnZCvHisquztC4",
+              "id": "10",
+              "snippet": {
+                "title": "Music",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "HyFIixS5BZaoBdkQdLzPdoXWipg",
+              "id": "15",
+              "snippet": {
+                "title": "Pets & Animals",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "PNU8SwXhjsF90fmkilVohofOi4I",
+              "id": "17",
+              "snippet": {
+                "title": "Sports",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "5kFljz9YJ4lEgSfVwHWi5kTAwAs",
+              "id": "18",
+              "snippet": {
+                "title": "Short Movies",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "ANnLQyzEA_9m3bMyJXMhKTCOiyg",
+              "id": "19",
+              "snippet": {
+                "title": "Travel & Events",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "0Hh6gbZ9zWjnV3sfdZjKB5LQr6E",
+              "id": "20",
+              "snippet": {
+                "title": "Gaming",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "q8Cp4pUfCD8Fuh8VJ_yl5cBCVNw",
+              "id": "21",
+              "snippet": {
+                "title": "Videoblogging",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "cHDaaqPDZsJT1FPr1-MwtyIhR28",
+              "id": "22",
+              "snippet": {
+                "title": "People & Blogs",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "3Uz364xBbKY50a2s0XQlv-gXJds",
+              "id": "23",
+              "snippet": {
+                "title": "Comedy",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "0srcLUqQzO7-NGLF7QnhdVzJQmY",
+              "id": "24",
+              "snippet": {
+                "title": "Entertainment",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "bQlQMjmYX7DyFkX4w3kT0osJyIc",
+              "id": "25",
+              "snippet": {
+                "title": "News & Politics",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Y06N41HP_WlZmeREZvkGF0HW5pg",
+              "id": "26",
+              "snippet": {
+                "title": "Howto & Style",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "yBaNkLx4sX9NcDmFgAmxQcV4Y30",
+              "id": "27",
+              "snippet": {
+                "title": "Education",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Mxy3A-SkmnR7MhJDZRS4DuAIbQA",
+              "id": "28",
+              "snippet": {
+                "title": "Science & Technology",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "4pIHL_AdN2kO7btAGAP1TvPucNk",
+              "id": "30",
+              "snippet": {
+                "title": "Movies",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Iqol1myDwh2AuOnxjtn2AfYwJTU",
+              "id": "31",
+              "snippet": {
+                "title": "Anime/Animation",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "tzhBKCBcYWZLPai5INY4id91ss8",
+              "id": "32",
+              "snippet": {
+                "title": "Action/Adventure",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "ii8nBGYpKyl6FyzP3cmBCevdrbs",
+              "id": "33",
+              "snippet": {
+                "title": "Classics",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Y0u9UAQCCGp60G11Arac5Mp46z4",
+              "id": "34",
+              "snippet": {
+                "title": "Comedy",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "_YDnyT205AMuX8etu8loOiQjbD4",
+              "id": "35",
+              "snippet": {
+                "title": "Documentary",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "eAl2b-uqIGRDgnlMa0EsGZjXmWg",
+              "id": "36",
+              "snippet": {
+                "title": "Drama",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "HDAW2HFOt3SqeDI00X-eL7OELfY",
+              "id": "37",
+              "snippet": {
+                "title": "Family",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "QHiWh3niw5hjDrim85M8IGF45eE",
+              "id": "38",
+              "snippet": {
+                "title": "Foreign",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "ztKcSS7GpH9uEyZk9nQCdNujvGg",
+              "id": "39",
+              "snippet": {
+                "title": "Horror",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Ids1sm8QFeSo_cDlpcUNrnEBYWA",
+              "id": "40",
+              "snippet": {
+                "title": "Sci-Fi/Fantasy",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "qhfgS7MzzZHIy_UZ1dlawl1GbnY",
+              "id": "41",
+              "snippet": {
+                "title": "Thriller",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "TxVSfGoUyT7CJ7h7ebjg4vhIt6g",
+              "id": "42",
+              "snippet": {
+                "title": "Shorts",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "o9w6eNqzjHPnNbKDujnQd8pklXM",
+              "id": "43",
+              "snippet": {
+                "title": "Shows",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "mLdyKd0VgXKDI6GevTLBAcvRlIU",
+              "id": "44",
+              "snippet": {
+                "title": "Trailers",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            }
+          ]
+        }
+  recorded_at: Sun, 06 Nov 2022 12:20:42 GMT
 recorded_with: VCR 6.1.0

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module YoutubeAnalytics
+module UFeeling
   REGIONS = { TAIWAN: 'TW', MEXICO: 'MX', GUATEMALA: 'GT', NICARAGUA: 'NI' }.freeze
   PATH_FILTERS = { SNIPPET: 'snippet', STATISTICS: 'statistics', CONTENT_DETAILS: 'contentDetails',
                    REPLIES: 'replies' }.freeze

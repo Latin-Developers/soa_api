@@ -1,9 +1,9 @@
 # frozen_string_literal: false
 
-module YoutubeAnalytics
+module UFeeling
   module Youtube
     # Data Mapper: Youtube Category -> Category Entity
-    class VideoCategoryMapper
+    class CategoryMapper
       def initialize(youtube_token, gateway_class = Youtube::Api)
         @token = youtube_token
         @gateway_class = gateway_class
@@ -12,7 +12,7 @@ module YoutubeAnalytics
 
       def categories(region)
         data_items = @gateway.categories(region)
-        data_items.map { |data| VideoCategoryMapper.build_entity(data) }
+        data_items.map { |data| CategoryMapper.build_entity(data) }
       end
 
       def self.build_entity(data)
@@ -26,13 +26,15 @@ module YoutubeAnalytics
         end
 
         def build_entity
-          YoutubeAnalytics::Entity::VideoCategory.new(
+          UFeeling::Entity::Category.new(
             id: nil,
             origin_id:,
             title:
           )
         end
 
+        private
+        
         def origin_id
           @data['id']
         end
