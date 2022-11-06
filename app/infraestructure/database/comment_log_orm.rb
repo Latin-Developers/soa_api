@@ -6,11 +6,11 @@ module YoutubeAnalytics
   module Database
     # Object-Relational Mapper for comment logs entities
     class CommentsLogOrm < Sequel::Model(:comments_log)
-      many_to_one :videos,
+      many_to_one :video,
                   class: :'YoutubeAnalytics::Database::VideoOrm',
                   key: :video_id
 
-                  :channel,
+      many_to_one :channel,
                   class: :'YoutubeAnalytics::Database::ChannelOrm',
                   key: :author_channel_id
 

@@ -10,7 +10,7 @@ module YoutubeAnalytics
                   class: :'YoutubeAnalytics::Database::VideoOrm',
                   key: :channel_id
 
-                  :comments_log,
+      one_to_many :comments,
                   class: :'YoutubeAnalytics::Database::CommentsLogOrm',
                   key: :author_channel_id
 

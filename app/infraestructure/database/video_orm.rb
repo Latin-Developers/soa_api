@@ -10,7 +10,7 @@ module YoutubeAnalytics
                     class: :'YoutubeAnalytics::Database::categories',
                     key: :category_id
 
-                    :channel,
+      many_to_one   :channel,
                     class: :'YoutubeAnalytics::Database::channels',
                     key: :channel_id
 
@@ -18,9 +18,9 @@ module YoutubeAnalytics
                     class: :'YoutubeAnalytics::Database::comments_log',
                     key: :video_id
 
-                    :videos_log,
-                    class: :'YoutubeAnalytics::Database::videos_log',
-                    key: :video_id  
+      one_to_many :logs,
+                  class: :'YoutubeAnalytics::Database::videos_log',
+                  key: :video_id
 
       plugin :timestamps, update_on_create: true
     end
