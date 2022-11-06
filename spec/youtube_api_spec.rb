@@ -23,14 +23,14 @@ describe 'Tests Youtube API library' do
 
   describe 'Youtube categories information' do
     it 'HAPPY: should provide list of youtube video categories' do
-      categories = YoutubeAnalytics::Youtube::VideoCategoryMapper.new(YOUTUBE_API_KEY)
-                                                                 .categories(YoutubeAnalytics::REGIONS[:GUATEMALA])
+      categories = YoutubeAnalytics::Youtube::CategoryMapper.new(YOUTUBE_API_KEY)
+                                                            .categories(YoutubeAnalytics::REGIONS[:GUATEMALA])
       _(categories.size).must_be :>, 0
     end
 
     it 'SAD: should raise exception when unauthorized' do
       _(proc do
-        YoutubeAnalytics::Youtube::VideoCategoryMapper.new('BAD_TOKEN')
+        YoutubeAnalytics::Youtube::CategoryMapper.new('BAD_TOKEN')
         .categories(YoutubeAnalytics::REGIONS[:GUATEMALA])
       end).must_raise Errors::BadRequest
     end
@@ -53,28 +53,28 @@ describe 'Tests Youtube API library' do
 
   describe 'Youtube comments information' do
     it 'HAPPY: should provide list of youtube comments' do
-      comments = YoutubeAnalytics::Youtube::VideoCommentMapper.new(YOUTUBE_API_KEY)
-                                                              .video_comments('ggGINmj5EQE')
+      comments = YoutubeAnalytics::Youtube::CommentMapper.new(YOUTUBE_API_KEY)
+                                                         .comments('ggGINmj5EQE')
       _(comments.size).must_be :>, 0
     end
 
     it 'SAD: should raise exception when unauthorized' do
       _(proc do
-        YoutubeAnalytics::Youtube::VideoCommentMapper.new('BAD_TOKEN')
-                                                     .video_comments('ggGINmj5EQE')
+        YoutubeAnalytics::Youtube::CommentMapper.new('BAD_TOKEN')
+                                                     .comments('ggGINmj5EQE')
       end).must_raise Errors::BadRequest
     end
   end
 
   describe 'Youtube detail video information' do
     it 'HAPPY: should provide list of youtube video detail' do
-      details = YoutubeAnalytics::Youtube::VideoMapper.new(YOUTUBE_API_KEY).video_details('ggGINmj5EQE')
+      details = YoutubeAnalytics::Youtube::VideoMapper.new(YOUTUBE_API_KEY).details('ggGINmj5EQE')
       _(details.origin_id).must_equal 'ggGINmj5EQE'
     end
 
     it 'SAD: should raise exception when unauthorized' do
       _(proc do
-        YoutubeAnalytics::Youtube::VideoMapper.new('BAD_TOKEN').video_details('ggGINmj5EQE')
+        YoutubeAnalytics::Youtube::VideoMapper.new('BAD_TOKEN').details('ggGINmj5EQE')
       end).must_raise Errors::BadRequest
     end
   end

@@ -3,7 +3,7 @@
 module YoutubeAnalytics
   module Youtube
     # Data Mapper: Youtube Category -> Category Entity
-    class VideoCategoryMapper
+    class CategoryMapper
       def initialize(youtube_token, gateway_class = Youtube::Api)
         @token = youtube_token
         @gateway_class = gateway_class
@@ -12,7 +12,7 @@ module YoutubeAnalytics
 
       def categories(region)
         data_items = @gateway.categories(region)
-        data_items.map { |data| VideoCategoryMapper.build_entity(data) }
+        data_items.map { |data| CategoryMapper.build_entity(data) }
       end
 
       def self.build_entity(data)
@@ -26,7 +26,7 @@ module YoutubeAnalytics
         end
 
         def build_entity
-          YoutubeAnalytics::Entity::VideoCategory.new(
+          YoutubeAnalytics::Entity::Category.new(
             id: nil,
             origin_id:,
             title:

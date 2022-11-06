@@ -4,7 +4,7 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_table(:comments_log) do
+    create_table(:comments) do
       primary_key :id
       foreign_key :video_id, :videos
       foreign_key :author_channel_id, :channels

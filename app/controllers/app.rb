@@ -38,8 +38,8 @@ module YoutubeAnalytics
             # GET /videos/
             routing.on 'video_category' do
               routing.get do
-                categories = YoutubeAnalytics::Youtube::VideoCategoryMapper.new(YOUTUBE_API_KEY)
-                                                                           .categories(region_code)
+                categories = YoutubeAnalytics::Youtube::CategoryMapper.new(YOUTUBE_API_KEY)
+                                                                      .categories(region_code)
 
                 view 'project', locals: { categories: }
               end

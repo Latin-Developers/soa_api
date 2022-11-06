@@ -15,7 +15,7 @@ module YoutubeAnalytics
                     key: :channel_id
 
       one_to_many   :comments,
-                    class: :'YoutubeAnalytics::Database::comments_log',
+                    class: :'YoutubeAnalytics::Database::comments',
                     key: :video_id
 
       one_to_many :logs,

@@ -3,16 +3,16 @@
 module YoutubeAnalytics
   module Youtube
     # Data Mapper: Youtube Video -> Entity Video
-    class VideoCommentMapper
+    class CommentMapper
       def initialize(youtube_token, gateway_class = Youtube::Api)
         @token = youtube_token
         @gateway_class = gateway_class
         @gateway = @gateway_class.new(@token)
       end
 
-      def video_comments(video_id)
-        data_items = @gateway.video_comments(video_id)
-        data_items.map { |data| VideoCommentMapper.build_entity(data) }
+      def comments(video_id)
+        data_items = @gateway.comments(video_id)
+        data_items.map { |data| CommentMapper.build_entity(data) }
       end
 
       def self.build_entity(data)
@@ -26,7 +26,7 @@ module YoutubeAnalytics
         end
 
         def build_entity
-          YoutubeAnalytics::Entity::VideoComment.new(
+          YoutubeAnalytics::Entity::Comment.new(
             id: nil,
             origin_id:,
             origin_video_id:,
@@ -83,7 +83,7 @@ module YoutubeAnalytics
         end
 
         def comment_replies
-          replies_comments.map { |replies_comment| VideoCommentMapper.build_entity(replies_comment) }
+          replies_comments.map { |replies_comment| CommentMapper.build_entity(replies_comment) }
         end
 
         private

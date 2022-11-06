@@ -15,8 +15,8 @@ module YoutubeAnalytics
         data_items.map { |data| VideoMapper.build_entity(data) }
       end
 
-      def video_details(video_id)
-        data = @gateway.video_details(video_id)
+      def details(video_id)
+        data = @gateway.details(video_id)
         VideoMapper.build_entity(data)
       end
 

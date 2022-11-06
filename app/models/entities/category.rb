@@ -6,7 +6,7 @@ require 'dry-struct'
 module YoutubeAnalytics
   module Entity
     # Provides access to category data
-    class VideoCategory < Dry::Struct
+    class Category < Dry::Struct
       include Dry.Types
 
       attribute :id,        Coercible::Integer.optional

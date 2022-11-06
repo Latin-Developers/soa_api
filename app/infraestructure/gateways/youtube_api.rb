@@ -29,12 +29,12 @@ module YoutubeAnalytics
         video_resource(:VIDEOS, ApiFilters.popular_videos(region))
       end
 
-      def video_comments(video_id)
-        video_resource(:COMMENTS, ApiFilters.video_comments(video_id))
+      def comments(video_id)
+        video_resource(:COMMENTS, ApiFilters.comments(video_id))
       end
 
-      def video_details(video_id)
-        video_resource(:VIDEOS, ApiFilters.video_details(video_id)).first
+      def details(video_id)
+        video_resource(:VIDEOS, ApiFilters.details(video_id)).first
       end
     end
   end

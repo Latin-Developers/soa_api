@@ -5,7 +5,7 @@ require 'sequel'
 module YoutubeAnalytics
   module Database
     # Object-Relational Mapper for comment logs entities
-    class CommentsLogOrm < Sequel::Model(:comments_log)
+    class CommentsLogOrm < Sequel::Model(:comments)
       many_to_one :video,
                   class: :'YoutubeAnalytics::Database::VideoOrm',
                   key: :video_id
