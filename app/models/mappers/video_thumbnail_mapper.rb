@@ -27,6 +27,8 @@ module UFeeling
           )
         end
 
+        private
+
         def url
           @data['url']
         end

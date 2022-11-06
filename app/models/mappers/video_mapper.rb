@@ -48,6 +48,8 @@ module UFeeling
           )
         end
 
+        private
+        
         def origin_id
           @data['id']
         end
@@ -95,8 +97,6 @@ module UFeeling
         def comment_count
           statistics['commentCount']
         end
-
-        private
 
         def snippet
           @data['snippet'] || {}

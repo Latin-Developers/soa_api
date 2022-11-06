@@ -33,6 +33,8 @@ module UFeeling
           )
         end
 
+        private
+        
         def origin_id
           @data['id']
         end
