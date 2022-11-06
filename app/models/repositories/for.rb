@@ -1,18 +1,17 @@
 # frozen_string_literal: true
 
 require_relative 'categories'
-require_relative 'channel'
-require_relative 'comment'
-require_relative 'video'
-require_relative 'video_log'
+# require_relative 'channel'
+# require_relative 'comment'
+# require_relative 'video'
+# require_relative 'video_log'
 
 module YoutubeAnalytics
   module Repository
     # Finds the right repository for an entity object or class
     module For
       ENTITY_REPOSITORY = {
-        Entity::Project => Projects,
-        Entity::Member => Members
+        Entity::Category => Categories
       }.freeze
 
       def self.klass(entity_klass)

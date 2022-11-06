@@ -11,6 +11,10 @@ module YoutubeAnalytics
                   key: :category_id
 
       plugin :timestamps, update_on_create: true
+
+      def self.find_or_create(category_info)
+        first(origin_id: category_info[:origin_id]) || create(category_info)
+      end
     end
   end
 end

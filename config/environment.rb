@@ -25,6 +25,7 @@ module YoutubeAnalytics
       end
 
       # Database Setup
+      puts ENV.fetch('DATABASE_URL')
       DB = Sequel.connect(ENV.fetch('DATABASE_URL'))
       def self.DB = DB # rubocop:disable Naming/MethodName
     end

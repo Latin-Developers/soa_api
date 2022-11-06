@@ -22,8 +22,7 @@ module YoutubeAnalytics
         Entity::Category.new(
           id: db_record.id,
           origin_id: db_record.origin_id,
-          title: db_record.title,
-          email: db_record.email
+          title: db_record.title
         )
       end
 
@@ -34,7 +33,7 @@ module YoutubeAnalytics
       end
 
       def self.db_find_or_create(entity)
-        Database::MemberOrm.find_or_create(entity.to_attr_hash)
+        Database::Category.find_or_create(entity.to_attr_hash)
       end
     end
   end

@@ -5,8 +5,8 @@ module DatabaseHelper
   def self.wipe_database
     # Ignore foreign key constraints when wiping tables
     YoutubeAnalytics::App.DB.run('PRAGMA foreign_keys = OFF')
-    YoutubeAnalytics::Database::MemberOrm.map(&:destroy)
-    YoutubeAnalytics::Database::ProjectOrm.map(&:destroy)
+    YoutubeAnalytics::Database::Categories.map(&:destroy)
+    # YoutubeAnalytics::Database::ProjectOrm.map(&:destroy)
     YoutubeAnalytics::App.DB.run('PRAGMA foreign_keys = ON')
   end
 end

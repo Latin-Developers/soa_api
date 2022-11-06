@@ -17,7 +17,6 @@ require_relative '../require_app'
 require_app
 
 YOUTUBE_API_KEY = YoutubeAnalytics::App.config.YOUTUBE_API_KEY
-CORRECT = YAML.safe_load(File.read('spec/fixtures/youtube_comments.yml'))
 
 CASSETTES_FOLDER = 'spec/fixtures/cassettes'
 CASSETTE_FILE = 'youtube_api'

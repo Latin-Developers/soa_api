@@ -10,7 +10,7 @@ end
 
 desc 'run tests'
 task :spec do
-  sh 'bundle exec ruby spec/youtube_api_spec.rb'
+  sh 'bundle exec ruby spec/gateway_youtube_spec.rb'
 end
 
 desc 'Keep rerunning tests upon changes'
@@ -41,9 +41,10 @@ namespace :vcr do
 end
 
 namespace :quality do
-  only_app = 'config/app/'
+  only_app = 'config/ app/'
+
   desc 'run all static-analysis quality checks'
-  task all: %i[rubocop flog reek]
+  task all: %i[rubocop reek flog]
 
   desc 'code style linter'
   task :rubocop do
@@ -57,7 +58,7 @@ namespace :quality do
 
   desc 'complexiy analysis'
   task :flog do
-    sh 'flog'
+    sh "flog -m #{only_app}"
   end
 end
 
@@ -67,7 +68,7 @@ namespace :db do
     require_relative 'config/environment' # load config info
     require_relative 'spec/helpers/database_helper'
 
-    def app = YoutubeAnalytics : : App
+    def app = YoutubeAnalytics::App
   end
 
   desc 'Run migrations'
