@@ -11,7 +11,6 @@ module UFeeling
 
       attribute :id,                        Integer.optional
       attribute :origin_id,                 Strict::String
-      attribute :origin_video_id,           Strict::String
       attribute :text_display,              Strict::String
       attribute :text_original,             Strict::String
       attribute :author_display_name,       Strict::String

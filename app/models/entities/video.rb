@@ -12,18 +12,15 @@ module UFeeling
       include Dry.Types
 
       attribute :id,                      Integer.optional
+      attribute :category_id              Integer.optional
       attribute :origin_id,               Strict::String
       attribute :published_at,            Strict::String
       attribute :origin_channel_id,       Strict::String
       attribute :title,                   Strict::String
       attribute :description,             Strict::String
-      attribute :thumbnails,              Array.of(VideoThumbnail)
+      attribute :thumbnail_url            Strict::String
       attribute :origin_category_id,      Strict::String
       attribute :duration,                String.optional
-      attribute :view_count,              Strict::String.optional
-      attribute :like_count,              Strict::String.optional
-      attribute :favorite_count,          Strict::String.optional
-      attribute :comment_count,           Strict::String.optional
 
       def to_attr_hash
         to_hash.except(:id)
