@@ -74,3 +74,9 @@ h1 {
     font-size:11px;
     color:rgb(41, 41, 41);
   }
+
+  subtitle {
+    padding: 0.0in;
+    font-size:100px;
+    color:rgb(41, 41, 41);
+  }
