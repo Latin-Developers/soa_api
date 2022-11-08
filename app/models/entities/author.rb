@@ -3,7 +3,7 @@
 require 'dry-types'
 require 'dry-struct'
 
-require_relative 'video_thumbnail'
+# require_relative 'video_thumbnail'
 
 module UFeeling
   module Entity

@@ -3,7 +3,7 @@
 require 'dry-types'
 require 'dry-struct'
 
-require_relative 'video_thumbnail'
+# require_relative 'video_thumbnail'
 
 module UFeeling
   module Entity
@@ -12,13 +12,13 @@ module UFeeling
       include Dry.Types
 
       attribute :id,                      Integer.optional
-      attribute :category_id              Integer.optional
+      attribute :category_id,              Integer.optional
       attribute :origin_id,               Strict::String
       attribute :published_at,            Strict::String
       attribute :origin_channel_id,       Strict::String
       attribute :title,                   Strict::String
       attribute :description,             Strict::String
-      attribute :thumbnail_url            Strict::String
+      attribute :thumbnail_url,           Strict::String
       attribute :origin_category_id,      Strict::String
       attribute :duration,                String.optional
 
