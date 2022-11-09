@@ -96,6 +96,24 @@ h1 {
     height: 150px;
     margin-right: 15px;
   }
+
+  .img_positive {
+    height: 40px;
+    grid-column: 1;
+    margin-right: 15px;
+  }
+
+  .img_neutral {
+    height: 70px;
+    grid-column: 1;
+    margin-right: 15px;
+  }
+
+  .img_negative {
+    height: 70px;
+    grid-column: 1;
+    margin-right: 15px;
+  }
   
   .query-bar {
     background-color: #1984c5;
@@ -107,14 +125,22 @@ h1 {
   .grid-container {
     display: grid;
     height: 150px;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
   }
 
   .grid-container-text {
     display: grid;
-    grid-template-columns: repeat(4, 280px);
+    grid-template-columns: repeat(4, auto);
     grid-auto-rows: minmax(auto, auto);
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
+    
+  }
+
+  .grid-container-text {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-auto-rows: minmax(auto, auto);
+    background-color: rgb(255, 255, 255);
     
   }
 
@@ -140,6 +166,26 @@ h1 {
 
   .item4 {
     grid-column: 4;
+    margin-right: 15px;
+  }
+
+  .item5 {
+    grid-column: 5;
+    margin-right: 15px;
+  }
+
+  .item6 {
+    grid-column: 6;
+    margin-right: 15px;
+  }
+
+  .item7 {
+    grid-column: 7;
+    margin-right: 15px;
+  }
+
+  .item8 {
+    grid-column: 8;
     margin-right: 15px;
   }
   
