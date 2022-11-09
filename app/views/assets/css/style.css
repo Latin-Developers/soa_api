@@ -28,6 +28,12 @@ h1 {
     color:#0d6094;
     font-family: "Lucida Console", "Courier New", monospace;
   }
+
+  .video_desc {
+    font-size:12px;
+    color:#0d6094;
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
   
   .project.owner {
     font-weight: sans-serif;
@@ -65,8 +71,8 @@ h1 {
     height: 10px;
   }
 
-  .video-1 {
-    width: 300px;
+  .video_img {
+    width: 270px;
   }
   
   .query-bar {
