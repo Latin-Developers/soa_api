@@ -64,6 +64,10 @@ h1 {
   .blank-row-half {
     height: 10px;
   }
+
+  .video-1 {
+    width: 300px;
+  }
   
   .query-bar {
     background-color: #1984c5;
