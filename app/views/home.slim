@@ -1,26 +1,30 @@
 .row
-  .project.detail Region:
+  .col-md-12.col-sm-3.blank-row
+  .subtitle Analyze a new video:
 
-.container
+.row
+  .col-md-12.col-sm-3.blank-row-half
+
   form role="form" action="/videos" method='POST' id='show-video-categories'
-    .row.vertical-align.query-bar
-      .col-md-2.col-sm-3
-        .text-right Region:
-      .col-md-8.col-sm-6
-        
-        select#region_code.form-select name="region_code" required="true"
-          option value = "Select an Option" Select an Option
-          option value = "MX" MX
-          option value = "GT" GT
-          option value = "NI" NI
+    row.vertical-align.query-bar
+      .col-md-0.col-sm-3
+        .text-right YouTube Link:
+      .col-md-7.col-sm-6
+        input { 
+          type='text' name='YouTube Link'
+          id='github_url_input' class="form-control"
+          placeholder="e.g. https://www.youtube.com/watch?v=jgkBk4soOMI"
+        }
        
-      .col-md-2.col-sm-3
+      .col-md-2.col-sm-5
         button { 
           type='submit' id='show-video-categories-submit' class='submit' 
           value='submit' class="btn btn-light"
         } Get Analysis
     .row
-      .col-md-12.blank-row
+      .col-md-12.col-sm-3.blank-row
+      .subtitle Your videos:
+
     .row
       .col-md-2.col-sm-3
     
