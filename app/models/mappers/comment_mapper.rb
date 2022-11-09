@@ -43,7 +43,7 @@ module UFeeling
         end
 
         private
-        
+
         def origin_id
           @data['id']
         end
@@ -87,8 +87,6 @@ module UFeeling
         def comment_replies
           replies_comments.map { |replies_comment| CommentMapper.build_entity(replies_comment) }
         end
-
-        private
 
         def replies
           @data['replies'] || {}
