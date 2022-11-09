@@ -24,7 +24,8 @@ h1 {
   }
   
   .project.detail {
-    color: rgb(55, 0, 255);
+    color: rgb(75, 46, 179);
+    font-size:65px;
   }
   
   .project.owner {
