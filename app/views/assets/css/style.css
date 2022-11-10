@@ -93,6 +93,13 @@ h1 {
     font-size:17px;
     padding: 5px 5px 5px 5px;
   }
+  
+  .query-bar2 {
+    background-color: #ffffff;
+    color:#ffffff;
+    font-size:17px;
+    padding: 5px 5px 5px 5px;
+  }
 
   .query-bar-previews {
     background-color: #c54a19;
@@ -101,6 +108,16 @@ h1 {
     padding: 5px 5px 5px 5px;
   }
 
+  .filterDiv {
+    float: left;
+    background-color: #2196F3;
+    color: #ffffff;
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;
+    display: none; /* Hidden by default */
+  }
  
   footer {
     padding: 0.0in;
