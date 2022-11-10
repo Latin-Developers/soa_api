@@ -4,9 +4,10 @@ require 'dry-types'
 require 'dry-struct'
 
 module UFeeling
-  module Entity
+  module Comments
+    module Entity
     # Provides access to comment data
-    class Comment < Dry::Struct
+     class Comment < Dry::Struct
       include Dry.Types
 
       attribute :id,                        Integer.optional
@@ -17,8 +18,8 @@ module UFeeling
       attribute :author_profile_image_url,  Strict::String
       attribute :viewer_rating,             Strict::String
       attribute :like_count,                Strict::Integer
-      attribute :published_at,              Strict::String
-      attribute :updated_at,                Strict::String
+      attribute :published_at,              Strict::Time
+      attribute :updated_at,                Strict::Time
       attribute :comment_replies,           Array.of(Comment)
 
       def to_attr_hash

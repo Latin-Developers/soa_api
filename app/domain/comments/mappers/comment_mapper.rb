@@ -77,11 +77,11 @@ module UFeeling
         end
 
         def published_at
-          top_level_comment_snippet['publishedAt']
+          Time.parse(top_level_comment_snippet['publishedAt'])
         end
 
         def updated_at
-          top_level_comment_snippet['updatedAt']
+          Time.parse(top_level_comment_snippet['updatedAt'])
         end
 
         def comment_replies

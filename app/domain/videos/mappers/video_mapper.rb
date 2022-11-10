@@ -55,7 +55,7 @@ module UFeeling
         end
 
         def published_at
-          snippet['publishedAt']
+          Time.Parse(snippet['publishedAt'])
         end
 
         def origin_channel_id
