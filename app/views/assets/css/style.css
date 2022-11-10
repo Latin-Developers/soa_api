@@ -80,39 +80,12 @@ h1 {
   }
 
   .video_img2 {
-    height: 150px;
-    grid-column: 2;
-    margin-right: 15px;
-  }
-
-  .video_img3 {
-    grid-column: 3;
-    height: 150px;
-    margin-right: 15px;
-  }
-
-  .video_img4 {
-    grid-column: 4;
-    height: 150px;
-    margin-right: 15px;
-  }
-
-  .img_positive {
-    height: 40px;
-    margin-right: 15px;
-  }
-
-  .img_neutral {
-    height: 70px;
+    height: 35px;
     grid-column: 1;
     margin-right: 15px;
   }
 
-  .img_negative {
-    height: 70px;
-    grid-column: 1;
-    margin-right: 15px;
-  }
+ 
   
   .query-bar {
     background-color: #1984c5;
@@ -128,75 +101,7 @@ h1 {
     padding: 5px 5px 5px 5px;
   }
 
-  .grid-container {
-    display: grid;
-    height: 150px;
-    background-color: rgb(255, 255, 255);
-  }
-
-  .grid-container-text {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-auto-rows: minmax(auto, auto);
-    background-color: rgb(255, 255, 255);
-    
-  }
-
-  .grid-container-valuation {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-auto-rows: minmax(auto, auto);
-    background-color: rgb(255, 255, 255);
-    
-  }
-
-  .break-word {
-    word-break: break-word;
-  }
-
-  .item1 {
-    grid-column: 1;
-    margin-right: 15px;
-    
-  }
-
-  .item2 {
-    grid-column: 2;
-    margin-right: 15px;
-  }
-  
-  .item3 {
-    grid-column: 3;
-    margin-right: 15px;
-  }
-
-  .item4 {
-    grid-column: 4;
-    margin-right: 15px;
-  }
-
-  .item5 {
-    grid-column: 5;
-    margin-right: 15px;
-  }
-
-  .item6 {
-    grid-column: 6;
-    margin-right: 15px;
-  }
-
-  .item7 {
-    grid-column: 7;
-    margin-right: 15px;
-  }
-
-  .item8 {
-    grid-column: 8;
-    margin-right: 15px;
-  }
-  
-  
-  
+ 
   footer {
     padding: 0.0in;
     font-size:11px;
