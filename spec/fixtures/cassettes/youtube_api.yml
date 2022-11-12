@@ -2088,4 +2088,341 @@ http_interactions:
           }
         }
   recorded_at: Sat, 12 Nov 2022 08:27:12 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=lzx22zcmpy0&key=<YOUTUBE_API_KEY>&part=snippet,statistics,contentDetails
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sat, 12 Nov 2022 15:39:02 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "YIUPVpqNjppyCWOZfL-19bLb7uk",
+          "items": [],
+          "pageInfo": {
+            "totalResults": 0,
+            "resultsPerPage": 0
+          }
+        }
+  recorded_at: Sat, 12 Nov 2022 15:39:02 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=LZx22ZcMPy0&key=<YOUTUBE_API_KEY>&part=snippet,statistics,contentDetails
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sat, 12 Nov 2022 15:40:40 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "8f15ifs3-FzeiiGIK9liLVg6vKQ",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "ptCT4poRF-UHN-6h7JHCMTK4dig",
+              "id": "LZx22ZcMPy0",
+              "snippet": {
+                "publishedAt": "2022-11-11T22:00:09Z",
+                "channelId": "UCvC4D8onUfXzvjTOM-dBfEA",
+                "title": "Battle for Wakanda | Marvel Contest of Champions",
+                "description": "Wakanda must overcome the deadly Attuma to save The Battlerealm. Who will come to Shuri's aid in the Battle for Wakanda? Find out in Marvel Contest of Champions!\n\n► Watch Marvel on Disney+: https://bit.ly/2XyBSIW\n► Subscribe to Marvel on YouTube: http://bit.ly/WeO3YJ\n\nFollow Marvel on Twitter: \u202ahttps://twitter.com/marvel\nLike Marvel on Facebook: \u202ahttps://www.facebook.com/marvel\nWatch Marvel on Twitch: https://www.twitch.tv/marvel\n\nReward your Marvel fandom by joining Marvel Insider!\nEarn points, then redeem for awesome rewards.\nTerms and conditions apply. \nLearn more at https://www.marvel.com/insider?Osocial=YT&CID=MarvelInsider\n\nFor even more news, stay tuned to:\nTumblr: \u202ahttp://marvelentertainment.tumblr.com/\nInstagram: https://www.instagram.com/marvel\nPinterest: \u202ahttp://pinterest.com/marvelofficial\nReddit: http://reddit.com/u/marvel-official",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/LZx22ZcMPy0/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/LZx22ZcMPy0/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/LZx22ZcMPy0/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/LZx22ZcMPy0/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  },
+                  "maxres": {
+                    "url": "https://i.ytimg.com/vi/LZx22ZcMPy0/maxresdefault.jpg",
+                    "width": 1280,
+                    "height": 720
+                  }
+                },
+                "channelTitle": "Marvel Entertainment",
+                "tags": [
+                  "marvel",
+                  "comics"
+                ],
+                "categoryId": "24",
+                "liveBroadcastContent": "none",
+                "localized": {
+                  "title": "Battle for Wakanda | Marvel Contest of Champions",
+                  "description": "Wakanda must overcome the deadly Attuma to save The Battlerealm. Who will come to Shuri's aid in the Battle for Wakanda? Find out in Marvel Contest of Champions!\n\n► Watch Marvel on Disney+: https://bit.ly/2XyBSIW\n► Subscribe to Marvel on YouTube: http://bit.ly/WeO3YJ\n\nFollow Marvel on Twitter: \u202ahttps://twitter.com/marvel\nLike Marvel on Facebook: \u202ahttps://www.facebook.com/marvel\nWatch Marvel on Twitch: https://www.twitch.tv/marvel\n\nReward your Marvel fandom by joining Marvel Insider!\nEarn points, then redeem for awesome rewards.\nTerms and conditions apply. \nLearn more at https://www.marvel.com/insider?Osocial=YT&CID=MarvelInsider\n\nFor even more news, stay tuned to:\nTumblr: \u202ahttp://marvelentertainment.tumblr.com/\nInstagram: https://www.instagram.com/marvel\nPinterest: \u202ahttp://pinterest.com/marvelofficial\nReddit: http://reddit.com/u/marvel-official"
+                },
+                "defaultAudioLanguage": "en"
+              },
+              "contentDetails": {
+                "duration": "PT1M2S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              },
+              "statistics": {
+                "viewCount": "34416",
+                "likeCount": "1037",
+                "favoriteCount": "0",
+                "commentCount": "59"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sat, 12 Nov 2022 15:40:40 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videoCategories?id=24&key=<YOUTUBE_API_KEY>
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sat, 12 Nov 2022 15:40:40 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoCategoryListResponse",
+          "etag": "Ogry8GJktagFwQmgKG6ConsaHGU",
+          "items": [
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "0srcLUqQzO7-NGLF7QnhdVzJQmY",
+              "id": "24",
+              "snippet": {
+                "title": "Entertainment",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            }
+          ]
+        }
+  recorded_at: Sat, 12 Nov 2022 15:40:40 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/channels?id=UCvC4D8onUfXzvjTOM-dBfEA&key=<YOUTUBE_API_KEY>&part=snippet,statistics
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sat, 12 Nov 2022 15:40:40 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#channelListResponse",
+          "etag": "uC7Whk-l95F4WM-CNFPYFZU4NQI",
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#channel",
+              "etag": "DlKydJb_gCOutbmPXR0Ff3dSluw",
+              "id": "UCvC4D8onUfXzvjTOM-dBfEA",
+              "snippet": {
+                "title": "Marvel Entertainment",
+                "description": "At Marvel, we’re committed to bringing great stories, characters, and experiences to fans all over the world. We strive to foster an inclusive, diverse, respectful, and safe environment for all of our fans, and we ask the same of our fan communities. As such, we reserve the right to take action including but not limited to hiding, deleting, blocking, and reporting any posts on this account or page. Please also be aware that Marvel does not accept or consider unsolicited idea submissions.\n",
+                "customUrl": "@marvel",
+                "publishedAt": "2005-06-16T12:09:27Z",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://yt3.ggpht.com/fGvQjp1vAT1R4bAKTFLaSbdsfdYFDwAzVjeRVQeikH22bvHWsGULZdwIkpZXktcXZc5gFJuA3w=s88-c-k-c0x00ffffff-no-rj",
+                    "width": 88,
+                    "height": 88
+                  },
+                  "medium": {
+                    "url": "https://yt3.ggpht.com/fGvQjp1vAT1R4bAKTFLaSbdsfdYFDwAzVjeRVQeikH22bvHWsGULZdwIkpZXktcXZc5gFJuA3w=s240-c-k-c0x00ffffff-no-rj",
+                    "width": 240,
+                    "height": 240
+                  },
+                  "high": {
+                    "url": "https://yt3.ggpht.com/fGvQjp1vAT1R4bAKTFLaSbdsfdYFDwAzVjeRVQeikH22bvHWsGULZdwIkpZXktcXZc5gFJuA3w=s800-c-k-c0x00ffffff-no-rj",
+                    "width": 800,
+                    "height": 800
+                  }
+                },
+                "localized": {
+                  "title": "Marvel Entertainment",
+                  "description": "At Marvel, we’re committed to bringing great stories, characters, and experiences to fans all over the world. We strive to foster an inclusive, diverse, respectful, and safe environment for all of our fans, and we ask the same of our fan communities. As such, we reserve the right to take action including but not limited to hiding, deleting, blocking, and reporting any posts on this account or page. Please also be aware that Marvel does not accept or consider unsolicited idea submissions.\n"
+                },
+                "country": "US"
+              },
+              "statistics": {
+                "viewCount": "5315135515",
+                "subscriberCount": "19800000",
+                "hiddenSubscriberCount": false,
+                "videoCount": "8201"
+              }
+            }
+          ]
+        }
+  recorded_at: Sat, 12 Nov 2022 15:40:40 GMT
 recorded_with: VCR 6.1.0

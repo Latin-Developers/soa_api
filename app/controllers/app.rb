@@ -29,17 +29,43 @@ module UFeeling
       routing.on 'videos' do
         # [POST]  /videos?url=
         routing.post do
+          video_url = routing.params['video_url']
+          routing.halt 400 unless (video_url.include? 'youtube.com') &&
+                                  (video_url.include? 'watch?v=') &&
+                                  (video_url.split('/').count >= 3)
+          video_id = video_url.split('=')[-1]
+
+          # Get video from Youtube
+          video = UFeeling::Videos::Mappers::ApiVideo.new(App.config.YOUTUBE_API_KEY).details(video_id)
+          
+          # Add video to database
+          UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
+
+          # Redirect viewer to project page
+          routing.redirect "videos/#{video.origin_id}"
         end
 
-        # [...]  /videos/:video_id
-        routing.on String do |video_id|
-          # [GET]  /videos/:video_id
-          routing.get do
-            # [...]  /videos/:video_id/comments
-            routing.on 'comments' do
-              # [GET]  /videos/:video_id/comments
-              routing.get do
-              end
+        # [...]  /videos/:video_origin_id
+        routing.on String do |video_origin_id|
+          # [GET]  /videos/:video_origin_id
+          routing.is do
+            routing.get do
+              # Get Video from database
+              video = UFeeling::Videos::Repository::For
+                .klass(UFeeling::Videos::Entity::Video)
+                .find_origin_id(video_origin_id)
+
+                puts video:
+
+              # Show viewer the video
+              view 'video', locals: { video: video }
+            end
+          end
+
+          # [...]  /videos/:video_origin_id/comments
+          routing.on 'comments' do
+            # [GET]  /videos/:video_origin_id/comments
+            routing.get do
             end
           end
         end

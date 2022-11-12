@@ -32,7 +32,7 @@ describe 'Integration Tests of Youtube API and Database' do
     end
 
     it 'HAPPY: should a new video in the database' do
-      video = UFeeling::Videos::Mappers::ApiVideo.new(YOUTUBE_API_KEY).details('ggGINmj5EQE')
+      video = UFeeling::Videos::Mappers::ApiVideo.new(YOUTUBE_API_KEY).details('LZx22ZcMPy0')
       UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
 
       video_db = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_origin_id(video.origin_id)
