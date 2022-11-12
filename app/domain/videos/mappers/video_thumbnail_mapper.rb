@@ -4,7 +4,7 @@ module UFeeling
   module Videos
     module Mappers
       # Data Mapper: Youtube Video Thumbnail -> Video Thumbnail Entity
-      class VideoThumbnailMapper
+      class ApiVideoThumbnail
         def self.build_entity(thumbnails)
           thumbnails.map { |key, value| DataMapper.new(key, value).build_entity }
         end

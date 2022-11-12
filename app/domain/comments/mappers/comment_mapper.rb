@@ -4,7 +4,7 @@ module UFeeling
   module Comments
     module Mappers
       # Data Mapper: Youtube Video -> Entity Video
-      class ApiCommentMapper
+      class ApiComment
         def initialize(youtube_token, gateway_class = Youtube::Api)
           @token = youtube_token
           @gateway_class = gateway_class
@@ -13,7 +13,7 @@ module UFeeling
 
         def comments(video_id)
           data_items = @gateway.comments(video_id)
-          data_items.map { |data| CommentMapper.build_entity(data) }
+          data_items.map { |data| ApiComment.build_entity(data) }
         end
 
         def self.build_entity(data)
@@ -86,7 +86,7 @@ module UFeeling
           end
 
           def comment_replies
-            replies_comments.map { |replies_comment| CommentMapper.build_entity(replies_comment) }
+            replies_comments.map { |replies_comment| ApiComment.build_entity(replies_comment) }
           end
 
           def replies

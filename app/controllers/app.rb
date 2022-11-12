@@ -27,7 +27,7 @@ module UFeeling
           routing.post do
             region_code = routing.params['region_code'].upcase
 
-            categories = UFeeling::Youtube::CategoryMapper.new(App.config.YOUTUBE_API_KEY).categories(region_code)
+            categories = UFeeling::Videos::Mappers::ApiCategory.new(App.config.YOUTUBE_API_KEY).categories(region_code)
             categories.each { |category| Repository::For.klass(Entity::Category).find_or_create(category) }
 
             routing.redirect "/videos/region/#{region_code}/video_category/"

@@ -7,19 +7,21 @@ require_relative 'categories'
 # require_relative 'video_log'
 
 module UFeeling
-  module Repository
-    # Finds the right repository for an entity object or class
-    module For
-      ENTITY_REPOSITORY = {
-        Entity::Category => Categories
-      }.freeze
+  module Videos
+    module Repository
+      # Finds the right repository for an entity object or class
+      class For
+        ENTITY_REPOSITORY = {
+          Videos::Entity::Category => Categories
+        }.freeze
 
-      def self.klass(entity_klass)
-        ENTITY_REPOSITORY[entity_klass]
-      end
+        def self.klass(entity_klass)
+          ENTITY_REPOSITORY[entity_klass]
+        end
 
-      def self.entity(entity_object)
-        ENTITY_REPOSITORY[entity_object.class]
+        def self.entity(entity_object)
+          ENTITY_REPOSITORY[entity_object.class]
+        end
       end
     end
   end

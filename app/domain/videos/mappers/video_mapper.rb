@@ -4,7 +4,7 @@ module UFeeling
   module Videos
     module Mappers
       # Data Mapper: Youtube Video -> Entity Video
-      class VideoMapper
+      class ApiVideo
         def initialize(youtube_token, gateway_class = Youtube::Api)
           @token = youtube_token
           @gateway_class = gateway_class
@@ -14,12 +14,12 @@ module UFeeling
         # !Deprecated
         def popular_videos(region)
           data_items = @gateway.popular_videos(region)
-          data_items.map { |data| VideoMapper.build_entity(data) }
+          data_items.map { |data| ApiVideo.build_entity(data) }
         end
 
         def details(video_id)
           data = @gateway.details(video_id)
-          VideoMapper.build_entity(data)
+          ApiVideo.build_entity(data)
         end
 
         def self.build_entity(data)
@@ -34,15 +34,16 @@ module UFeeling
 
           def build_entity
             UFeeling::Videos::Entity::Video.new(
-              id: nil, origin_id:,
-              published_at:, origin_channel_id:,
-              title:, description:,
-              thumbnails:, origin_category_id:,
-              duration:,
-              view_count:,
-              like_count:,
-              favorite_count:,
-              comment_count:
+              id: nil,
+              category_id: nil,
+              origin_id:,
+              published_at:,
+              origin_channel_id:,
+              title:,
+              description:,
+              thumbnail_url: nil,
+              origin_category_id:,
+              duration:
             )
           end
 
@@ -53,7 +54,7 @@ module UFeeling
           end
 
           def published_at
-            Time.Parse(snippet['publishedAt'])
+            Time.parse(snippet['publishedAt'])
           end
 
           def origin_channel_id
@@ -69,7 +70,7 @@ module UFeeling
           end
 
           def thumbnails
-            VideoThumbnailMapper.build_entity(snippet['thumbnails'])
+            # ApiVideoThumbnail.build_entity(snippet['thumbnails'])
           end
 
           def origin_category_id

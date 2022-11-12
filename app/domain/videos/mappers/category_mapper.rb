@@ -4,7 +4,7 @@ module UFeeling
   module Videos
     module Mappers
       # Data Mapper: Youtube Category -> Category Entity
-      class CategoryMapper
+      class ApiCategory
         def initialize(youtube_token, gateway_class = Youtube::Api)
           @token = youtube_token
           @gateway_class = gateway_class
@@ -13,7 +13,7 @@ module UFeeling
 
         def categories(region)
           data_items = @gateway.categories(region)
-          data_items.map { |data| CategoryMapper.build_entity(data) }
+          data_items.map { |data| ApiCategory.build_entity(data) }
         end
 
         def self.build_entity(data)
