@@ -21,15 +21,23 @@ describe 'Integration Tests of Youtube API and Database' do
     end
 
     it 'HAPPY: should save all the categories in the dabase' do
-      categories = UFeeling::Youtube::CategoryMapper
+      categories = UFeeling::Videos::Mappers::ApiCategory
         .new(YOUTUBE_API_KEY)
         .categories(UFeeling::REGIONS[:MEXICO])
 
-      categories.each { |category| UFeeling::Repository::For.klass(UFeeling::Entity::Category).find_or_create(category) }
-
-      categories_db = UFeeling::Repository::For.klass(UFeeling::Entity::Category).find_by_region(UFeeling::REGIONS[:MEXICO])
+      categories.each { |category| UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Category).find_or_create(category) }
+      categories_db = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Category).find_by_region(UFeeling::REGIONS[:MEXICO])
 
       _(categories_db.size).must_equal(categories.size)
+    end
+
+    it 'HAPPY: should a new video in the database' do
+      video = UFeeling::Videos::Mappers::ApiVideo.new(YOUTUBE_API_KEY).details('LZx22ZcMPy0')
+      UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
+
+      video_db = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_origin_id(video.origin_id)
+
+      _(video_db.origin_id).must_equal(video.origin_id)
     end
   end
 end

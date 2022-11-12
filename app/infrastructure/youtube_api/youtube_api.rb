@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 require 'http'
+require 'pry'
 
 module UFeeling
   module Youtube
     # Library for Youtube Web API
     class Api
-      YOUTUBE_API_PATH = { VIDEO_CATEGORIES: 'videoCategories', VIDEOS: 'videos', COMMENTS: 'commentThreads' }.freeze
+      YOUTUBE_API_PATH = { VIDEO_CATEGORIES: 'videoCategories', AUTHORS: 'channels', VIDEOS: 'videos', COMMENTS: 'commentThreads' }.freeze
 
       def initialize(token)
         @token = token
@@ -17,10 +18,18 @@ module UFeeling
         youtube_response['items']
       end
 
-      # TODO: channels
+      # TODO: authors
+
+      def author(id)
+        video_resource(:AUTHORS, ApiFilters.author(id)).first
+      end
 
       def categories(region)
         video_resource(:VIDEO_CATEGORIES, ApiFilters.categories(region))
+      end
+
+      def category(id)
+        video_resource(:VIDEO_CATEGORIES, ApiFilters.category(id)).first
       end
 
       # !Deprecated, not needed for the project scope

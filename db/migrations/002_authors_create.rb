@@ -4,11 +4,13 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_table(:channels) do
+    create_table(:authors) do
       primary_key :id
-      String      :title
+      String      :origin_id
+      String      :name
       String      :description
-      String      :country # Confirmar valor
+      DateTime    :created_at
+      DateTime    :updated_at
     end
   end
 end

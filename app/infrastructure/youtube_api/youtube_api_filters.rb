@@ -6,8 +6,19 @@ module UFeeling
   module Youtube
     # YoutubeAPI Filters
     class ApiFilters
+      def self.author(id)
+        {
+          part: "#{PATH_FILTERS[:SNIPPET]},#{PATH_FILTERS[:STATISTICS]}",
+          id: id
+        }
+      end
+
       def self.categories(region)
         { regionCode: region }
+      end
+
+      def self.category(id)
+        { id: id }
       end
 
       def self.popular_videos(region)

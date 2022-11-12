@@ -10,9 +10,9 @@ module UFeeling
                   class: :'UFeeling::Database::VideoOrm',
                   key: :video_id
 
-      many_to_one :channel,
-                  class: :'UFeeling::Database::ChannelOrm',
-                  key: :author_channel_id
+      many_to_one :author,
+                  class: :'UFeeling::Database::AuthorOrm',
+                  key: :author_author_id
 
       plugin :timestamps, update_on_create: true
     end

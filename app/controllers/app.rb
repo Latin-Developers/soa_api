@@ -15,37 +15,57 @@ module UFeeling
       routing.assets # load CSS
       response['Content-Type'] = 'text/html; charset=utf-8'
 
-      # GET /
+      # [GET]   /                             Home
+      # [POST]  /videos?url=                  Analyze a new video
+      # [GET]   /videos/:video_id             Gets the analysis of a video
+      # [GET]   /videos/:video_id/comments    Gets the analysis of a video including the list of top comments
+
+      # [GET] /
       routing.root do
         view 'home'
       end
 
-      # POST /videos/
+      # [...] /videos/
       routing.on 'videos' do
-        routing.is do
-          # POST /videos/
-          routing.post do
-            region_code = routing.params['region_code'].upcase
+        # [POST]  /videos?url=
+        routing.post do
+          video_url = routing.params['video_url']
+          routing.halt 400 unless (video_url.include? 'youtube.com') &&
+                                  (video_url.include? 'watch?v=') &&
+                                  (video_url.split('/').count >= 3)
+          video_id = video_url.split('=')[-1]
 
-            categories = UFeeling::Youtube::CategoryMapper.new(App.config.YOUTUBE_API_KEY).categories(region_code)
-            categories.each { |category| Repository::For.klass(Entity::Category).find_or_create(category) }
+          # Get video from Youtube
+          video = UFeeling::Videos::Mappers::ApiVideo.new(App.config.YOUTUBE_API_KEY).details(video_id)
+          
+          # Add video to database
+          UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
 
-            routing.redirect "/videos/region/#{region_code}/video_category/"
-          end
+          # Redirect viewer to project page
+          routing.redirect "videos/#{video.origin_id}"
         end
 
-        routing.on 'region' do
-          # GET /videos/region
+        # [...]  /videos/:video_origin_id
+        routing.on String do |video_origin_id|
+          # [GET]  /videos/:video_origin_id
+          routing.is do
+            routing.get do
+              # Get Video from database
+              video = UFeeling::Videos::Repository::For
+                .klass(UFeeling::Videos::Entity::Video)
+                .find_origin_id(video_origin_id)
 
-          routing.on String do |region_code|
-            # GET /videos/
-            routing.on 'video_category' do
-              routing.get do
-                # Gets regions
-                categories = Repository::For.klass(Entity::Category).find_by_region(region_code)
+                puts video:
 
-                view 'project', locals: { categories: }
-              end
+              # Show viewer the video
+              view 'video', locals: { video: video }
+            end
+          end
+
+          # [...]  /videos/:video_origin_id/comments
+          routing.on 'comments' do
+            # [GET]  /videos/:video_origin_id/comments
+            routing.get do
             end
           end
         end
