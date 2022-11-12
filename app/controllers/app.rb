@@ -27,7 +27,7 @@ module UFeeling
 
       # [...] /videos/
       routing.on 'videos' do
-        # [POST]  /videos?url= 
+        # [POST]  /videos?url=
         routing.post do
         end
 

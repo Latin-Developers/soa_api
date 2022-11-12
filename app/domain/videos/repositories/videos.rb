@@ -11,6 +11,7 @@ module UFeeling
         end
 
         def self.find_id(id)
+          
           rebuild_entity Database::VideoOrm.first(id:)
         end
 
@@ -30,8 +31,8 @@ module UFeeling
             author_id: db_record.author_id,
             category_id: db_record.category_id,
             origin_id: db_record.origin_id,
-            origin_category_id: db_record.category.origin_id,
-            origin_author_id: db_record.author.origin_id,
+            origin_category_id: db_record.origin_category_id,
+            origin_author_id: db_record.origin_author_id,
             published_at: db_record.published_at,
             title: db_record.title,
             description: db_record.description,
@@ -52,12 +53,19 @@ module UFeeling
 
           unless category
             category = UFeeling::Videos::Mappers::ApiCategory.new(YOUTUBE_API_KEY).category(entity.origin_category_id)
-            Database::CategoryOrm.find_or_create(category.to_attr_hash)
+            category = Database::CategoryOrm.find_or_create(category.to_attr_hash)
           end
 
-          author = 
+          author = UFeeling::Authors::Repository::For.klass(UFeeling::Authors::Entity::Author).find(entity.origin_author_id)
+
+          unless author
+            author = UFeeling::Authors::Mappers::ApiAuthor.new(YOUTUBE_API_KEY).author(entity.origin_author_id)
+            author = Database::AuthorOrm.find_or_create(author.to_attr_hash)
+          end
 
           entity.category_id = category.id
+          entity.author_id = author.id
+
           Database::VideoOrm.find_or_create(entity.to_attr_hash)
         end
       end

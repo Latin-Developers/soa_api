@@ -2,205 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=<YOUTUBE_API_KEY>&part=snippet,statistics,contentDetails
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Date:
-      - Sat, 12 Nov 2022 07:01:33 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "kind": "youtube#videoListResponse",
-          "etag": "ZNwfzACy60wPBzhfpORtgXVGZTA",
-          "items": [
-            {
-              "kind": "youtube#video",
-              "etag": "_M9R7FIeFNuM_une7A1A15H20gY",
-              "id": "ggGINmj5EQE",
-              "snippet": {
-                "publishedAt": "2022-09-08T21:01:43Z",
-                "channelId": "UCWI2X2x3KASrvEZXdBVNxkA",
-                "title": "El Señor de los Anillos : La Saga en 1 Video I Fedewolf",
-                "description": "Ya tenemos playeras! https://worales.mx/collections/fedelobo \n\nDirectos de Lunes a Viernes 8:00 pm (MX) en mi pagina de Facebook: https://www.facebook.com/soyfedelobo\n\nTe dejo mis demás canales: \n\nFedelobo: https://www.youtube.com/user/elfedelobo\nCanal de videojuegos: https://www.youtube.com/c/Pixelteca \nCanal con Nadia: https://www.youtube.com/amorsindistancia\n\n\nMis redes sociales:\n\nTwitter: https://twitter.com/SoyFedelobo\nFacebook: https://www.facebook.com/soyfedelobo/\nInstagram: https://www.instagram.com/soyfedelobo",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  },
-                  "standard": {
-                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/sddefault.jpg",
-                    "width": 640,
-                    "height": 480
-                  }
-                },
-                "channelTitle": "El FedeWolf",
-                "tags": [
-                  "series",
-                  "peliculas",
-                  "comedia",
-                  "resumen",
-                  "la historia en 1 video",
-                  "la saga en 1 video",
-                  "fedelobo",
-                  "fedewolf",
-                  "resumen fedelobo",
-                  "resumen fedewolf",
-                  "historia fedelobo",
-                  "historia fedewolf",
-                  "fede lobo",
-                  "fede wolf"
-                ],
-                "categoryId": "1",
-                "liveBroadcastContent": "none",
-                "localized": {
-                  "title": "El Señor de los Anillos : La Saga en 1 Video I Fedewolf",
-                  "description": "Ya tenemos playeras! https://worales.mx/collections/fedelobo \n\nDirectos de Lunes a Viernes 8:00 pm (MX) en mi pagina de Facebook: https://www.facebook.com/soyfedelobo\n\nTe dejo mis demás canales: \n\nFedelobo: https://www.youtube.com/user/elfedelobo\nCanal de videojuegos: https://www.youtube.com/c/Pixelteca \nCanal con Nadia: https://www.youtube.com/amorsindistancia\n\n\nMis redes sociales:\n\nTwitter: https://twitter.com/SoyFedelobo\nFacebook: https://www.facebook.com/soyfedelobo/\nInstagram: https://www.instagram.com/soyfedelobo"
-                }
-              },
-              "contentDetails": {
-                "duration": "PT43M16S",
-                "dimension": "2d",
-                "definition": "hd",
-                "caption": "false",
-                "licensedContent": true,
-                "contentRating": {},
-                "projection": "rectangular"
-              },
-              "statistics": {
-                "viewCount": "3347609",
-                "likeCount": "166062",
-                "favoriteCount": "0",
-                "commentCount": "6368"
-              }
-            }
-          ],
-          "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 1
-          }
-        }
-  recorded_at: Sat, 12 Nov 2022 07:01:33 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=BAD_TOKEN&part=snippet,statistics,contentDetails
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Sat, 12 Nov 2022 07:01:33 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "error": {
-            "code": 400,
-            "message": "API key not valid. Please pass a valid API key.",
-            "errors": [
-              {
-                "message": "API key not valid. Please pass a valid API key.",
-                "domain": "global",
-                "reason": "badRequest"
-              }
-            ],
-            "status": "INVALID_ARGUMENT",
-            "details": [
-              {
-                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
-                "reason": "API_KEY_INVALID",
-                "domain": "googleapis.com",
-                "metadata": {
-                  "service": "youtube.googleapis.com"
-                }
-              }
-            ]
-          }
-        }
-  recorded_at: Sat, 12 Nov 2022 07:01:33 GMT
-- request:
-    method: get
     uri: https://www.googleapis.com/youtube/v3/commentThreads?key=<YOUTUBE_API_KEY>&part=snippet,replies&videoId=ggGINmj5EQE
     body:
       encoding: UTF-8
@@ -222,7 +23,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sat, 12 Nov 2022 07:01:33 GMT
+      - Sat, 12 Nov 2022 08:26:26 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -245,7 +46,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "{\n  \"kind\": \"youtube#commentThreadListResponse\",\n  \"etag\":
-        \"wf-xmFNRlCXfjaHTP0eaTv2RKY8\",\n  \"nextPageToken\": \"QURTSl9pMU5lc29SZ3hkTk44SVNKWDJVX080ODhFdEhJUEtGWXVkazF6Mk9Iel9BWVdVOU5jRm15YnJWdGs5UkVwZlUxQ0JfY2g4aXo0ZXljMG1pV0V5RmdJWjE1SlRnVWc=\",\n
+        \"cf9U3oqhILnZ6vWDd_b0lrAprk4\",\n  \"nextPageToken\": \"QURTSl9pMnNoc3BSZ1pFRlhNXzlkVWN5OHBkb3V0cEk2VkNQSVdWR21rbmJmUE9pYl9qS2RsY09GdURickktZnJIVjhxckJJczFkZWZpYkxvVlUwR3BuOWpaQldfUy1ZUkE=\",\n
         \ \"pageInfo\": {\n    \"totalResults\": 20,\n    \"resultsPerPage\": 20\n
         \ },\n  \"items\": [\n    {\n      \"kind\": \"youtube#commentThread\",\n
         \     \"etag\": \"zaQsTubyAiNd_zi1KycEszbsEgQ\",\n      \"id\": \"UgwVnoC8Iy-N7vukGVZ4AaABAg\",\n
@@ -620,7 +421,7 @@ http_interactions:
         \           \"updatedAt\": \"2022-11-08T01:15:06Z\"\n          }\n        },\n
         \       \"canReply\": true,\n        \"totalReplyCount\": 0,\n        \"isPublic\":
         true\n      }\n    }\n  ]\n}\n"
-  recorded_at: Sat, 12 Nov 2022 07:01:33 GMT
+  recorded_at: Sat, 12 Nov 2022 08:26:26 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/commentThreads?key=BAD_TOKEN&part=snippet,replies&videoId=ggGINmj5EQE
@@ -644,7 +445,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sat, 12 Nov 2022 07:01:33 GMT
+      - Sat, 12 Nov 2022 08:26:26 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -691,370 +492,7 @@ http_interactions:
             ]
           }
         }
-  recorded_at: Sat, 12 Nov 2022 07:01:33 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/videoCategories?key=<YOUTUBE_API_KEY>&regionCode=MX
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Date:
-      - Sat, 12 Nov 2022 07:01:33 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "kind": "youtube#videoCategoryListResponse",
-          "etag": "fIIv2-q7-AkaOeJf0LPrlnu-0As",
-          "items": [
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "grPOPYEUUZN3ltuDUGEWlrTR90U",
-              "id": "1",
-              "snippet": {
-                "title": "Film & Animation",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "Q0xgUf8BFM8rW3W0R9wNq809xyA",
-              "id": "2",
-              "snippet": {
-                "title": "Autos & Vehicles",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "qnpwjh5QlWM5hrnZCvHisquztC4",
-              "id": "10",
-              "snippet": {
-                "title": "Music",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "HyFIixS5BZaoBdkQdLzPdoXWipg",
-              "id": "15",
-              "snippet": {
-                "title": "Pets & Animals",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "PNU8SwXhjsF90fmkilVohofOi4I",
-              "id": "17",
-              "snippet": {
-                "title": "Sports",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "5kFljz9YJ4lEgSfVwHWi5kTAwAs",
-              "id": "18",
-              "snippet": {
-                "title": "Short Movies",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "ANnLQyzEA_9m3bMyJXMhKTCOiyg",
-              "id": "19",
-              "snippet": {
-                "title": "Travel & Events",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "0Hh6gbZ9zWjnV3sfdZjKB5LQr6E",
-              "id": "20",
-              "snippet": {
-                "title": "Gaming",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "q8Cp4pUfCD8Fuh8VJ_yl5cBCVNw",
-              "id": "21",
-              "snippet": {
-                "title": "Videoblogging",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "cHDaaqPDZsJT1FPr1-MwtyIhR28",
-              "id": "22",
-              "snippet": {
-                "title": "People & Blogs",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "3Uz364xBbKY50a2s0XQlv-gXJds",
-              "id": "23",
-              "snippet": {
-                "title": "Comedy",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "0srcLUqQzO7-NGLF7QnhdVzJQmY",
-              "id": "24",
-              "snippet": {
-                "title": "Entertainment",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "bQlQMjmYX7DyFkX4w3kT0osJyIc",
-              "id": "25",
-              "snippet": {
-                "title": "News & Politics",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "Y06N41HP_WlZmeREZvkGF0HW5pg",
-              "id": "26",
-              "snippet": {
-                "title": "Howto & Style",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "yBaNkLx4sX9NcDmFgAmxQcV4Y30",
-              "id": "27",
-              "snippet": {
-                "title": "Education",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "Mxy3A-SkmnR7MhJDZRS4DuAIbQA",
-              "id": "28",
-              "snippet": {
-                "title": "Science & Technology",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "4pIHL_AdN2kO7btAGAP1TvPucNk",
-              "id": "30",
-              "snippet": {
-                "title": "Movies",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "Iqol1myDwh2AuOnxjtn2AfYwJTU",
-              "id": "31",
-              "snippet": {
-                "title": "Anime/Animation",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "tzhBKCBcYWZLPai5INY4id91ss8",
-              "id": "32",
-              "snippet": {
-                "title": "Action/Adventure",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "ii8nBGYpKyl6FyzP3cmBCevdrbs",
-              "id": "33",
-              "snippet": {
-                "title": "Classics",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "Y0u9UAQCCGp60G11Arac5Mp46z4",
-              "id": "34",
-              "snippet": {
-                "title": "Comedy",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "_YDnyT205AMuX8etu8loOiQjbD4",
-              "id": "35",
-              "snippet": {
-                "title": "Documentary",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "eAl2b-uqIGRDgnlMa0EsGZjXmWg",
-              "id": "36",
-              "snippet": {
-                "title": "Drama",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "HDAW2HFOt3SqeDI00X-eL7OELfY",
-              "id": "37",
-              "snippet": {
-                "title": "Family",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "QHiWh3niw5hjDrim85M8IGF45eE",
-              "id": "38",
-              "snippet": {
-                "title": "Foreign",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "ztKcSS7GpH9uEyZk9nQCdNujvGg",
-              "id": "39",
-              "snippet": {
-                "title": "Horror",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "Ids1sm8QFeSo_cDlpcUNrnEBYWA",
-              "id": "40",
-              "snippet": {
-                "title": "Sci-Fi/Fantasy",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "qhfgS7MzzZHIy_UZ1dlawl1GbnY",
-              "id": "41",
-              "snippet": {
-                "title": "Thriller",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "TxVSfGoUyT7CJ7h7ebjg4vhIt6g",
-              "id": "42",
-              "snippet": {
-                "title": "Shorts",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "o9w6eNqzjHPnNbKDujnQd8pklXM",
-              "id": "43",
-              "snippet": {
-                "title": "Shows",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            },
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "mLdyKd0VgXKDI6GevTLBAcvRlIU",
-              "id": "44",
-              "snippet": {
-                "title": "Trailers",
-                "assignable": false,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            }
-          ]
-        }
-  recorded_at: Sat, 12 Nov 2022 07:01:33 GMT
+  recorded_at: Sat, 12 Nov 2022 08:26:26 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/videoCategories?key=<YOUTUBE_API_KEY>&regionCode=GT
@@ -1078,7 +516,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sat, 12 Nov 2022 07:01:33 GMT
+      - Sat, 12 Nov 2022 08:26:26 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -1417,7 +855,7 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Sat, 12 Nov 2022 07:01:33 GMT
+  recorded_at: Sat, 12 Nov 2022 08:26:26 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/videoCategories?key=BAD_TOKEN&regionCode=GT
@@ -1441,7 +879,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sat, 12 Nov 2022 07:01:33 GMT
+      - Sat, 12 Nov 2022 08:26:26 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -1488,7 +926,869 @@ http_interactions:
             ]
           }
         }
-  recorded_at: Sat, 12 Nov 2022 07:01:33 GMT
+  recorded_at: Sat, 12 Nov 2022 08:26:26 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videoCategories?id=1&key=<YOUTUBE_API_KEY>
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sat, 12 Nov 2022 08:26:26 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoCategoryListResponse",
+          "etag": "s6RguhiCzdsBQFsS4YzslvqtQtI",
+          "items": [
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "grPOPYEUUZN3ltuDUGEWlrTR90U",
+              "id": "1",
+              "snippet": {
+                "title": "Film & Animation",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            }
+          ]
+        }
+  recorded_at: Sat, 12 Nov 2022 08:26:26 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videoCategories?id=1&key=BAD_TOKEN
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sat, 12 Nov 2022 08:26:26 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "code": 400,
+            "message": "API key not valid. Please pass a valid API key.",
+            "errors": [
+              {
+                "message": "API key not valid. Please pass a valid API key.",
+                "domain": "global",
+                "reason": "badRequest"
+              }
+            ],
+            "status": "INVALID_ARGUMENT",
+            "details": [
+              {
+                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+                "reason": "API_KEY_INVALID",
+                "domain": "googleapis.com",
+                "metadata": {
+                  "service": "youtube.googleapis.com"
+                }
+              }
+            ]
+          }
+        }
+  recorded_at: Sat, 12 Nov 2022 08:26:26 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=<YOUTUBE_API_KEY>&part=snippet,statistics,contentDetails
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sat, 12 Nov 2022 08:26:27 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "wBJk5AvBrDoaY0Bx4AKBqtufnIw",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "jiOwJwOO03OD3eHVGqERq8tDYWM",
+              "id": "ggGINmj5EQE",
+              "snippet": {
+                "publishedAt": "2022-09-08T21:01:43Z",
+                "channelId": "UCWI2X2x3KASrvEZXdBVNxkA",
+                "title": "El Señor de los Anillos : La Saga en 1 Video I Fedewolf",
+                "description": "Ya tenemos playeras! https://worales.mx/collections/fedelobo \n\nDirectos de Lunes a Viernes 8:00 pm (MX) en mi pagina de Facebook: https://www.facebook.com/soyfedelobo\n\nTe dejo mis demás canales: \n\nFedelobo: https://www.youtube.com/user/elfedelobo\nCanal de videojuegos: https://www.youtube.com/c/Pixelteca \nCanal con Nadia: https://www.youtube.com/amorsindistancia\n\n\nMis redes sociales:\n\nTwitter: https://twitter.com/SoyFedelobo\nFacebook: https://www.facebook.com/soyfedelobo/\nInstagram: https://www.instagram.com/soyfedelobo",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  },
+                  "standard": {
+                    "url": "https://i.ytimg.com/vi/ggGINmj5EQE/sddefault.jpg",
+                    "width": 640,
+                    "height": 480
+                  }
+                },
+                "channelTitle": "El FedeWolf",
+                "tags": [
+                  "series",
+                  "peliculas",
+                  "comedia",
+                  "resumen",
+                  "la historia en 1 video",
+                  "la saga en 1 video",
+                  "fedelobo",
+                  "fedewolf",
+                  "resumen fedelobo",
+                  "resumen fedewolf",
+                  "historia fedelobo",
+                  "historia fedewolf",
+                  "fede lobo",
+                  "fede wolf"
+                ],
+                "categoryId": "1",
+                "liveBroadcastContent": "none",
+                "localized": {
+                  "title": "El Señor de los Anillos : La Saga en 1 Video I Fedewolf",
+                  "description": "Ya tenemos playeras! https://worales.mx/collections/fedelobo \n\nDirectos de Lunes a Viernes 8:00 pm (MX) en mi pagina de Facebook: https://www.facebook.com/soyfedelobo\n\nTe dejo mis demás canales: \n\nFedelobo: https://www.youtube.com/user/elfedelobo\nCanal de videojuegos: https://www.youtube.com/c/Pixelteca \nCanal con Nadia: https://www.youtube.com/amorsindistancia\n\n\nMis redes sociales:\n\nTwitter: https://twitter.com/SoyFedelobo\nFacebook: https://www.facebook.com/soyfedelobo/\nInstagram: https://www.instagram.com/soyfedelobo"
+                }
+              },
+              "contentDetails": {
+                "duration": "PT43M16S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              },
+              "statistics": {
+                "viewCount": "3348469",
+                "likeCount": "166066",
+                "favoriteCount": "0",
+                "commentCount": "6368"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sat, 12 Nov 2022 08:26:26 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=ggGINmj5EQE&key=BAD_TOKEN&part=snippet,statistics,contentDetails
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sat, 12 Nov 2022 08:26:27 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "code": 400,
+            "message": "API key not valid. Please pass a valid API key.",
+            "errors": [
+              {
+                "message": "API key not valid. Please pass a valid API key.",
+                "domain": "global",
+                "reason": "badRequest"
+              }
+            ],
+            "status": "INVALID_ARGUMENT",
+            "details": [
+              {
+                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+                "reason": "API_KEY_INVALID",
+                "domain": "googleapis.com",
+                "metadata": {
+                  "service": "youtube.googleapis.com"
+                }
+              }
+            ]
+          }
+        }
+  recorded_at: Sat, 12 Nov 2022 08:26:27 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videoCategories?key=<YOUTUBE_API_KEY>&regionCode=MX
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sat, 12 Nov 2022 08:26:27 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoCategoryListResponse",
+          "etag": "fIIv2-q7-AkaOeJf0LPrlnu-0As",
+          "items": [
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "grPOPYEUUZN3ltuDUGEWlrTR90U",
+              "id": "1",
+              "snippet": {
+                "title": "Film & Animation",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Q0xgUf8BFM8rW3W0R9wNq809xyA",
+              "id": "2",
+              "snippet": {
+                "title": "Autos & Vehicles",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "qnpwjh5QlWM5hrnZCvHisquztC4",
+              "id": "10",
+              "snippet": {
+                "title": "Music",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "HyFIixS5BZaoBdkQdLzPdoXWipg",
+              "id": "15",
+              "snippet": {
+                "title": "Pets & Animals",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "PNU8SwXhjsF90fmkilVohofOi4I",
+              "id": "17",
+              "snippet": {
+                "title": "Sports",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "5kFljz9YJ4lEgSfVwHWi5kTAwAs",
+              "id": "18",
+              "snippet": {
+                "title": "Short Movies",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "ANnLQyzEA_9m3bMyJXMhKTCOiyg",
+              "id": "19",
+              "snippet": {
+                "title": "Travel & Events",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "0Hh6gbZ9zWjnV3sfdZjKB5LQr6E",
+              "id": "20",
+              "snippet": {
+                "title": "Gaming",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "q8Cp4pUfCD8Fuh8VJ_yl5cBCVNw",
+              "id": "21",
+              "snippet": {
+                "title": "Videoblogging",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "cHDaaqPDZsJT1FPr1-MwtyIhR28",
+              "id": "22",
+              "snippet": {
+                "title": "People & Blogs",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "3Uz364xBbKY50a2s0XQlv-gXJds",
+              "id": "23",
+              "snippet": {
+                "title": "Comedy",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "0srcLUqQzO7-NGLF7QnhdVzJQmY",
+              "id": "24",
+              "snippet": {
+                "title": "Entertainment",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "bQlQMjmYX7DyFkX4w3kT0osJyIc",
+              "id": "25",
+              "snippet": {
+                "title": "News & Politics",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Y06N41HP_WlZmeREZvkGF0HW5pg",
+              "id": "26",
+              "snippet": {
+                "title": "Howto & Style",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "yBaNkLx4sX9NcDmFgAmxQcV4Y30",
+              "id": "27",
+              "snippet": {
+                "title": "Education",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Mxy3A-SkmnR7MhJDZRS4DuAIbQA",
+              "id": "28",
+              "snippet": {
+                "title": "Science & Technology",
+                "assignable": true,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "4pIHL_AdN2kO7btAGAP1TvPucNk",
+              "id": "30",
+              "snippet": {
+                "title": "Movies",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Iqol1myDwh2AuOnxjtn2AfYwJTU",
+              "id": "31",
+              "snippet": {
+                "title": "Anime/Animation",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "tzhBKCBcYWZLPai5INY4id91ss8",
+              "id": "32",
+              "snippet": {
+                "title": "Action/Adventure",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "ii8nBGYpKyl6FyzP3cmBCevdrbs",
+              "id": "33",
+              "snippet": {
+                "title": "Classics",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Y0u9UAQCCGp60G11Arac5Mp46z4",
+              "id": "34",
+              "snippet": {
+                "title": "Comedy",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "_YDnyT205AMuX8etu8loOiQjbD4",
+              "id": "35",
+              "snippet": {
+                "title": "Documentary",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "eAl2b-uqIGRDgnlMa0EsGZjXmWg",
+              "id": "36",
+              "snippet": {
+                "title": "Drama",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "HDAW2HFOt3SqeDI00X-eL7OELfY",
+              "id": "37",
+              "snippet": {
+                "title": "Family",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "QHiWh3niw5hjDrim85M8IGF45eE",
+              "id": "38",
+              "snippet": {
+                "title": "Foreign",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "ztKcSS7GpH9uEyZk9nQCdNujvGg",
+              "id": "39",
+              "snippet": {
+                "title": "Horror",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "Ids1sm8QFeSo_cDlpcUNrnEBYWA",
+              "id": "40",
+              "snippet": {
+                "title": "Sci-Fi/Fantasy",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "qhfgS7MzzZHIy_UZ1dlawl1GbnY",
+              "id": "41",
+              "snippet": {
+                "title": "Thriller",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "TxVSfGoUyT7CJ7h7ebjg4vhIt6g",
+              "id": "42",
+              "snippet": {
+                "title": "Shorts",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "o9w6eNqzjHPnNbKDujnQd8pklXM",
+              "id": "43",
+              "snippet": {
+                "title": "Shows",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            },
+            {
+              "kind": "youtube#videoCategory",
+              "etag": "mLdyKd0VgXKDI6GevTLBAcvRlIU",
+              "id": "44",
+              "snippet": {
+                "title": "Trailers",
+                "assignable": false,
+                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+              }
+            }
+          ]
+        }
+  recorded_at: Sat, 12 Nov 2022 08:26:27 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/channels?id=UCc96wBaIMkjH2JedZ5LIO4g&key=<YOUTUBE_API_KEY>&part=snippet,statistics
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sat, 12 Nov 2022 08:27:12 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#channelListResponse",
+          "etag": "yAbuJmZprALdRw6ktLmeIYma9TQ",
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#channel",
+              "etag": "g0WlmyVTfW1EpNwMV1KaTe2gWnE",
+              "id": "UCc96wBaIMkjH2JedZ5LIO4g",
+              "snippet": {
+                "title": "Escorpión Dorado el Chido",
+                "description": "Este es el primer canal de su majestad Escorpión Dorado donde encontrarás lecciones de vida, escorpiones al volante temáticos de canciones, opiniones y demás cosas con todo el: Peluche en el estuche!!!!\nTambién se pueden suscribir a mi otro canal donde están los escorpiones al volante con famosos: https://www.youtube.com/user/elpelucheenelestuche\nCONTRATACIONES, CAMPAÑAS Y MÁS: soyalexmontiel@gmail.com",
+                "customUrl": "@escorpiondorado",
+                "publishedAt": "2009-05-21T15:28:39Z",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://yt3.ggpht.com/ytc/AMLnZu_C8OuLGUl5qeTahA6C7ryenAR12YJLc3JOZ6lR=s88-c-k-c0x00ffffff-no-rj",
+                    "width": 88,
+                    "height": 88
+                  },
+                  "medium": {
+                    "url": "https://yt3.ggpht.com/ytc/AMLnZu_C8OuLGUl5qeTahA6C7ryenAR12YJLc3JOZ6lR=s240-c-k-c0x00ffffff-no-rj",
+                    "width": 240,
+                    "height": 240
+                  },
+                  "high": {
+                    "url": "https://yt3.ggpht.com/ytc/AMLnZu_C8OuLGUl5qeTahA6C7ryenAR12YJLc3JOZ6lR=s800-c-k-c0x00ffffff-no-rj",
+                    "width": 800,
+                    "height": 800
+                  }
+                },
+                "localized": {
+                  "title": "Escorpión Dorado el Chido",
+                  "description": "Este es el primer canal de su majestad Escorpión Dorado donde encontrarás lecciones de vida, escorpiones al volante temáticos de canciones, opiniones y demás cosas con todo el: Peluche en el estuche!!!!\nTambién se pueden suscribir a mi otro canal donde están los escorpiones al volante con famosos: https://www.youtube.com/user/elpelucheenelestuche\nCONTRATACIONES, CAMPAÑAS Y MÁS: soyalexmontiel@gmail.com"
+                }
+              },
+              "statistics": {
+                "viewCount": "408475090",
+                "subscriberCount": "4150000",
+                "hiddenSubscriberCount": false,
+                "videoCount": "375"
+              }
+            }
+          ]
+        }
+  recorded_at: Sat, 12 Nov 2022 08:27:12 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/channels?id=UCc96wBaIMkjH2JedZ5LIO4g&key=BAD_TOKEN&part=snippet,statistics
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sat, 12 Nov 2022 08:27:12 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "code": 400,
+            "message": "API key not valid. Please pass a valid API key.",
+            "errors": [
+              {
+                "message": "API key not valid. Please pass a valid API key.",
+                "domain": "global",
+                "reason": "badRequest"
+              }
+            ],
+            "status": "INVALID_ARGUMENT",
+            "details": [
+              {
+                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+                "reason": "API_KEY_INVALID",
+                "domain": "googleapis.com",
+                "metadata": {
+                  "service": "youtube.googleapis.com"
+                }
+              }
+            ]
+          }
+        }
+  recorded_at: Sat, 12 Nov 2022 08:27:12 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=<YOUTUBE_API_KEY>&part=snippet&regionCode=GT
@@ -1512,7 +1812,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sat, 12 Nov 2022 07:01:33 GMT
+      - Sat, 12 Nov 2022 08:27:12 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -1534,7 +1834,7 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: "{\n  \"kind\": \"youtube#videoListResponse\",\n  \"etag\": \"9cMykAovRBOQzQ9Fq3IonqV6YjA\",\n
+      string: "{\n  \"kind\": \"youtube#videoListResponse\",\n  \"etag\": \"ZWYN6ZqDubVnMRdRqUfHRB018YE\",\n
         \ \"items\": [\n    {\n      \"kind\": \"youtube#video\",\n      \"etag\":
         \"4Bsj0cDRRewtOM10up3wCkiaTEU\",\n      \"id\": \"uwT8CGrZqag\",\n      \"snippet\":
         {\n        \"publishedAt\": \"2022-11-10T23:24:28Z\",\n        \"channelId\":
@@ -1635,7 +1935,7 @@ http_interactions:
         3: https://amzn.to/31pqcZ7\\nCuchillo 4: https://amzn.to/2AmeCp1\\nCuchillo
         5: https://amzn.to/2PDd38u\\nSellador al vacío: https://amzn.to/3PnHFdI\"\n
         \       },\n        \"defaultAudioLanguage\": \"en-US\"\n      }\n    },\n
-        \   {\n      \"kind\": \"youtube#video\",\n      \"etag\": \"H_HHjwU_Wkri24Kbd3bzfI-CX1A\",\n
+        \   {\n      \"kind\": \"youtube#video\",\n      \"etag\": \"lOSy5ymw1g2tCRn8Qo6eUL4lqZ8\",\n
         \     \"id\": \"Z1YwzuS8DoI\",\n      \"snippet\": {\n        \"publishedAt\":
         \"2022-11-11T18:00:07Z\",\n        \"channelId\": \"UCgJ94h57eiO7DStmxoUzufQ\",\n
         \       \"title\": \"Un Mundo Sin... Fin\",\n        \"description\": \"Episodio
@@ -1677,107 +1977,46 @@ http_interactions:
         creado por Matías Sinay y Santiago Pérez Silva\\n\\n\\n\U0001F4E7 Contacto:
         hola@naisekai.com\"\n        },\n        \"defaultAudioLanguage\": \"es-419\"\n
         \     }\n    },\n    {\n      \"kind\": \"youtube#video\",\n      \"etag\":
-        \"rieKYgfOzbQ-8-9jRovRk-jy95o\",\n      \"id\": \"GnOmOBFNv_g\",\n      \"snippet\":
-        {\n        \"publishedAt\": \"2022-11-10T17:00:11Z\",\n        \"channelId\":
-        \"UC_Av98lDjf5KvFib5elhpYg\",\n        \"title\": \"LEJOS DEL CIELO - Rauw
-        Alejandro (Official Video)\",\n        \"description\": \"LEJOS DEL CIELO\\nRauw
-        Alejandro (Video Oficial)\\n\\nSuscríbete al canal: https://goo.gl/Cqxmma\\n\\nMusic:\\nApple
-        Music: https://RauwA.lnk.to/LejosDelCielo/applemusic \\nSpotify: https://RauwA.lnk.to/LejosDelCielo/spotify
-        \\nAmazon: https://RauwA.lnk.to/LejosDelCielo/amazonmusicstreaming \\nYouTube:
-        https://RauwA.lnk.to/LejosDelCielo/youtube \\niTunes: https://RauwA.lnk.to/LejosDelCielo/itunes
-        \\nDeezer: https://RauwA.lnk.to/LejosDelCielo/deezer \\nTikTok: https://RauwA.lnk.to/LejosDelCielo/tiktokusemysound
-        \\nPandora: https://RauwA.lnk.to/LejosDelCielo/pandora \\n\\nSigue a Rauw:\\nInstagram:
-        https://www.instagram.com/rauwalejandro\\nFacebook: https://www.facebook.com/rauwalejandro
-        \\nTwitter: https://twitter.com/rauwalejandro\\n\\nLetra: \\n\\n¿Dónde? ¿Dónde
-        estás?\\nLlevo rato llamando\\nContesta\\nNo corren las manecillas del reloj\\nMe
-        tienes en el aire volando\\nPero lejos del cielo\\nAunque perderte da miedo\\nEn
-        verdad, mejor dime que no\\n\\n¿Dónde? ¿Dónde estás?\\nLlevo rato llamando\\nContesta\\nNo
-        corren las manecillas del reloj\\nMe tienes en el aire volando\\nPero lejos
-        del cielo\\nAunque perderte da miedo\\nEn verdad, mejor dime que no\\n\\nUno
-        perdona, pero ¿quién borra las cicatrices?\\nRa’ Rauw\\nSin avisar la vida
-        te pone un par de quizes\\nLlevo más de 10 borradores de la carta que hice\\nMami\\nY
-        como quiera no se si vas a entender lo que dice (No)\\n¿De que me vale tener
-        una fortuna?\\nSi por dentro me quiebro\\nEste capítulo cierro\\nSerá descanso
-        pa’ mi cerebro\\nSolo llorando, pero en un Ferro\\n\\nMala, tu fuiste mala\\nTu
-        fuiste mala\\nNo seas mala\\nDeja que te lo haga\\nPor última vez en mi cama\\n\\n¿Dónde?
-        ¿Dónde estás?\\nLlevo rato llamando\\nContesta\\nNo corren las manecillas
-        del reloj\\nMe tienes en el aire volando\\nPero lejos del cielo\\nAunque perderte
-        da miedo\\nEn verdad, mejor dime que no\\n\\nComo cuando no se riegan las
-        flores\\nBaby, estoy triste\\nEstoy triste\\nSi te ponía a gritar en el cuarto\\n¿Por
-        qué te fuiste?\\nSi te viniste\\nYo dormía fácil, ahora no encuentro el sueño\\nMe
-        voy pa’ la calle a enfriar este infierno\\nPa’l de gatas me piden que sea
-        su dueño\\nTengo el corazón roto, pero no lo enseño\\n\\nMami\\nBlinda’o de
-        pies a cabeza\\nDios me cuida eh (espero que a ti también) \\nMe levanto más
-        cabrón de todas mis caídas eh\\nMírame en la disco, guayando espotia’o en
-        una esquina\\nYo pensaba que sí, pero a la verdad no te conocía\\n\\n¿Dónde?
-        ¿Dónde estás?\\nLlevo rato llamando\\nContesta\\nNo corren las manecillas
-        del reloj\\nMe tienes en el aire volando\\nPero lejos del cielo\\nAunque perderte
-        da miedo\\nEn verdad, mejor dime que no\\n\\n¿Dónde estás?\\nMejor dime que
-        no\\nContesta\\nYeah \\nRa’ Rauw\\nRauw Alejandro\\n(Me tienes en el aire
-        volando)\\nSaturno\\n(Mejor dime que no)\\n(Esta noche me la paso perriando)\\nMr.
-        NaisGai\\nKenobi\\nCon los Fokin Sensei\\n\\n\\n\\n\\n#RauwAlejandro #LejosDelCielo
-        #Saturno\\n\\n(C) 2022 Sony Music Entertainment US Latin LLC/Duars Entertainment,
-        Inc.\",\n        \"thumbnails\": {\n          \"default\": {\n            \"url\":
-        \"https://i.ytimg.com/vi/GnOmOBFNv_g/default.jpg\",\n            \"width\":
+        \"r6IRRpP48HkRxG-_Ms3DEJErA30\",\n      \"id\": \"OLDzD9NHq9I\",\n      \"snippet\":
+        {\n        \"publishedAt\": \"2022-11-11T01:28:30Z\",\n        \"channelId\":
+        \"UCQZfFRohQ7UX-0CdXl-6pwQ\",\n        \"title\": \"BROMAS DE HALLOWEN \U0001F383
+        Buscando el disfraz perfecto en familia | Jukilop ✨ Kimberly Loaiza\",\n        \"description\":
+        \"LINDURAS GRACIAS POR VER ESTE VIDEO ME ENCANTARIA QUE LE DIERAN LIKE Y LO
+        COMPARTIERAN FUERA DE GRAN AYUDA \\r\\n\\r\\n✨ Sígueme en mis redes sociales
+        ✨\\r\\n\\r\\nInstagram: https://www.instagram.com/kimberly.loaiza/\\r\\n\\r\\nPagina
+        de Facebook: https://www.facebook.com/kimberlyloaizaa/?ref=br_tf\\r\\n\\r\\n\\r\\nTwitter:
+        https://mobile.twitter.com/kimberlyloaiza_\\r\\n\\r\\nContacto: marcaskim@gmail.com\",\n
+        \       \"thumbnails\": {\n          \"default\": {\n            \"url\":
+        \"https://i.ytimg.com/vi/OLDzD9NHq9I/default.jpg\",\n            \"width\":
         120,\n            \"height\": 90\n          },\n          \"medium\": {\n
-        \           \"url\": \"https://i.ytimg.com/vi/GnOmOBFNv_g/mqdefault.jpg\",\n
+        \           \"url\": \"https://i.ytimg.com/vi/OLDzD9NHq9I/mqdefault.jpg\",\n
         \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/GnOmOBFNv_g/hqdefault.jpg\",\n
+        {\n            \"url\": \"https://i.ytimg.com/vi/OLDzD9NHq9I/hqdefault.jpg\",\n
         \           \"width\": 480,\n            \"height\": 360\n          },\n          \"standard\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/GnOmOBFNv_g/sddefault.jpg\",\n
+        {\n            \"url\": \"https://i.ytimg.com/vi/OLDzD9NHq9I/sddefault.jpg\",\n
         \           \"width\": 640,\n            \"height\": 480\n          },\n          \"maxres\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/GnOmOBFNv_g/maxresdefault.jpg\",\n
+        {\n            \"url\": \"https://i.ytimg.com/vi/OLDzD9NHq9I/maxresdefault.jpg\",\n
         \           \"width\": 1280,\n            \"height\": 720\n          }\n        },\n
-        \       \"channelTitle\": \"Rauw Alejandro\",\n        \"tags\": [\n          \"rauw
-        alejandro\",\n          \"rauw\",\n          \"rauw alejandro 2020\",\n          \"rauw
-        alejandro letra\",\n          \"rauw alejandro 2021\",\n          \"duars
-        entertainment\",\n          \"alejandro\",\n          \"rauw alejandro videos\",\n
-        \         \"duars\",\n          \"letra rauw alejandro\",\n          \"rauw
-        alejandro new\",\n          \"rauwalejandro\",\n          \"ra rauw\",\n          \"rauw
-        2020\",\n          \"rauw alejandro new song\",\n          \"lejos del cielo\"\n
-        \       ],\n        \"categoryId\": \"10\",\n        \"liveBroadcastContent\":
-        \"none\",\n        \"localized\": {\n          \"title\": \"LEJOS DEL CIELO
-        - Rauw Alejandro (Official Video)\",\n          \"description\": \"LEJOS DEL
-        CIELO\\nRauw Alejandro (Video Oficial)\\n\\nSuscríbete al canal: https://goo.gl/Cqxmma\\n\\nMusic:\\nApple
-        Music: https://RauwA.lnk.to/LejosDelCielo/applemusic \\nSpotify: https://RauwA.lnk.to/LejosDelCielo/spotify
-        \\nAmazon: https://RauwA.lnk.to/LejosDelCielo/amazonmusicstreaming \\nYouTube:
-        https://RauwA.lnk.to/LejosDelCielo/youtube \\niTunes: https://RauwA.lnk.to/LejosDelCielo/itunes
-        \\nDeezer: https://RauwA.lnk.to/LejosDelCielo/deezer \\nTikTok: https://RauwA.lnk.to/LejosDelCielo/tiktokusemysound
-        \\nPandora: https://RauwA.lnk.to/LejosDelCielo/pandora \\n\\nSigue a Rauw:\\nInstagram:
-        https://www.instagram.com/rauwalejandro\\nFacebook: https://www.facebook.com/rauwalejandro
-        \\nTwitter: https://twitter.com/rauwalejandro\\n\\nLetra: \\n\\n¿Dónde? ¿Dónde
-        estás?\\nLlevo rato llamando\\nContesta\\nNo corren las manecillas del reloj\\nMe
-        tienes en el aire volando\\nPero lejos del cielo\\nAunque perderte da miedo\\nEn
-        verdad, mejor dime que no\\n\\n¿Dónde? ¿Dónde estás?\\nLlevo rato llamando\\nContesta\\nNo
-        corren las manecillas del reloj\\nMe tienes en el aire volando\\nPero lejos
-        del cielo\\nAunque perderte da miedo\\nEn verdad, mejor dime que no\\n\\nUno
-        perdona, pero ¿quién borra las cicatrices?\\nRa’ Rauw\\nSin avisar la vida
-        te pone un par de quizes\\nLlevo más de 10 borradores de la carta que hice\\nMami\\nY
-        como quiera no se si vas a entender lo que dice (No)\\n¿De que me vale tener
-        una fortuna?\\nSi por dentro me quiebro\\nEste capítulo cierro\\nSerá descanso
-        pa’ mi cerebro\\nSolo llorando, pero en un Ferro\\n\\nMala, tu fuiste mala\\nTu
-        fuiste mala\\nNo seas mala\\nDeja que te lo haga\\nPor última vez en mi cama\\n\\n¿Dónde?
-        ¿Dónde estás?\\nLlevo rato llamando\\nContesta\\nNo corren las manecillas
-        del reloj\\nMe tienes en el aire volando\\nPero lejos del cielo\\nAunque perderte
-        da miedo\\nEn verdad, mejor dime que no\\n\\nComo cuando no se riegan las
-        flores\\nBaby, estoy triste\\nEstoy triste\\nSi te ponía a gritar en el cuarto\\n¿Por
-        qué te fuiste?\\nSi te viniste\\nYo dormía fácil, ahora no encuentro el sueño\\nMe
-        voy pa’ la calle a enfriar este infierno\\nPa’l de gatas me piden que sea
-        su dueño\\nTengo el corazón roto, pero no lo enseño\\n\\nMami\\nBlinda’o de
-        pies a cabeza\\nDios me cuida eh (espero que a ti también) \\nMe levanto más
-        cabrón de todas mis caídas eh\\nMírame en la disco, guayando espotia’o en
-        una esquina\\nYo pensaba que sí, pero a la verdad no te conocía\\n\\n¿Dónde?
-        ¿Dónde estás?\\nLlevo rato llamando\\nContesta\\nNo corren las manecillas
-        del reloj\\nMe tienes en el aire volando\\nPero lejos del cielo\\nAunque perderte
-        da miedo\\nEn verdad, mejor dime que no\\n\\n¿Dónde estás?\\nMejor dime que
-        no\\nContesta\\nYeah \\nRa’ Rauw\\nRauw Alejandro\\n(Me tienes en el aire
-        volando)\\nSaturno\\n(Mejor dime que no)\\n(Esta noche me la paso perriando)\\nMr.
-        NaisGai\\nKenobi\\nCon los Fokin Sensei\\n\\n\\n\\n\\n#RauwAlejandro #LejosDelCielo
-        #Saturno\\n\\n(C) 2022 Sony Music Entertainment US Latin LLC/Duars Entertainment,
-        Inc.\"\n        },\n        \"defaultAudioLanguage\": \"es\"\n      }\n    }\n
+        \       \"channelTitle\": \"Kimberly Loaiza\",\n        \"tags\": [\n          \"team\",\n
+        \         \"juki\",\n          \"jukilop\",\n          \"teamjukilop\",\n
+        \         \"juan\",\n          \"de\",\n          \"dios\",\n          \"pantoja\",\n
+        \         \"reto\",\n          \"challenge\",\n          \"diversión\",\n
+        \         \"entretenimiento\",\n          \"vlog\",\n          \"blogs\",\n
+        \         \"nuevo\",\n          \"video\",\n          \"vlogs\",\n          \"blog\",\n
+        \         \"lindura\",\n          \"linduras\",\n          \"kimberly\",\n
+        \         \"loaiza\",\n          \"risas\",\n          \"musica\"\n        ],\n
+        \       \"categoryId\": \"22\",\n        \"liveBroadcastContent\": \"none\",\n
+        \       \"localized\": {\n          \"title\": \"BROMAS DE HALLOWEN \U0001F383
+        Buscando el disfraz perfecto en familia | Jukilop ✨ Kimberly Loaiza\",\n          \"description\":
+        \"LINDURAS GRACIAS POR VER ESTE VIDEO ME ENCANTARIA QUE LE DIERAN LIKE Y LO
+        COMPARTIERAN FUERA DE GRAN AYUDA \\r\\n\\r\\n✨ Sígueme en mis redes sociales
+        ✨\\r\\n\\r\\nInstagram: https://www.instagram.com/kimberly.loaiza/\\r\\n\\r\\nPagina
+        de Facebook: https://www.facebook.com/kimberlyloaizaa/?ref=br_tf\\r\\n\\r\\n\\r\\nTwitter:
+        https://mobile.twitter.com/kimberlyloaiza_\\r\\n\\r\\nContacto: marcaskim@gmail.com\"\n
+        \       },\n        \"defaultAudioLanguage\": \"en-US\"\n      }\n    }\n
         \ ],\n  \"nextPageToken\": \"CAUQAA\",\n  \"pageInfo\": {\n    \"totalResults\":
         200,\n    \"resultsPerPage\": 5\n  }\n}\n"
-  recorded_at: Sat, 12 Nov 2022 07:01:33 GMT
+  recorded_at: Sat, 12 Nov 2022 08:27:12 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=BAD_TOKEN&part=snippet&regionCode=GT
@@ -1801,7 +2040,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sat, 12 Nov 2022 07:01:33 GMT
+      - Sat, 12 Nov 2022 08:27:12 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -1848,367 +2087,5 @@ http_interactions:
             ]
           }
         }
-  recorded_at: Sat, 12 Nov 2022 07:01:33 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/videoCategories?key=<YOUTUBE_API_KEY>&regionCode=1
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Sat, 12 Nov 2022 07:35:14 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "error": {
-            "code": 400,
-            "message": "The \u003ccode\u003eregionCode\u003c/code\u003e parameter specifies an invalid region code.",
-            "errors": [
-              {
-                "message": "The \u003ccode\u003eregionCode\u003c/code\u003e parameter specifies an invalid region code.",
-                "domain": "youtube.parameter",
-                "reason": "invalidRegionCode",
-                "location": "regionCode",
-                "locationType": "parameter"
-              }
-            ]
-          }
-        }
-  recorded_at: Sat, 12 Nov 2022 07:35:14 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/videoCategories?id=1&key=<YOUTUBE_API_KEY>
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Date:
-      - Sat, 12 Nov 2022 07:37:27 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "kind": "youtube#videoCategoryListResponse",
-          "etag": "s6RguhiCzdsBQFsS4YzslvqtQtI",
-          "items": [
-            {
-              "kind": "youtube#videoCategory",
-              "etag": "grPOPYEUUZN3ltuDUGEWlrTR90U",
-              "id": "1",
-              "snippet": {
-                "title": "Film & Animation",
-                "assignable": true,
-                "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
-              }
-            }
-          ]
-        }
-  recorded_at: Sat, 12 Nov 2022 07:37:27 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/videoCategories?id=1&key=BAD_TOKEN
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Sat, 12 Nov 2022 08:08:49 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "error": {
-            "code": 400,
-            "message": "API key not valid. Please pass a valid API key.",
-            "errors": [
-              {
-                "message": "API key not valid. Please pass a valid API key.",
-                "domain": "global",
-                "reason": "badRequest"
-              }
-            ],
-            "status": "INVALID_ARGUMENT",
-            "details": [
-              {
-                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
-                "reason": "API_KEY_INVALID",
-                "domain": "googleapis.com",
-                "metadata": {
-                  "service": "youtube.googleapis.com"
-                }
-              }
-            ]
-          }
-        }
-  recorded_at: Sat, 12 Nov 2022 08:08:49 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/channels?id=UCc96wBaIMkjH2JedZ5LIO4g&key=<YOUTUBE_API_KEY>&part=snippet,statistics
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Date:
-      - Sat, 12 Nov 2022 08:10:39 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "kind": "youtube#channelListResponse",
-          "etag": "yAbuJmZprALdRw6ktLmeIYma9TQ",
-          "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 5
-          },
-          "items": [
-            {
-              "kind": "youtube#channel",
-              "etag": "g0WlmyVTfW1EpNwMV1KaTe2gWnE",
-              "id": "UCc96wBaIMkjH2JedZ5LIO4g",
-              "snippet": {
-                "title": "Escorpión Dorado el Chido",
-                "description": "Este es el primer canal de su majestad Escorpión Dorado donde encontrarás lecciones de vida, escorpiones al volante temáticos de canciones, opiniones y demás cosas con todo el: Peluche en el estuche!!!!\nTambién se pueden suscribir a mi otro canal donde están los escorpiones al volante con famosos: https://www.youtube.com/user/elpelucheenelestuche\nCONTRATACIONES, CAMPAÑAS Y MÁS: soyalexmontiel@gmail.com",
-                "customUrl": "@escorpiondorado",
-                "publishedAt": "2009-05-21T15:28:39Z",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://yt3.ggpht.com/ytc/AMLnZu_C8OuLGUl5qeTahA6C7ryenAR12YJLc3JOZ6lR=s88-c-k-c0x00ffffff-no-rj",
-                    "width": 88,
-                    "height": 88
-                  },
-                  "medium": {
-                    "url": "https://yt3.ggpht.com/ytc/AMLnZu_C8OuLGUl5qeTahA6C7ryenAR12YJLc3JOZ6lR=s240-c-k-c0x00ffffff-no-rj",
-                    "width": 240,
-                    "height": 240
-                  },
-                  "high": {
-                    "url": "https://yt3.ggpht.com/ytc/AMLnZu_C8OuLGUl5qeTahA6C7ryenAR12YJLc3JOZ6lR=s800-c-k-c0x00ffffff-no-rj",
-                    "width": 800,
-                    "height": 800
-                  }
-                },
-                "localized": {
-                  "title": "Escorpión Dorado el Chido",
-                  "description": "Este es el primer canal de su majestad Escorpión Dorado donde encontrarás lecciones de vida, escorpiones al volante temáticos de canciones, opiniones y demás cosas con todo el: Peluche en el estuche!!!!\nTambién se pueden suscribir a mi otro canal donde están los escorpiones al volante con famosos: https://www.youtube.com/user/elpelucheenelestuche\nCONTRATACIONES, CAMPAÑAS Y MÁS: soyalexmontiel@gmail.com"
-                }
-              },
-              "statistics": {
-                "viewCount": "408475090",
-                "subscriberCount": "4150000",
-                "hiddenSubscriberCount": false,
-                "videoCount": "375"
-              }
-            }
-          ]
-        }
-  recorded_at: Sat, 12 Nov 2022 08:10:39 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/channels?id=UCc96wBaIMkjH2JedZ5LIO4g&key=BAD_TOKEN&part=snippet,statistics
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Sat, 12 Nov 2022 08:10:39 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "error": {
-            "code": 400,
-            "message": "API key not valid. Please pass a valid API key.",
-            "errors": [
-              {
-                "message": "API key not valid. Please pass a valid API key.",
-                "domain": "global",
-                "reason": "badRequest"
-              }
-            ],
-            "status": "INVALID_ARGUMENT",
-            "details": [
-              {
-                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
-                "reason": "API_KEY_INVALID",
-                "domain": "googleapis.com",
-                "metadata": {
-                  "service": "youtube.googleapis.com"
-                }
-              }
-            ]
-          }
-        }
-  recorded_at: Sat, 12 Nov 2022 08:10:39 GMT
+  recorded_at: Sat, 12 Nov 2022 08:27:12 GMT
 recorded_with: VCR 6.1.0

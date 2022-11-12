@@ -31,13 +31,13 @@ describe 'Integration Tests of Youtube API and Database' do
       _(categories_db.size).must_equal(categories.size)
     end
 
-    # it 'HAPPY: should a new video in the database' do
-    #   video = UFeeling::Videos::Mappers::ApiVideo.new(YOUTUBE_API_KEY).details('ggGINmj5EQE')
-    #   UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
+    it 'HAPPY: should a new video in the database' do
+      video = UFeeling::Videos::Mappers::ApiVideo.new(YOUTUBE_API_KEY).details('ggGINmj5EQE')
+      UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
 
-    #   video_db = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_origin_id(video.origin_id)
+      video_db = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_origin_id(video.origin_id)
 
-    #   _(video_db.origin_id).must_equal(video.origin_id)
-    # end
+      _(video_db.origin_id).must_equal(video.origin_id)
+    end
   end
 end
