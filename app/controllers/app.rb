@@ -15,36 +15,30 @@ module UFeeling
       routing.assets # load CSS
       response['Content-Type'] = 'text/html; charset=utf-8'
 
-      # GET /
+      # [GET]   /                             Home
+      # [POST]  /videos?url=                  Analyze a new video
+      # [GET]   /videos/:video_id             Gets the analysis of a video
+      # [GET]   /videos/:video_id/comments    Gets the analysis of a video including the list of top comments
+
+      # [GET] /
       routing.root do
         view 'home'
       end
 
-      # POST /videos/
+      # [...] /videos/
       routing.on 'videos' do
-        routing.is do
-          # POST /videos/
-          routing.post do
-            region_code = routing.params['region_code'].upcase
-
-            categories = UFeeling::Videos::Mappers::ApiCategory.new(App.config.YOUTUBE_API_KEY).categories(region_code)
-            categories.each { |category| Repository::For.klass(Entity::Category).find_or_create(category) }
-
-            routing.redirect "/videos/region/#{region_code}/video_category/"
-          end
+        # [POST]  /videos?url= 
+        routing.post do
         end
 
-        routing.on 'region' do
-          # GET /videos/region
-
-          routing.on String do |region_code|
-            # GET /videos/
-            routing.on 'video_category' do
+        # [...]  /videos/:video_id
+        routing.on String do |video_id|
+          # [GET]  /videos/:video_id
+          routing.get do
+            # [...]  /videos/:video_id/comments
+            routing.on 'comments' do
+              # [GET]  /videos/:video_id/comments
               routing.get do
-                # Gets regions
-                categories = Repository::For.klass(Entity::Category).find_by_region(region_code)
-
-                view 'project', locals: { categories: }
               end
             end
           end
