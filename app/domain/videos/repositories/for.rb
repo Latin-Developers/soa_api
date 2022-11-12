@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require_relative 'categories'
-# require_relative 'channel'
+require_relative 'videos'
+# require_relative 'author'
 # require_relative 'comment'
-# require_relative 'video'
 # require_relative 'video_log'
 
 module UFeeling
@@ -12,7 +12,8 @@ module UFeeling
       # Finds the right repository for an entity object or class
       class For
         ENTITY_REPOSITORY = {
-          Videos::Entity::Category => Categories
+          UFeeling::Videos::Entity::Category => Categories,
+          UFeeling::Videos::Entity::Video => Videos
         }.freeze
 
         def self.klass(entity_klass)

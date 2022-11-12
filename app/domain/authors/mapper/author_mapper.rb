@@ -1,24 +1,19 @@
 # frozen_string_literal: false
 
 module UFeeling
-  module Videos
+  module Authors
     module Mappers
-      # Data Mapper: Youtube Category -> Category Entity
-      class ApiCategory
+      # Data Mapper: Youtube Author -> Author Entity
+      class ApiAuthor
         def initialize(youtube_token, gateway_class = Youtube::Api)
           @token = youtube_token
           @gateway_class = gateway_class
           @gateway = @gateway_class.new(@token)
         end
 
-        def category(category_id)
-          data = @gateway.category(category_id)
-          ApiCategory.build_entity(data)
-        end
-
-        def categories(region)
-          data_items = @gateway.categories(region)
-          data_items.map { |data| ApiCategory.build_entity(data) }
+        def author(author_id)
+          data = @gateway.author(author_id)
+          ApiAuthor.build_entity(data)
         end
 
         def self.build_entity(data)
@@ -32,10 +27,11 @@ module UFeeling
           end
 
           def build_entity
-            UFeeling::Videos::Entity::Category.new(
+            UFeeling::Authors::Entity::Author.new(
               id: nil,
               origin_id:,
-              title:
+              name:,
+              description:
             )
           end
 
@@ -45,8 +41,12 @@ module UFeeling
             @data['id']
           end
 
-          def title
+          def name
             @data['snippet']['title']
+          end
+
+          def description
+            @data['snippet']['description']
           end
         end
       end

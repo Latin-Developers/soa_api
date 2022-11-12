@@ -35,15 +35,17 @@ module UFeeling
           def build_entity
             UFeeling::Videos::Entity::Video.new(
               id: nil,
+              author_id: nil,
               category_id: nil,
               origin_id:,
+              origin_category_id:,
+              origin_author_id:,
               published_at:,
-              origin_channel_id:,
               title:,
               description:,
               thumbnail_url: nil,
-              origin_category_id:,
-              duration:
+              duration:,
+              tags: nil,
             )
           end
 
@@ -57,7 +59,7 @@ module UFeeling
             Time.parse(snippet['publishedAt'])
           end
 
-          def origin_channel_id
+          def origin_author_id
             snippet['channelId']
           end
 

@@ -65,4 +65,30 @@ describe 'Tests Youtube API library' do
       end).must_raise Errors::BadRequest
     end
   end
+
+  describe 'Youtube category information' do
+    it 'HAPPY: should provide list of youtube category detail' do
+      details = UFeeling::Videos::Mappers::ApiCategory.new(YOUTUBE_API_KEY).category('1')
+      _(details.origin_id).must_equal '1'
+    end
+
+    it 'SAD: should raise exception when unauthorized' do
+      _(proc do
+        UFeeling::Videos::Mappers::ApiCategory.new('BAD_TOKEN').category('1')
+      end).must_raise Errors::BadRequest
+    end
+  end
+
+  describe 'Youtube channel (author) information' do
+    it 'HAPPY: should provide list of youtube channel (author) detail' do
+      details = UFeeling::Authors::Mappers::ApiAuthor.new(YOUTUBE_API_KEY).author('UCc96wBaIMkjH2JedZ5LIO4g')
+      _(details.origin_id).must_equal 'UCc96wBaIMkjH2JedZ5LIO4g'
+    end
+
+    it 'SAD: should raise exception when unauthorized' do
+      _(proc do
+        UFeeling::Authors::Mappers::ApiAuthor.new('BAD_TOKEN').author('UCc96wBaIMkjH2JedZ5LIO4g')
+      end).must_raise Errors::BadRequest
+    end
+  end
 end

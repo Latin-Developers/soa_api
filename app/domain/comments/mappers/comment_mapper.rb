@@ -109,8 +109,8 @@ module UFeeling
             top_level_comment['snippet'] || snippet
           end
 
-          def author_channel_id
-            top_level_comment_snippet['authorChannelId'] || {}
+          def author_author_id
+            top_level_comment_snippet['authorAuthorId'] || {}
           end
         end
       end

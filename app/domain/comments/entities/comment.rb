@@ -19,7 +19,6 @@ module UFeeling
         attribute :viewer_rating,             Strict::String
         attribute :like_count,                Strict::Integer
         attribute :published_at,              Strict::Time
-        attribute :updated_at,                Strict::Time
         attribute :comment_replies,           Array.of(Comment)
 
         def to_attr_hash

@@ -8,6 +8,8 @@ Sequel.migration do
       primary_key :id
       String      :title, unique: false
       String      :origin_id, unique: true
+      DateTime    :created_at
+      DateTime    :updated_at
     end
   end
 end

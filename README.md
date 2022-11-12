@@ -24,7 +24,7 @@ In this case we are planning to have 5 entities:
 - videos: Record of all the videos that have been requested in the app
 - videos_log: Daily record about information and some statistics of all the videos that have been requested in the app
 - comments: Daily record about information and some statistics of all the comments from the videos that have been requested in the app
-- channels: Information about the channels from the videos that have been requested in the app
+- authors: Information about the authors from the videos that have been requested in the app
 
 ## Entity-Relationship Diagram
 

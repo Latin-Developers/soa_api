@@ -26,10 +26,18 @@ describe 'Integration Tests of Youtube API and Database' do
         .categories(UFeeling::REGIONS[:MEXICO])
 
       categories.each { |category| UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Category).find_or_create(category) }
-
       categories_db = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Category).find_by_region(UFeeling::REGIONS[:MEXICO])
 
       _(categories_db.size).must_equal(categories.size)
     end
+
+    # it 'HAPPY: should a new video in the database' do
+    #   video = UFeeling::Videos::Mappers::ApiVideo.new(YOUTUBE_API_KEY).details('ggGINmj5EQE')
+    #   UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
+
+    #   video_db = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_origin_id(video.origin_id)
+
+    #   _(video_db.origin_id).must_equal(video.origin_id)
+    # end
   end
 end

@@ -1,51 +1,42 @@
 # frozen_string_literal: true
 
 module UFeeling
-  module Videos
+  module Authors
     # ? Should this be called Repositories ??
     module Repository
-      # Repository for Categories
-      class Categories
+      # Repository for Authors
+      class Authors
         def self.find(origin_id)
           find_origin_id(origin_id)
         end
 
         def self.find_id(id)
-          rebuild_entity Database::CategoryOrm.first(id:)
-        end
-
-        def self.find_title(title)
-          rebuild_entity Database::CategoryOrm.first(title:)
+          rebuild_entity Database::AuthorOrm.first(id:)
         end
 
         def self.find_origin_id(origin_id)
-          rebuild_entity Database::CategoryOrm.first(origin_id:)
-        end
-
-        # !Deprecated
-        def self.find_by_region(region)
-          categories = Database::CategoryOrm.all()
-          rebuild_many(categories)
+          rebuild_entity Database::AuthorOrm.first(origin_id:)
         end
 
         def self.rebuild_entity(db_record)
           return nil unless db_record
 
-          Entity::Category.new(
+          Entity::Author.new(
             id: db_record.id,
             origin_id: db_record.origin_id,
-            title: db_record.title
+            name: db_record.name,
+            description: db_record.description
           )
         end
 
         def self.rebuild_many(db_records)
           db_records.map do |db_member|
-            Categories.rebuild_entity(db_member)
+            Authors.rebuild_entity(db_member)
           end
         end
 
         def self.find_or_create(entity)
-          Database::CategoryOrm.find_or_create(entity.to_attr_hash)
+          Database::AuthorOrm.find_or_create(entity.to_attr_hash)
         end
       end
     end

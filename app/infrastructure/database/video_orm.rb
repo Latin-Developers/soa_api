@@ -10,9 +10,9 @@ module UFeeling
                     class: :'UFeeling::Database::categories',
                     key: :category_id
 
-      many_to_one   :channel,
-                    class: :'UFeeling::Database::channels',
-                    key: :channel_id
+      many_to_one   :author,
+                    class: :'UFeeling::Database::authors',
+                    key: :author_id
 
       one_to_many   :comments,
                     class: :'UFeeling::Database::comments',
