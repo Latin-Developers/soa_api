@@ -55,8 +55,6 @@ module UFeeling
                 .klass(UFeeling::Videos::Entity::Video)
                 .find_origin_id(video_origin_id)
 
-                puts video:
-
               # Show viewer the video
               view 'video', locals: { video: video }
             end
