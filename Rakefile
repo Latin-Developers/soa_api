@@ -22,8 +22,9 @@ task :run do
   sh 'bundle exec puma'
 end
 
+desc 'Run the webserver and application and restart if code changes'
 task :rerun do
-  sh "rerun -c --ignore 'coverage/*' -- bundle exec puma"
+  sh "rerun -c --ignore 'coverage/*' --ignore 'repostore/*' -- bundle exec puma"
 end
 
 desc 'Run application console'
