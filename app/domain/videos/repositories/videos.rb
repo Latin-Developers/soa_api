@@ -48,24 +48,38 @@ module UFeeling
         end
 
         def self.find_or_create(entity)
-          category = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Category).find(entity.origin_category_id)
-
-          unless category
-            category = UFeeling::Videos::Mappers::ApiCategory.new(App.config.YOUTUBE_API_KEY).category(entity.origin_category_id)
-            category = Database::CategoryOrm.find_or_create(category.to_attr_hash)
-          end
-
-          author = UFeeling::Authors::Repository::For.klass(UFeeling::Authors::Entity::Author).find(entity.origin_author_id)
-
-          unless author
-            author = UFeeling::Authors::Mappers::ApiAuthor.new(App.config.YOUTUBE_API_KEY).author(entity.origin_author_id)
-            author = Database::AuthorOrm.find_or_create(author.to_attr_hash)
-          end
+          category = category_from_origin_id(entity)
+          author = author_from_origin_id(entity)
 
           entity.category_id = category.id
           entity.author_id = author.id
 
           Database::VideoOrm.find_or_create(entity.to_attr_hash)
+        end
+
+        def self.category_from_origin_id(entity)
+          category = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Category)
+            .find(entity.origin_category_id)
+
+          unless category
+            category = UFeeling::Videos::Mappers::ApiCategory.new(App.config.YOUTUBE_API_KEY)
+              .category(entity.origin_category_id)
+            category = Database::CategoryOrm.find_or_create(category.to_attr_hash)
+          end
+          category
+        end
+
+        def self.author_from_origin_id(entity)
+          author = UFeeling::Authors::Repository::For.klass(UFeeling::Authors::Entity::Author)
+            .find(entity.origin_author_id)
+
+          unless author
+            author = UFeeling::Authors::Mappers::ApiAuthor.new(App.config.YOUTUBE_API_KEY)
+              .author(entity.origin_author_id)
+            author = Database::AuthorOrm.find_or_create(author.to_attr_hash)
+          end
+
+          author
         end
       end
     end

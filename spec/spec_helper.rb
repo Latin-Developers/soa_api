@@ -15,5 +15,4 @@ require 'webmock'
 require_relative '../require_app'
 require_app
 
-
 YOUTUBE_API_KEY = UFeeling::App.config.YOUTUBE_API_KEY

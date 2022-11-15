@@ -37,7 +37,7 @@ module UFeeling
 
           # Get video from Youtube
           video = UFeeling::Videos::Mappers::ApiVideo.new(App.config.YOUTUBE_API_KEY).details(video_id)
-          
+
           # Add video to database
           UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
 
@@ -56,15 +56,14 @@ module UFeeling
                 .find_origin_id(video_origin_id)
 
               # Show viewer the video
-              view 'video', locals: { video: video }
+              view 'video', locals: { video: }
             end
           end
 
           # [...]  /videos/:video_origin_id/comments
           routing.on 'comments' do
             # [GET]  /videos/:video_origin_id/comments
-            routing.get do
-            end
+            # routing.get {}
           end
         end
       end

@@ -9,7 +9,7 @@ module UFeeling
       def self.author(id)
         {
           part: "#{PATH_FILTERS[:SNIPPET]},#{PATH_FILTERS[:STATISTICS]}",
-          id: id
+          id:
         }
       end
 
@@ -18,7 +18,7 @@ module UFeeling
       end
 
       def self.category(id)
-        { id: id }
+        { id: }
       end
 
       def self.popular_videos(region)

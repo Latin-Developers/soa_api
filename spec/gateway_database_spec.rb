@@ -25,8 +25,11 @@ describe 'Integration Tests of Youtube API and Database' do
         .new(YOUTUBE_API_KEY)
         .categories(UFeeling::REGIONS[:MEXICO])
 
-      categories.each { |category| UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Category).find_or_create(category) }
-      categories_db = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Category).find_by_region(UFeeling::REGIONS[:MEXICO])
+      categories.each do |category|
+        UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Category).find_or_create(category)
+      end
+      categories_db = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Category)
+        .find_by_region
 
       _(categories_db.size).must_equal(categories.size)
     end
@@ -35,7 +38,8 @@ describe 'Integration Tests of Youtube API and Database' do
       video = UFeeling::Videos::Mappers::ApiVideo.new(YOUTUBE_API_KEY).details('LZx22ZcMPy0')
       UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
 
-      video_db = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_origin_id(video.origin_id)
+      video_db = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video)
+        .find_origin_id(video.origin_id)
 
       _(video_db.origin_id).must_equal(video.origin_id)
     end

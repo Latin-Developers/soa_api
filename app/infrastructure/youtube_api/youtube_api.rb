@@ -7,7 +7,13 @@ module UFeeling
   module Youtube
     # Library for Youtube Web API
     class Api
-      YOUTUBE_API_PATH = { VIDEO_CATEGORIES: 'videoCategories', AUTHORS: 'channels', VIDEOS: 'videos', COMMENTS: 'commentThreads' }.freeze
+      YOUTUBE_API_PATH =
+        {
+          VIDEO_CATEGORIES: 'videoCategories',
+          AUTHORS: 'channels',
+          VIDEOS: 'videos',
+          COMMENTS: 'commentThreads'
+        }.freeze
 
       def initialize(token)
         @token = token

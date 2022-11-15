@@ -23,7 +23,7 @@ module UFeeling
         end
 
         # !Deprecated
-        def self.find_by_region(region)
+        def self.find_by_region
           categories = Database::CategoryOrm.all
           rebuild_many(categories)
         end

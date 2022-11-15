@@ -13,7 +13,7 @@ module UFeeling
       class For
         ENTITY_REPOSITORY = {
           UFeeling::Videos::Entity::Category => Categories,
-          UFeeling::Videos::Entity::Video => Videos
+          UFeeling::Videos::Entity::Video    => Videos
         }.freeze
 
         def self.klass(entity_klass)
