@@ -6,8 +6,8 @@ Sequel.migration do
   change do
     create_table(:videos) do
       primary_key :id
-      foreign_key :author_id, :authors
-      foreign_key :category_id, :categories
+      foreign_key :author_id, table: :authors
+      foreign_key :category_id, table: :categories
       String      :origin_id
       String      :origin_category_id
       String      :origin_author_id

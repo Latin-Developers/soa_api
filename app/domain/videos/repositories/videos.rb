@@ -51,8 +51,8 @@ module UFeeling
           category = category_from_origin_id(entity)
           author = author_from_origin_id(entity)
 
-          entity.category_id = category.id
-          entity.author_id = author.id
+          entity = UFeeling::Videos::Entity::Video.new(entity.to_h.merge(category_id: category.id,
+                                                                         author_id: author.id))
 
           Database::VideoOrm.find_or_create(entity.to_attr_hash)
         end

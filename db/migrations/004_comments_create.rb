@@ -6,8 +6,8 @@ Sequel.migration do
   change do
     create_table(:comments) do
       primary_key :id
-      foreign_key :video_id, :videos
-      foreign_key :author_author_id, :authors
+      foreign_key :video_id, table: :videos
+      foreign_key :author_author_id, table: :authors
       String      :text_display
       String      :text_original
       DateTime    :published_at

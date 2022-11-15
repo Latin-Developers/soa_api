@@ -12,7 +12,7 @@ module UFeeling
 
       one_to_many :comments,
                   class: :'UFeeling::Database::CommentsLogOrm',
-                  key: :author_author_id
+                  key: :author_id
 
       plugin :timestamps, update_on_create: true
 

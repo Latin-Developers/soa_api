@@ -7,12 +7,10 @@ module UFeeling
     # Object-Relational Mapper for video entities
     class VideoOrm < Sequel::Model(:videos)
       many_to_one   :category,
-                    class: :'UFeeling::Database::CategoryOrm',
-                    key: :category_id
+                    class: :'UFeeling::Database::CategoryOrm'
 
       many_to_one   :author,
-                    class: :'UFeeling::Database::AuthorOrm',
-                    key: :author_id
+                    class: :'UFeeling::Database::AuthorOrm'
 
       one_to_many   :comments,
                     class: :'UFeeling::Database::CommentsLogOrm',
@@ -20,7 +18,7 @@ module UFeeling
 
       one_to_many :logs,
                   class: :'UFeeling::Database::VideoLogOrm',
-                  key: :video_id
+                  key: :vidoe_id
 
       plugin :association_dependencies, logs: :destroy
       plugin :timestamps, update_on_create: true
