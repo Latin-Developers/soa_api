@@ -52,3 +52,6 @@ group :development do
   gem 'reek'
   gem 'rubocop'
 end
+
+#Sentimental Analysis
+gem 'vader_sentiment_ruby'
