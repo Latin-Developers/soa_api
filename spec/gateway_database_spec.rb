@@ -20,7 +20,7 @@ describe 'Integration Tests of Youtube API and Database' do
       DatabaseHelper.wipe_database
     end
 
-    it 'HAPPY: should save all the categories in the dabase' do
+    it 'HAPPY: should save all the categories in the database' do
       categories = UFeeling::Videos::Mappers::ApiCategory
         .new(YOUTUBE_API_KEY)
         .categories(UFeeling::REGIONS[:MEXICO])
@@ -29,7 +29,7 @@ describe 'Integration Tests of Youtube API and Database' do
         UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Category).find_or_create(category)
       end
       categories_db = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Category)
-        .find_by_region
+        .all
 
       _(categories_db.size).must_equal(categories.size)
     end

@@ -22,8 +22,7 @@ module UFeeling
           rebuild_entity Database::CategoryOrm.first(origin_id:)
         end
 
-        # !Deprecated
-        def self.find_by_region
+        def self.all
           categories = Database::CategoryOrm.all
           rebuild_many(categories)
         end
