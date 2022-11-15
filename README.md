@@ -29,3 +29,5 @@ In this case we are planning to have 5 entities:
 ## Entity-Relationship Diagram
 
 ![](images/Entity_Relationship_Diagram.png)
+
+Prueba
