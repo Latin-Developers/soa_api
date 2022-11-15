@@ -6,10 +6,12 @@ require 'slim'
 module UFeeling
   # Web App
   class App < Roda
-    plugin :render, engine: 'slim', views: 'app/views'
-    plugin :assets, css: 'style.css', path: 'app/views/assets'
-    plugin :common_logger, $stderr
     plugin :halt
+    plugin :all_verbs # allows HTTP verbs beyond GET/POST (e.g., DELETE)
+    plugin :render, engine: 'slim', views: 'app/presentation/views_html'
+    plugin :public, root: 'app/presentation/public'
+    plugin :assets, path: 'app/presentation/assets', css: 'style.css'
+    plugin :common_logger, $stderr
 
     route do |routing|
       routing.assets # load CSS
