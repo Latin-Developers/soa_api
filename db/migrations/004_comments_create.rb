@@ -7,7 +7,9 @@ Sequel.migration do
     create_table(:comments) do
       primary_key :id
       foreign_key :video_id, table: :videos
-      foreign_key :author_author_id, table: :authors
+      foreign_key :author_author_id, table: :authors  #Check if the name is author_channel_id
+      foreign_key :sentiment_id, table: :sentiments
+      Float       :sentimental_score
       String      :text_display
       String      :text_original
       DateTime    :published_at
