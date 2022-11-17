@@ -18,7 +18,7 @@ module UFeeling
 
       one_to_many :logs,
                   class: :'UFeeling::Database::VideoLogOrm',
-                  key: :vidoe_id
+                  key: :video_id
 
       plugin :association_dependencies, logs: :destroy
       plugin :timestamps, update_on_create: true
