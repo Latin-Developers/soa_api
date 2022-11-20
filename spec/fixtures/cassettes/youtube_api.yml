@@ -4773,4 +4773,102 @@ http_interactions:
           ]
         }
   recorded_at: Tue, 15 Nov 2022 04:08:32 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/channels?id=UCvC4D8onUfXzvjTOM-dBfEA&key=<YOUTUBE_API_KEY>&part=snippet,statistics
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 20 Nov 2022 09:11:27 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#channelListResponse",
+          "etag": "G5s8L9d26Nv16bDA4oU3TsVnkhM",
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#channel",
+              "etag": "GNFX6JXK9fO9R_lzn9reOxC54Cs",
+              "id": "UCvC4D8onUfXzvjTOM-dBfEA",
+              "snippet": {
+                "title": "Marvel Entertainment",
+                "description": "At Marvel, we’re committed to bringing great stories, characters, and experiences to fans all over the world. We strive to foster an inclusive, diverse, respectful, and safe environment for all of our fans, and we ask the same of our fan communities. As such, we reserve the right to take action including but not limited to hiding, deleting, blocking, and reporting any posts on this account or page. Please also be aware that Marvel does not accept or consider unsolicited idea submissions.\n",
+                "customUrl": "@marvel",
+                "publishedAt": "2005-06-16T12:09:27Z",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://yt3.ggpht.com/fGvQjp1vAT1R4bAKTFLaSbdsfdYFDwAzVjeRVQeikH22bvHWsGULZdwIkpZXktcXZc5gFJuA3w=s88-c-k-c0x00ffffff-no-rj",
+                    "width": 88,
+                    "height": 88
+                  },
+                  "medium": {
+                    "url": "https://yt3.ggpht.com/fGvQjp1vAT1R4bAKTFLaSbdsfdYFDwAzVjeRVQeikH22bvHWsGULZdwIkpZXktcXZc5gFJuA3w=s240-c-k-c0x00ffffff-no-rj",
+                    "width": 240,
+                    "height": 240
+                  },
+                  "high": {
+                    "url": "https://yt3.ggpht.com/fGvQjp1vAT1R4bAKTFLaSbdsfdYFDwAzVjeRVQeikH22bvHWsGULZdwIkpZXktcXZc5gFJuA3w=s800-c-k-c0x00ffffff-no-rj",
+                    "width": 800,
+                    "height": 800
+                  }
+                },
+                "localized": {
+                  "title": "Marvel Entertainment",
+                  "description": "At Marvel, we’re committed to bringing great stories, characters, and experiences to fans all over the world. We strive to foster an inclusive, diverse, respectful, and safe environment for all of our fans, and we ask the same of our fan communities. As such, we reserve the right to take action including but not limited to hiding, deleting, blocking, and reporting any posts on this account or page. Please also be aware that Marvel does not accept or consider unsolicited idea submissions.\n"
+                },
+                "country": "US"
+              },
+              "statistics": {
+                "viewCount": "5329795890",
+                "subscriberCount": "19900000",
+                "hiddenSubscriberCount": false,
+                "videoCount": "8209"
+              }
+            }
+          ]
+        }
+  recorded_at: Sun, 20 Nov 2022 09:11:27 GMT
 recorded_with: VCR 6.1.0

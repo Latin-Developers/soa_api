@@ -15,7 +15,7 @@ module UFeeling
         end
 
         def self.all
-          categories = Database::SentimentOrm.all
+          sentiments = Database::SentimentOrm.all
           rebuild_many(sentiments)
         end
 
