@@ -89,10 +89,10 @@ namespace :db do
 
   desc 'Wipe records from all tables'
   task wipe: :config do
-    if app.environment == :production
-      puts 'Do not damage production database!'
-      return
-    end
+    # if app.environment == :production
+    #   puts 'Do not damage production database!'
+    #   return
+    # end
 
     require_app('infrastructure') # En el PDF de la semana no incluye esto pero en el codigo de Git si
     DatabaseHelper.wipe_database
@@ -100,10 +100,10 @@ namespace :db do
 
   desc 'Delete dev or test database file (set correct RACK_ENV)'
   task drop: :config do
-    if app.environment == :production
-      puts 'Do not damage production database!'
-      return
-    end
+    # if app.environment == :production
+    #   puts 'Do not damage production database!'
+    #   return
+    # end
 
     FileUtils.rm(UFeeling::App.config.DB_FILENAME)
     puts "Deleted #{UFeeling::App.config.DB_FILENAME}"
