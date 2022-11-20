@@ -19,7 +19,7 @@ module UFeeling
         attribute :published_at,            Strict::Time
         attribute :title,                   Strict::String
         attribute :description,             Strict::String
-        attribute :thumbnail_url,           Strict::String.optional
+        attribute :thumbnail_url,           String.optional
         attribute :duration,                String.optional
         attribute :tags,                    String.optional
 

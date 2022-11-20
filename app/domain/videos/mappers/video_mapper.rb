@@ -43,7 +43,7 @@ module UFeeling
               published_at:,
               title:,
               description:,
-              thumbnail_url: nil,
+              thumbnail_url:,
               duration:,
               tags: nil
             )
@@ -71,9 +71,16 @@ module UFeeling
             snippet['description']
           end
 
-          # TODO: Pending to implement
-          def thumbnails
-            # ApiVideoThumbnail.build_entity(snippet['thumbnails'])
+          def thumbnail_url
+            maxres_thumbnail ? maxres_thumbnail['url'] : default_thumbnail['url']
+          end
+
+          def default_thumbnail
+            snippet['thumbnails']['default']
+          end
+
+          def maxres_thumbnail
+            snippet['thumbnails']['maxres']
           end
 
           def origin_category_id
