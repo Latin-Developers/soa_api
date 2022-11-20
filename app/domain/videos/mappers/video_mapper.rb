@@ -71,6 +71,7 @@ module UFeeling
             snippet['description']
           end
 
+          # TODO: Pending to implement
           def thumbnails
             # ApiVideoThumbnail.build_entity(snippet['thumbnails'])
           end
