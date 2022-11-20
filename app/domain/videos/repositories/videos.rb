@@ -15,9 +15,9 @@ module UFeeling
         end
 
         def self.find_ids(ids)
-          ids.map do |id|
-            rebuild_entity Database::VideoOrm.first(id:)
-          end
+          ids.filter { |id| id }
+            .map { |id| rebuild_entity Database::VideoOrm.first(id:) }
+            .filter { |video| video }
         end
 
         def self.find_title(title)

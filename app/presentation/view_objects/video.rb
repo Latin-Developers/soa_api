@@ -12,32 +12,12 @@ module Views
       @video
     end
 
-    def praise_link
-      "/video/#{fullname}"
+    def thumbnail_url
+      @video.thumbnail_url
     end
 
-    def index_str
-      "video[#{@index}]"
-    end
-
-    def contributor_names
-      @video.contributors.map(&:username).join(', ')
-    end
-
-    def owner_name
-      @video.owner.username
-    end
-
-    def fullname
-      "#{owner_name}/#{name}"
-    end
-
-    def http_url
-      @video.http_url
-    end
-
-    def name
-      @video.name
+    def title
+      @video.title
     end
   end
 end

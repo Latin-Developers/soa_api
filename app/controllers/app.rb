@@ -49,14 +49,15 @@ module UFeeling
           routing.halt 400 unless (video_url.include? 'youtube.com') &&
                                   (video_url.include? 'watch?v=') &&
                                   (video_url.split('/').count >= 3)
-          video_id = video_url.split('=')[-1]
 
-          # Get video from Youtube
-          video = UFeeling::Videos::Mappers::ApiVideo.new(App.config.YOUTUBE_API_KEY).details(video_id)
-
-          # Add video to database
           begin
-            UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
+            video_id = video_url.split('=')[-1]
+
+            # Get video from Youtube
+            video = UFeeling::Videos::Mappers::ApiVideo.new(App.config.YOUTUBE_API_KEY).details(video_id)
+
+            # Add video to database
+            video = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
 
             # Adding watched video to the current cookie session
             session[:watching].insert(0, video.id).uniq!

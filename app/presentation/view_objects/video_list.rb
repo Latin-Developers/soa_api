@@ -3,10 +3,10 @@
 require_relative 'video'
 
 module Views
-  # View for a a list of project entities
+  # View for a a list of video entities
   class VideoList
     def initialize(videos)
-      @videos = videos.map.with_index { |proj, i| Project.new(proj, i) }
+      @videos = videos.map.with_index { |video, i| Video.new(video, i) }
     end
 
     def each(&)
