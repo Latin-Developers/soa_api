@@ -9,6 +9,9 @@ module UFeeling
       many_to_one :video,
                   class: :'UFeeling::Database::VideoOrm'
 
+      many_to_one :sentiment,
+                  class: :'UFeeling::Database::SentimentOrm'
+
       plugin :timestamps, update_on_create: true
     end
   end

@@ -7,6 +7,7 @@ Sequel.migration do
     create_table(:videos_log) do
       primary_key :id
       foreign_key :video_id, :videos
+      foreign_key :sentiment_id, table: :sentiments
       Integer     :view_count
       Integer     :like_count
       Integer     :favorite_count

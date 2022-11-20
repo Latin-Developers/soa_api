@@ -12,6 +12,9 @@ module UFeeling
       many_to_one :author,
                   class: :'UFeeling::Database::AuthorOrm'
 
+      many_to_one :sentiment,
+                  class: :'UFeeling::Database::SentimentOrm'
+
       plugin :timestamps, update_on_create: true
     end
   end

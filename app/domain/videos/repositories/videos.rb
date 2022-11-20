@@ -14,6 +14,12 @@ module UFeeling
           rebuild_entity Database::VideoOrm.first(id:)
         end
 
+        def self.find_ids(ids)
+          ids.filter { |id| id }
+            .map { |id| rebuild_entity Database::VideoOrm.first(id:) }
+            .filter { |video| video }
+        end
+
         def self.find_title(title)
           rebuild_entity Database::VideoOrm.first(title:)
         end
@@ -78,7 +84,6 @@ module UFeeling
               .author(entity.origin_author_id)
             author = Database::AuthorOrm.find_or_create(author.to_attr_hash)
           end
-
           author
         end
       end
