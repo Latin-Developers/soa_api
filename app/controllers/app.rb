@@ -2,11 +2,13 @@
 
 require 'roda'
 require 'slim'
+require 'slim/include'
 
 module UFeeling
   # Web App
   class App < Roda
     plugin :halt
+    plugin :flash
     plugin :all_verbs # allows HTTP verbs beyond GET/POST (e.g., DELETE)
     plugin :render, engine: 'slim', views: 'app/presentation/views_html'
     plugin :public, root: 'app/presentation/public'
@@ -16,7 +18,7 @@ module UFeeling
     route do |routing|
       routing.assets # load CSS
       response['Content-Type'] = 'text/html; charset=utf-8'
-
+      routing.public
       # [GET]   /                             Home
       # [POST]  /videos?url=                  Analyze a new video
       # [GET]   /videos/:video_id             Gets the analysis of a video
@@ -24,7 +26,19 @@ module UFeeling
 
       # [GET] /
       routing.root do
-        view 'home'
+        # Get cookie viewer's previously seen videos
+        session[:watching] ||= []
+
+        # Load previously searched videos
+        videos = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video)
+          .find_ids(session[:watching])
+
+        session[:watching] = videos.map(&:id)
+
+        flash.now[:notice] = 'Search for a video to get started' if videos.none?
+
+        viewed_videos = Views::VideoList.new(videos)
+        view 'home', locals: { videos: viewed_videos }
       end
 
       # [...] /videos/
@@ -41,9 +55,16 @@ module UFeeling
           video = UFeeling::Videos::Mappers::ApiVideo.new(App.config.YOUTUBE_API_KEY).details(video_id)
 
           # Add video to database
-          UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
+          begin
+            UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
 
-          # Redirect viewer to project page
+            # Adding watched video to the current cookie session
+            session[:watching].insert(0, video.id).uniq!
+          rescue StandardError
+            flash[:error] = 'Having trouble accessing the database'
+          end
+
+          # Redirect viewer to video page
           routing.redirect "videos/#{video.origin_id}"
         end
 
@@ -53,9 +74,19 @@ module UFeeling
           routing.is do
             routing.get do
               # Get Video from database
-              video = UFeeling::Videos::Repository::For
-                .klass(UFeeling::Videos::Entity::Video)
-                .find_origin_id(video_origin_id)
+              begin
+                video = UFeeling::Videos::Repository::For
+                  .klass(UFeeling::Videos::Entity::Video)
+                  .find_origin_id(video_origin_id)
+
+                if video.nil?
+                  flash[:error] = 'Could not find the requested video'
+                  routing.redirect '/'
+                end
+              rescue StandardError
+                flash[:error] = 'Having trouble accessing the database'
+                routing.redirect '/'
+              end
 
               # Show viewer the video
               view 'video', locals: { video: }
