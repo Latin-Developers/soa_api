@@ -4,7 +4,7 @@ require 'dry-types'
 require 'dry-struct'
 
 module UFeeling
-  module Authors
+  module Videos
     module Entity
       # Provides access to Category data
       class Author < Dry::Struct

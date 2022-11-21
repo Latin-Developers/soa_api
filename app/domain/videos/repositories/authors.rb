@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module UFeeling
-  module Authors
+  module Videos
     # ? Should this be called Repositories ??
     module Repository
       # Repository for Authors

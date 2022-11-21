@@ -4,7 +4,7 @@ require 'dry-types'
 require 'dry-struct'
 
 module UFeeling
-  module Comments
+  module Videos
     module Entity
       # Provides access to comment data
       class Comment < Dry::Struct

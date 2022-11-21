@@ -1,7 +1,7 @@
 # frozen_string_literal: false
 
 module UFeeling
-  module Comments
+  module Videos
     module Mappers
       # Data Mapper: Youtube Video -> Entity Video
       class ApiComment
@@ -27,7 +27,7 @@ module UFeeling
           end
 
           def build_entity
-            UFeeling::Comments::Entity::Comment.new(
+            UFeeling::Videos::Entity::Comment.new(
               id: nil,
               origin_id:,
               origin_video_id:,

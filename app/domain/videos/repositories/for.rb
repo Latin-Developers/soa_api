@@ -2,7 +2,7 @@
 
 require_relative 'categories'
 require_relative 'videos'
-# require_relative 'author'
+require_relative 'authors'
 # require_relative 'comment'
 # require_relative 'video_log'
 
@@ -12,6 +12,7 @@ module UFeeling
       # Finds the right repository for an entity object or class
       class For
         ENTITY_REPOSITORY = {
+          UFeeling::Videos::Entity::Author   => Authors,
           UFeeling::Videos::Entity::Category => Categories,
           UFeeling::Videos::Entity::Video    => Videos
         }.freeze

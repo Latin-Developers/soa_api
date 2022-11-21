@@ -1,7 +1,7 @@
 # frozen_string_literal: false
 
 module UFeeling
-  module Authors
+  module Videos
     module Mappers
       # Data Mapper: Youtube Author -> Author Entity
       class ApiAuthor
@@ -27,7 +27,7 @@ module UFeeling
           end
 
           def build_entity
-            UFeeling::Authors::Entity::Author.new(
+            UFeeling::Videos::Entity::Author.new(
               id: nil,
               origin_id:,
               name:,

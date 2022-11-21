@@ -42,13 +42,13 @@ describe 'Tests Youtube API library' do
 
   describe 'Youtube comments information' do
     it 'HAPPY: should provide list of youtube comments' do
-      comments = UFeeling::Comments::Mappers::ApiComment.new(YOUTUBE_API_KEY).comments('ggGINmj5EQE')
+      comments = UFeeling::Videos::Mappers::ApiComment.new(YOUTUBE_API_KEY).comments('ggGINmj5EQE')
       _(comments.size).must_be :>, 0
     end
 
     it 'SAD: should raise exception when unauthorized' do
       _(proc do
-        UFeeling::Comments::Mappers::ApiComment.new('BAD_TOKEN').comments('ggGINmj5EQE')
+        UFeeling::Videos::Mappers::ApiComment.new('BAD_TOKEN').comments('ggGINmj5EQE')
       end).must_raise Errors::BadRequest
     end
   end
@@ -81,13 +81,13 @@ describe 'Tests Youtube API library' do
 
   describe 'Youtube channel (author) information' do
     it 'HAPPY: should provide list of youtube channel (author) detail' do
-      details = UFeeling::Authors::Mappers::ApiAuthor.new(YOUTUBE_API_KEY).author('UCc96wBaIMkjH2JedZ5LIO4g')
+      details = UFeeling::Videos::Mappers::ApiAuthor.new(YOUTUBE_API_KEY).author('UCc96wBaIMkjH2JedZ5LIO4g')
       _(details.origin_id).must_equal 'UCc96wBaIMkjH2JedZ5LIO4g'
     end
 
     it 'SAD: should raise exception when unauthorized' do
       _(proc do
-        UFeeling::Authors::Mappers::ApiAuthor.new('BAD_TOKEN').author('UCc96wBaIMkjH2JedZ5LIO4g')
+        UFeeling::Videos::Mappers::ApiAuthor.new('BAD_TOKEN').author('UCc96wBaIMkjH2JedZ5LIO4g')
       end).must_raise Errors::BadRequest
     end
   end

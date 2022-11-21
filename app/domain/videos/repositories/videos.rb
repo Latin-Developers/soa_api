@@ -76,11 +76,11 @@ module UFeeling
         end
 
         def self.author_from_origin_id(entity)
-          author = UFeeling::Authors::Repository::For.klass(UFeeling::Authors::Entity::Author)
+          author = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Author)
             .find(entity.origin_author_id)
 
           unless author
-            author = UFeeling::Authors::Mappers::ApiAuthor.new(App.config.YOUTUBE_API_KEY)
+            author = UFeeling::Videos::Mappers::ApiAuthor.new(App.config.YOUTUBE_API_KEY)
               .author(entity.origin_author_id)
             author = Database::AuthorOrm.find_or_create(author.to_attr_hash)
           end
