@@ -59,6 +59,8 @@ module UFeeling
             # Add video to database
             video = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
 
+            # TODO: GET Comments
+
             # Adding watched video to the current cookie session
             session[:watching].insert(0, video.id).uniq!
           rescue StandardError
