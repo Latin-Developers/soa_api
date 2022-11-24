@@ -3,7 +3,7 @@
 require_relative 'categories'
 require_relative 'videos'
 require_relative 'authors'
-# require_relative 'comment'
+require_relative 'comments'
 # require_relative 'video_log'
 
 module UFeeling
@@ -14,7 +14,8 @@ module UFeeling
         ENTITY_REPOSITORY = {
           UFeeling::Videos::Entity::Author   => Authors,
           UFeeling::Videos::Entity::Category => Categories,
-          UFeeling::Videos::Entity::Video    => Videos
+          UFeeling::Videos::Entity::Video    => Videos,
+          UFeeling::Videos::Entity::Comment  => Comments
         }.freeze
 
         def self.klass(entity_klass)

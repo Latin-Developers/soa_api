@@ -59,7 +59,14 @@ module UFeeling
             # Add video to database
             video = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
 
-            # TODO: GET Comments
+            # Get comments from Youtube (Julian added)
+
+            comment = UFeeling::Videos::Mappers::ApiComment.new(App.config.YOUTUBE_API_KEY).details(video_id)
+
+            # Add comments to database
+
+            comment = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Comment).find_or_create(comment)
+
 
             # Adding watched video to the current cookie session
             session[:watching].insert(0, video.id).uniq!

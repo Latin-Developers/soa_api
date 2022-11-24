@@ -67,6 +67,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.9-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.9-x86_64-linux)
+      racc (~> 1.4)
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
@@ -130,6 +132,7 @@ GEM
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
     sqlite3 (1.5.4-arm64-darwin)
+    sqlite3 (1.5.4-x86_64-linux)
     temple (0.8.2)
     thor (1.2.1)
     tilt (2.0.11)
@@ -154,6 +157,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   dry-struct (~> 1)
