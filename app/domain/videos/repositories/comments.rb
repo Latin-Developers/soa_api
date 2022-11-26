@@ -60,8 +60,7 @@ module UFeeling
           # Missing Sentiment
 
           entity = UFeeling::Videos::Entity::Comment.new(entity.to_h.merge(video_id: video.id,
-                                                                           author_channel_id: author.id))
-                                                                           puts entity.to_attr_hash
+                                                                           author_channel_id: author.id))                                                                 
           Database::CommentsLogOrm.find_or_create(entity.to_attr_hash)
         end
 
