@@ -26,12 +26,17 @@ module UFeeling
             year: db_record.year
           )
 
+          sentiment = Entity::SentimentalScore.new(
+            sentiment_id: db_record.sentiment_id,
+            #sentiment_name: db_record.sentiment_name,
+            sentiment_score: db_record.sentiment_score
+          )
+
           Entity::Comment.new(
             id: db_record.id,
             video_id: db_record.video_id,
             author_channel_id: db_record.author_channel_id,
-            sentiment_id: db_record.sentiment_id,
-            sentimental_score: db_record.sentimental_score,
+            sentiment:,
             origin_id: db_record.origin_id,
             video_origin_id: db_record.video_origin_id,
             author_channel_origin_id: db_record.author_channel_origin_id,

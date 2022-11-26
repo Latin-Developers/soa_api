@@ -19,7 +19,7 @@ module UFeeling
         attribute :date,                 Integer.optional
         attribute :month,                Integer.optional
         attribute :year,                 Integer.optional
-        attribute :sentimental_score,    Float.optional
+        attribute :sentiment_score,    Float.optional
 
         def to_attr_hash
           to_hash.except(:id)

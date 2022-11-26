@@ -9,7 +9,7 @@ Sequel.migration do
       foreign_key :video_id, table: :videos
       foreign_key :author_channel_id, table: :authors  # Check if the name is author_channel_id
       foreign_key :sentiment_id, table: :sentiments
-      Float       :sentimental_score
+      Float       :sentiment_score
       String      :origin_id
       String      :video_origin_id
       String      :author_channel_origin_id
