@@ -29,17 +29,19 @@ module UFeeling
           def build_entity
             UFeeling::Videos::Entity::Comment.new(
               id: nil,
+              video_id: nil,
+              author_channel_id: nil,
+              sentiment_id: nil,
+              sentimental_score: nil,
               origin_id:,
-              origin_video_id:,
+              video_origin_id:,
+              author_channel_origin_id:,
               text_display:,
               text_original:,
-              author_display_name:,
-              author_profile_image_url:,
-              viewer_rating:,
               like_count:,
-              published_at:,
-              updated_at:,
-              comment_replies:
+              total_reply_count:,
+              published_info:,
+              comment_replies: []
             )
           end
 
@@ -49,7 +51,7 @@ module UFeeling
             @data['id']
           end
 
-          def origin_video_id
+          def video_origin_id
             top_level_comment_snippet['videoId']
           end
 
@@ -61,28 +63,37 @@ module UFeeling
             top_level_comment_snippet['textOriginal']
           end
 
-          def author_display_name
-            top_level_comment_snippet['authorDisplayName']
-          end
-
-          def author_profile_image_url
-            top_level_comment_snippet['authorProfileImageUrl']
-          end
-
-          def viewer_rating
-            top_level_comment_snippet['viewerRating']
-          end
-
           def like_count
             top_level_comment_snippet['likeCount']
+          end
+
+          def published_info
+            UFeeling::Videos::Values::PublishedInfo.new(
+              published_at:,
+              year:,
+              month:,
+              day:
+            )
           end
 
           def published_at
             Time.parse(top_level_comment_snippet['publishedAt'])
           end
 
-          def updated_at
-            Time.parse(top_level_comment_snippet['updatedAt'])
+          def year
+            published_at.year
+          end
+
+          def month
+            published_at.month
+          end
+
+          def day
+            published_at.day
+          end
+
+          def total_reply_count
+            comment_replies.size
           end
 
           def comment_replies
@@ -109,8 +120,8 @@ module UFeeling
             top_level_comment['snippet'] || snippet
           end
 
-          def author_author_id
-            top_level_comment_snippet['authorAuthorId'] || {}
+          def author_channel_origin_id
+            top_level_comment_snippet['authorChannelId']['value'] || {}
           end
         end
       end

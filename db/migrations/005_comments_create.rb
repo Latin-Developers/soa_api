@@ -10,11 +10,14 @@ Sequel.migration do
       foreign_key :author_channel_id, table: :authors  # Check if the name is author_channel_id
       foreign_key :sentiment_id, table: :sentiments
       Float       :sentimental_score
+      String      :origin_id
+      String      :video_origin_id
+      String      :author_channel_origin_id
       String      :text_display
       String      :text_original
-      DateTime    :published_at
       Integer     :like_count
-      Integer     :total_reply_Count
+      Integer     :total_reply_count
+      DateTime    :published_at
       String      :day
       String      :month
       String      :year

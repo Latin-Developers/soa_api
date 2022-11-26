@@ -50,29 +50,30 @@ module UFeeling
                                   (video_url.include? 'watch?v=') &&
                                   (video_url.split('/').count >= 3)
 
-          begin
-            video_id = video_url.split('=')[-1]
+          # begin
+          video_id = video_url.split('=')[-1]
 
-            # Get video from Youtube
-            video = UFeeling::Videos::Mappers::ApiVideo.new(App.config.YOUTUBE_API_KEY).details(video_id)
+          # Get video from Youtube
+          video = UFeeling::Videos::Mappers::ApiVideo.new(App.config.YOUTUBE_API_KEY).details(video_id)
 
-            # Add video to database
-            video = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
+          # Add video to database
+          video = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
 
-            # Get comments from Youtube (Julian added)
+          # Get comments from Youtube (Julian added)
 
-            comment = UFeeling::Videos::Mappers::ApiComment.new(App.config.YOUTUBE_API_KEY).details(video_id)
+          comments = UFeeling::Videos::Mappers::ApiComment.new(App.config.YOUTUBE_API_KEY).comments(video_id)
 
-            # Add comments to database
+          # Add comments to database
 
-            comment = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Comment).find_or_create(comment)
-
-
-            # Adding watched video to the current cookie session
-            session[:watching].insert(0, video.id).uniq!
-          rescue StandardError
-            flash[:error] = 'Having trouble accessing the database'
+          comments.each do |comment|
+            UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Comment).find_or_create(comment)
           end
+
+          # Adding watched video to the current cookie session
+          session[:watching].insert(0, video.id).uniq!
+          # rescue StandardError
+          #   flash[:error] = 'Having trouble accessing the database'
+          # end
 
           # Redirect viewer to video page
           routing.redirect "videos/#{video.origin_id}"
