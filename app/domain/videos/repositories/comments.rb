@@ -57,10 +57,14 @@ module UFeeling
         def self.find_or_create(entity)
           video = video_from_origin_id(entity)
           author = author_from_origin_id(entity)
+          sentiment = sentiment_from_name(entity)
           # Missing Sentiment
 
+          puts "hash"
           entity = UFeeling::Videos::Entity::Comment.new(entity.to_h.merge(video_id: video.id,
-                                                                           author_channel_id: author.id))                                                                 
+                                                                           author_channel_id: author.id,
+                                                                           sentiment: {sentiment_id: sentiment.id, sentiment_name: entity.sentiment.sentiment_name, sentiment_score: entity.sentiment.sentiment_score}))
+                                                                                                                            puts entity.to_attr_hash
           Database::CommentsLogOrm.find_or_create(entity.to_attr_hash)
         end
 
@@ -88,6 +92,18 @@ module UFeeling
             author = Database::AuthorOrm.find_or_create(author.to_attr_hash)
           end
           author
+        end
+
+        def self.sentiment_from_name(entity)
+          sentiment = UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Sentiment)
+            .find_title(entity.sentiment.sentiment_name)
+
+          unless sentiment
+            sentiment = UFeeling::Videos::Entity::Sentiment.new(id: nil, sentiment: entity.sentiment.sentiment_name)
+            sentiment = Database::SentimentOrm.create(sentiment.to_attr_hash)
+          end
+          sentiment
+          
         end
       end
     end
