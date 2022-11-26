@@ -32,8 +32,9 @@ module UFeeling
         attribute :comment_replies,           Array.of(Comment)
 
         def to_attr_hash
-          to_hash.except(:id, :published_info, :comment_replies).merge(published_info)
-                                                                .merge(sentiment)
+          to_hash.except(:id, :published_info, :comment_replies, :sentiment)
+                 .merge(published_info.to_attr_hash)
+                 .merge(sentiment.to_attr_hash)
         end
       end
     end
