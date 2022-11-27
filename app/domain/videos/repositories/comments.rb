@@ -32,7 +32,7 @@ module UFeeling
 
           sentiment = Entity::SentimentalScore.new(
             sentiment_id: db_record.sentiment_id,
-            #sentiment_name: db_record.sentiment_name,
+            # sentiment_name: db_record.sentiment_name,
             sentiment_score: db_record.sentiment_score
           )
 
@@ -64,11 +64,12 @@ module UFeeling
           sentiment = sentiment_from_name(entity)
           # Missing Sentiment
 
-          puts "hash"
+          puts 'hash'
           entity = UFeeling::Videos::Entity::Comment.new(entity.to_h.merge(video_id: video.id,
                                                                            author_channel_id: author.id,
-                                                                           sentiment: {sentiment_id: sentiment.id, sentiment_name: entity.sentiment.sentiment_name, sentiment_score: entity.sentiment.sentiment_score}))
-                                                                                                                            puts entity.to_attr_hash
+                                                                           sentiment: { sentiment_id: sentiment.id,
+sentiment_name: entity.sentiment.sentiment_name, sentiment_score: entity.sentiment.sentiment_score }))
+          puts entity.to_attr_hash
           Database::CommentsLogOrm.find_or_create(entity.to_attr_hash)
         end
 
@@ -107,7 +108,6 @@ module UFeeling
             sentiment = Database::SentimentOrm.create(sentiment.to_attr_hash)
           end
           sentiment
-          
         end
       end
     end

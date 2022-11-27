@@ -39,12 +39,12 @@ module UFeeling
 
       def add_video_to_db(input)
         # Add video to database
-        video = if (new_video = input[:remote_video])
-                  UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(new_video)
-                else
-                  input[:local_video]
-                end
-        Success(video)
+        input[:video] = if (new_video = input[:remote_video])
+                          UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(new_video)
+                        else
+                          input[:local_video]
+                        end
+        Success(input)
       rescue StandardError => e
         puts "@@Error : #{e}"
         Failure('Having trouble accessing the database')
@@ -53,11 +53,11 @@ module UFeeling
       # Get comments from Youtube (Julian added)
       # TODO: Verificar el paginado de los comentarios
       def get_comments(input)
-        comments = UFeeling::Videos::Mappers::ApiComment
+        input[:comments] = UFeeling::Videos::Mappers::ApiComment
           .new(App.config.YOUTUBE_API_KEY)
-          .comments(input[:origin_id])
+          .comments(input[:video][:origin_id])
 
-        Success(comments)
+        Success(input)
         # ? Como vamos a manejar estas excepciones?
       rescue StandardError => e
         puts "@@Error : #{e}"
@@ -66,12 +66,13 @@ module UFeeling
 
       # Add comments to database
       # TODO: Verificar actualizacion de comentarios. (Reprocesar el sentimiento?)
-      def add_comments_to_db(_input)
-        [:comments].each do |comment|
+      def add_comments_to_db(input)
+        input[:comments].each do |comment|
           UFeeling::Videos::Repository::For
             .klass(UFeeling::Videos::Entity::Comment)
             .find_or_create(comment)
         end
+        Success(input[:video])
       end
 
       # Support methods that other services could use
