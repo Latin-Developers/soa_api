@@ -1,4 +1,5 @@
 # frozen_string_literal: false
+require "vader_sentiment_ruby"
 
 module UFeeling
   module Videos
@@ -31,8 +32,7 @@ module UFeeling
               id: nil,
               video_id: nil,
               author_channel_id: nil,
-              sentiment_id: nil,
-              sentimental_score: nil,
+              sentiment:,
               origin_id:,
               video_origin_id:,
               author_channel_origin_id:,
@@ -90,6 +90,17 @@ module UFeeling
 
           def day
             published_at.day
+          end
+
+          def sentiment
+            analysis = VaderSentimentRuby.polarity_scores(text_display)
+            analysis.delete(:compound)
+            score = analysis.max_by {|k,v| v}
+            UFeeling::Videos::Values::SentimentalScore.new(
+              sentiment_id: nil,
+              sentiment_name: score[0].to_s,
+              sentiment_score: score[1]
+            )
           end
 
           def total_reply_count

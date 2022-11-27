@@ -16,7 +16,7 @@ Sequel.migration do
       String      :day
       String      :month
       String      :year
-      Float       :sentimental_score
+      Float       :sentiment_score
       DateTime    :created_at
       DateTime    :updated_at
     end
