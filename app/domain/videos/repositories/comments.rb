@@ -10,6 +10,10 @@ module UFeeling
           rebuild_entity Database::CommentsLogOrm.first(id:)
         end
 
+        def self.find_origin_id(origin_id)
+          rebuild_entity Database::CommentsLogOrm.first(origin_id)
+        end
+
         def self.find_ids(ids)
           ids.filter { |id| id }
             .map { |id| rebuild_entity Database::CommentsLogOrm.first(id:) }
