@@ -18,7 +18,8 @@ module UFeeling
 
       def parse_url(input)
         if input.success?
-          video_id = input[:video_url].split('=')[-1]
+          includes_other_params = input[:video_url].include? '&'
+          video_id = includes_other_params ? input[:video_url].split('=')[-2] : input[:video_url].split('=')[-1]
           Success(video_id:)
         else
           Failure("URL #{input.errors.messages.first}")
