@@ -13,7 +13,7 @@ module UFeeling
                     class: :'UFeeling::Database::AuthorOrm'
 
       one_to_many   :comments,
-                    class: :'UFeeling::Database::CommentsLogOrm',
+                    class: :'UFeeling::Database::CommentsOrm',
                     key: :video_id
 
       one_to_many :logs,

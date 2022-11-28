@@ -7,7 +7,7 @@ module UFeeling
     # Object Relational Mapper for author entities
     class SentimentOrm < Sequel::Model(:sentiments)
       one_to_many :comments,
-                  class: :'UFeeling::Database::CommentsLogOrm',
+                  class: :'UFeeling::Database::CommentsOrm',
                   key: :sentiment_id
 
       one_to_many :logs,

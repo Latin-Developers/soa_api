@@ -40,6 +40,7 @@ module UFeeling
         viewed_videos = Views::VideoList.new(videos)
         view 'home', locals: { videos: viewed_videos }
       end
+
       # [...] /videos/
       routing.on 'videos' do
         routing.is do
@@ -66,22 +67,17 @@ module UFeeling
           routing.is do
             routing.get do
               # Get Video from database
-              begin
-                video = UFeeling::Videos::Repository::For
-                  .klass(UFeeling::Videos::Entity::Video)
-                  .find_origin_id(video_origin_id)
+              video = Services::GetVideo.new.call(video_origin_id)
 
-                if video.nil?
-                  flash[:error] = 'Could not find the requested video'
-                  routing.redirect '/'
-                end
-              rescue StandardError
-                flash[:error] = 'Having trouble accessing the database'
+              if video.failure?
+                flash[:error] = video.failure
                 routing.redirect '/'
               end
 
+              video_info = Views::VideoInfo.new(video.value![:video], video.value![:comments])
+
               # Show viewer the video
-              view 'video', locals: { video: }
+              view 'video', locals: { video_info: }
             end
           end
 

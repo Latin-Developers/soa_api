@@ -11,7 +11,7 @@ module UFeeling
                   key: :author_id
 
       one_to_many :comments,
-                  class: :'UFeeling::Database::CommentsLogOrm',
+                  class: :'UFeeling::Database::CommentsOrm',
                   key: :author_id
 
       plugin :timestamps, update_on_create: true

@@ -39,12 +39,12 @@ module UFeeling
 
       def add_video_to_db(input)
         # Add video to database
-        input[:video] = if (new_video = input[:remote_video])
-                          Videos::Repository::For.klass(Videos::Entity::Video).find_or_create(new_video)
-                        else
-                          input[:local_video]
-                        end
-        Success(input)
+        video = if (new_video = input[:remote_video])
+                  Videos::Repository::For.klass(Videos::Entity::Video).find_or_create(new_video)
+                else
+                  input[:local_video]
+                end
+        Success(video:)
       rescue StandardError => e
         puts "@@Error : #{e}"
         Failure('Having trouble accessing the database')

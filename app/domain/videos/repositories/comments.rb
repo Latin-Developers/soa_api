@@ -6,17 +6,21 @@ module UFeeling
     module Repository
       # Repository for Categories
       class Comments
+        def self.find_video_comments(video_id)
+          Database::CommentsOrm.find(video_id:)
+        end
+
         def self.find_id(id)
-          rebuild_entity Database::CommentsLogOrm.first(id:)
+          rebuild_entity Database::CommentsOrm.first(id:)
         end
 
         def self.find_origin_id(origin_id)
-          rebuild_entity Database::CommentsLogOrm.first(origin_id)
+          rebuild_entity Database::CommentsOrm.first(origin_id)
         end
 
         def self.find_ids(ids)
           ids.filter { |id| id }
-            .map { |id| rebuild_entity Database::CommentsLogOrm.first(id:) }
+            .map { |id| rebuild_entity Database::CommentsOrm.first(id:) }
             .filter { |comment| comment }
         end
 
@@ -74,7 +78,7 @@ module UFeeling
                                      sentiment_score: entity.sentiment.sentiment_score
                                    }))
 
-          Database::CommentsLogOrm.find_or_create(entity.to_attr_hash)
+          Database::CommentsOrm.find_or_create(entity.to_attr_hash)
         end
 
         def self.video_from_origin_id(entity)
