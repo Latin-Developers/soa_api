@@ -3,7 +3,7 @@
 require 'dry/monads'
 
 module UFeeling
-  module Service
+  module Services
     # Retrieves array of all listed videos entities
     class ListVideos
       include Dry::Monads::Result::Mixin

@@ -5,7 +5,7 @@ require 'sequel'
 module UFeeling
   module Database
     # Object-Relational Mapper for comment logs entities
-    class CommentsLogOrm < Sequel::Model(:comments)
+    class CommentsOrm < Sequel::Model(:comments)
       many_to_one :video,
                   class: :'UFeeling::Database::VideoOrm'
 
