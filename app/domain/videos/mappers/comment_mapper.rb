@@ -1,5 +1,6 @@
 # frozen_string_literal: false
-require "vader_sentiment_ruby"
+
+require 'vader_sentiment_ruby'
 
 module UFeeling
   module Videos
@@ -95,7 +96,7 @@ module UFeeling
           def sentiment
             analysis = VaderSentimentRuby.polarity_scores(text_display)
             analysis.delete(:compound)
-            score = analysis.max_by {|k,v| v}
+            score = analysis.max_by { |_k, v| v }
             UFeeling::Videos::Values::SentimentalScore.new(
               sentiment_id: nil,
               sentiment_name: score[0].to_s,

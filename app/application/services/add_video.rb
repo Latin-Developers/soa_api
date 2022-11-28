@@ -40,7 +40,7 @@ module UFeeling
       def add_video_to_db(input)
         # Add video to database
         input[:video] = if (new_video = input[:remote_video])
-                          UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(new_video)
+                          Videos::Repository::For.klass(Videos::Entity::Video).find_or_create(new_video)
                         else
                           input[:local_video]
                         end
@@ -53,7 +53,7 @@ module UFeeling
       # Get comments from Youtube (Julian added)
       # TODO: Verificar el paginado de los comentarios
       def get_comments(input)
-        input[:comments] = UFeeling::Videos::Mappers::ApiComment
+        input[:comments] = Videos::Mappers::ApiComment
           .new(App.config.YOUTUBE_API_KEY)
           .comments(input[:video][:origin_id])
 
@@ -68,8 +68,8 @@ module UFeeling
       # TODO: Verificar actualizacion de comentarios. (Reprocesar el sentimiento?)
       def add_comments_to_db(input)
         input[:comments].each do |comment|
-          UFeeling::Videos::Repository::For
-            .klass(UFeeling::Videos::Entity::Comment)
+          Videos::Repository::For
+            .klass(Videos::Entity::Comment)
             .find_or_create(comment)
         end
         Success(input[:video])
@@ -78,19 +78,19 @@ module UFeeling
       # Support methods that other services could use
 
       def video_from_origin(input)
-        UFeeling::Videos::Mappers::ApiVideo
+        Videos::Mappers::ApiVideo
           .new(App.config.YOUTUBE_API_KEY).details(input[:video_id])
       rescue StandardError
         raise 'Could not find that video on Youtube'
       end
 
       def video_in_database(input)
-        UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video)
+        Videos::Repository::For.klass(Videos::Entity::Video)
           .find(input[:video_id])
       end
 
       def comment_in_database(input)
-        UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video)
+        Videos::Repository::For.klass(Videos::Entity::Video)
           .find(input[:video_id])
       end
     end

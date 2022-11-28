@@ -65,11 +65,15 @@ module UFeeling
           # Missing Sentiment
 
           puts 'hash'
-          entity = UFeeling::Videos::Entity::Comment.new(entity.to_h.merge(video_id: video.id,
-                                                                           author_channel_id: author.id,
-                                                                           sentiment: { sentiment_id: sentiment.id,
-sentiment_name: entity.sentiment.sentiment_name, sentiment_score: entity.sentiment.sentiment_score }))
-          puts entity.to_attr_hash
+          entity = UFeeling::Videos::Entity::Comment
+            .new(entity.to_h.merge(video_id: video.id,
+                                   author_channel_id: author.id,
+                                   sentiment: {
+                                     sentiment_id: sentiment.id,
+                                     sentiment_name: entity.sentiment.sentiment_name,
+                                     sentiment_score: entity.sentiment.sentiment_score
+                                   }))
+
           Database::CommentsLogOrm.find_or_create(entity.to_attr_hash)
         end
 

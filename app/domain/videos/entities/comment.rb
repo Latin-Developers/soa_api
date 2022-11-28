@@ -3,10 +3,8 @@
 require 'dry-types'
 require 'dry-struct'
 
-
 require_relative '../values/publish_info'
 require_relative '../values/sentimental_score'
-
 
 module UFeeling
   module Videos
@@ -33,8 +31,8 @@ module UFeeling
 
         def to_attr_hash
           to_hash.except(:id, :published_info, :comment_replies, :sentiment)
-                 .merge(published_info.to_attr_hash)
-                 .merge(sentiment.to_attr_hash)
+            .merge(published_info.to_attr_hash)
+            .merge(sentiment.to_attr_hash)
         end
       end
     end

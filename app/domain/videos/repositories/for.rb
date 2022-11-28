@@ -13,11 +13,11 @@ module UFeeling
       # Finds the right repository for an entity object or class
       class For
         ENTITY_REPOSITORY = {
-          UFeeling::Videos::Entity::Author     => Authors,
-          UFeeling::Videos::Entity::Category   => Categories,
-          UFeeling::Videos::Entity::Video      => Videos,
-          UFeeling::Videos::Entity::Comment    => Comments,
-          UFeeling::Videos::Entity::Sentiment  => Sentiments
+          UFeeling::Videos::Entity::Author    => Authors,
+          UFeeling::Videos::Entity::Category  => Categories,
+          UFeeling::Videos::Entity::Video     => Videos,
+          UFeeling::Videos::Entity::Comment   => Comments,
+          UFeeling::Videos::Entity::Sentiment => Sentiments
         }.freeze
 
         def self.klass(entity_klass)

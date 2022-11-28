@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/require_app.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/require_app.rb": {
         "lines": [
           null,
           null,
@@ -16,12 +16,12 @@
           1,
           null,
           1,
-          36,
+          41,
           null,
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/config/environment.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -62,7 +62,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/infrastructure/database/author_orm.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/infrastructure/database/author_orm.rb": {
         "lines": [
           null,
           null,
@@ -90,7 +90,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/infrastructure/database/category_orm.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/infrastructure/database/category_orm.rb": {
         "lines": [
           null,
           null,
@@ -114,7 +114,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/infrastructure/database/comments_orm.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/infrastructure/database/comments_orm.rb": {
         "lines": [
           null,
           null,
@@ -139,7 +139,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/infrastructure/database/sentiment_orm.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/infrastructure/database/sentiment_orm.rb": {
         "lines": [
           null,
           null,
@@ -167,7 +167,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/infrastructure/database/video_log_orm.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/infrastructure/database/video_log_orm.rb": {
         "lines": [
           null,
           null,
@@ -189,7 +189,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/infrastructure/database/video_orm.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/infrastructure/database/video_orm.rb": {
         "lines": [
           null,
           null,
@@ -224,7 +224,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/infrastructure/youtube_api/http_utils/errors.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/infrastructure/youtube_api/http_utils/errors.rb": {
         "lines": [
           null,
           null,
@@ -238,7 +238,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/infrastructure/youtube_api/http_utils/response.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/infrastructure/youtube_api/http_utils/response.rb": {
         "lines": [
           null,
           null,
@@ -262,7 +262,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/infrastructure/youtube_api/http_utils/youtube_request.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/infrastructure/youtube_api/http_utils/youtube_request.rb": {
         "lines": [
           null,
           null,
@@ -297,7 +297,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/infrastructure/youtube_api/youtube_api.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/infrastructure/youtube_api/youtube_api.rb": {
         "lines": [
           null,
           null,
@@ -356,7 +356,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/infrastructure/youtube_api/youtube_api_filters.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/infrastructure/youtube_api/youtube_api_filters.rb": {
         "lines": [
           null,
           null,
@@ -407,7 +407,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/infrastructure/youtube_api/youtube_constants.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/infrastructure/youtube_api/youtube_constants.rb": {
         "lines": [
           null,
           null,
@@ -419,7 +419,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/init.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/init.rb": {
         "lines": [
           null,
           null,
@@ -429,19 +429,19 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/init.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/init.rb": {
         "lines": [
           null,
           null,
           1,
           1,
           4,
-          18,
+          19,
           null,
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/entities/author.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/entities/author.rb": {
         "lines": [
           null,
           null,
@@ -469,7 +469,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/entities/category.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/entities/category.rb": {
         "lines": [
           null,
           null,
@@ -496,14 +496,17 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/entities/comment.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/entities/comment.rb": {
         "lines": [
           null,
           null,
           1,
           1,
           null,
+          null,
           1,
+          1,
+          null,
           null,
           1,
           1,
@@ -512,7 +515,6 @@
           1,
           1,
           null,
-          1,
           1,
           1,
           1,
@@ -535,64 +537,12 @@
           null,
           null,
           null,
-          null
-        ]
-      },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/values/publish_info.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
           null,
           null,
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/entities/sentiment.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/entities/video.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/values/publish_info.rb": {
         "lines": [
           null,
           null,
@@ -610,6 +560,87 @@
           1,
           1,
           1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/values/sentimental_score.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/entities/sentiment.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/entities/video.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -630,7 +661,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/entities/video_log.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/entities/video_log.rb": {
         "lines": [
           null,
           null,
@@ -664,7 +695,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/repositories/authors.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/repositories/authors.rb": {
         "lines": [
           null,
           null,
@@ -712,7 +743,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/repositories/categories.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/repositories/categories.rb": {
         "lines": [
           null,
           null,
@@ -768,7 +799,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/repositories/comments.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/repositories/comments.rb": {
         "lines": [
           null,
           null,
@@ -784,6 +815,10 @@
           null,
           1,
           0,
+          null,
+          null,
+          1,
+          0,
           0,
           0,
           null,
@@ -804,6 +839,11 @@
           null,
           null,
           null,
+          0,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           null,
@@ -824,10 +864,15 @@
           1,
           0,
           0,
+          0,
           null,
           null,
           0,
+          0,
           null,
+          null,
+          null,
+          0,
           0,
           null,
           null,
@@ -852,6 +897,17 @@
           0,
           null,
           null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          0,
+          0,
           0,
           null,
           0,
@@ -862,7 +918,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/repositories/for.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/repositories/for.rb": {
         "lines": [
           null,
           null,
@@ -870,15 +926,17 @@
           1,
           1,
           1,
-          null,
-          null,
-          1,
-          1,
           1,
           null,
+          null,
+          1,
+          1,
           1,
           null,
           1,
+          null,
+          1,
+          null,
           null,
           null,
           null,
@@ -897,7 +955,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/repositories/videos.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/repositories/videos.rb": {
         "lines": [
           null,
           null,
@@ -993,7 +1051,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/repositories/sentiments.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/repositories/sentiments.rb": {
         "lines": [
           null,
           null,
@@ -1040,7 +1098,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/mappers/author_mapper.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/mappers/author_mapper.rb": {
         "lines": [
           null,
           null,
@@ -1099,7 +1157,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/mappers/category_mapper.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/mappers/category_mapper.rb": {
         "lines": [
           null,
           null,
@@ -1158,9 +1216,10 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/mappers/comment_mapper.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/mappers/comment_mapper.rb": {
         "lines": [
           null,
+          1,
           null,
           1,
           1,
@@ -1206,7 +1265,6 @@
           null,
           null,
           null,
-          null,
           1,
           null,
           1,
@@ -1218,7 +1276,7 @@
           null,
           null,
           1,
-          25,
+          50,
           null,
           null,
           1,
@@ -1256,6 +1314,17 @@
           null,
           1,
           25,
+          25,
+          100,
+          25,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          25,
           null,
           null,
           1,
@@ -1271,15 +1340,15 @@
           null,
           null,
           1,
-          270,
+          300,
           null,
           null,
           1,
-          225,
+          250,
           null,
           null,
           1,
-          225,
+          250,
           null,
           null,
           1,
@@ -1292,7 +1361,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/mappers/video_mapper.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/mappers/video_mapper.rb": {
         "lines": [
           null,
           null,
@@ -1421,7 +1490,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/domain/videos/mappers/video_thumbnail_mapper.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/mappers/video_thumbnail_mapper.rb": {
         "lines": [
           null,
           null,
@@ -1473,7 +1542,25 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/presentation/view_objects/video.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/domain/videos/lib/sentiment_calculator.rb": {
+        "lines": [
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/presentation/view_objects/video.rb": {
         "lines": [
           null,
           null,
@@ -1500,7 +1587,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/presentation/view_objects/video_list.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/presentation/view_objects/video_list.rb": {
         "lines": [
           null,
           null,
@@ -1524,7 +1611,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/app/application/controllers/app.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/application/controllers/app.rb": {
         "lines": [
           null,
           null,
@@ -1569,42 +1656,23 @@
           0,
           null,
           null,
+          0,
+          0,
           null,
-          0,
-          null,
-          0,
-          0,
           0,
           0,
           0,
           null,
-          null,
+          0,
+          0,
           0,
           null,
           null,
           0,
-          null,
-          null,
           0,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
           0,
           0,
           null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
           null,
           null,
           null,
@@ -1644,7 +1712,160 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/spec/helpers/vcr_helper.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/application/form/new_video.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/application/services/add_video.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/app/application/services/list_videos.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/spec/helpers/vcr_helper.rb": {
         "lines": [
           null,
           null,
@@ -1682,7 +1903,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/spec/helpers/database_helper.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/spec/helpers/database_helper.rb": {
         "lines": [
           null,
           null,
@@ -1698,7 +1919,7 @@
           null
         ]
       },
-      "/Users/code/NTHU/2022_Fall/SOA/ufeeling-app/spec/gateway_youtube_spec.rb": {
+      "/Users/code/NTHU/2022_Fall/SOA/project/ufeeling-app/spec/gateway_youtube_spec.rb": {
         "lines": [
           null,
           null,
@@ -1797,6 +2018,6 @@
         ]
       }
     },
-    "timestamp": 1669441296
+    "timestamp": 1669601837
   }
 }
