@@ -23,8 +23,6 @@ module UFeeling
         attribute :duration,                String.optional
         attribute :tags,                    String.optional
 
-        attr_writer :author_id, :category_id
-
         def to_attr_hash
           to_hash.except(:id)
         end

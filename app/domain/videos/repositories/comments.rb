@@ -23,24 +23,10 @@ module UFeeling
         def self.rebuild_entity(db_record)
           return nil unless db_record
 
-          published_info = Entity::PublishedInfo.new(
-            date: db_record.published_at,
-            day: db_record.day,
-            month: db_record.month,
-            year: db_record.year
-          )
-
-          sentiment = Entity::SentimentalScore.new(
-            sentiment_id: db_record.sentiment_id,
-            # sentiment_name: db_record.sentiment_name,
-            sentiment_score: db_record.sentiment_score
-          )
-
           Entity::Comment.new(
             id: db_record.id,
             video_id: db_record.video_id,
             author_channel_id: db_record.author_channel_id,
-            sentiment:,
             origin_id: db_record.origin_id,
             video_origin_id: db_record.video_origin_id,
             author_channel_origin_id: db_record.author_channel_origin_id,
@@ -48,7 +34,25 @@ module UFeeling
             text_original: db_record.text_original,
             like_count: db_record.like_count,
             total_reply_count: db_record.total_reply_count,
+            sentiment:,
             published_info:
+          )
+        end
+
+        def self.published_info(db_record)
+          Entity::PublishedInfo.new(
+            date: db_record.published_at,
+            day: db_record.day,
+            month: db_record.month,
+            year: db_record.year
+          )
+        end
+
+        def self.sentiment(db_record)
+          Entity::SentimentalScore.new(
+            sentiment_id: db_record.sentiment_id,
+            sentiment_name: db_record.sentiment.sentiment_name,
+            sentiment_score: db_record.sentiment_score
           )
         end
 
@@ -59,22 +63,22 @@ module UFeeling
         end
 
         def self.find_or_create(entity)
+          entity = fill_reference_ids(entity)
+          Database::CommentsLogOrm.find_or_create(entity.to_attr_hash)
+        end
+
+        def self.fill_reference_ids(entity)
           video = video_from_origin_id(entity)
           author = author_from_origin_id(entity)
           sentiment = sentiment_from_name(entity)
-          # Missing Sentiment
 
-          puts 'hash'
-          entity = UFeeling::Videos::Entity::Comment
-            .new(entity.to_h.merge(video_id: video.id,
-                                   author_channel_id: author.id,
-                                   sentiment: {
-                                     sentiment_id: sentiment.id,
-                                     sentiment_name: entity.sentiment.sentiment_name,
-                                     sentiment_score: entity.sentiment.sentiment_score
-                                   }))
-
-          Database::CommentsLogOrm.find_or_create(entity.to_attr_hash)
+          UFeeling::Videos::Entity::Comment.new(entity.to_h.merge(video_id: video.id,
+                                                                  author_channel_id: author.id,
+                                                                  sentiment: {
+                                                                    sentiment_id: sentiment.id,
+                                                                    sentiment_name: entity.sentiment.sentiment_name,
+                                                                    sentiment_score: entity.sentiment.sentiment_score
+                                                                  }))
         end
 
         def self.video_from_origin_id(entity)
