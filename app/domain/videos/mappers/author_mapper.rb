@@ -31,6 +31,7 @@ module UFeeling
               id: nil,
               origin_id:,
               name:,
+              thumbnail_url:,
               description:
             )
           end
@@ -42,11 +43,27 @@ module UFeeling
           end
 
           def name
-            @data['snippet']['title']
+            snippet['title']
           end
 
           def description
             @data['snippet']['description']
+          end
+
+          def thumbnail_url
+            maxres_thumbnail ? maxres_thumbnail['url'] : default_thumbnail['url']
+          end
+
+          def default_thumbnail
+            snippet['thumbnails']['default']
+          end
+
+          def maxres_thumbnail
+            snippet['thumbnails']['maxres']
+          end
+
+          def snippet
+            @data['snippet'] || {}
           end
         end
       end

@@ -8,6 +8,7 @@ Sequel.migration do
       primary_key :id
       String      :origin_id
       String      :name
+      String      :thumbnail_url
       String      :description
       DateTime    :created_at
       DateTime    :updated_at

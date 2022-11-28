@@ -68,7 +68,7 @@ module UFeeling
 
         def self.find_or_create(entity)
           entity = fill_reference_ids(entity)
-          Database::CommentsLogOrm.find_or_create(entity.to_attr_hash)
+          Database::CommentsOrm.find_or_create(entity.to_attr_hash)
         end
 
         def self.fill_reference_ids(entity)

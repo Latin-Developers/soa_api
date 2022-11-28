@@ -25,6 +25,7 @@ module UFeeling
             id: db_record.id,
             origin_id: db_record.origin_id,
             name: db_record.name,
+            thumbnail_url: db_record.thumbnail_url,
             description: db_record.description
           )
         end
