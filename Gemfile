@@ -6,6 +6,7 @@ ruby File.read('.ruby-version').strip
 # Configuration and Utilities
 gem 'figaro', '~> 1.2'
 gem 'rake', '~> 13.0'
+gem 'vader_sentiment_ruby'
 
 # Web Application
 gem 'puma', '~> 6'
@@ -16,6 +17,11 @@ gem 'slim', '~> 4'
 # Validation
 gem 'dry-struct', '~> 1'
 gem 'dry-types', '~> 1'
+
+# Controllers and services
+gem 'dry-monads', '~> 1.4'
+gem 'dry-transaction', '~> 0.13'
+gem 'dry-validation', '~> 1.10'
 
 # Networking
 gem 'http', '~> 5'
