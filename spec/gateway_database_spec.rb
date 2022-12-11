@@ -34,7 +34,7 @@ describe 'Integration Tests of Youtube API and Database' do
       _(categories_db.size).must_equal(categories.size)
     end
 
-    it 'HAPPY: should a new video in the database' do
+    it 'HAPPY: should store a new video in the database' do
       video = UFeeling::Videos::Mappers::ApiVideo.new(YOUTUBE_API_KEY).details('LZx22ZcMPy0')
       UFeeling::Videos::Repository::For.klass(UFeeling::Videos::Entity::Video).find_or_create(video)
 
